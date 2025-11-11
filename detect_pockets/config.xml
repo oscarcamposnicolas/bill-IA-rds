@@ -1,0 +1,10 @@
+<View>
+  <Image name="image" value="$image"/>
+  
+  <RectangleLabels name="label" toName="image">
+    
+    <Label value="pocket_corner" background="red" text_color="white"/>
+    <Label value="pocket_side" background="blue" text_color="white"/>
+    
+  </RectangleLabels>    
+</View>

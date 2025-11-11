@@ -1,0 +1,48 @@
+# detect_balls/test_model.py
+import os
+import random
+
+
+def detect_billiard_balls(image_path):
+    """
+    Función de simulación de un modelo de detección de objetos.
+    En una aplicación real, aquí es donde cargarías tu modelo (por ejemplo, con TensorFlow, PyTorch, OpenCV)
+    y procesarías la imagen para encontrar objetos.
+
+    Args:
+        image_path (str): La ruta al archivo de imagen subido.
+
+    Returns:
+        str: Un resultado de detección simulado en formato de texto.
+    """
+    # Comprobar si el archivo de imagen existe realmente
+    if not os.path.exists(image_path):
+        return "Error: El archivo de imagen no se encontró en el servidor."
+
+    # Simulación: Generar un número aleatorio de bolas detectadas
+    try:
+        num_balls_detected = random.randint(3, 15)
+
+        # Simular las coordenadas de las bolas
+        results = []
+        for i in range(num_balls_detected):
+            ball_number = random.randint(1, 15)
+            x_coord = random.randint(50, 800)
+            y_coord = random.randint(50, 600)
+            confidence = random.uniform(0.85, 0.99)
+            results.append(
+                f"- Bola #{ball_number}: encontrada en ({x_coord}, {y_coord}) con una confianza del {confidence:.2%}"
+            )
+
+        detection_summary = (
+            f"Detección completada en '{os.path.basename(image_path)}'.\n"
+        )
+        detection_summary += (
+            f"Se han encontrado un total de {num_balls_detected} bolas de billar.\n\n"
+        )
+        detection_summary += "Detalles:\n" + "\n".join(results)
+
+        return detection_summary
+
+    except Exception as e:
+        return f"Ha ocurrido un error durante la simulación de la detección: {e}"

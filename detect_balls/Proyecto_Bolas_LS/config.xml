@@ -1,0 +1,41 @@
+<View>
+  <Image name="image" value="$image" zoom="true" zoomControl="true" rotateControl="true"/>
+  
+  <View><Filter toName="label" minlength="0" name="filter"/><RectangleLabels name="label" toName="image">
+    
+    <Label value="black_8" background="black" text_color="white"/>
+    <Label value="blue_10" background="blue" text_color="white"/>
+    <Label value="blue_2" background="blue" text_color="white"/>
+    <Label value="dred_15" background="darkred" text_color="white"/>
+    <Label value="dred_7" background="darkred" text_color="white"/>
+    <Label value="green_14" background="green" text_color="white"/>
+    <Label value="green_6" background="green" text_color="white"/>
+    <Label value="orange_13" background="orange"/>
+    <Label value="orange_5" background="orange"/>
+    <Label value="purple_12" background="purple" text_color="white"/>
+    <Label value="purple_4" background="purple" text_color="white"/>
+    <Label value="red_11" background="red" text_color="white"/>
+    <Label value="red_3" background="red" text_color="white"/>
+    <Label value="white" background="white"/>
+    <Label value="yellow_1" background="yellow"/>
+    <Label value="yellow_9" background="yellow"/>
+
+    <Label value="be_black_8" background="#333333" text_color="white"/>
+    <Label value="be_blue_10" background="#00008b" text_color="white"/>
+    <Label value="be_blue_2" background="#00008b" text_color="white"/>
+    <Label value="be_dred_15" background="#500000" text_color="white"/>
+    <Label value="be_dred_7" background="#500000" text_color="white"/>
+    <Label value="be_green_14" background="#004d00" text_color="white"/>
+    <Label value="be_green_6" background="#004d00" text_color="white"/>
+    <Label value="be_purple_13" background="#cc6600"/>
+    <Label value="be_purple_5" background="#cc6600"/>
+    <Label value="be_pink_4" background="hotpink"/>
+    <Label value="be_pink_12" background="hotpink"/>
+    <Label value="be_red_11" background="#b30000" text_color="white"/>
+    <Label value="be_red_3" background="#b30000" text_color="white"/>
+    <Label value="be_white" background="lightgrey"/>
+    <Label value="be_yellow_1" background="#cccc00"/>
+    <Label value="be_yellow_9" background="#cccc00"/>
+    
+  </RectangleLabels></View>
+</View>

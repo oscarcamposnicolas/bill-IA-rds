@@ -1,0 +1,7721 @@
+[
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-06-08.png",
+    "id": 725,
+    "label": [
+      {
+        "x": 20.0815,
+        "y": 20.39635,
+        "width": 3.565,
+        "height": 8.2259,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 43.1988,
+        "y": 81.9476,
+        "width": 4.8942,
+        "height": 8.9254,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 60.87785,
+        "y": 60.7306,
+        "width": 4.1613,
+        "height": 9.7566,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 48.677400000000006,
+        "y": 65.67765,
+        "width": 4.6624,
+        "height": 10.248899999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 28.92,
+        "y": 41.66795,
+        "width": 4.6488000000000005,
+        "height": 10.1125,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 57.64789999999999,
+        "y": 18.24145,
+        "width": 4.2866,
+        "height": 8.390699999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 22.562979189485212,
+        "y": 65.94070208528055,
+        "width": 4.271631982475355,
+        "height": 7.964747723783789,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 40.96385542168674,
+        "y": 16.11472213881852,
+        "width": 4.0525739320919785,
+        "height": 6.853387576279128,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 31.10624315443588,
+        "y": 84.46337121035917,
+        "width": 4.381161007667034,
+        "height": 6.297707502526821,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 2,
+    "created_at": "2025-06-19T08:09:03.287483Z",
+    "updated_at": "2025-06-19T08:09:03.287495Z",
+    "lead_time": 152.655
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-33-46.png",
+    "id": 726,
+    "label": [
+      {
+        "x": 91.0756,
+        "y": 6.8542594316660574,
+        "width": 8.256999999999994,
+        "height": 22.24819056833394,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 503,
+        "original_height": 180
+      },
+      {
+        "x": 1.831100000000001,
+        "y": 62.839727759522944,
+        "width": 7.703200000000001,
+        "height": 24.186072240477095,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 503,
+        "original_height": 180
+      },
+      {
+        "x": 48.192771084337345,
+        "y": 48.97164415236704,
+        "width": 8.105147864183998,
+        "height": 23.87367652427893,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 503,
+        "original_height": 180
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 3,
+    "created_at": "2025-06-19T08:10:04.589637Z",
+    "updated_at": "2025-06-19T08:10:04.589648Z",
+    "lead_time": 51.781
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-40-47.png",
+    "id": 727,
+    "label": [
+      {
+        "x": 46.99850000000001,
+        "y": 77.94295,
+        "width": 6.3229999999999995,
+        "height": 9.9817,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 14.406849999999999,
+        "y": 50.28405,
+        "width": 5.3399,
+        "height": 10.832899999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 20.6896,
+        "y": 25.924049999999998,
+        "width": 4.1512,
+        "height": 8.581900000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 33.3611,
+        "y": 71.43605000000001,
+        "width": 5.6286000000000005,
+        "height": 9.800699999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 45.9323,
+        "y": 29.648149999999994,
+        "width": 4.3386000000000005,
+        "height": 8.0945,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 25.5199,
+        "y": 42.255199999999995,
+        "width": 5.2036,
+        "height": 10.9738,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 50.05965,
+        "y": 35.234350000000006,
+        "width": 5.9047,
+        "height": 8.8733,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 39.53997809419496,
+        "y": 59.40307630395538,
+        "width": 4.600219058050385,
+        "height": 8.054654414095644,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 62.4315443592552,
+        "y": 11.914176320849808,
+        "width": 3.3953997809419434,
+        "height": 6.040990810571731,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 68.23658269441401,
+        "y": 3.6917166064605036,
+        "width": 3.285870755750267,
+        "height": 6.040990810571732,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 4,
+    "created_at": "2025-06-19T08:35:29.285128Z",
+    "updated_at": "2025-06-19T08:35:29.285141Z",
+    "lead_time": 1521.21
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-14-09.png",
+    "id": 728,
+    "label": [
+      {
+        "x": 23.946849999999962,
+        "y": 51.3294478193733,
+        "width": 1.9398999999999975,
+        "height": 4.094103392085968,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 27.243208759169086,
+        "y": 47.739528966466196,
+        "width": 2.289326872217205,
+        "height": 3.9061639757205944,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 25.52621360500617,
+        "y": 45.850834296887,
+        "width": 2.2416325623793503,
+        "height": 3.9061639757206237,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 23.809218450843236,
+        "y": 44.17676402157817,
+        "width": 2.2654797172982883,
+        "height": 3.6056898237420643,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 22.092223296680352,
+        "y": 45.37866062949221,
+        "width": 2.1223967877846945,
+        "height": 4.292487885407267,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 22.020681831923557,
+        "y": 49.28482460521283,
+        "width": 2.384715491892921,
+        "height": 4.292487885407281,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 20.35138098759851,
+        "y": 47.524904572195865,
+        "width": 2.2177854074604237,
+        "height": 3.99201373342874,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 23.73767698608649,
+        "y": 47.69660408761209,
+        "width": 2.265479717298274,
+        "height": 3.992013733428812,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 25.57390791484403,
+        "y": 49.71407339375355,
+        "width": 2.1223967877847123,
+        "height": 3.648614702596171,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 71.96187443940546,
+        "y": 80.71248076005007,
+        "width": 2.513852605209933,
+        "height": 4.462088374247645,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 5,
+    "created_at": "2025-06-19T08:39:57.377547Z",
+    "updated_at": "2025-06-19T08:39:57.377563Z",
+    "lead_time": 234.729
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-13-02.png",
+    "id": 729,
+    "label": [
+      {
+        "x": 22.35732197096885,
+        "y": 48.0862466466953,
+        "width": 3.1575711410535003,
+        "height": 6.379953353304249,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 3.5342775519098715,
+        "y": 86.60054544092884,
+        "width": 3.701997033132353,
+        "height": 6.24789035386592,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 65.93752672199437,
+        "y": 8.458508176371504,
+        "width": 4.0226999999999995,
+        "height": 7.2899,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 41.78004093469901,
+        "y": 55.26641559632712,
+        "width": 2.710333132850521,
+        "height": 4.747237528552903,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 46.382493424445535,
+        "y": 48.78461050926412,
+        "width": 3.0171632988338413,
+        "height": 5.294995704924479,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 31.60350709625946,
+        "y": 13.511368350497158,
+        "width": 2.7103331328507294,
+        "height": 5.0211166167387935,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 79.05990610164586,
+        "y": 12.050679880173144,
+        "width": 2.9148865768394785,
+        "height": 5.021116616738807,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 87.60001238817553,
+        "y": 35.330402375962166,
+        "width": 3.0683016598310218,
+        "height": 5.934046910691329,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 89.72118943956609,
+        "y": 63.357362400304254,
+        "width": 2.6591947718535494,
+        "height": 5.203702675529314,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      },
+      {
+        "x": 92.48266093341401,
+        "y": 89.22742253136038,
+        "width": 2.761471493847907,
+        "height": 4.199479352181555,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1280,
+        "original_height": 717
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 6,
+    "created_at": "2025-06-19T08:44:18.968024Z",
+    "updated_at": "2025-06-19T08:44:18.968034Z",
+    "lead_time": 257.302
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-34-17.png",
+    "id": 730,
+    "label": [
+      {
+        "x": 78.0568,
+        "y": 1.8828999999999985,
+        "width": 15.842400000000001,
+        "height": 24.817600000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 753,
+        "original_height": 464
+      },
+      {
+        "x": 2.7940000000000005,
+        "y": 62.09405,
+        "width": 19.778399999999998,
+        "height": 31.872099999999996,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 753,
+        "original_height": 464
+      },
+      {
+        "x": 69.4437,
+        "y": 38.80945,
+        "width": 17.454800000000002,
+        "height": 29.082900000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 753,
+        "original_height": 464
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 7,
+    "created_at": "2025-06-19T08:44:51.910610Z",
+    "updated_at": "2025-06-19T08:44:51.910621Z",
+    "lead_time": 15.887
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-14-18.png",
+    "id": 731,
+    "label": [
+      {
+        "x": 2.70315,
+        "y": 85.84575,
+        "width": 5.4699,
+        "height": 10.2219,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 78.828,
+        "y": 54.2419,
+        "width": 3.2326,
+        "height": 7.0992,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 66.4083,
+        "y": 81.3032,
+        "width": 4.89,
+        "height": 8.3124,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 22.206,
+        "y": 47.792699999999996,
+        "width": 3.4118000000000004,
+        "height": 6.127400000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 58.51413543721235,
+        "y": 17.75147928994083,
+        "width": 3.725619110234504,
+        "height": 6.31163708086785,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 33.53057199211045,
+        "y": 13.214990138067062,
+        "width": 2.629848783694939,
+        "height": 5.128205128205128,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 29.366644751260136,
+        "y": 9.664694280078894,
+        "width": 2.739425816348895,
+        "height": 4.73372781065089,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 40.653079114617576,
+        "y": 64.49704142011834,
+        "width": 2.629848783694939,
+        "height": 5.719921104536496,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 85.47008547008546,
+        "y": 60.15779092702169,
+        "width": 2.8490028490028436,
+        "height": 5.91715976331362,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 91.82555336401487,
+        "y": 87.3767258382643,
+        "width": 5.040543502081985,
+        "height": 7.100591715976355,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 8,
+    "created_at": "2025-06-19T08:47:00.877661Z",
+    "updated_at": "2025-06-19T08:47:00.877672Z",
+    "lead_time": 119.852
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-01-56.png",
+    "id": 732,
+    "label": [
+      {
+        "x": 23.587946126110463,
+        "y": 51.51428905920813,
+        "width": 2.3284861982234535,
+        "height": 4.106110940792364,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 90.91129144503144,
+        "y": 27.325581395348834,
+        "width": 2.8478235874347178,
+        "height": 7.751937984496131,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 19.939680262099685,
+        "y": 47.637671043844,
+        "width": 2.513749958079771,
+        "height": 4.486012841340269,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 21.78165221414089,
+        "y": 45.79725551919158,
+        "width": 2.383728408523922,
+        "height": 4.179276920564867,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 23.601953907922795,
+        "y": 43.841814024248386,
+        "width": 2.2970473754866845,
+        "height": 4.639380801727974,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 23.731975457478764,
+        "y": 48.251142885395296,
+        "width": 2.210366342449338,
+        "height": 3.719173039401285,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 21.911673763696747,
+        "y": 49.8998484595626,
+        "width": 2.2970473754866845,
+        "height": 4.524354831437208,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 25.508936634742007,
+        "y": 46.33404338054875,
+        "width": 2.2753771172273565,
+        "height": 3.834199009692659,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 25.33557456866746,
+        "y": 49.8998484595626,
+        "width": 2.6221012493763105,
+        "height": 4.025908960177176,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      },
+      {
+        "x": 27.177546520708745,
+        "y": 47.94440696461958,
+        "width": 2.3187176337459716,
+        "height": 4.294302890855755,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1281,
+        "original_height": 724
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 9,
+    "created_at": "2025-06-19T08:49:54.232359Z",
+    "updated_at": "2025-06-19T08:49:54.232372Z",
+    "lead_time": 170.841
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-39-49.png",
+    "id": 733,
+    "label": [
+      {
+        "x": 39.791927150911775,
+        "y": 28.865979381443292,
+        "width": 37.051436300298,
+        "height": 45.77319587628866,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1311,
+        "original_height": 697
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 10,
+    "created_at": "2025-06-19T08:50:16.003462Z",
+    "updated_at": "2025-06-19T08:50:16.003473Z",
+    "lead_time": 19.364
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-49-16.png",
+    "id": 734,
+    "label": [
+      {
+        "x": 20.820999999999998,
+        "y": 28.2218,
+        "width": 4.0314000000000005,
+        "height": 9.2132,
+        "rotation": 0,
+        "rectanglelabels": [
+          "purple_4"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 51.933476704631666,
+        "y": 61.618257261410804,
+        "width": 4.382571873808576,
+        "height": 7.053941908713626,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_10"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 52.62904482655636,
+        "y": 55.00382397444881,
+        "width": 3.7669951624221696,
+        "height": 7.133110772086582,
+        "rotation": 0,
+        "rectanglelabels": [
+          "orange_5"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 53.24750671889432,
+        "y": 16.60843702157473,
+        "width": 3.8232189708165336,
+        "height": 6.2813960530314645,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_1"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 70.17087304559692,
+        "y": 23.42215477401564,
+        "width": 3.598323737239099,
+        "height": 7.133110772086582,
+        "rotation": 0,
+        "rectanglelabels": [
+          "black_8"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 71.57646825545594,
+        "y": 33.21687404314946,
+        "width": 3.092309461689851,
+        "height": 6.813717752440908,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_2"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 63.53646365506235,
+        "y": 10.965827007834598,
+        "width": 3.092309461689851,
+        "height": 5.4296813339763474,
+        "rotation": 0,
+        "rectanglelabels": [
+          "green_6"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 41.496730764472915,
+        "y": 22.676904394842413,
+        "width": 3.4296523120560067,
+        "height": 5.855538693503913,
+        "rotation": 0,
+        "rectanglelabels": [
+          "white"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 29.66539735270239,
+        "y": 30.795470213769626,
+        "width": 3.125891676320588,
+        "height": 5.919129339789485,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_9"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 29.47279585136271,
+        "y": 63.48547717842323,
+        "width": 3.9443146864277168,
+        "height": 8.713692946058096,
+        "rotation": 0,
+        "rectanglelabels": [
+          "dred_7"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 11,
+    "created_at": "2025-06-19T09:19:25.446159Z",
+    "updated_at": "2025-06-19T09:19:25.446171Z",
+    "lead_time": 468.274
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-38-45.png",
+    "id": 735,
+    "label": [
+      {
+        "x": 83.45479999999999,
+        "y": 8.24775,
+        "width": 13.5604,
+        "height": 12.867700000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 271,
+        "original_height": 288
+      },
+      {
+        "x": 27.24915,
+        "y": 77.40355,
+        "width": 14.3699,
+        "height": 15.209900000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 271,
+        "original_height": 288
+      },
+      {
+        "x": 9.759093305218766,
+        "y": 64.68638392857143,
+        "width": 14.782156035846072,
+        "height": 14.044642857142861,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 271,
+        "original_height": 288
+      },
+      {
+        "x": 73.19319978914075,
+        "y": 46.32031250000001,
+        "width": 15.49973642593568,
+        "height": 14.989955357142854,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 271,
+        "original_height": 288
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 12,
+    "created_at": "2025-06-19T09:20:40.891479Z",
+    "updated_at": "2025-06-19T09:20:40.891491Z",
+    "lead_time": 73.187
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-41-24.png",
+    "id": 736,
+    "label": [
+      {
+        "x": 61.22875000000001,
+        "y": 15.4558,
+        "width": 2.7613,
+        "height": 6.5834,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 26.57165,
+        "y": 37.58345,
+        "width": 4.7395,
+        "height": 7.6998999999999995,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 27.38225629791895,
+        "y": 32.63930776289102,
+        "width": 3.5049288061336235,
+        "height": 6.022729408628706,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 47.53559693318721,
+        "y": 39.050600359173174,
+        "width": 3.6144578313252915,
+        "height": 6.4112925962821645,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 22.89156626506024,
+        "y": 44.87904817397516,
+        "width": 3.5049288061336235,
+        "height": 6.799855783935627,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 48.411829134720705,
+        "y": 47.98755367520287,
+        "width": 3.6144578313252964,
+        "height": 6.217011002455436,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 57.94085432639633,
+        "y": 44.296203392494974,
+        "width": 3.7239868565169756,
+        "height": 6.022729408628699,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 56.955093099671416,
+        "y": 49.15324323816326,
+        "width": 4.162102957283679,
+        "height": 6.605574190108904,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 13,
+    "created_at": "2025-06-19T09:22:16.468861Z",
+    "updated_at": "2025-06-19T09:22:16.468873Z",
+    "lead_time": 91.331
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-42-00.png",
+    "id": 737,
+    "label": [
+      {
+        "x": 65.05125,
+        "y": 77.4493,
+        "width": 5.2799,
+        "height": 9.7226,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 35.713,
+        "y": 68.32345,
+        "width": 4.5207999999999995,
+        "height": 9.0559,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 53.1356,
+        "y": 4.7213,
+        "width": 4.2078,
+        "height": 5.8418,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 62.48592091294586,
+        "y": 14.012797150538159,
+        "width": 2.715595665909305,
+        "height": 4.233032472558406,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 61.33385002437832,
+        "y": 17.078096527218385,
+        "width": 3.1270495546834534,
+        "height": 4.962865657482259,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 47.09754547279307,
+        "y": 54.00765568436583,
+        "width": 4.443701998760702,
+        "height": 7.444298486223403,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 68.74002002231278,
+        "y": 50.650423033716066,
+        "width": 3.949957332231733,
+        "height": 7.4442984862233885,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 65.69526124538415,
+        "y": 38.2432588900104,
+        "width": 3.5385034434575857,
+        "height": 6.568498664314767,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 14,
+    "created_at": "2025-06-19T10:14:53.217923Z",
+    "updated_at": "2025-06-19T10:14:53.217934Z",
+    "lead_time": 3152.986
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2019-56-08.png",
+    "id": 738,
+    "label": [
+      {
+        "x": 59.21124999999999,
+        "y": 51.925650000000005,
+        "width": 5.4305,
+        "height": 26.2021,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 33.896499999999996,
+        "y": 30.072100000000002,
+        "width": 4.6876,
+        "height": 22.8972,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 22.2415,
+        "y": 51.609700000000004,
+        "width": 5.8296,
+        "height": 25.773600000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 90.69025,
+        "y": 18.05915,
+        "width": 4.3683,
+        "height": 21.6999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 39.23035,
+        "y": 54.513,
+        "width": 5.980499999999999,
+        "height": 25.0728,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 76.3596,
+        "y": 5.99375,
+        "width": 4.4992,
+        "height": 17.6373,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 50.07064999999999,
+        "y": 49.32690000000001,
+        "width": 5.7679,
+        "height": 26.5704,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 66.15100000000001,
+        "y": 41.1158,
+        "width": 5.5958,
+        "height": 23.078599999999998,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      },
+      {
+        "x": 1.535315021840527,
+        "y": 81.73076923076923,
+        "width": 6.360590804767899,
+        "height": 15.865384615384613,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1039,
+        "original_height": 237
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 15,
+    "created_at": "2025-06-19T10:15:56.757343Z",
+    "updated_at": "2025-06-19T10:15:56.757358Z",
+    "lead_time": 60.161
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-03-49.png",
+    "id": 739,
+    "label": [
+      {
+        "x": 35.36725,
+        "y": 8.23865,
+        "width": 4.4582999999999995,
+        "height": 8.534899999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 51.75147053669221,
+        "y": 6.043728967466913,
+        "width": 4.066890909090929,
+        "height": 6.883044036165733,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 69.22564999999999,
+        "y": 82.9091,
+        "width": 4.4855,
+        "height": 7.832600000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 21.358159912376777,
+        "y": 65.57024870277883,
+        "width": 4.9288061336254145,
+        "height": 7.779521032533083,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 61.33625410733844,
+        "y": 41.30555214892564,
+        "width": 4.05257393209201,
+        "height": 7.22384095878072,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 30.66812705366922,
+        "y": 75.01680995656899,
+        "width": 4.052573932092006,
+        "height": 5.927254120025211,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 16,
+    "created_at": "2025-06-19T10:17:14.933380Z",
+    "updated_at": "2025-06-19T10:17:14.933394Z",
+    "lead_time": 73.176
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-44-38.png",
+    "id": 740,
+    "label": [
+      {
+        "x": 24.52585,
+        "y": 81.14445,
+        "width": 8.364099999999999,
+        "height": 16.3483,
+        "rotation": 0,
+        "rectanglelabels": [
+          "green_6"
+        ],
+        "original_width": 472,
+        "original_height": 296
+      },
+      {
+        "x": 5.026200000000001,
+        "y": 60.8122,
+        "width": 9.875399999999999,
+        "height": 15.0676,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 472,
+        "original_height": 296
+      },
+      {
+        "x": 19.65735,
+        "y": 39.7355,
+        "width": 8.5721,
+        "height": 17.0792,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 472,
+        "original_height": 296
+      },
+      {
+        "x": 44.01755,
+        "y": 64.05354999999999,
+        "width": 7.7013,
+        "height": 13.9609,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 472,
+        "original_height": 296
+      },
+      {
+        "x": 86.2684,
+        "y": 34.34715,
+        "width": 8.0652,
+        "height": 16.2219,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 472,
+        "original_height": 296
+      },
+      {
+        "x": 15.224534501642935,
+        "y": 4.366359788046535,
+        "width": 7.5575027382256295,
+        "height": 12.051153015008438,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 472,
+        "original_height": 296
+      },
+      {
+        "x": 38.554216867469876,
+        "y": 71.78295491548504,
+        "width": 8.65279299014237,
+        "height": 13.273733755661418,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 472,
+        "original_height": 296
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 17,
+    "created_at": "2025-06-19T10:18:23.347757Z",
+    "updated_at": "2025-06-19T10:18:23.347773Z",
+    "lead_time": 65.917
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/htdyu3jas61b1.jpg",
+    "id": 741,
+    "label": [
+      {
+        "x": 43.58410000000001,
+        "y": 44.64095,
+        "width": 17.2286,
+        "height": 7.4223,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 55.43444999999999,
+        "y": 54.33625,
+        "width": 21.0981,
+        "height": 17.8963,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_1"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 48.424,
+        "y": 38.27905,
+        "width": 14.2096,
+        "height": 8.0261,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 55.5373,
+        "y": 54.38485000000001,
+        "width": 21.134,
+        "height": 17.2081,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 25.37395,
+        "y": 46.047650000000004,
+        "width": 18.4531,
+        "height": 15.7193,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 35.4947,
+        "y": 35.74675,
+        "width": 14.441399999999998,
+        "height": 6.6545000000000005,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 59.360099999999996,
+        "y": 47.8775,
+        "width": 19.5602,
+        "height": 10.277,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 39.83476094970322,
+        "y": 49.99561715089034,
+        "width": 18.663799999999995,
+        "height": 15.4344,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 31.365198375507617,
+        "y": 41.1433926897845,
+        "width": 16.119962511715112,
+        "height": 7.872539831302629,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      },
+      {
+        "x": 61.60574820368635,
+        "y": 41.330834114339275,
+        "width": 18.119337706966565,
+        "height": 9.372071227741317,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 3024,
+        "original_height": 4032
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 18,
+    "created_at": "2025-06-19T10:23:05.027899Z",
+    "updated_at": "2025-06-19T10:23:05.027911Z",
+    "lead_time": 156.586
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/maxresdefault.jpg",
+    "id": 742,
+    "label": [
+      {
+        "x": 85.38215,
+        "y": 54.11205,
+        "width": 10.161100000000001,
+        "height": 15.856100000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_13"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 76.0102,
+        "y": 20.772199999999998,
+        "width": 9.5938,
+        "height": 14.594999999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 75.26705,
+        "y": 34.76605,
+        "width": 9.8047,
+        "height": 15.0367,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_11"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 58.185550000000006,
+        "y": 1.105600000000001,
+        "width": 9.6755,
+        "height": 13.52,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 77.5667,
+        "y": 7.014300000000001,
+        "width": 8.5652,
+        "height": 13.815,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 73.6711,
+        "y": 50.7104,
+        "width": 10.796600000000002,
+        "height": 15.798599999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_14"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 67.96575,
+        "y": 3.475099999999999,
+        "width": 9.1133,
+        "height": 14.3634,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 50.41344999999999,
+        "y": 42.50625,
+        "width": 11.2629,
+        "height": 20.1203,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 87.12034999999999,
+        "y": 10.994700000000002,
+        "width": 8.635900000000001,
+        "height": 12.3874,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 66.1044,
+        "y": 16.82765,
+        "width": 9.9306,
+        "height": 14.7215,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 53.089149445936215,
+        "y": 27.676149999999982,
+        "width": 10.774400554063886,
+        "height": 16.118899999999993,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 64.07105,
+        "y": 30.37129999999993,
+        "width": 10.91900777754827,
+        "height": 16.83339999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_10"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 56.10229222245172,
+        "y": 13.216899999999999,
+        "width": 10.108107777548302,
+        "height": 14.312400000000004,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 62.302400000000006,
+        "y": 46.7657,
+        "width": 10.4832,
+        "height": 17.491,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_15"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 85.4033,
+        "y": 37.71515,
+        "width": 10.2172,
+        "height": 15.940299999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_12"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 86.0037,
+        "y": 24.111900000000002,
+        "width": 8.8186,
+        "height": 13.597999999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 19,
+    "created_at": "2025-06-19T10:27:46.359443Z",
+    "updated_at": "2025-06-19T10:27:46.359453Z",
+    "lead_time": 276.77
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-18-35.png",
+    "id": 743,
+    "label": [
+      {
+        "x": 39.94775,
+        "y": 33.5634,
+        "width": 11.9289,
+        "height": 16.733600000000003,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 273,
+        "original_height": 224
+      },
+      {
+        "x": 46.448255794050155,
+        "y": 28.437917222963904,
+        "width": 10.187942898223298,
+        "height": 12.550066755674216,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 273,
+        "original_height": 224
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 20,
+    "created_at": "2025-06-19T10:28:17.343169Z",
+    "updated_at": "2025-06-19T10:28:17.343180Z",
+    "lead_time": 27.859
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-30-55.png",
+    "id": 744,
+    "label": [
+      {
+        "x": 23.563002158323016,
+        "y": 51.53334888885548,
+        "width": 2.158198561118156,
+        "height": 3.637663848738746,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 20.025749140237274,
+        "y": 48.09857424369653,
+        "width": 2.1986687566893366,
+        "height": 3.5343641418149403,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 23.635068205421984,
+        "y": 47.90799578506925,
+        "width": 2.072196660065611,
+        "height": 3.6209907139182604,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 25.211105101809917,
+        "y": 46.15813902858244,
+        "width": 2.2473118707753805,
+        "height": 3.6902919716008924,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 23.693439942325238,
+        "y": 44.581535416302245,
+        "width": 1.9943676775279364,
+        "height": 3.2744844255050225,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 21.981202326496373,
+        "y": 46.29674154394773,
+        "width": 1.9359959406246823,
+        "height": 3.811569172545525,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 21.88391609832428,
+        "y": 49.90040694344532,
+        "width": 2.1402970197860824,
+        "height": 3.413086940870322,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 25.230562347444334,
+        "y": 49.90040694344532,
+        "width": 2.2959549848614316,
+        "height": 3.915521059069505,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 27.088729305531338,
+        "y": 48.04659830043454,
+        "width": 2.081925282882832,
+        "height": 3.915521059069505,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 39,
+    "created_at": "2025-06-19T13:49:27.640942Z",
+    "updated_at": "2025-06-19T13:49:27.640953Z",
+    "lead_time": 132.836
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-30-38.png",
+    "id": 745,
+    "label": [
+      {
+        "x": 92.3265,
+        "y": 70.48225000000001,
+        "width": 6.6936,
+        "height": 15.2367,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 45.1322,
+        "y": 0.9995000000000004,
+        "width": 5.9132,
+        "height": 11.1542,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 80.38585,
+        "y": 22.883350000000004,
+        "width": 6.800299999999999,
+        "height": 12.586500000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 0.5259,
+        "y": 74.58345,
+        "width": 6.271599999999999,
+        "height": 14.7949,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 12.06305,
+        "y": 73.6935,
+        "width": 6.4641,
+        "height": 16.1274,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 84.61619999999999,
+        "y": 47.94245,
+        "width": 6.8964,
+        "height": 14.743300000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 67.99115,
+        "y": 56.62435,
+        "width": 7.771699999999999,
+        "height": 14.713499999999998,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 72.596,
+        "y": 91.27199999999999,
+        "width": 5.6566,
+        "height": 8.6616,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      },
+      {
+        "x": 45.3558,
+        "y": 74.87539999999998,
+        "width": 6.4666,
+        "height": 14.176,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 670,
+        "original_height": 351
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 30,
+    "created_at": "2025-06-19T10:48:06.646619Z",
+    "updated_at": "2025-06-19T10:48:06.646630Z",
+    "lead_time": 44.09
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-07-13.png",
+    "id": 746,
+    "label": [
+      {
+        "x": 48.5633,
+        "y": 64.6861,
+        "width": 4.4762,
+        "height": 9.9152,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 35.50335,
+        "y": 46.544200000000004,
+        "width": 4.7395,
+        "height": 11.134,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 69.23155000000001,
+        "y": 19.63185,
+        "width": 4.1035,
+        "height": 7.8869,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 65.26955,
+        "y": 82.18835,
+        "width": 6.0139,
+        "height": 7.9991,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 74.49615,
+        "y": 32.8577,
+        "width": 3.9400999999999997,
+        "height": 9.832,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 35.5617,
+        "y": 10.660400000000001,
+        "width": 4.654599999999999,
+        "height": 9.1326,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 70.22605,
+        "y": 50.68845000000001,
+        "width": 4.052300000000001,
+        "height": 9.1311,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 16.39305,
+        "y": 51.4296,
+        "width": 4.3239,
+        "height": 8.5486,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 19.338422391857506,
+        "y": 63.040466857260746,
+        "width": 4.516539440203562,
+        "height": 7.315276017566099,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 31,
+    "created_at": "2025-06-19T10:49:48.799369Z",
+    "updated_at": "2025-06-19T10:49:48.799380Z",
+    "lead_time": 98.072
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-20-42.png",
+    "id": 747,
+    "label": [
+      {
+        "x": 53.31764999999999,
+        "y": 36.3301,
+        "width": 9.6929,
+        "height": 23.1514,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 872,
+        "original_height": 343
+      },
+      {
+        "x": 80.2493,
+        "y": 60.01445000000001,
+        "width": 11.9246,
+        "height": 28.401500000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 872,
+        "original_height": 343
+      },
+      {
+        "x": 30.710500000000003,
+        "y": 20.323200000000003,
+        "width": 8.910400000000001,
+        "height": 21.551000000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 872,
+        "original_height": 343
+      },
+      {
+        "x": 5.728378017279772,
+        "y": 39.80582524271845,
+        "width": 9.292702116920522,
+        "height": 23.462783171521032,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 872,
+        "original_height": 343
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 32,
+    "created_at": "2025-06-19T10:50:17.108708Z",
+    "updated_at": "2025-06-19T10:50:17.108718Z",
+    "lead_time": 22.389
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-43-53.png",
+    "id": 748,
+    "label": [
+      {
+        "x": 4.68755,
+        "y": 68.8154,
+        "width": 19.3119,
+        "height": 25.395,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 771,
+        "original_height": 665
+      },
+      {
+        "x": 34.52256759896963,
+        "y": 13.722998729351971,
+        "width": 14.247408850368457,
+        "height": 16.64548919949173,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 771,
+        "original_height": 665
+      },
+      {
+        "x": 62.57900348892592,
+        "y": 1.2706480304955527,
+        "width": 15.562554282710124,
+        "height": 16.010165184243963,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 771,
+        "original_height": 665
+      },
+      {
+        "x": 78.36074867702636,
+        "y": 2.2871664548919957,
+        "width": 12.822667965331593,
+        "height": 15.756035578144859,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 771,
+        "original_height": 665
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 21,
+    "created_at": "2025-06-19T10:29:04.503495Z",
+    "updated_at": "2025-06-19T10:29:04.503505Z",
+    "lead_time": 38.144
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/s-l1200.jpg",
+    "id": 749,
+    "label": [
+      {
+        "x": 25.514668603561415,
+        "y": 27.411949999999997,
+        "width": 18.396628491096482,
+        "height": 12.161700000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 23.473565042174332,
+        "y": 38.78559999999997,
+        "width": 19.924307778819077,
+        "height": 13.775999999999986,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_13"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 59.20764789128388,
+        "y": 42.57174999999998,
+        "width": 20.328179943767633,
+        "height": 20.5293,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_10"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 41.03317717900656,
+        "y": 46.493849999999966,
+        "width": 19.916272820993434,
+        "height": 22.18469999999998,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 21.690480740393628,
+        "y": 50.29584999999997,
+        "width": 21.150669259606385,
+        "height": 21.660944985941892,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 59.58108219306466,
+        "y": 30.538949999999975,
+        "width": 19.6254627928772,
+        "height": 14.007699999999994,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_14"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 79.44545000000001,
+        "y": 37.81235,
+        "width": 19.1323,
+        "height": 21.8939,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 7.911749999999993,
+        "y": 9.926299999999994,
+        "width": 20.761634957825688,
+        "height": 12.115599999999992,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 25.69468575445173,
+        "y": 16.685999999999986,
+        "width": 18.250304217432053,
+        "height": 12.228999999999992,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_11"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 42.46527717900658,
+        "y": 24.154799999999984,
+        "width": 19.184487066541706,
+        "height": 12.330999999999996,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_12"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 59.59245,
+        "y": 68.1161,
+        "width": 25.510699999999996,
+        "height": 25.613799999999998,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 2.08875,
+        "y": 54.45114999999999,
+        "width": 21.451748547328954,
+        "height": 22.315300000000022,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 7.048499999999996,
+        "y": 20.35955,
+        "width": 20.574052108716035,
+        "height": 14.104899999999997,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 41.239102905342065,
+        "y": 34.54645,
+        "width": 20.553714901593256,
+        "height": 13.026700000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 5.810684161199624,
+        "y": 31.39643861293346,
+        "width": 19.681349578256782,
+        "height": 14.151827553889436,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_15"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      },
+      {
+        "x": 2.0618556701030926,
+        "y": 41.70571696344892,
+        "width": 22.680412371134025,
+        "height": 15.838800374882858,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1200,
+        "original_height": 1200
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 40,
+    "created_at": "2025-06-19T13:55:15.919721Z",
+    "updated_at": "2025-06-19T13:55:15.919731Z",
+    "lead_time": 340.528
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-43-06.png",
+    "id": 750,
+    "label": [
+      {
+        "x": 47.63685,
+        "y": 5.0000000000050004e-5,
+        "width": 3.9997,
+        "height": 6.7343,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 47.42545,
+        "y": 92.68165,
+        "width": 4.125100000000001,
+        "height": 7.0333000000000006,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 18.4727,
+        "y": 56.36255,
+        "width": 3.8766000000000003,
+        "height": 8.1097,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 93.06615776081425,
+        "y": 4.086899286408039,
+        "width": 2.989821882951645,
+        "height": 5.769740169046644,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 87.59541984732824,
+        "y": 5.649537248858172,
+        "width": 3.053435114503813,
+        "height": 6.370754769989002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 76.0178117048346,
+        "y": 14.784959183182025,
+        "width": 3.2442748091603164,
+        "height": 6.490957690177474,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 30.852417302798983,
+        "y": 81.01676820702995,
+        "width": 2.7353689567430024,
+        "height": 5.048522647915817,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 11.195928753180661,
+        "y": 81.97839156853773,
+        "width": 3.117048346055979,
+        "height": 5.1687255681042785,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 70.48346055979644,
+        "y": 63.587344779701546,
+        "width": 2.608142493638681,
+        "height": 5.1687255681043,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 2.4173027989821882,
+        "y": 94.11888650757338,
+        "width": 1.8447837150127224,
+        "height": 4.086899286408041,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 33,
+    "created_at": "2025-06-19T10:51:59.593527Z",
+    "updated_at": "2025-06-19T10:51:59.593537Z",
+    "lead_time": 96.56
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-42-16.png",
+    "id": 751,
+    "label": [
+      {
+        "x": 68.77529225010969,
+        "y": 37.76621907449205,
+        "width": 3.6852577498903574,
+        "height": 7.042429571106093,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 36.69255,
+        "y": 69.99145,
+        "width": 4.2703,
+        "height": 10.0807,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 86.98259448749333,
+        "y": 86.79458239277652,
+        "width": 4.263228844668646,
+        "height": 7.2234762979684035,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 53.76758766783604,
+        "y": 70.76749435665914,
+        "width": 4.263228844668653,
+        "height": 7.336343115124151,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 47.786341229047174,
+        "y": 54.176072234762984,
+        "width": 3.8814471570863844,
+        "height": 7.900677200902926,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 50.77696444844161,
+        "y": 13.882618510158013,
+        "width": 3.18151406318556,
+        "height": 4.176072234762982,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 61.27596085695396,
+        "y": 11.512415349887128,
+        "width": 2.9269929381307067,
+        "height": 4.627539503386003,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 34,
+    "created_at": "2025-06-19T10:53:41.495273Z",
+    "updated_at": "2025-06-19T10:53:41.495284Z",
+    "lead_time": 97.651
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/aramith-billiards-balls-tournament-pro-cup-tv.jpg",
+    "id": 752,
+    "label": [
+      {
+        "x": 62.620999999999995,
+        "y": 29.493949999999998,
+        "width": 15.9742,
+        "height": 29.001900000000003,
+        "rotation": 0,
+        "rectanglelabels": [
+          "orange_13"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 84.65825,
+        "y": 24.066000000000003,
+        "width": 14.097100000000001,
+        "height": 22.344,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_10"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 30.803899999999995,
+        "y": 29.216299999999997,
+        "width": 15.7974,
+        "height": 29.3472,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 4.96235,
+        "y": 39.001,
+        "width": 21.3977,
+        "height": 37.7386,
+        "rotation": 0,
+        "rectanglelabels": [
+          "white"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      },
+      {
+        "x": 4.7939,
+        "y": 39.04314999999999,
+        "width": 21.5668,
+        "height": 37.6627,
+        "rotation": 0,
+        "rectanglelabels": [
+          "white"
+        ],
+        "original_width": 1280,
+        "original_height": 720
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 22,
+    "created_at": "2025-06-19T10:29:41.432035Z",
+    "updated_at": "2025-06-19T10:29:41.432045Z",
+    "lead_time": 31.593
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-17-55.png",
+    "id": 753,
+    "label": [
+      {
+        "x": 54.0794,
+        "y": 76.7227,
+        "width": 8.0144,
+        "height": 15.6478,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1011,
+        "original_height": 521
+      },
+      {
+        "x": 84.55850000000001,
+        "y": 67.78014999999999,
+        "width": 7.2658000000000005,
+        "height": 14.7167,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1011,
+        "original_height": 521
+      },
+      {
+        "x": 26.339158149247165,
+        "y": 70.74074074074073,
+        "width": 6.934705889536094,
+        "height": 7.65432098765433,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1011,
+        "original_height": 521
+      },
+      {
+        "x": 1.654150028696682,
+        "y": 61.23456790123457,
+        "width": 5.471419325689024,
+        "height": 6.790123456790127,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1011,
+        "original_height": 521
+      },
+      {
+        "x": 0.5725903945488515,
+        "y": 50.74074074074074,
+        "width": 4.644344311340684,
+        "height": 9.135802469135804,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1011,
+        "original_height": 521
+      },
+      {
+        "x": 4.135375071741705,
+        "y": 50,
+        "width": 3.308300057393364,
+        "height": 8.2716049382716,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1011,
+        "original_height": 521
+      },
+      {
+        "x": 97.65847284805412,
+        "y": 63.456790123456784,
+        "width": 2.0994981133457884,
+        "height": 12.71604938271605,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1011,
+        "original_height": 521
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 35,
+    "created_at": "2025-06-19T10:55:15.223955Z",
+    "updated_at": "2025-06-19T10:55:15.223966Z",
+    "lead_time": 59.258
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-24-46.png",
+    "id": 754,
+    "label": [
+      {
+        "x": 69.4621,
+        "y": 20.89185,
+        "width": 3.098,
+        "height": 7.803699999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 89.00605,
+        "y": 35.57835,
+        "width": 3.2325,
+        "height": 7.8858999999999995,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 28.94168466522678,
+        "y": 12.436530736348304,
+        "width": 2.6637868970482366,
+        "height": 5.384889597181738,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 35.85313174946004,
+        "y": 22.308828331181495,
+        "width": 3.023758099352058,
+        "height": 5.641312911333252,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 18.57451403887689,
+        "y": 26.9244479859087,
+        "width": 3.2397408207343403,
+        "height": 5.000254625954472,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 22.174226061915046,
+        "y": 47.566524775105364,
+        "width": 2.6637868970482366,
+        "height": 5.256677940105995,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 32.6133909287257,
+        "y": 72.31137459072622,
+        "width": 3.1677465802735796,
+        "height": 4.743831311802978,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 64.72282217422605,
+        "y": 61.28517208221124,
+        "width": 2.735781137509008,
+        "height": 5.25667794010598,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 92.08063354931606,
+        "y": 6.538794510863541,
+        "width": 3.0957523398128046,
+        "height": 4.4874079976514505,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 92.29661627069834,
+        "y": 88.97889001057446,
+        "width": 3.023758099352065,
+        "height": 4.743831311802964,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 37,
+    "created_at": "2025-06-19T10:59:49.854843Z",
+    "updated_at": "2025-06-19T10:59:49.854853Z",
+    "lead_time": 85.883
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-08-51.png",
+    "id": 755,
+    "label": [
+      {
+        "x": 20.25054999999997,
+        "y": 13.920932155907428,
+        "width": 3.8360999999999987,
+        "height": 7.139967844092557,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 50.06615000000001,
+        "y": 42.56788483556637,
+        "width": 3.5129,
+        "height": 7.10005176613884,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 55.06934999999999,
+        "y": 46.65742411693058,
+        "width": 3.897500000000002,
+        "height": 7.518167844092578,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 37.55004974443682,
+        "y": 8.789266077953716,
+        "width": 3.5477502555631624,
+        "height": 6.7982839220462905,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 17.611199999999993,
+        "y": 57.66943483556637,
+        "width": 4.959000000000005,
+        "height": 6.824730328867282,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 42.4493499999999,
+        "y": 9.207416077953717,
+        "width": 3.6824999999999948,
+        "height": 7.296583922046283,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 49.47049999999998,
+        "y": 66.48228215590744,
+        "width": 4.3804,
+        "height": 8.095459805115711,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 41,
+    "created_at": "2025-06-19T13:57:26.424367Z",
+    "updated_at": "2025-06-19T13:57:26.424378Z",
+    "lead_time": 83.822
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-15-34.png",
+    "id": 756,
+    "label": [
+      {
+        "x": 0.7434499999999997,
+        "y": 50.46585,
+        "width": 6.437900000000001,
+        "height": 22.8513,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      },
+      {
+        "x": 35.702,
+        "y": 31.993350000000003,
+        "width": 6.2904,
+        "height": 16.9909,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      },
+      {
+        "x": 36.163650000000004,
+        "y": 71.8811,
+        "width": 8.4845,
+        "height": 19.2774,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      },
+      {
+        "x": 15.10505,
+        "y": 50.18680000000001,
+        "width": 6.8031,
+        "height": 20.945800000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      },
+      {
+        "x": 36.87785,
+        "y": 53.42214999999999,
+        "width": 7.6011,
+        "height": 19.3237,
+        "rotation": 0,
+        "rectanglelabels": [
+          "black_8"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      },
+      {
+        "x": 36.898599999999995,
+        "y": 53.39955,
+        "width": 7.5284,
+        "height": 19.1777,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      },
+      {
+        "x": 11.744580191415313,
+        "y": 42.22737819025522,
+        "width": 5.692158497679813,
+        "height": 18.561484918793496,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      },
+      {
+        "x": 86.10290385730859,
+        "y": 30.62645011600928,
+        "width": 5.98036905452436,
+        "height": 13.689095127610209,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1024,
+        "original_height": 318
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 38,
+    "created_at": "2025-06-19T11:00:53.177226Z",
+    "updated_at": "2025-06-19T11:00:53.177243Z",
+    "lead_time": 57.126
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-35-19.png",
+    "id": 757,
+    "label": [
+      {
+        "x": 68.43804999999999,
+        "y": 6.457949999999999,
+        "width": 12.8025,
+        "height": 11.7311,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 44.73897515134629,
+        "y": 62.69915651358951,
+        "width": 9.94199447807695,
+        "height": 4.779756326148068,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 51.30069150687707,
+        "y": 65.22961574507966,
+        "width": 9.146634919830795,
+        "height": 5.248359887535159,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 39.56913802274627,
+        "y": 65.79194001874414,
+        "width": 9.345474809392329,
+        "height": 4.123711340206185,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 32.3114820537501,
+        "y": 68.13495782567948,
+        "width": 10.04141442285772,
+        "height": 9.746954076850969,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 44.34129537222315,
+        "y": 67.57263355201499,
+        "width": 9.643734643734604,
+        "height": 6.185567010309353,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 57.166468248942536,
+        "y": 67.94751640112463,
+        "width": 9.643734643734584,
+        "height": 10.871602624179978,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 51.10185161731554,
+        "y": 70.85285848172445,
+        "width": 10.04141442285772,
+        "height": 11.152764761012193,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 38.574938574938585,
+        "y": 70.75913776944708,
+        "width": 9.544314698953867,
+        "height": 11.340206185567016,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      },
+      {
+        "x": 44.54013526178475,
+        "y": 73.75820056232428,
+        "width": 11.333873705007726,
+        "height": 11.246485473289596,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 296,
+        "original_height": 314
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 42,
+    "created_at": "2025-06-19T13:59:58.506099Z",
+    "updated_at": "2025-06-19T13:59:58.506109Z",
+    "lead_time": 147.591
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-03-09.png",
+    "id": 758,
+    "label": [
+      {
+        "x": 54.17309897774736,
+        "y": 53.817171437271604,
+        "width": 4.1411523000684305,
+        "height": 7.038659805115703,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 65.67709923331053,
+        "y": 83.69412947624848,
+        "width": 4.651150766689453,
+        "height": 6.699370523751496,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 55.28252282771311,
+        "y": 40.291024116930636,
+        "width": 3.8052776834131823,
+        "height": 5.805860657734397,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 63.241550255563126,
+        "y": 62.34563751522531,
+        "width": 4.357000000000029,
+        "height": 7.544949086479917,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 28.996348722184212,
+        "y": 16.285774116930575,
+        "width": 3.6752776834131655,
+        "height": 6.444267844092572,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 48.47273900299779,
+        "y": 66.01705237515225,
+        "width": 4.1774425886684625,
+        "height": 7.1863580998782055,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 30.82664530948448,
+        "y": 77.58830694275274,
+        "width": 4.033392844231617,
+        "height": 6.9427527405602945,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 26.793252465252866,
+        "y": 74.05602923264311,
+        "width": 3.9613679720131962,
+        "height": 6.820950060901353,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 54.45080339712679,
+        "y": 44.214372716199755,
+        "width": 3.3131441220473974,
+        "height": 6.2119366626065755,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 43,
+    "created_at": "2025-06-19T14:01:42.760729Z",
+    "updated_at": "2025-06-19T14:01:42.760739Z",
+    "lead_time": 99.468
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-33-30.png",
+    "id": 759,
+    "label": [
+      {
+        "x": 16.22547923917787,
+        "y": 58.51272015655577,
+        "width": 23.790060776362143,
+        "height": 40.50880626223092,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 46.0452789219912,
+        "y": 19.56947162426614,
+        "width": 18.08921671935369,
+        "height": 32.48532289628178,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 32.45095847835574,
+        "y": 5.6751467710371815,
+        "width": 16.225479239177865,
+        "height": 28.962818003913892,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 49.224595799938264,
+        "y": 9.197651663405088,
+        "width": 16.554374088620655,
+        "height": 13.89432485322896,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 0.2192632329618631,
+        "y": 6.457925636007827,
+        "width": 14.909899841406691,
+        "height": 31.31115459882583,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 23,
+    "created_at": "2025-06-19T10:31:26.934769Z",
+    "updated_at": "2025-06-19T10:31:26.934784Z",
+    "lead_time": 96.77
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-27-04.png",
+    "id": 760,
+    "label": [
+      {
+        "x": 7.984099999999997,
+        "y": 20.645280438741374,
+        "width": 2.711999999999998,
+        "height": 5.223245024834953,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 30.255900530781073,
+        "y": 82.50061770695322,
+        "width": 2.927898606699705,
+        "height": 5.862633220199435,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 36.77240072982394,
+        "y": 13.037436341059072,
+        "width": 2.8664990047855077,
+        "height": 5.286270488411339,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 4.010251260605031,
+        "y": 86.6875863410591,
+        "width": 3.375798208613903,
+        "height": 5.934072342716687,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 40.98519177289347,
+        "y": 55.0492767301305,
+        "width": 2.908002653905328,
+        "height": 5.049276730130494,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 51.38130126060504,
+        "y": 34.59323254139669,
+        "width": 2.980702720252964,
+        "height": 4.919808096024589,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 48.691398805742594,
+        "y": 14.266656986768789,
+        "width": 2.689902454862448,
+        "height": 4.790339461918675,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 48.545998673047336,
+        "y": 5.851195769884625,
+        "width": 3.198802919295865,
+        "height": 4.272464925495037,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 75.95392368610511,
+        "y": 64.11208111754422,
+        "width": 2.689902454862434,
+        "height": 4.790339461918663,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 62.50441141179295,
+        "y": 82.49662716058346,
+        "width": 2.617202388514791,
+        "height": 4.401933559600948,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 44,
+    "created_at": "2025-06-19T14:05:11.091577Z",
+    "updated_at": "2025-06-19T14:05:11.091588Z",
+    "lead_time": 196.906
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-45-11.png",
+    "id": 761,
+    "label": [
+      {
+        "x": 70.86511352201263,
+        "y": 65.64979761971021,
+        "width": 4.171556603773538,
+        "height": 8.099381703493409,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 45.36163522012578,
+        "y": 61.5535889872173,
+        "width": 4.245283018867923,
+        "height": 8.12971930019851,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 41.116352201257854,
+        "y": 50.375224949444345,
+        "width": 3.85220125786163,
+        "height": 8.274892859130631,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 50.39308176100627,
+        "y": 28.889538227491133,
+        "width": 3.616352201257868,
+        "height": 7.113504387673704,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 45.04716981132075,
+        "y": 31.938182965065582,
+        "width": 2.5157232704402475,
+        "height": 5.371421680488293,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 29.87421383647798,
+        "y": 27.292629079237855,
+        "width": 4.088050314465409,
+        "height": 6.532810151945235,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 58.018867924528294,
+        "y": 85.07170553422013,
+        "width": 4.323899371069174,
+        "height": 5.806942357284655,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 45,
+    "created_at": "2025-06-19T14:06:29.215772Z",
+    "updated_at": "2025-06-19T14:06:29.215784Z",
+    "lead_time": 66.691
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-22-53.png",
+    "id": 762,
+    "label": [
+      {
+        "x": 53.587597010635236,
+        "y": 7.959183673469387,
+        "width": 15.67081057775222,
+        "height": 27.551020408163264,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1136,
+        "original_height": 610
+      },
+      {
+        "x": 75.28564242598448,
+        "y": 29.591836734693878,
+        "width": 17.862532336878417,
+        "height": 32.04081632653061,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1136,
+        "original_height": 610
+      },
+      {
+        "x": 3.6163409025582065,
+        "y": 30.612244897959183,
+        "width": 16.65708536935901,
+        "height": 33.06122448979592,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1136,
+        "original_height": 610
+      },
+      {
+        "x": 17.643360160965784,
+        "y": 26.530612244897956,
+        "width": 12.602400114975577,
+        "height": 33.265306122448976,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1136,
+        "original_height": 610
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 24,
+    "created_at": "2025-06-19T10:32:17.194888Z",
+    "updated_at": "2025-06-19T10:32:17.194899Z",
+    "lead_time": 46.092
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-36-23.png",
+    "id": 763,
+    "label": [
+      {
+        "x": 4.8885603815439245,
+        "y": 43.46746055900618,
+        "width": 4.192889618456078,
+        "height": 8.68235093167698,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 73.84869999999991,
+        "y": 34.19022453416149,
+        "width": 3.8939999999999984,
+        "height": 7.323627950310565,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 53.34010000000002,
+        "y": 44.42070652173917,
+        "width": 3.6420000000000017,
+        "height": 8.700066459627266,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 83.6744505450626,
+        "y": 22.033145031055877,
+        "width": 3.453668855368282,
+        "height": 7.3857869565217475,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 55.35555837241729,
+        "y": 3.881987577639751,
+        "width": 3.066572125744706,
+        "height": 6.211180124223603,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 30.19394093040943,
+        "y": 49.378881987577635,
+        "width": 4.1673928888325555,
+        "height": 8.385093167701868,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 42.853379705919636,
+        "y": 81.2111801242236,
+        "width": 3.9315027253137274,
+        "height": 8.540372670807457,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 47.178032703764735,
+        "y": 81.67701863354037,
+        "width": 4.0101327798199975,
+        "height": 9.782608695652186,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      },
+      {
+        "x": 70.37389878311573,
+        "y": 40.06211180124223,
+        "width": 3.381092343769808,
+        "height": 7.76397515527951,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 784,
+        "original_height": 397
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 46,
+    "created_at": "2025-06-19T14:08:04.895120Z",
+    "updated_at": "2025-06-19T14:08:04.895134Z",
+    "lead_time": 92.198
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-16-08.png",
+    "id": 764,
+    "label": [
+      {
+        "x": 1.8840999999999997,
+        "y": 45.60761363636363,
+        "width": 6.5005999999999995,
+        "height": 22.132536363636326,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1402,
+        "original_height": 388
+      },
+      {
+        "x": 23.963850000000015,
+        "y": 25.117972727272715,
+        "width": 5.039635650369596,
+        "height": 18.457727272727258,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1402,
+        "original_height": 388
+      },
+      {
+        "x": 16.428864498767993,
+        "y": 43.96455000000003,
+        "width": 5.725885501231999,
+        "height": 21.897099999999988,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1402,
+        "original_height": 388
+      },
+      {
+        "x": 34.992328699260774,
+        "y": 49.60194999999992,
+        "width": 5.828142601478388,
+        "height": 22.292699999999943,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1402,
+        "original_height": 388
+      },
+      {
+        "x": 94.27034289975359,
+        "y": 17.13566363636363,
+        "width": 4.9311571002464,
+        "height": 15.703436363636362,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1402,
+        "original_height": 388
+      },
+      {
+        "x": 93.04285,
+        "y": 0.05394999999999983,
+        "width": 4.600499999999999,
+        "height": 14.9339,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1402,
+        "original_height": 388
+      },
+      {
+        "x": 17.76844767215666,
+        "y": 31.53409090909091,
+        "width": 5.34625859162235,
+        "height": 17.329545454545457,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1402,
+        "original_height": 388
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 47,
+    "created_at": "2025-06-19T14:09:01.818537Z",
+    "updated_at": "2025-06-19T14:11:00.710376Z",
+    "lead_time": 171.84300000000002
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-17-16.png",
+    "id": 765,
+    "label": [
+      {
+        "x": 74.4388,
+        "y": 56.496900000000004,
+        "width": 23.8682,
+        "height": 36.5066,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 875,
+        "original_height": 543
+      },
+      {
+        "x": 0.1509499999999997,
+        "y": 14.801199999999998,
+        "width": 3.9947000000000004,
+        "height": 27.372600000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "green_6"
+        ],
+        "original_width": 875,
+        "original_height": 543
+      },
+      {
+        "x": 0.2486000000000002,
+        "y": 14.098300000000002,
+        "width": 3.9512,
+        "height": 28.108,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 875,
+        "original_height": 543
+      },
+      {
+        "x": 22.416078218359587,
+        "y": 53.2319391634981,
+        "width": 22.494731124388913,
+        "height": 23.57414448669202,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 875,
+        "original_height": 543
+      },
+      {
+        "x": 0.07865290602933188,
+        "y": 6.2103929024081115,
+        "width": 10.539489407930473,
+        "height": 30.2915082382763,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 875,
+        "original_height": 543
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 48,
+    "created_at": "2025-06-19T14:16:31.474927Z",
+    "updated_at": "2025-06-19T14:16:31.474941Z",
+    "lead_time": 56.977
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/81QsyEpQinL._AC_SL1500_.jpg",
+    "id": 766,
+    "label": [
+      {
+        "x": 43.934650000000005,
+        "y": 51.84029999999999,
+        "width": 19.3153,
+        "height": 20.3146,
+        "rotation": 0,
+        "rectanglelabels": [
+          "dred_7"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 43.703900000000004,
+        "y": 32.982299999999995,
+        "width": 18.8538,
+        "height": 18.8836,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_9"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 26.085800000000003,
+        "y": 23.7712,
+        "width": 18.1954,
+        "height": 18.1128,
+        "rotation": 0,
+        "rectanglelabels": [
+          "purple_4"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 60.00165,
+        "y": 9.904499999999999,
+        "width": 18.1491,
+        "height": 16.209,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_1"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 62.214800000000004,
+        "y": 25.7374,
+        "width": 16.9676,
+        "height": 15.296199999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "red_3"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 62.1267,
+        "y": 42.911500000000004,
+        "width": 19.0274,
+        "height": 18.255,
+        "rotation": 0,
+        "rectanglelabels": [
+          "orange_5"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 24.158800000000003,
+        "y": 40.481849999999994,
+        "width": 20.025599999999997,
+        "height": 20.9495,
+        "rotation": 0,
+        "rectanglelabels": [
+          "green_6"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 43.75757575757575,
+        "y": 16.727272727272723,
+        "width": 18.78787878787879,
+        "height": 16.484848484848488,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_2"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      },
+      {
+        "x": 20.727272727272723,
+        "y": 62.18181818181817,
+        "width": 23.030303030303028,
+        "height": 21.090909090909093,
+        "rotation": 0,
+        "rectanglelabels": [
+          "black_8"
+        ],
+        "original_width": 1500,
+        "original_height": 1500
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 50,
+    "created_at": "2025-06-19T14:37:21.726702Z",
+    "updated_at": "2025-06-19T14:37:21.726715Z",
+    "lead_time": 234.641
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-48-59.png",
+    "id": 767,
+    "label": [
+      {
+        "x": 39.524550000000005,
+        "y": 3.458649999999999,
+        "width": 3.5095,
+        "height": 7.704700000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 57.90545,
+        "y": 56.69635000000001,
+        "width": 4.5883,
+        "height": 10.8903,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 52.03869999999999,
+        "y": 18.6597,
+        "width": 3.7338000000000005,
+        "height": 7.875,
+        "rotation": 0,
+        "rectanglelabels": [
+          "white"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 44.4954128440367,
+        "y": 20.846764195388047,
+        "width": 3.2110091743119256,
+        "height": 7.600382779568562,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 70.06880733944955,
+        "y": 5.211691048847012,
+        "width": 3.0963302752293487,
+        "height": 4.994537255145053,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 28.6697247706422,
+        "y": 33.00737664269774,
+        "width": 2.9816513761467895,
+        "height": 6.731767604760726,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 32.11009174311927,
+        "y": 58.848678093230845,
+        "width": 3.3256880733944953,
+        "height": 8.034690366972484,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 63.18807339449541,
+        "y": 46.03660426481528,
+        "width": 3.555045871559635,
+        "height": 6.948921398462673,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_9"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 50.34403669724771,
+        "y": 63.408907760971985,
+        "width": 3.3256880733944953,
+        "height": 7.166075192164641,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_10"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 32.798165137614674,
+        "y": 4.125922080337218,
+        "width": 2.981651376146793,
+        "height": 5.428844842548972,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 51,
+    "created_at": "2025-06-19T14:43:04.694437Z",
+    "updated_at": "2025-06-19T14:43:04.694449Z",
+    "lead_time": 319.974
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-37-06.png",
+    "id": 768,
+    "label": [
+      {
+        "x": 14.022300000000001,
+        "y": 3.5095499999999995,
+        "width": 4.5168,
+        "height": 8.064300000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      },
+      {
+        "x": 2.1789490825688014,
+        "y": 91.41855573026537,
+        "width": 4.388406422018344,
+        "height": 6.4600185105236045,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      },
+      {
+        "x": 1.4908256880733965,
+        "y": 86.00181523818864,
+        "width": 3.78440366972477,
+        "height": 6.490703036844418,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      },
+      {
+        "x": 38.646788990825684,
+        "y": 66.3494088210764,
+        "width": 4.013761467889914,
+        "height": 5.9498111171074015,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      },
+      {
+        "x": 51.72018348623853,
+        "y": 83.29735563950351,
+        "width": 4.128440366972477,
+        "height": 5.9498111171074015,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      },
+      {
+        "x": 61.23853211009175,
+        "y": 81.6746798802924,
+        "width": 3.440366972477058,
+        "height": 5.048324584212338,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      },
+      {
+        "x": 81.30733944954129,
+        "y": 82.75646371976649,
+        "width": 3.440366972477065,
+        "height": 4.507432664475289,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      },
+      {
+        "x": 90.94036697247707,
+        "y": 19.6524064171123,
+        "width": 3.6697247706421905,
+        "height": 5.408919197370359,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 882,
+        "original_height": 561
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 52,
+    "created_at": "2025-06-19T14:45:00.126969Z",
+    "updated_at": "2025-06-19T14:45:00.126981Z",
+    "lead_time": 112.453
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-33-08.png",
+    "id": 769,
+    "label": [
+      {
+        "x": 92.77914999999986,
+        "y": 63.808970599250934,
+        "width": 6.572499999999993,
+        "height": 15.605979400749037,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      },
+      {
+        "x": 82.0774582702115,
+        "y": 3.58330917602996,
+        "width": 5.230197040694663,
+        "height": 11.954445318352064,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      },
+      {
+        "x": 26.829150000000002,
+        "y": 68.29624999999999,
+        "width": 6.9789,
+        "height": 17.869699999999998,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      },
+      {
+        "x": 0.9446000000000003,
+        "y": 68.49715468164793,
+        "width": 5.829599999999999,
+        "height": 16.087945318352055,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      },
+      {
+        "x": 10.864,
+        "y": 73.01804999999999,
+        "width": 6.5096,
+        "height": 19.9801,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      },
+      {
+        "x": 85.54680098643512,
+        "y": 34.62720692883893,
+        "width": 5.794483459576816,
+        "height": 14.283781647940073,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      },
+      {
+        "x": 46.250482860549866,
+        "y": 67.41573033707866,
+        "width": 5.741981715680517,
+        "height": 14.606741573033702,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      },
+      {
+        "x": 72.60067292565907,
+        "y": 88.20224719101124,
+        "width": 6.4498972696685115,
+        "height": 10.112359550561791,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 669,
+        "original_height": 281
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 49,
+    "created_at": "2025-06-19T14:20:55.927978Z",
+    "updated_at": "2025-06-19T14:20:55.927990Z",
+    "lead_time": 244.541
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-19-18.png",
+    "id": 770,
+    "label": [
+      {
+        "x": 23.930844444444453,
+        "y": 10.369311572153077,
+        "width": 2.8910222222222117,
+        "height": 5.433651237129247,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 3.7668277777777806,
+        "y": 86.68863016751197,
+        "width": 3.3656555555555494,
+        "height": 6.634646688181954,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 45.25590555555558,
+        "y": 84.44891157215298,
+        "width": 3.603788888888864,
+        "height": 5.632451237129323,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 27.942366666666672,
+        "y": 75.27914876287073,
+        "width": 3.230022222222219,
+        "height": 5.4827582603351335,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 31.444444444444446,
+        "y": 30.14384508990318,
+        "width": 2.5555555555555536,
+        "height": 4.53142769325342,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 43.55555555555556,
+        "y": 20.292915321960965,
+        "width": 2.6666666666666714,
+        "height": 4.53142769325342,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 61.44444444444447,
+        "y": 32.70508682956815,
+        "width": 3.0000000000000067,
+        "height": 4.531427693253427,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 80.8888888888889,
+        "y": 53.19502074688797,
+        "width": 3,
+        "height": 5.122483479329951,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 79.55555555555557,
+        "y": 74.47302904564316,
+        "width": 2.7777777777777715,
+        "height": 4.53142769325342,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      },
+      {
+        "x": 19.55555555555555,
+        "y": 41.37390502535731,
+        "width": 3.2222222222222165,
+        "height": 4.531427693253402,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1282,
+        "original_height": 723
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 53,
+    "created_at": "2025-06-19T16:30:36.035360Z",
+    "updated_at": "2025-06-19T16:30:36.035377Z",
+    "lead_time": 229.955
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2019-58-08.png",
+    "id": 771,
+    "label": [
+      {
+        "x": 79.7816,
+        "y": 2.7676000000000007,
+        "width": 6.6575999999999995,
+        "height": 13.815199999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 542,
+        "original_height": 282
+      },
+      {
+        "x": 28.135900000000003,
+        "y": 9.57155,
+        "width": 6.755999999999999,
+        "height": 14.2427,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 542,
+        "original_height": 282
+      },
+      {
+        "x": 52.86965,
+        "y": 36.666399999999996,
+        "width": 6.459099999999999,
+        "height": 16.1968,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 542,
+        "original_height": 282
+      },
+      {
+        "x": 42.0128,
+        "y": 43.73915,
+        "width": 6.5134,
+        "height": 16.4617,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 542,
+        "original_height": 282
+      },
+      {
+        "x": 20.483460559796438,
+        "y": 47.56059047515926,
+        "width": 6.4885496183206115,
+        "height": 11.370526771696177,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 542,
+        "original_height": 282
+      },
+      {
+        "x": 14.631043256997456,
+        "y": 83.75065417862236,
+        "width": 6.48854961832061,
+        "height": 7.580351181130766,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 542,
+        "original_height": 282
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 28,
+    "created_at": "2025-06-19T10:39:29.256101Z",
+    "updated_at": "2025-06-19T10:39:29.256112Z",
+    "lead_time": 56.325
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-44-54.png",
+    "id": 772,
+    "label": [
+      {
+        "x": 57.97019999999991,
+        "y": 72.35736047227927,
+        "width": 4.908399999999996,
+        "height": 9.514589527720736,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 50.118830681094984,
+        "y": 23.77941570841888,
+        "width": 4.246740784354855,
+        "height": 7.3800342915811195,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 15.818899999999992,
+        "y": 4.206471663244354,
+        "width": 3.8668,
+        "height": 7.112628336755641,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 34.30804999999999,
+        "y": 69.41367166324433,
+        "width": 4.8871,
+        "height": 9.46002833675561,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 20.01561362190106,
+        "y": 3.9014373716632447,
+        "width": 3.3359356036501744,
+        "height": 7.392197125256673,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 25.019517027376324,
+        "y": 15.195071868583163,
+        "width": 3.6695291640151915,
+        "height": 7.802874743326488,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 51.59580400312272,
+        "y": 9.44558521560575,
+        "width": 3.5583313105601917,
+        "height": 7.186858316221766,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 58.712466624243106,
+        "y": 45.37987679671458,
+        "width": 4.1143205778352225,
+        "height": 7.597535934291571,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 44.923932795822374,
+        "y": 61.39630390143738,
+        "width": 4.670309845110246,
+        "height": 8.008213552361383,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 22.128372837546173,
+        "y": 74.12731006160159,
+        "width": 4.447914138200229,
+        "height": 8.418891170431214,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 54,
+    "created_at": "2025-06-19T16:33:41.920215Z",
+    "updated_at": "2025-06-19T16:33:41.920225Z",
+    "lead_time": 151.813
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-48-43.png",
+    "id": 773,
+    "label": [
+      {
+        "x": 47.36696571435292,
+        "y": 17.372810526315767,
+        "width": 4.034184285647218,
+        "height": 7.08155789473688,
+        "rotation": 0,
+        "rectanglelabels": [
+          "black_8"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 25.571153575285223,
+        "y": 26.736842105263158,
+        "width": 3.1130100004695045,
+        "height": 5.894736842105267,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_9"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 61.14841072350814,
+        "y": 5.684210526315789,
+        "width": 3.113010000469508,
+        "height": 5.05263157894737,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_1"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 28.128268932813743,
+        "y": 10.31578947368421,
+        "width": 2.890652143293117,
+        "height": 4.842105263157896,
+        "rotation": 0,
+        "rectanglelabels": [
+          "white"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 67.81914643879993,
+        "y": 5.894736842105263,
+        "width": 2.7794732147049217,
+        "height": 4.8421052631578965,
+        "rotation": 0,
+        "rectanglelabels": [
+          "red_3"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 35.91079393398751,
+        "y": 51.368421052631575,
+        "width": 4.335978214939665,
+        "height": 6.736842105263165,
+        "rotation": 0,
+        "rectanglelabels": [
+          "green_6"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 43.47096107798488,
+        "y": 56.00000000000001,
+        "width": 3.6689046434104853,
+        "height": 7.1578947368420955,
+        "rotation": 0,
+        "rectanglelabels": [
+          "purple_4"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 75.9352082257383,
+        "y": 57.263157894736835,
+        "width": 3.891262500586876,
+        "height": 6.10526315789474,
+        "rotation": 0,
+        "rectanglelabels": [
+          "dred_7"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 56.47889572280389,
+        "y": 49.05263157894737,
+        "width": 4.002441429175072,
+        "height": 6.315789473684205,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_2"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 48.14047607868914,
+        "y": 62.31578947368421,
+        "width": 4.22479928635147,
+        "height": 7.789473684210527,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_10"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      },
+      {
+        "x": 31.68599464763604,
+        "y": 12.631578947368421,
+        "width": 3.2241889290577,
+        "height": 4.842105263157894,
+        "rotation": 0,
+        "rectanglelabels": [
+          "orange_5"
+        ],
+        "original_width": 1121,
+        "original_height": 592
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 65,
+    "created_at": "2025-06-19T18:09:25.094464Z",
+    "updated_at": "2025-06-19T18:09:25.094477Z",
+    "lead_time": 297.208
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-04-23.png",
+    "id": 774,
+    "label": [
+      {
+        "x": 66.3351,
+        "y": 26.25595,
+        "width": 4.380599999999999,
+        "height": 7.993500000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 35.412549999999996,
+        "y": 8.335049999999999,
+        "width": 4.1521,
+        "height": 8.4065,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 63.05924999999994,
+        "y": 61.72961954887214,
+        "width": 4.475699999999995,
+        "height": 8.272270676691772,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 68.70775,
+        "y": 82.6786,
+        "width": 5.2471,
+        "height": 7.627000000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 61.418706993511165,
+        "y": 41.04583947368418,
+        "width": 4.169941840903553,
+        "height": 7.3196308270676775,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 13.192650000000002,
+        "y": 68.10708947368421,
+        "width": 4.729899999999998,
+        "height": 8.245900751879741,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 31.931269814948344,
+        "y": 76.3855281954887,
+        "width": 4.340927853881257,
+        "height": 7.245942105263069,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 30.900024032684453,
+        "y": 73.49624060150376,
+        "width": 3.5568372987262684,
+        "height": 5.075187969924812,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 48.68421052631579,
+        "y": 66.54135338345864,
+        "width": 4.11259312665225,
+        "height": 6.203007518796994,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 55,
+    "created_at": "2025-06-19T16:39:08.796950Z",
+    "updated_at": "2025-06-19T16:39:08.796962Z",
+    "lead_time": 308.437
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-41-01.png",
+    "id": 775,
+    "label": [
+      {
+        "x": 85.16969999999999,
+        "y": 71.737,
+        "width": 6.1652,
+        "height": 9.99,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 66.73155000000001,
+        "y": 35.23575,
+        "width": 4.2935,
+        "height": 8.8853,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 79.95870000000001,
+        "y": 33.372299999999996,
+        "width": 4.6802,
+        "height": 9.446,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 34.47965,
+        "y": 69.51635,
+        "width": 5.4001,
+        "height": 10.5157,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 61.980199999999996,
+        "y": 48.42385,
+        "width": 5.8216,
+        "height": 9.5725,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 64.63915,
+        "y": 5.7128,
+        "width": 4.452500000000001,
+        "height": 8.6256,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 65.47765,
+        "y": 60.442049999999995,
+        "width": 5.4171,
+        "height": 10.5887,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 53.92959831029778,
+        "y": 41.396933560477,
+        "width": 4.1142167783113734,
+        "height": 6.984667802385005,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      },
+      {
+        "x": 45.256384561425136,
+        "y": 4.940374787052811,
+        "width": 3.0022662976866883,
+        "height": 4.770017035775128,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 884,
+        "original_height": 577
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 56,
+    "created_at": "2025-06-19T16:40:19.279242Z",
+    "updated_at": "2025-06-19T16:40:19.279253Z",
+    "lead_time": 60.313
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/s-l400.jpg",
+    "id": 776,
+    "label": [
+      {
+        "x": 40.807900000000004,
+        "y": 63.574149999999996,
+        "width": 15.2698,
+        "height": 19.467100000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 23.953050000000005,
+        "y": 67.4161,
+        "width": 16.4851,
+        "height": 18.240000000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 56.482949999999995,
+        "y": 78.95935,
+        "width": 21.0351,
+        "height": 20.7051,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 56.632349999999995,
+        "y": 60.7251,
+        "width": 15.451300000000002,
+        "height": 17.7606,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_10"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 56.77945,
+        "y": 49.60775,
+        "width": 14.7923,
+        "height": 12.1349,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_14"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 4.590300000000001,
+        "y": 59.24284999999999,
+        "width": 18.486,
+        "height": 12.3825,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 27.546250000000004,
+        "y": 36.92255,
+        "width": 13.983899999999998,
+        "height": 11.4303,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_11"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 25.208149999999996,
+        "y": 56.61675,
+        "width": 14.2133,
+        "height": 12.442300000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_13"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 42.146,
+        "y": 44.643100000000004,
+        "width": 14.685599999999999,
+        "height": 9.6362,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_12"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 11.251299999999999,
+        "y": 31.883950000000006,
+        "width": 15.778400000000001,
+        "height": 10.370899999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 4.44555,
+        "y": 70.4039,
+        "width": 18.4101,
+        "height": 20.0474,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 72.8607,
+        "y": 55.3571,
+        "width": 16.581000000000003,
+        "height": 20.182,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 27.381349999999998,
+        "y": 46.81785,
+        "width": 12.4183,
+        "height": 10.2731,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 10.778550000000001,
+        "y": 50.12029999999999,
+        "width": 13.242300000000002,
+        "height": 10.6216,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_15"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 9.5939,
+        "y": 40.6107,
+        "width": 16.2638,
+        "height": 11.183,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      },
+      {
+        "x": 39.77401129943504,
+        "y": 52.881355932203356,
+        "width": 16.94915254237287,
+        "height": 12.203389830508527,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 400,
+        "original_height": 400
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 57,
+    "created_at": "2025-06-19T16:43:35.665692Z",
+    "updated_at": "2025-06-19T16:43:35.665703Z",
+    "lead_time": 183.83
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-40-34.png",
+    "id": 777,
+    "label": [
+      {
+        "x": 9.4146,
+        "y": 44.80375,
+        "width": 6.155200000000001,
+        "height": 15.542900000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 497,
+        "original_height": 236
+      },
+      {
+        "x": 65.94508503008683,
+        "y": 4.683840749414521,
+        "width": 4.670646831810544,
+        "height": 9.133489461358312,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 497,
+        "original_height": 236
+      },
+      {
+        "x": 90.74399558946182,
+        "y": 51.52224824355972,
+        "width": 5.337882093497768,
+        "height": 10.070257611241217,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 497,
+        "original_height": 236
+      },
+      {
+        "x": 54.37967382750838,
+        "y": 84.5433255269321,
+        "width": 6.338734986028584,
+        "height": 11.475409836065566,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 497,
+        "original_height": 236
+      },
+      {
+        "x": 45.81682130252239,
+        "y": 68.38407494145198,
+        "width": 5.893911478237101,
+        "height": 11.007025761124126,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 497,
+        "original_height": 236
+      },
+      {
+        "x": 3.002558677592487,
+        "y": 57.377049180327866,
+        "width": 5.0042644626541435,
+        "height": 10.538641686182665,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 497,
+        "original_height": 236
+      },
+      {
+        "x": 24.798910559374985,
+        "y": 22.950819672131146,
+        "width": 5.337882093497754,
+        "height": 9.601873536299763,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 497,
+        "original_height": 236
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 64,
+    "created_at": "2025-06-19T17:36:26.640956Z",
+    "updated_at": "2025-06-19T17:36:26.640967Z",
+    "lead_time": 53.045
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2019-57-22.png",
+    "id": 778,
+    "label": [
+      {
+        "x": 48.0138,
+        "y": 40.83015,
+        "width": 13.5924,
+        "height": 21.6355,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1062,
+        "original_height": 659
+      },
+      {
+        "x": 44.029999999999994,
+        "y": 21.812400000000004,
+        "width": 11.658,
+        "height": 18.6198,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1062,
+        "original_height": 659
+      },
+      {
+        "x": 69.2721,
+        "y": 44.2676,
+        "width": 12.972800000000001,
+        "height": 23.3988,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1062,
+        "original_height": 659
+      },
+      {
+        "x": 14.66355,
+        "y": 42.3986,
+        "width": 14.205499999999999,
+        "height": 22.85,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1062,
+        "original_height": 659
+      },
+      {
+        "x": 15.233249999999998,
+        "y": 19.9398,
+        "width": 11.916699999999999,
+        "height": 18.9346,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1062,
+        "original_height": 659
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 27,
+    "created_at": "2025-06-19T10:38:28.620001Z",
+    "updated_at": "2025-06-19T10:38:28.620011Z",
+    "lead_time": 27.957
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-42-25.png",
+    "id": 779,
+    "label": [
+      {
+        "x": 44.70988757803625,
+        "y": 15.657490336134453,
+        "width": 3.2242248439275647,
+        "height": 6.382407563025214,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 77.38106928915138,
+        "y": 16.596638655462183,
+        "width": 2.7794924313631975,
+        "height": 5.672268907563023,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 18.67818913876068,
+        "y": 57.773109243697476,
+        "width": 3.3353909176358343,
+        "height": 5.882352941176471,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 29.684979166958936,
+        "y": 84.45378151260505,
+        "width": 3.5577503121448935,
+        "height": 5.672268907563023,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 9.561453963889395,
+        "y": 85.50420168067227,
+        "width": 3.446570614890364,
+        "height": 5.252100840336141,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 1.8900548533269736,
+        "y": 93.0672268907563,
+        "width": 3.557750312144891,
+        "height": 5.042016806722685,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 47.69609012219243,
+        "y": 92.43697478991592,
+        "width": 4.002469101163026,
+        "height": 5.882352941176458,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 92.83504720753075,
+        "y": 4.201680672268901,
+        "width": 3.1130315231267423,
+        "height": 5.672268907563031,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 71.822084426425,
+        "y": 22.899159663865547,
+        "width": 3.001851825872265,
+        "height": 5.042016806722689,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      },
+      {
+        "x": 63.70596652684447,
+        "y": 59.66386554621849,
+        "width": 3.6689300093994173,
+        "height": 6.302521008403359,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1198,
+        "original_height": 634
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 67,
+    "created_at": "2025-06-19T18:12:40.069943Z",
+    "updated_at": "2025-06-19T18:12:40.069955Z",
+    "lead_time": 108.013
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-32-58.png",
+    "id": 780,
+    "label": [
+      {
+        "x": 3.723083172739857,
+        "y": 85.37719999999996,
+        "width": 4.385766827260144,
+        "height": 8.23497532133681,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 72.45845,
+        "y": 25.24615,
+        "width": 4.1331,
+        "height": 6.3391,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 54.54925000000001,
+        "y": 63.30674999999999,
+        "width": 4.1181,
+        "height": 8.629100000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 23.690434101745158,
+        "y": 18.50899742930591,
+        "width": 2.8082885409363563,
+        "height": 5.7840616966580995,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 22.610323124461946,
+        "y": 48.97172236503856,
+        "width": 2.8082885409363527,
+        "height": 4.498714652956295,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 39.96410615947891,
+        "y": 19.28020565552699,
+        "width": 2.952303337907459,
+        "height": 5.526992287917739,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 62.57442928394086,
+        "y": 11.182519280205655,
+        "width": 3.3123403303351893,
+        "height": 5.398457583547559,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 40.54016534736329,
+        "y": 58.48329048843187,
+        "width": 2.952303337907452,
+        "height": 4.498714652956309,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 40.32414315190665,
+        "y": 62.853470437018,
+        "width": 2.880295939421906,
+        "height": 4.241645244215938,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      },
+      {
+        "x": 65.38271782487722,
+        "y": 51.41388174807196,
+        "width": 2.7362811424508173,
+        "height": 4.755784061696643,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1287,
+        "original_height": 721
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 36,
+    "created_at": "2025-06-19T10:58:15.347034Z",
+    "updated_at": "2025-06-19T10:58:15.347044Z",
+    "lead_time": 109.865
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-07-45.png",
+    "id": 781,
+    "label": [
+      {
+        "x": 80.08475,
+        "y": 14.9522,
+        "width": 19.9153,
+        "height": 36.1598,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 46.00110000000001,
+        "y": 1.2906500000000016,
+        "width": 20.6842,
+        "height": 31.7337,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 54.5675,
+        "y": 35.5133,
+        "width": 24.0928,
+        "height": 39.283,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 29.68236582694414,
+        "y": 79.27702385533712,
+        "width": 26.28696604600219,
+        "height": 20.560162728837426,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 25,
+    "created_at": "2025-06-19T10:32:58.457353Z",
+    "updated_at": "2025-06-19T10:32:58.457363Z",
+    "lead_time": 34.421
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-41-36.png",
+    "id": 782,
+    "label": [
+      {
+        "x": 53.7874,
+        "y": 25.837449999999997,
+        "width": 4.031,
+        "height": 8.6891,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 46.1426,
+        "y": 44.6541,
+        "width": 4.7838,
+        "height": 7.9079999999999995,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 15.179899999999998,
+        "y": 81.11345000000001,
+        "width": 6.0854,
+        "height": 8.0701,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 32.5262,
+        "y": 72.64320000000001,
+        "width": 4.902,
+        "height": 11.268799999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 61.936234840639145,
+        "y": 47.73175542406312,
+        "width": 3.7806678358738424,
+        "height": 5.917159763313606,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 48.48150518944105,
+        "y": 54.63510848126233,
+        "width": 3.5582756102342117,
+        "height": 6.11439842209073,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 50.37183910737798,
+        "y": 59.56607495069034,
+        "width": 4.33664839997293,
+        "height": 5.917159763313599,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 48.147916850981595,
+        "y": 66.07495069033531,
+        "width": 3.7806678358738424,
+        "height": 6.706114398422088,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      },
+      {
+        "x": 38.69624726129699,
+        "y": 14.792899408284024,
+        "width": 3.224687271774748,
+        "height": 3.944773175542407,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1137,
+        "original_height": 641
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 66,
+    "created_at": "2025-06-19T18:10:46.620127Z",
+    "updated_at": "2025-06-19T18:10:46.620138Z",
+    "lead_time": 74.151
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-32-02.png",
+    "id": 783,
+    "label": [
+      {
+        "x": 0.026500000000000135,
+        "y": 68.78505,
+        "width": 4.0666,
+        "height": 10.1133,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 30.555555555555557,
+        "y": 69.60240963855422,
+        "width": 3.7777777777777786,
+        "height": 7.024096385542165,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 39.33333333333333,
+        "y": 85.77911646586345,
+        "width": 3.6666666666666714,
+        "height": 7.236947791164667,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 66.33333333333333,
+        "y": 83.43775100401606,
+        "width": 3.7777777777777857,
+        "height": 7.024096385542165,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 95.77777777777777,
+        "y": 45.12449799196787,
+        "width": 3.555555555555557,
+        "height": 6.172690763052216,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 17.22222222222222,
+        "y": 91.1004016064257,
+        "width": 4.333333333333336,
+        "height": 6.385542168674704,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 14.555555555555555,
+        "y": 45.55020080321285,
+        "width": 3.8888888888888875,
+        "height": 6.385542168674704,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 15,
+        "y": 12.98393574297189,
+        "width": 3.444444444444443,
+        "height": 5.95983935742972,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      },
+      {
+        "x": 14.777777777777779,
+        "y": 1.0642570281124497,
+        "width": 3.6666666666666643,
+        "height": 6.811244979919679,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 954,
+        "original_height": 498
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 68,
+    "created_at": "2025-06-19T18:13:55.697845Z",
+    "updated_at": "2025-06-19T18:13:55.697864Z",
+    "lead_time": 72.074
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-45-37.png",
+    "id": 784,
+    "label": [
+      {
+        "x": 52.96465,
+        "y": 75.3841,
+        "width": 5.2157,
+        "height": 10.055,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 32.91456462268174,
+        "y": 27.92607802874743,
+        "width": 3.891924870925209,
+        "height": 7.392197125256676,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 52.262991123852764,
+        "y": 63.244353182751546,
+        "width": 4.44791413820024,
+        "height": 9.650924024640652,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 47.59268127874252,
+        "y": 76.59137577002053,
+        "width": 4.4479141382002325,
+        "height": 8.418891170431223,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 60.15803871915818,
+        "y": 83.77823408624229,
+        "width": 4.6703098451102605,
+        "height": 7.186858316221773,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      },
+      {
+        "x": 9.896608957495523,
+        "y": 87.88501026694045,
+        "width": 4.003122724380212,
+        "height": 4.928131416837772,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 626,
+        "original_height": 339
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 69,
+    "created_at": "2025-06-19T18:14:54.172073Z",
+    "updated_at": "2025-06-19T18:14:54.172085Z",
+    "lead_time": 55.597
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-30-15.png",
+    "id": 785,
+    "label": [
+      {
+        "x": 65.3077,
+        "y": 10.19535,
+        "width": 2.9694000000000003,
+        "height": 6.3359,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 3.754933623268869,
+        "y": 86.34847920792078,
+        "width": 3.470912840442917,
+        "height": 6.667322772277218,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 56.15264797507788,
+        "y": 80.5940594059406,
+        "width": 2.5574473335183967,
+        "height": 4.950495049504951,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 80.05922087535856,
+        "y": 51.48514851485149,
+        "width": 2.44625397119151,
+        "height": 4.158415841584159,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 34.46994232133493,
+        "y": 53.46534653465347,
+        "width": 2.2238672465377434,
+        "height": 4.356435643564346,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 32.13488171247032,
+        "y": 42.37623762376238,
+        "width": 3.002220782825937,
+        "height": 4.35643564356436,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 21.2379322044354,
+        "y": 20.594059405940595,
+        "width": 3.1134141451528308,
+        "height": 4.752475247524753,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 22.683445914684928,
+        "y": 10.891089108910892,
+        "width": 3.1134141451528343,
+        "height": 5.148514851485148,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 28.13192066870238,
+        "y": 60.99009900990099,
+        "width": 3.0022207828259475,
+        "height": 4.752475247524757,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      },
+      {
+        "x": 37.58335646648777,
+        "y": 65.14851485148515,
+        "width": 2.7798340581721703,
+        "height": 4.356435643564353,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1284,
+        "original_height": 721
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 70,
+    "created_at": "2025-06-19T18:16:27.798989Z",
+    "updated_at": "2025-06-19T18:16:27.799000Z",
+    "lead_time": 86.456
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-02-40.png",
+    "id": 786,
+    "label": [
+      {
+        "x": 75.329605827926,
+        "y": 20.17615939849624,
+        "width": 4.214144172073984,
+        "height": 6.349240601503745,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 47.35354999999974,
+        "y": 68.43476890753641,
+        "width": 2.324099999999988,
+        "height": 6.300981752767039,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 45.01874999999976,
+        "y": 66.40160912361644,
+        "width": 2.745099999999988,
+        "height": 6.660389795983111,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 48.79690355872822,
+        "y": 70.55529027533868,
+        "width": 3.298599832960072,
+        "height": 5.984023649235127,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 51.41579191095712,
+        "y": 68.59442376880966,
+        "width": 2.319015640141636,
+        "height": 6.524952340691399,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 52.37538458963641,
+        "y": 66.80259747836074,
+        "width": 3.1786507481251647,
+        "height": 5.274054741698734,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 48.65696295975415,
+        "y": 66.32928487333648,
+        "width": 3.358574375377522,
+        "height": 2.670835414065408,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 47.15759939931775,
+        "y": 64.87553901504772,
+        "width": 2.7388374370638218,
+        "height": 2.332754981905211,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 48.83688658700652,
+        "y": 62.67801620600658,
+        "width": 3.0587016632902504,
+        "height": 3.3131882351697115,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 50.916004057478325,
+        "y": 64.90934705826375,
+        "width": 2.7988119794812647,
+        "height": 2.3665630251212235,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 71,
+    "created_at": "2025-06-19T18:18:37.576981Z",
+    "updated_at": "2025-06-19T18:18:37.576999Z",
+    "lead_time": 116.869
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2014-41-07.png",
+    "id": 787,
+    "label": [
+      {
+        "x": 89.34944999999999,
+        "y": 51.6332,
+        "width": 9.3297,
+        "height": 14.479000000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 529,
+        "original_height": 320
+      },
+      {
+        "x": 12.00425,
+        "y": 2.3991499999999997,
+        "width": 8.2587,
+        "height": 12.0953,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 529,
+        "original_height": 320
+      },
+      {
+        "x": 6.80905,
+        "y": 67.2569,
+        "width": 7.585500000000001,
+        "height": 14.285400000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 529,
+        "original_height": 320
+      },
+      {
+        "x": 3.0364999999999998,
+        "y": 57.35184999999999,
+        "width": 7.485799999999999,
+        "height": 13.609499999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 529,
+        "original_height": 320
+      },
+      {
+        "x": 30.7761,
+        "y": 80.74510000000001,
+        "width": 8.5454,
+        "height": 16.2294,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 529,
+        "original_height": 320
+      },
+      {
+        "x": 89.62845,
+        "y": 18.83165,
+        "width": 7.0310999999999995,
+        "height": 13.7605,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 529,
+        "original_height": 320
+      },
+      {
+        "x": 66.02440590879898,
+        "y": 52.02512845215157,
+        "width": 7.385998715478479,
+        "height": 12.422326589595379,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 529,
+        "original_height": 320
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 29,
+    "created_at": "2025-06-19T10:40:35.838270Z",
+    "updated_at": "2025-06-19T10:40:35.838280Z",
+    "lead_time": 53.516
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/bolas-pool-aramith-tournament-black-.jpg",
+    "id": 788,
+    "label": [
+      {
+        "x": 36.314099999999996,
+        "y": 51.5026,
+        "width": 10.1672,
+        "height": 7.1564000000000005,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 23.8262,
+        "y": 51.76405,
+        "width": 11.2122,
+        "height": 6.8299,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 47.19695,
+        "y": 57.681000000000004,
+        "width": 10.2817,
+        "height": 7.1302,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 47.41475,
+        "y": 51.6347,
+        "width": 10.3741,
+        "height": 6.8444,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 33.2572,
+        "y": 63.390049999999995,
+        "width": 11.751399999999999,
+        "height": 7.3577,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_10"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 45.45561710232319,
+        "y": 69.5183638349016,
+        "width": 11.692500000000122,
+        "height": 4.8762845398428425,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_14"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 21.84140730005904,
+        "y": 57.30015000000003,
+        "width": 11.775642699941075,
+        "height": 6.35510000000003,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 34.57915,
+        "y": 57.67295,
+        "width": 11.1851,
+        "height": 6.7597000000000005,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 45.705344772126054,
+        "y": 63.71516710232286,
+        "width": 12.33330522787403,
+        "height": 6.667400000000024,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_11"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 58.503038776472096,
+        "y": 51.6336705906449,
+        "width": 11.720859467067127,
+        "height": 6.7405675323428085,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 20.33511179397112,
+        "y": 63.011061648420366,
+        "width": 12.450729836811153,
+        "height": 7.942706964862282,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 18.87537105448292,
+        "y": 69.4081607714716,
+        "width": 11.892593671712717,
+        "height": 4.722690627755966,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 31.755436402908245,
+        "y": 69.70869562960152,
+        "width": 12.665397592618234,
+        "height": 4.508022871948867,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_15"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 58.631839429956145,
+        "y": 57.42969999743623,
+        "width": 11.892593671712799,
+        "height": 6.95523528814954,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 58.41717167414904,
+        "y": 63.44039716003499,
+        "width": 12.579530490295495,
+        "height": 7.599238555570717,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_12"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      },
+      {
+        "x": 58.67477298111717,
+        "y": 69.79456273192437,
+        "width": 11.892593671712717,
+        "height": 4.465089320787442,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_13"
+        ],
+        "original_width": 800,
+        "original_height": 800
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 26,
+    "created_at": "2025-06-19T10:37:52.371575Z",
+    "updated_at": "2025-06-19T10:37:52.371587Z",
+    "lead_time": 277.957
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-14-51.png",
+    "id": 789,
+    "label": [
+      {
+        "x": 21.403850000000002,
+        "y": 20.85285,
+        "width": 3.5477000000000003,
+        "height": 8.4581,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 21.56855555555556,
+        "y": 40.04824999999999,
+        "width": 3.1942444444444593,
+        "height": 7.183300000000004,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 8.652750000000001,
+        "y": 55.93910000000001,
+        "width": 4.0377,
+        "height": 8.4088,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 72.60375,
+        "y": 68.02945,
+        "width": 3.2035,
+        "height": 6.6123,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 58.8173,
+        "y": 74.96875,
+        "width": 3.7022,
+        "height": 8.3193,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 67.22222222222223,
+        "y": 11.600000000000001,
+        "width": 2.7777777777777715,
+        "height": 3.9999999999999982,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 30.555555555555557,
+        "y": 38.6,
+        "width": 2.444444444444443,
+        "height": 5,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 24.22222222222222,
+        "y": 50.8,
+        "width": 3,
+        "height": 4.800000000000011,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 4.111111111111112,
+        "y": 87,
+        "width": 3.777777777777777,
+        "height": 6.200000000000003,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      },
+      {
+        "x": 83.11111111111111,
+        "y": 56.2,
+        "width": 2.444444444444443,
+        "height": 4.799999999999997,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1287,
+        "original_height": 715
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 63,
+    "created_at": "2025-06-19T17:35:07.578212Z",
+    "updated_at": "2025-06-19T17:35:07.578224Z",
+    "lead_time": 80.884
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-05-11.png",
+    "id": 790,
+    "label": [
+      {
+        "x": 22.8609,
+        "y": 26.615250000000003,
+        "width": 4.9914,
+        "height": 7.8881000000000006,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 52.93375,
+        "y": 51.3726,
+        "width": 5.1849,
+        "height": 7.4190000000000005,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 32.05525,
+        "y": 76.0587,
+        "width": 4.6075,
+        "height": 11.081000000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 73.58207161739966,
+        "y": 36.278195488721806,
+        "width": 3.89029079548186,
+        "height": 6.203007518796994,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 64.4676760394136,
+        "y": 55.82706766917293,
+        "width": 4.2237442922374555,
+        "height": 7.70676691729323,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 78.91732756548907,
+        "y": 67.10526315789474,
+        "width": 4.446046623407838,
+        "height": 6.954887218045116,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 55.130978130257155,
+        "y": 61.65413533834586,
+        "width": 4.223744292237441,
+        "height": 6.3909774436090245,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 49.57341985099736,
+        "y": 66.54135338345864,
+        "width": 4.11259312665225,
+        "height": 7.142857142857139,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      },
+      {
+        "x": 38.124849795722184,
+        "y": 52.06766917293233,
+        "width": 4.223744292237441,
+        "height": 7.894736842105267,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 876,
+        "original_height": 518
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 62,
+    "created_at": "2025-06-19T17:33:37.592784Z",
+    "updated_at": "2025-06-19T17:33:37.592802Z",
+    "lead_time": 77.824
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-31-29.png",
+    "id": 791,
+    "label": [
+      {
+        "x": 48.07144999999999,
+        "y": 11.165700000000001,
+        "width": 4.4019,
+        "height": 21.8638,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 59.9678,
+        "y": 66.30030000000001,
+        "width": 6.5692,
+        "height": 25.878800000000002,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 82.27515,
+        "y": 49.77524999999999,
+        "width": 5.7595,
+        "height": 24.9751,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 61.60099999999999,
+        "y": 50.6507,
+        "width": 6.0426,
+        "height": 21.0858,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_white"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 33.45885,
+        "y": 42.8633,
+        "width": 6.1155,
+        "height": 25.3382,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 44.048500000000004,
+        "y": 8.54975,
+        "width": 3.6458,
+        "height": 15.9635,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 3.1310000000000002,
+        "y": 17.51885,
+        "width": 4.194599999999999,
+        "height": 20.6223,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_2"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 88.86084999999999,
+        "y": 57.17095,
+        "width": 5.9349,
+        "height": 26.833299999999998,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 52.393750000000004,
+        "y": 52.254,
+        "width": 5.9089,
+        "height": 26.4252,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      },
+      {
+        "x": 41.888888888888886,
+        "y": 67.34358974358973,
+        "width": 5.666666666666671,
+        "height": 14.911794871794882,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1407,
+        "original_height": 325
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 61,
+    "created_at": "2025-06-19T17:31:44.648731Z",
+    "updated_at": "2025-06-19T17:31:44.648742Z",
+    "lead_time": 73.025
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-13-52.png",
+    "id": 792,
+    "label": [
+      {
+        "x": 13.88888888888889,
+        "y": 39.21924982307148,
+        "width": 6.222222222222225,
+        "height": 47.359094125973115,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 18.444444444444446,
+        "y": 36.81429582448691,
+        "width": 19.88888888888889,
+        "height": 9.434819532908705,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_black_8"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 19.666666666666668,
+        "y": 44.214154281670204,
+        "width": 20.666666666666668,
+        "height": 12.579759377211609,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 18.000000000000004,
+        "y": 50.50403397027604,
+        "width": 5.777777777777763,
+        "height": 40.514225053078576,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_blue_2"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 38.88888888888889,
+        "y": 34.03934890304317,
+        "width": 21.888888888888893,
+        "height": 9.434819532908705,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_green_6"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 41.111111111111114,
+        "y": 42.54918612880396,
+        "width": 23.33333333333333,
+        "height": 6.659872611464969,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_9"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 22.222222222222225,
+        "y": 52.90898796886058,
+        "width": 27.33333333333334,
+        "height": 45.13913658881811,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_pink_4"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 47.00000000000001,
+        "y": 47.72908704883227,
+        "width": 25.000000000000007,
+        "height": 46.06411889596603,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_red_3"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 70.44444444444446,
+        "y": 44.214154281670204,
+        "width": 23.888888888888886,
+        "height": 48.654069355980184,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_dred_7"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 65.66666666666667,
+        "y": 38.47926397735315,
+        "width": 23.66666666666667,
+        "height": 8.13984430290163,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_purple_5"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      },
+      {
+        "x": 62.777777777777786,
+        "y": 31.264401981599434,
+        "width": 21.22222222222223,
+        "height": 8.509837225760798,
+        "rotation": 0,
+        "rectanglelabels": [
+          "be_yellow_1"
+        ],
+        "original_width": 1307,
+        "original_height": 785
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 60,
+    "created_at": "2025-06-19T17:30:28.636255Z",
+    "updated_at": "2025-06-19T17:30:28.636267Z",
+    "lead_time": 163.745
+  },
+  {
+    "image": "\/data\/local-files\/?d=src\/Proyecto_Bolas_LS\/imagenes\/2025-06-15%2020-46-17.png",
+    "id": 793,
+    "label": [
+      {
+        "x": 7.088500000000001,
+        "y": 43.735099999999996,
+        "width": 5.4441999999999995,
+        "height": 12.4568,
+        "rotation": 0,
+        "rectanglelabels": [
+          "orange_13"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 27.60815,
+        "y": 42.894600000000004,
+        "width": 5.1373,
+        "height": 9.3636,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_9"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 67.56020000000001,
+        "y": 38.6322,
+        "width": 4.763599999999999,
+        "height": 10.499799999999999,
+        "rotation": 0,
+        "rectanglelabels": [
+          "yellow_1"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 22.704700000000003,
+        "y": 41.9975,
+        "width": 4.827,
+        "height": 10.5628,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_10"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 36.852050000000006,
+        "y": 40.6107,
+        "width": 4.5195,
+        "height": 11.1634,
+        "rotation": 0,
+        "rectanglelabels": [
+          "dred_7"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 32.556050000000006,
+        "y": 40.8906,
+        "width": 3.9909,
+        "height": 10.9282,
+        "rotation": 0,
+        "rectanglelabels": [
+          "black_8"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 62.3251,
+        "y": 38.63845,
+        "width": 4.0048,
+        "height": 11.5385,
+        "rotation": 0,
+        "rectanglelabels": [
+          "blue_2"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 46.4867,
+        "y": 39.69915,
+        "width": 4.4448,
+        "height": 11.6275,
+        "rotation": 0,
+        "rectanglelabels": [
+          "orange_5"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 56.53275000000001,
+        "y": 38.76969999999999,
+        "width": 4.3829,
+        "height": 11.561200000000001,
+        "rotation": 0,
+        "rectanglelabels": [
+          "red_3"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 41.22222222222222,
+        "y": 40.122177954847274,
+        "width": 4.777777777777779,
+        "height": 11.463479415670648,
+        "rotation": 0,
+        "rectanglelabels": [
+          "green_6"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 12.666666666666668,
+        "y": 43.86985391766268,
+        "width": 4.444444444444443,
+        "height": 10.80212483399734,
+        "rotation": 0,
+        "rectanglelabels": [
+          "purple_12"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 17.11111111111111,
+        "y": 42.547144754316065,
+        "width": 4.777777777777779,
+        "height": 12.345285524568396,
+        "rotation": 0,
+        "rectanglelabels": [
+          "red_11"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 51.66666666666667,
+        "y": 39.0199203187251,
+        "width": 4.222222222222214,
+        "height": 11.904382470119522,
+        "rotation": 0,
+        "rectanglelabels": [
+          "purple_4"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      },
+      {
+        "x": 89.22222222222223,
+        "y": 31.96547144754316,
+        "width": 4.7777777777777715,
+        "height": 9.920318725099605,
+        "rotation": 0,
+        "rectanglelabels": [
+          "white"
+        ],
+        "original_width": 498,
+        "original_height": 251
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 59,
+    "created_at": "2025-06-19T17:27:40.606099Z",
+    "updated_at": "2025-06-19T17:27:40.606112Z",
+    "lead_time": 174.959
+  }
+]

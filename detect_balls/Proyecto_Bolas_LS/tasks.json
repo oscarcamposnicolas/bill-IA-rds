@@ -1,0 +1,5786 @@
+[
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-06-08.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "10c9c88d-966c-440d-9c56-26db11465da4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 20.0815,
+              "y": 20.39635,
+              "width": 3.565,
+              "height": 8.2259,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "5b1a3503-8420-4546-91a2-3d22ed574fe3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 43.1988,
+              "y": 81.9476,
+              "width": 4.8942,
+              "height": 8.9254,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "a9277966-f8ff-4dc0-b9a7-ccb9f99b9e2d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 60.87785,
+              "y": 60.7306,
+              "width": 4.1613,
+              "height": 9.7566,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "2b4f9dbf-d55b-4e56-a7d2-42d18a4ae780",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 48.677400000000006,
+              "y": 65.67765,
+              "width": 4.6624,
+              "height": 10.248899999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "cae69e70-09ca-40e1-bf82-d490843fcf50",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 28.92,
+              "y": 41.66795,
+              "width": 4.6488000000000005,
+              "height": 10.1125,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "bd367af3-652c-42a3-b18f-5dfd7ba3c302",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 57.64789999999999,
+              "y": 18.24145,
+              "width": 4.2866,
+              "height": 8.390699999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-33-46.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "0f941401-c0fb-418a-8851-1aa8aaf9335b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 91.0756,
+              "y": 4.711749999999999,
+              "width": 8.257,
+              "height": 24.390700000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "4bb3a2e2-df80-421a-bce1-7a37f0692d21",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 1.8742,
+              "y": 59.5993,
+              "width": 7.6278,
+              "height": 27.189999999999998,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "b41a4452-8f2a-4254-83f2-873654dc3e98",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 1.8311000000000002,
+              "y": 59.779,
+              "width": 7.703200000000001,
+              "height": 27.2468,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-40-47.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "a56e7d4f-3006-4c0d-9c85-5b757a67ee4c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 46.99850000000001,
+              "y": 77.94295,
+              "width": 6.3229999999999995,
+              "height": 9.9817,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "b4fc1a6e-0af0-40f2-a1d0-d8139c7a29ad",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 14.406849999999999,
+              "y": 50.28405,
+              "width": 5.3399,
+              "height": 10.832899999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "b1c2e28e-9002-4597-a2d6-4f186b3ff8bc",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 20.6896,
+              "y": 25.924049999999998,
+              "width": 4.1512,
+              "height": 8.581900000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "ead509c7-bb80-4b0a-b760-7d30db204e5b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 33.3611,
+              "y": 71.43605000000001,
+              "width": 5.6286000000000005,
+              "height": 9.800699999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "79fd4ae0-631e-4dfe-93fc-4cc884f50985",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 45.9323,
+              "y": 29.648149999999994,
+              "width": 4.3386000000000005,
+              "height": 8.0945,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "88d7a5bb-b77f-4fc8-bfa8-d7571a27b299",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 25.5199,
+              "y": 42.255199999999995,
+              "width": 5.2036,
+              "height": 10.9738,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "b8a28d1c-8cca-4ae1-8246-6844a088805f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 50.05965,
+              "y": 35.234350000000006,
+              "width": 5.9047,
+              "height": 8.8733,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-14-09.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "98616cfe-5223-48dd-bd8a-d742f01426bf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.94685,
+              "y": 50.5568,
+              "width": 1.9399,
+              "height": 5.296,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-13-02.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "b7795a28-ef90-41b7-9bad-787540e4fa67",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 21.7948,
+              "y": 46.077799999999996,
+              "width": 4.1292,
+              "height": 8.3884,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "279febbb-2148-4cc8-8e47-62288577edda",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 1.8978500000000003,
+              "y": 85.23115,
+              "width": 6.1055,
+              "height": 11.360299999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "654cc53b-af82-4b78-afea-d79c7e41c3c9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 65.83525,
+              "y": 7.91075,
+              "width": 4.0226999999999995,
+              "height": 7.2899,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-34-17.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "a9dadbd3-9eda-4fa2-a629-e0b8ec99591e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 78.0568,
+              "y": 1.8828999999999985,
+              "width": 15.842400000000001,
+              "height": 24.817600000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "92b97102-a0e0-44df-ab26-e2953d635215",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.7940000000000005,
+              "y": 62.09405,
+              "width": 19.778399999999998,
+              "height": 31.872099999999996,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "39ec7a45-f9a7-477c-bb5e-ca2351f52208",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 69.4437,
+              "y": 38.80945,
+              "width": 17.454800000000002,
+              "height": 29.082900000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-14-18.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "3e36f2e1-d4cd-48c0-9790-661913af0922",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.70315,
+              "y": 85.84575,
+              "width": 5.4699,
+              "height": 10.2219,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "89c29b65-b8e7-4afc-b2dc-e89c8de10f89",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 78.828,
+              "y": 54.2419,
+              "width": 3.2326,
+              "height": 7.0992,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "3f1a4c28-d4e0-4a37-8b26-167a13d2035e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 66.4083,
+              "y": 81.3032,
+              "width": 4.89,
+              "height": 8.3124,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "181a7216-86b7-4f0c-abe0-7e1a58d46194",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 22.206,
+              "y": 47.792699999999996,
+              "width": 3.4118000000000004,
+              "height": 6.127400000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-01-56.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "771702bf-68f7-4405-b817-e1d711568786",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.913,
+              "y": 47.8718,
+              "width": 1.8084,
+              "height": 7.7486,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-39-49.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": []
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-49-16.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "928381ee-8875-47d8-be55-14d10912e5a8",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 20.820999999999998,
+              "y": 28.2218,
+              "width": 4.0314000000000005,
+              "height": 9.2132,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-38-45.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "98098414-3881-49ed-b365-f8b78ac89fe8",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 83.45479999999999,
+              "y": 8.24775,
+              "width": 13.5604,
+              "height": 12.867700000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "479089ab-c1ab-4121-b248-c61c2636290f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.24915,
+              "y": 77.40355,
+              "width": 14.3699,
+              "height": 15.209900000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-41-24.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "0230e3bd-5e73-469b-90de-db5a106b1015",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 61.22875000000001,
+              "y": 15.4558,
+              "width": 2.7613,
+              "height": 6.5834,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "cb3b44fa-1574-4c11-b4dd-54454b8a87af",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 26.57165,
+              "y": 37.58345,
+              "width": 4.7395,
+              "height": 7.6998999999999995,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-42-00.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "d03e6f2e-197f-47dd-8fdb-ee8dc06e5c79",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 65.05125,
+              "y": 77.4493,
+              "width": 5.2799,
+              "height": 9.7226,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "dbad3be0-a988-4d6e-b309-6e6e460c4548",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.713,
+              "y": 68.32345,
+              "width": 4.5207999999999995,
+              "height": 9.0559,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "bbe571cd-9cb2-4423-87ae-01e565334244",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 53.1356,
+              "y": 4.7213,
+              "width": 4.2078,
+              "height": 5.8418,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2019-56-08.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "d0ba21a9-d504-4d0b-8c19-f8e574fdcf5d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 59.21124999999999,
+              "y": 51.925650000000005,
+              "width": 5.4305,
+              "height": 26.2021,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "fbd499a8-a7cb-4d5c-8baa-6a3c1e9117e9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 33.896499999999996,
+              "y": 30.072100000000002,
+              "width": 4.6876,
+              "height": 22.8972,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "f7d4f9d6-d668-487b-9316-18d99ae92022",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 22.2415,
+              "y": 51.609700000000004,
+              "width": 5.8296,
+              "height": 25.773600000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "bcf46511-41a4-45c2-bd26-676ae6e0cc6d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 90.69025,
+              "y": 18.05915,
+              "width": 4.3683,
+              "height": 21.6999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "7cbdcdd5-c2d6-439f-a617-f3beb1faafbf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 39.23035,
+              "y": 54.513,
+              "width": 5.980499999999999,
+              "height": 25.0728,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "39831a7a-309b-467b-a0f9-d430233ae448",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 76.3596,
+              "y": 5.99375,
+              "width": 4.4992,
+              "height": 17.6373,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "8a27f86c-1378-4877-b447-2441b6fc5ebd",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 50.07064999999999,
+              "y": 49.32690000000001,
+              "width": 5.7679,
+              "height": 26.5704,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "304e9736-38bf-43f2-93ef-a8acef929917",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 66.15100000000001,
+              "y": 41.1158,
+              "width": 5.5958,
+              "height": 23.078599999999998,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-03-49.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "894d4f26-509f-4c11-99a9-66db801feffc",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.36725,
+              "y": 8.23865,
+              "width": 4.4582999999999995,
+              "height": 8.534899999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "085dcc16-fd70-4fc5-b348-d9c1a67eb1d2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 45.07020000000001,
+              "y": 13.823249999999998,
+              "width": 13.1578,
+              "height": 26.7023,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "33454315-21f5-4e54-8020-503821a7dc51",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 69.22564999999999,
+              "y": 82.9091,
+              "width": 4.4855,
+              "height": 7.832600000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-44-38.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "59fbc302-6b31-4e70-868b-77493c8b19c9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 24.52585,
+              "y": 81.14445,
+              "width": 8.364099999999999,
+              "height": 16.3483,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "5e88f6a1-a780-4031-9435-0782521656b9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 5.026200000000001,
+              "y": 60.8122,
+              "width": 9.875399999999999,
+              "height": 15.0676,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "97eff719-442a-45dc-a7c1-4f66a966668c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 19.65735,
+              "y": 39.7355,
+              "width": 8.5721,
+              "height": 17.0792,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "82ca47b5-d5ce-42a5-bf10-e667b7646b0b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 44.01755,
+              "y": 64.05354999999999,
+              "width": 7.7013,
+              "height": 13.9609,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "fd649dc1-5692-43fe-80ff-278e1f1ecec3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 86.2684,
+              "y": 34.34715,
+              "width": 8.0652,
+              "height": 16.2219,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/htdyu3jas61b1.jpg"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "f73662b3-3646-44ed-936a-6d727eeba5b8",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 43.58410000000001,
+              "y": 44.64095,
+              "width": 17.2286,
+              "height": 7.4223,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_12"
+              ]
+            }
+          },
+          {
+            "id": "f7877708-69d3-4ba7-9b7b-95a257488d6c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 55.43444999999999,
+              "y": 54.33625,
+              "width": 21.0981,
+              "height": 17.8963,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "146bc64d-0847-42f3-b337-a799ac75c93b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 48.424,
+              "y": 38.27905,
+              "width": 14.2096,
+              "height": 8.0261,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "de3bf88d-401a-44d7-b552-ceb739c505b1",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 55.5373,
+              "y": 54.38485000000001,
+              "width": 21.134,
+              "height": 17.2081,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "a4c994b1-3d19-4287-b1db-c76bfec258cf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 25.37395,
+              "y": 46.047650000000004,
+              "width": 18.4531,
+              "height": 15.7193,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "ff8ca84b-8461-4205-b4ee-9bb9df8131ee",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.4947,
+              "y": 35.74675,
+              "width": 14.441399999999998,
+              "height": 6.6545000000000005,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "b82b967d-93fe-4241-ad4a-e5fe532ce009",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 39.63225,
+              "y": 50.30349999999999,
+              "width": 18.8793,
+              "height": 16.023799999999998,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "868a23fc-fcdc-4200-87f2-7f90ab6ab541",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 59.360099999999996,
+              "y": 47.8775,
+              "width": 19.5602,
+              "height": 10.277,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "c01532bf-b50d-46c0-96c9-29ab9cfd119c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 39.7098,
+              "y": 50.37049999999999,
+              "width": 18.6638,
+              "height": 15.4344,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/maxresdefault.jpg"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "ae89f046-9785-4888-a2ef-d6a18274ec07",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 85.38215,
+              "y": 54.11205,
+              "width": 10.161100000000001,
+              "height": 15.856100000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_12"
+              ]
+            }
+          },
+          {
+            "id": "ee55c404-e8cb-4cca-a4df-2007c807c283",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 76.0102,
+              "y": 20.772199999999998,
+              "width": 9.5938,
+              "height": 14.594999999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "b0e2cbaf-32f4-454e-900d-edf831cf32af",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 75.26705,
+              "y": 34.76605,
+              "width": 9.8047,
+              "height": 15.0367,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_11"
+              ]
+            }
+          },
+          {
+            "id": "5305076d-6739-48d8-8579-57b5e0abfafd",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 58.185550000000006,
+              "y": 1.105600000000001,
+              "width": 9.6755,
+              "height": 13.52,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "7ca9f3f5-1c88-4210-86a8-9b8881931f72",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 77.5667,
+              "y": 7.014300000000001,
+              "width": 8.5652,
+              "height": 13.815,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "c9292372-7738-49fe-b134-c1bd391dd776",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 73.6711,
+              "y": 50.7104,
+              "width": 10.796600000000002,
+              "height": 15.798599999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_14"
+              ]
+            }
+          },
+          {
+            "id": "5bce17cd-5e33-4371-817e-ae19e5be5feb",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 67.96575,
+              "y": 3.475099999999999,
+              "width": 9.1133,
+              "height": 14.3634,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "422f548a-d8ed-4655-88e2-9855047a4122",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 85.48365,
+              "y": 37.81535,
+              "width": 10.1503,
+              "height": 15.9855,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_11"
+              ]
+            }
+          },
+          {
+            "id": "1cb874b6-cac4-4750-b301-469de3b0bfea",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 50.41344999999999,
+              "y": 42.50625,
+              "width": 11.2629,
+              "height": 20.1203,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "6eb9441e-bac6-4f81-b067-45b15ce00938",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 87.12034999999999,
+              "y": 10.994700000000002,
+              "width": 8.635900000000001,
+              "height": 12.3874,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "aea72e51-f897-4413-ae70-9df0fd712318",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 66.1044,
+              "y": 16.82765,
+              "width": 9.9306,
+              "height": 14.7215,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "0f6b28dc-4c4b-43de-9e61-2876fd690341",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 66.17785,
+              "y": 17.043049999999997,
+              "width": 9.8409,
+              "height": 14.414299999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "f793cb77-62c5-4e3e-beaf-97939a8db9f2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 64.12655000000001,
+              "y": 30.150650000000002,
+              "width": 9.9621,
+              "height": 17.113300000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "99a06fad-faed-4dd7-af41-ad5ce685af1c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 58.43805000000001,
+              "y": 27.67615,
+              "width": 5.4254999999999995,
+              "height": 16.1189,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "2f47f46f-6365-4cd1-a18d-d23d2395a03d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 64.07105,
+              "y": 30.3713,
+              "width": 10.0961,
+              "height": 16.8334,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "ffea145e-1561-4a54-afce-a74a2b9117b1",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 56.75755,
+              "y": 13.03375,
+              "width": 9.2989,
+              "height": 14.0707,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_12"
+              ]
+            }
+          },
+          {
+            "id": "62f2112d-9f2a-4a8d-a164-4f41f4a3f458",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 56.9252,
+              "y": 13.216899999999999,
+              "width": 9.2852,
+              "height": 14.3124,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "56f7224e-8591-4eb6-9ac2-c1a5d9f325a3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 62.302400000000006,
+              "y": 46.7657,
+              "width": 10.4832,
+              "height": 17.491,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "80c15d7a-f0fc-49ae-bfaf-03836ac536fa",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 85.4033,
+              "y": 37.71515,
+              "width": 10.2172,
+              "height": 15.940299999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "ea729237-8457-494d-bab4-3ad13286223a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 86.0643,
+              "y": 24.0825,
+              "width": 9.1268,
+              "height": 13.6578,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "4aaf0afc-e157-4a35-82f7-8043fe62ecf3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 86.0037,
+              "y": 24.111900000000002,
+              "width": 8.8186,
+              "height": 13.597999999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-18-35.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "7d0e12f2-b989-4c26-83ae-d08a7c8c05ce",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 39.94775,
+              "y": 33.5634,
+              "width": 11.9289,
+              "height": 16.733600000000003,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-30-55.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "8c5de80a-a37e-4d09-9241-f51dc2fd831b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.1544,
+              "y": 47.46189999999999,
+              "width": 2.4306,
+              "height": 8.3848,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-30-38.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "3c4debe7-785f-4291-8205-20d8a3b8e4d2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 92.3265,
+              "y": 70.48225000000001,
+              "width": 6.6936,
+              "height": 15.2367,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "41cb184d-8d07-4cb8-8bef-7dd1b92f5ac2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 45.1322,
+              "y": 0.9995000000000004,
+              "width": 5.9132,
+              "height": 11.1542,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "39acc497-eb91-40cf-9445-7360b911ab39",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 80.38585,
+              "y": 22.883350000000004,
+              "width": 6.800299999999999,
+              "height": 12.586500000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "362d984d-baf1-4d83-90c9-1d55fbedf84b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 0.5259,
+              "y": 74.58345,
+              "width": 6.271599999999999,
+              "height": 14.7949,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "9f02d30f-b532-4cc6-b555-138c1499bf7d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 12.06305,
+              "y": 73.6935,
+              "width": 6.4641,
+              "height": 16.1274,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "8697df67-4836-48c8-9f0c-1f47c052b05c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 84.61619999999999,
+              "y": 47.94245,
+              "width": 6.8964,
+              "height": 14.743300000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "84b7004d-09ab-4a0b-93fc-4e5442581f3c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 67.99115,
+              "y": 56.62435,
+              "width": 7.771699999999999,
+              "height": 14.713499999999998,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "66e1c16c-8aca-4166-a1ec-656388f65a0a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 72.596,
+              "y": 91.27199999999999,
+              "width": 5.6566,
+              "height": 8.6616,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "96d5685d-66f6-46aa-97bf-5116faa56426",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 45.3558,
+              "y": 74.87539999999998,
+              "width": 6.4666,
+              "height": 14.176,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-07-13.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "5ccf8efa-2f3a-4113-b5c6-87436c528845",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 48.5633,
+              "y": 64.6861,
+              "width": 4.4762,
+              "height": 9.9152,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "94546328-28d5-4d59-bdc4-5b2741cb4290",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.50335,
+              "y": 46.544200000000004,
+              "width": 4.7395,
+              "height": 11.134,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "c82efefb-5fcd-454c-8bc5-3f7b70bec524",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 69.23155000000001,
+              "y": 19.63185,
+              "width": 4.1035,
+              "height": 7.8869,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "08f6b365-508c-4ab0-b5a9-29e648a28e57",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 65.26955,
+              "y": 82.18835,
+              "width": 6.0139,
+              "height": 7.9991,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "af506b8b-403e-4fca-b9e7-7382c67b4105",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 74.49615,
+              "y": 32.8577,
+              "width": 3.9400999999999997,
+              "height": 9.832,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "6c279f9a-f165-4fd9-a13e-94b107b0afd1",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.5617,
+              "y": 10.660400000000001,
+              "width": 4.654599999999999,
+              "height": 9.1326,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "038a5a1d-7f46-4805-803e-d799942c2d68",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 70.22605,
+              "y": 50.68845000000001,
+              "width": 4.052300000000001,
+              "height": 9.1311,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "864fc438-3ea3-4bce-bb31-748a5124def3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 16.39305,
+              "y": 51.4296,
+              "width": 4.3239,
+              "height": 8.5486,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-20-42.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "2660005d-c0b2-4782-b1ca-07d24d370bc4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 53.31764999999999,
+              "y": 36.3301,
+              "width": 9.6929,
+              "height": 23.1514,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "9d2248b0-00f4-4e6c-b72c-c24092a8941a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 80.2493,
+              "y": 60.01445000000001,
+              "width": 11.9246,
+              "height": 28.401500000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "14e330ec-5dd9-4c07-9a78-476f3b88df34",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 30.710500000000003,
+              "y": 20.323200000000003,
+              "width": 8.910400000000001,
+              "height": 21.551000000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-43-53.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "ed8dc523-ba10-4b32-9742-b83c8702ce96",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 4.68755,
+              "y": 68.8154,
+              "width": 19.3119,
+              "height": 25.395,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/s-l1200.jpg"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "cc8d0663-2dbf-4a46-9337-83b8ff6f81bf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.0142,
+              "y": 27.41195,
+              "width": 14.6478,
+              "height": 12.1617,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "faf7f690-9bd2-4de6-9070-7923d410fcf5",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 25.4417,
+              "y": 38.785599999999995,
+              "width": 16.2692,
+              "height": 13.776,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_12"
+              ]
+            }
+          },
+          {
+            "id": "6a9c294e-dc88-4c11-9011-eccbc6c4a9e6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 60.80089999999999,
+              "y": 42.571749999999994,
+              "width": 17.704,
+              "height": 20.5293,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "5304bade-a107-4053-8cef-bfd75cc7c267",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 42.720150000000004,
+              "y": 46.493849999999995,
+              "width": 18.229300000000002,
+              "height": 22.1847,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "955db6c1-1dac-4210-be20-14c678197237",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 22.908849999999997,
+              "y": 50.29585000000001,
+              "width": 19.9323,
+              "height": 21.004900000000003,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "2ce53e63-7cdc-4963-b271-ba60d0df843f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 61.9241,
+              "y": 30.53895,
+              "width": 16.6264,
+              "height": 14.0077,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_14"
+              ]
+            }
+          },
+          {
+            "id": "58413313-df2a-4e55-8cdd-c0f406f96c26",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 79.44545000000001,
+              "y": 37.81235,
+              "width": 19.1323,
+              "height": 21.8939,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "61efa069-87cd-48e8-800f-52288f50f25a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 7.91175,
+              "y": 9.926300000000001,
+              "width": 18.793499999999998,
+              "height": 12.1156,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "0f150aca-b427-44a4-9065-09b7f9224613",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.569100000000002,
+              "y": 16.686,
+              "width": 15.063799999999999,
+              "height": 12.229,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_11"
+              ]
+            }
+          },
+          {
+            "id": "50ebdd9c-395d-45a0-8937-978716fcf219",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 59.70795,
+              "y": 68.04015,
+              "width": 25.3303,
+              "height": 25.5087,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "3a5b3576-3431-4a3a-9b36-046f970b9d5c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.0415,
+              "y": 41.70825,
+              "width": 21.6398,
+              "height": 14.7083,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "c1a1487b-8c01-4840-a661-3f1d76975f4c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 6.8778500000000005,
+              "y": 31.1931,
+              "width": 16.834699999999998,
+              "height": 12.912,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "f8e5e8f2-e095-42e3-be4b-fb94ccd02134",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 44.15225,
+              "y": 24.154799999999998,
+              "width": 15.6231,
+              "height": 12.331,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "1b4f884b-99d8-4478-9a9f-2ba53716d542",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 59.59245,
+              "y": 68.1161,
+              "width": 25.510699999999996,
+              "height": 25.613799999999998,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "6acef016-4527-42a0-b7d5-5978a84e7437",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.08875,
+              "y": 54.451150000000005,
+              "width": 20.3271,
+              "height": 22.3153,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "cacad93e-721c-488f-8fb7-6d0fa455538d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 43.48635000000001,
+              "y": 34.6414,
+              "width": 16.1101,
+              "height": 12.914200000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "8f5370e2-7854-427d-a46a-668b710bd930",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.0831500000000003,
+              "y": 54.350550000000005,
+              "width": 20.3171,
+              "height": 22.486700000000003,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "fa01cade-cd25-4cf4-9d3b-002ad36cb444",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 7.048500000000001,
+              "y": 20.35955,
+              "width": 18.980800000000002,
+              "height": 14.1049,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "6c46ec44-ec36-48f0-a6dc-65ac189079a6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 43.4884,
+              "y": 34.54645,
+              "width": 15.961400000000001,
+              "height": 13.0267,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-43-06.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "11db485c-94d0-4ea6-8e46-3374d5136281",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 47.63685,
+              "y": 5.0000000000050004e-05,
+              "width": 3.9997,
+              "height": 6.7343,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "f807da28-8a52-4770-9bfb-a5b7472d96e0",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 47.42545,
+              "y": 92.68165,
+              "width": 4.125100000000001,
+              "height": 7.0333000000000006,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "4715b794-2648-44e5-a3ce-3d79f66fc922",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 18.4727,
+              "y": 56.36255,
+              "width": 3.8766000000000003,
+              "height": 8.1097,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-42-16.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "590495c6-79e1-438c-9a75-7a9863553e5c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 68.26625,
+              "y": 35.960350000000005,
+              "width": 4.1943,
+              "height": 9.8641,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "14c07f29-9843-4e34-b2f3-60b4af60b9de",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 36.69255,
+              "y": 69.99145,
+              "width": 4.2703,
+              "height": 10.0807,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/aramith-billiards-balls-tournament-pro-cup-tv.jpg"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "5dabe8b7-00bb-4875-a8ef-6cdc41bd76de",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 62.620999999999995,
+              "y": 29.493949999999998,
+              "width": 15.9742,
+              "height": 29.001900000000003,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "234d654a-04fc-4420-868d-9bc7f84eb9ab",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 84.65825,
+              "y": 24.066000000000003,
+              "width": 14.097100000000001,
+              "height": 22.344,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "18e84b5b-1a09-4537-8384-946fb4659ea3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 30.803899999999995,
+              "y": 29.216299999999997,
+              "width": 15.7974,
+              "height": 29.3472,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "fab1559e-0c7f-4284-b615-b88751a07e9d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 4.96235,
+              "y": 39.001,
+              "width": 21.3977,
+              "height": 37.7386,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "c312ad3d-76fa-4fab-a22c-e5618ab8b710",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 4.7939,
+              "y": 39.04314999999999,
+              "width": 21.5668,
+              "height": 37.6627,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-17-55.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "680af393-9c91-4e68-85f1-4f6862176040",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 54.0794,
+              "y": 76.7227,
+              "width": 8.0144,
+              "height": 15.6478,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "0fac5fcc-a3a3-407d-9132-3872bceb39d6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 84.55850000000001,
+              "y": 67.78014999999999,
+              "width": 7.2658000000000005,
+              "height": 14.7167,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-24-46.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "7bff954c-36f0-4021-91ad-413e1f774bd9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 69.4621,
+              "y": 20.89185,
+              "width": 3.098,
+              "height": 7.803699999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "4b5d5797-179d-4578-a2ee-051b5d84194d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 89.00605,
+              "y": 35.57835,
+              "width": 3.2325,
+              "height": 7.8858999999999995,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-08-51.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "f93ee5bc-dfae-460b-b163-8f497a3358ac",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 20.25055,
+              "y": 12.4593,
+              "width": 3.8361,
+              "height": 8.6016,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "f4b4753c-280d-48c4-8eee-eade478f2649",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 50.06615,
+              "y": 40.98445,
+              "width": 3.5129,
+              "height": 9.292499999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "74a682b6-3dce-4e1c-8d7f-3908e3f40720",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 55.06935000000001,
+              "y": 45.5612,
+              "width": 3.8975000000000004,
+              "height": 8.979800000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "6b4324da-e6ef-436a-8b44-b56b6298b0af",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 37.406,
+              "y": 8.05845,
+              "width": 3.6917999999999997,
+              "height": 7.5291,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "81046ebd-def5-4f44-8460-4c79e6215aed",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 17.6112,
+              "y": 56.08599999999999,
+              "width": 4.9590000000000005,
+              "height": 9.9916,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "dfbffd9e-e8e1-4fb4-95ef-efadcf0f5f2e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 42.44935,
+              "y": 8.476600000000001,
+              "width": 3.6824999999999997,
+              "height": 8.0274,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "e0e14d09-c929-4adc-83f3-8cdbad2ff8f8",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 49.47050000000001,
+              "y": 65.02065,
+              "width": 4.3804,
+              "height": 9.9225,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-15-34.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "2ef9ca1f-95f8-45d3-866c-be2e0384effd",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 0.7434499999999997,
+              "y": 50.46585,
+              "width": 6.437900000000001,
+              "height": 22.8513,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "b68bee1b-3de5-4c38-a508-e124347fc57e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.702,
+              "y": 31.993350000000003,
+              "width": 6.2904,
+              "height": 16.9909,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "7dc3c1bd-9d13-441b-a5ef-d913c6c608f4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 36.163650000000004,
+              "y": 71.8811,
+              "width": 8.4845,
+              "height": 19.2774,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "63d00109-8092-402e-991d-017ab071771e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 15.10505,
+              "y": 50.18680000000001,
+              "width": 6.8031,
+              "height": 20.945800000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "0a512e7d-ccb7-4b33-992b-86c58fb141bb",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 36.87785,
+              "y": 53.42214999999999,
+              "width": 7.6011,
+              "height": 19.3237,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "e52caf9f-9cf5-4dcc-9e65-10f0f90d5a36",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 36.898599999999995,
+              "y": 53.39955,
+              "width": 7.5284,
+              "height": 19.1777,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-35-19.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "53a7dad3-6faf-45ca-aabd-4dbee091aeb6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 68.43804999999999,
+              "y": 6.457949999999999,
+              "width": 12.8025,
+              "height": 11.7311,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-03-09.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "fed2193c-0056-4a4a-87fa-8547a4f93f22",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 53.596900000000005,
+              "y": 52.84275,
+              "width": 5.4376,
+              "height": 8.8657,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "6bd895d8-1326-47d4-95c5-5854b9967f29",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 65.24495,
+              "y": 82.35430000000001,
+              "width": 5.0833,
+              "height": 8.039200000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "cc21d086-998e-4c4a-adba-90d3841e046a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 54.058099999999996,
+              "y": 39.194799999999994,
+              "width": 5.3178,
+              "height": 12.1396,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "53530470-17c4-40ff-b0e1-83410a8ec23f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 63.3856,
+              "y": 60.64039999999999,
+              "width": 4.356999999999999,
+              "height": 9.8592,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "ca28a0f2-81e4-42d6-86d5-8f5e93005597",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 28.2761,
+              "y": 15.189550000000002,
+              "width": 5.1878,
+              "height": 7.905900000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-33-30.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": []
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-27-04.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "3683d90f-d267-4b9e-b8bb-edebfc0d5805",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 7.9841,
+              "y": 19.739,
+              "width": 2.7119999999999997,
+              "height": 6.6474,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "b3a002c7-dcc4-45c4-98cd-a1b416858596",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 29.674300000000002,
+              "y": 81.3354,
+              "width": 4.4546,
+              "height": 8.0636,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "7ffbdcb6-222d-4f6d-a9ce-094241764f5f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.9727,
+              "y": 11.742750000000001,
+              "width": 3.9570000000000003,
+              "height": 7.2283,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "307e06f8-146f-4779-9ede-b07721a783c2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.6289500000000006,
+              "y": 85.39290000000001,
+              "width": 5.338699999999999,
+              "height": 9.9476,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-45-11.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "f0730887-00dc-4964-9966-e2f3280a4d28",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 70.07895,
+              "y": 62.8915,
+              "width": 5.8225,
+              "height": 11.2932,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-22-53.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": []
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-36-23.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "5a245abf-2673-479d-a735-b5861a07aba2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 4.338150000000001,
+              "y": 40.51715,
+              "width": 4.7433000000000005,
+              "height": 12.0985,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "fb72d865-6246-434a-8b90-8e68872d5621",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 73.8487,
+              "y": 32.482150000000004,
+              "width": 3.894,
+              "height": 9.8081,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "6fee3764-8ff9-480d-bc35-1879729131af",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 53.3401,
+              "y": 43.33375,
+              "width": 3.642,
+              "height": 10.7187,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "5117edc5-ba49-41eb-a15d-13a512ff6847",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 82.88815000000001,
+              "y": 20.48035,
+              "width": 5.1049,
+              "height": 9.5597,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-16-08.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "2fc508fc-1cec-4a9c-8dbd-4eb62bcdcd35",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 1.8841000000000003,
+              "y": 44.47125,
+              "width": 6.5005999999999995,
+              "height": 23.268900000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "424d7772-519e-4ff0-8fdc-28fd349b5def",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.963849999999997,
+              "y": 24.2657,
+              "width": 5.2755,
+              "height": 19.31,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "aed0200c-4658-49e2-888f-f85d264e80fa",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 15.64265,
+              "y": 43.96455,
+              "width": 6.5121,
+              "height": 21.8971,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "b6518243-85fb-46c3-ab2c-14504e9e00ec",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 34.5206,
+              "y": 46.47695,
+              "width": 6.771599999999999,
+              "height": 25.4177,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "b482a1e0-ab26-4ae1-9c23-acc1d849838a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 94.1131,
+              "y": 15.9993,
+              "width": 5.0884,
+              "height": 16.8398,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "d716d3f3-83d9-4abb-b702-951f857c463a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 93.04285,
+              "y": 0.05394999999999983,
+              "width": 4.600499999999999,
+              "height": 14.9339,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-17-16.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "956e8b61-7c8b-4607-b4ca-0aa5dfd0f13c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 74.4388,
+              "y": 56.496900000000004,
+              "width": 23.8682,
+              "height": 36.5066,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "f0c11836-b15a-4c40-b8a0-2f9e98c46c2e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 0.1509499999999997,
+              "y": 14.801199999999998,
+              "width": 3.9947000000000004,
+              "height": 27.372600000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "2219c0ca-fc1a-4271-b5d6-1eb4dbfa0063",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 0.2486000000000002,
+              "y": 14.098300000000002,
+              "width": 3.9512,
+              "height": 28.108,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_14"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/81QsyEpQinL._AC_SL1500_.jpg"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "a9973eef-6b3a-47ff-b2c6-af20ad668da4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 43.934650000000005,
+              "y": 51.84029999999999,
+              "width": 19.3153,
+              "height": 20.3146,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "5afd5b2f-8d63-4e74-864a-d8d2a620cde4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 43.703900000000004,
+              "y": 32.982299999999995,
+              "width": 18.8538,
+              "height": 18.8836,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "e31c990b-2059-499b-a36a-1cfc9265b2c2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 26.085800000000003,
+              "y": 23.7712,
+              "width": 18.1954,
+              "height": 18.1128,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "ceb7598b-0f2b-4101-94c5-b5f4ec119b57",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 60.00165,
+              "y": 9.904499999999999,
+              "width": 18.1491,
+              "height": 16.209,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "b4afd506-4c48-41b9-8f37-6cdfb1c860d8",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 62.214800000000004,
+              "y": 25.7374,
+              "width": 16.9676,
+              "height": 15.296199999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "b33efcf1-f725-4ea2-8e1c-94a98954f8fc",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 62.1267,
+              "y": 42.911500000000004,
+              "width": 19.0274,
+              "height": 18.255,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "bcf22107-1df0-4feb-8905-98c9b09cbc8e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 24.652949999999997,
+              "y": 40.47194999999999,
+              "width": 19.5297,
+              "height": 20.9771,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "dff9d3f0-31fd-4805-afe5-9d7e2c45739f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 24.158800000000003,
+              "y": 40.481849999999994,
+              "width": 20.025599999999997,
+              "height": 20.9495,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_14"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-48-59.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "eefc3333-1682-4e1c-a957-41e52a808095",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 39.524550000000005,
+              "y": 3.458649999999999,
+              "width": 3.5095,
+              "height": 7.704700000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "2c42173c-cfeb-4cd9-a846-323a6d9eb366",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 57.90545,
+              "y": 56.69635000000001,
+              "width": 4.5883,
+              "height": 10.8903,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "4510ec91-6ca4-4785-ae6d-bbb30279fc31",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 52.03869999999999,
+              "y": 18.6597,
+              "width": 3.7338000000000005,
+              "height": 7.875,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-37-06.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "52a88b7d-9411-4930-a69d-8947867c953b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 14.022300000000001,
+              "y": 3.5095499999999995,
+              "width": 4.5168,
+              "height": 8.064300000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "55cd9bc8-df3f-4cfc-9d15-f73ac6ffe3a9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 5.0000000000050004e-05,
+              "y": 85.10815,
+              "width": 7.1407,
+              "height": 14.3931,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-33-08.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "72a4c1a1-138b-48d0-8ced-2e62617643f7",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 92.77915,
+              "y": 60.62545,
+              "width": 6.572500000000001,
+              "height": 18.7895,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "e07b1370-0cfb-4e89-902f-4afc05a0ba42",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 81.44819999999999,
+              "y": 1.7106499999999998,
+              "width": 6.882000000000001,
+              "height": 14.9507,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "ab8b3055-a79d-4745-9e0c-fbb3a2005552",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 26.829150000000002,
+              "y": 68.29624999999999,
+              "width": 6.9789,
+              "height": 17.869699999999998,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "e0a2cc4c-bf2a-4990-a866-a8ab6d1152b6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 0.9446000000000003,
+              "y": 65.5009,
+              "width": 5.8296,
+              "height": 19.084200000000003,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "6863f564-a0db-4b7b-8205-52e4cbfb406d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 10.864,
+              "y": 73.01804999999999,
+              "width": 6.5096,
+              "height": 19.9801,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "7bf813e8-3aa6-41b8-bcd3-ec9459d79d45",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 84.9962,
+              "y": 32.192750000000004,
+              "width": 7.053,
+              "height": 18.0291,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-19-18.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "92fe013c-07cd-4a9c-843d-eaebb279ba9e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.4864,
+              "y": 9.1872,
+              "width": 3.6688,
+              "height": 7.009799999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "640b631e-82f9-462c-82ee-e38be492b680",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 1.9890499999999998,
+              "y": 85.3095,
+              "width": 5.8101,
+              "height": 10.378,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "0e14c579-6487-4a0e-b5fe-659109bed521",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 44.70035,
+              "y": 83.26679999999999,
+              "width": 4.7149,
+              "height": 7.2086,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "faf679dd-2186-44bd-b396-bfbc3b839673",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.275700000000004,
+              "y": 73.703,
+              "width": 4.0078000000000005,
+              "height": 8.044,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2019-58-08.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "752db6da-1d72-4a44-9b73-cb9ee3c00bbe",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 79.7816,
+              "y": 2.7676000000000007,
+              "width": 6.6575999999999995,
+              "height": 13.815199999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "672e0ae0-93b0-4e73-a0d4-f73711348e61",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 28.135900000000003,
+              "y": 9.57155,
+              "width": 6.755999999999999,
+              "height": 14.2427,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "3ee6cdac-4f35-47d8-965c-db2bf5e05d62",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 52.86965,
+              "y": 36.666399999999996,
+              "width": 6.459099999999999,
+              "height": 16.1968,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "974f13fb-8bc4-4ab1-946f-f231d0a6b0ee",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 42.069449999999996,
+              "y": 43.84145,
+              "width": 6.4041,
+              "height": 16.4751,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "8055d660-f3a2-4c16-97b0-428c242d964a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 42.0128,
+              "y": 43.73915,
+              "width": 6.5134,
+              "height": 16.4617,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-44-54.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "14bf9a8b-e4f8-486c-8fc1-984ba8cde8b4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 57.970200000000006,
+              "y": 70.71465,
+              "width": 4.9084,
+              "height": 11.157300000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "057557ec-d58b-4874-8457-0e3df2d43787",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 49.11805000000001,
+              "y": 21.31535,
+              "width": 6.3595,
+              "height": 9.844100000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "ce9b96fe-eb38-441b-891d-c57a09560028",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 15.8189,
+              "y": 2.7691,
+              "width": 3.8668,
+              "height": 8.55,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "1f228609-18be-492a-b78b-df6fa7a937db",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 34.30805,
+              "y": 67.9763,
+              "width": 4.8871,
+              "height": 10.8974,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-48-43.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "ac4864e4-fcbf-4006-a868-eb132b51ace6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 46.922250000000005,
+              "y": 15.6886,
+              "width": 4.4789,
+              "height": 9.818399999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-04-23.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "40d54b29-414e-489c-be40-e3a19abb613a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 66.3351,
+              "y": 26.25595,
+              "width": 4.380599999999999,
+              "height": 7.993500000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "e1a59d34-7d1b-44bd-8d11-1054ee262a57",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 35.412549999999996,
+              "y": 8.335049999999999,
+              "width": 4.1521,
+              "height": 8.4065,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "ab1e9ab5-594b-40f4-95c2-7d6d51127535",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 63.05925,
+              "y": 60.601800000000004,
+              "width": 4.4757,
+              "height": 9.964,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "de38bc95-9409-4f24-8fc2-241c2646c423",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 68.6608,
+              "y": 82.67885,
+              "width": 5.3144,
+              "height": 7.6741,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_15"
+              ]
+            }
+          },
+          {
+            "id": "16b4a39b-9f53-43cc-b468-38c5d9918b42",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 68.70775,
+              "y": 82.6786,
+              "width": 5.2471,
+              "height": 7.627000000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "527d71c9-f2d4-4fdf-94e8-33e54f6c1933",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 60.7518,
+              "y": 39.73005,
+              "width": 4.948,
+              "height": 9.3873,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "298e2217-643a-4a4a-88f8-1ce1b157d8b7",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 13.19265,
+              "y": 66.79129999999999,
+              "width": 4.7299,
+              "height": 10.1256,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "69c25dee-30a5-4c60-8045-df27afbd8ac3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 30.0417,
+              "y": 71.87424999999999,
+              "width": 6.4528,
+              "height": 12.5091,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_12"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-41-01.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "65ca039b-d3e7-4862-9f45-0b50f2e9cae8",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 85.16969999999999,
+              "y": 71.737,
+              "width": 6.1652,
+              "height": 9.99,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "f7dd81b0-63ed-41f7-9972-9162171a7241",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 66.73155000000001,
+              "y": 35.23575,
+              "width": 4.2935,
+              "height": 8.8853,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "6aa471cd-d74c-4b2c-b6b0-cf5bc1a74e85",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 79.95870000000001,
+              "y": 33.372299999999996,
+              "width": 4.6802,
+              "height": 9.446,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "4992d9e4-3662-4393-b3a4-b7685f935b66",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 34.47965,
+              "y": 69.51635,
+              "width": 5.4001,
+              "height": 10.5157,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "852ef8dc-cf4d-4e52-a583-962d54c1e3e8",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 61.980199999999996,
+              "y": 48.42385,
+              "width": 5.8216,
+              "height": 9.5725,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "c1933230-1b70-4c9f-a710-f8e3b86be797",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 64.63915,
+              "y": 5.7128,
+              "width": 4.452500000000001,
+              "height": 8.6256,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "e6291ccd-36d3-43af-9b72-b9ef41dcf8d0",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 65.47765,
+              "y": 60.442049999999995,
+              "width": 5.4171,
+              "height": 10.5887,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/s-l400.jpg"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "8a148968-5f4c-45ee-9ed9-ae95d61423b3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 40.807900000000004,
+              "y": 63.574149999999996,
+              "width": 15.2698,
+              "height": 19.467100000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "cef5fa3a-1714-4403-8867-902cd20be5e9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.953050000000005,
+              "y": 67.4161,
+              "width": 16.4851,
+              "height": 18.240000000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "46a9a5cb-3fd3-4a76-ac7d-3fa704a2d2f0",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 56.482949999999995,
+              "y": 78.95935,
+              "width": 21.0351,
+              "height": 20.7051,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "f3cafbcf-4488-4862-a907-059eda09221e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 56.632349999999995,
+              "y": 60.7251,
+              "width": 15.451300000000002,
+              "height": 17.7606,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "3b6270af-c2e6-4a2a-9ef7-5839180df765",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 56.77945,
+              "y": 49.60775,
+              "width": 14.7923,
+              "height": 12.1349,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_14"
+              ]
+            }
+          },
+          {
+            "id": "5a10bcb7-19ca-4e50-b23c-c609872d9ddc",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 4.590300000000001,
+              "y": 59.24284999999999,
+              "width": 18.486,
+              "height": 12.3825,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "edb92926-8578-47c1-8aab-13ffc4223f9e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.546250000000004,
+              "y": 36.92255,
+              "width": 13.983899999999998,
+              "height": 11.4303,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_11"
+              ]
+            }
+          },
+          {
+            "id": "c05b7057-33d2-4e4a-8ed8-abe9e1ce34c1",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 25.208149999999996,
+              "y": 56.61675,
+              "width": 14.2133,
+              "height": 12.442300000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "96a6c882-6164-41e3-aa33-38a9b1063014",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.269149999999996,
+              "y": 46.6835,
+              "width": 12.536900000000001,
+              "height": 10.4428,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "a941684a-ce90-445e-9fd6-8e4b79e890de",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 42.146,
+              "y": 44.643100000000004,
+              "width": 14.685599999999999,
+              "height": 9.6362,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "9ebdc24e-ef87-47a0-ad13-54c17cd69f1c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 11.251299999999999,
+              "y": 31.883950000000006,
+              "width": 15.778400000000001,
+              "height": 10.370899999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "6ea5448c-fc10-4cda-9b3a-74a25b89aab0",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 4.44555,
+              "y": 70.4039,
+              "width": 18.4101,
+              "height": 20.0474,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "f827b615-6b36-4169-ad4d-60a35bf0800b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 72.89800000000001,
+              "y": 55.347500000000004,
+              "width": 16.6154,
+              "height": 20.163600000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "61d9f818-0505-4801-8c14-72bfcbe75671",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 72.8607,
+              "y": 55.3571,
+              "width": 16.581000000000003,
+              "height": 20.182,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "8c7dcb98-4c4e-48b2-9ce4-fced37909aad",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.381349999999998,
+              "y": 46.81785,
+              "width": 12.4183,
+              "height": 10.2731,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "72b1a393-1826-404a-acc9-939c41d81611",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 10.778550000000001,
+              "y": 50.12029999999999,
+              "width": 13.242300000000002,
+              "height": 10.6216,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "4690bf86-32c8-429d-b11a-c79ce0be616f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 9.5939,
+              "y": 40.6107,
+              "width": 16.2638,
+              "height": 11.183,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-40-34.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "74f9cf4b-eda3-4683-8bb5-3dfab53d0a99",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 9.4146,
+              "y": 44.80375,
+              "width": 6.155200000000001,
+              "height": 15.542900000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2019-57-22.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "9c3cb8b7-fd39-4611-8984-8902d3b4edf2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 48.0138,
+              "y": 40.83015,
+              "width": 13.5924,
+              "height": 21.6355,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "770eca29-2dfa-4326-9382-7598ae9ee914",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 44.029999999999994,
+              "y": 21.812400000000004,
+              "width": 11.658,
+              "height": 18.6198,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "5c2dcc23-1395-42a1-9862-2868423e3188",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 69.2721,
+              "y": 44.2676,
+              "width": 12.972800000000001,
+              "height": 23.3988,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "961111cd-20e5-4356-afd2-726bc36f8c04",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 14.66355,
+              "y": 42.3986,
+              "width": 14.205499999999999,
+              "height": 22.85,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "b4cadd16-e329-4cf1-9c7b-36b9e5dbcedf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 15.233249999999998,
+              "y": 19.9398,
+              "width": 11.916699999999999,
+              "height": 18.9346,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-42-25.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "3ce37f0f-20f4-42ad-ad25-12408de458b7",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 43.82045,
+              "y": 13.556649999999998,
+              "width": 5.0031,
+              "height": 9.1135,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-32-58.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "95465bc6-97a9-41c9-94ae-82b3a47448ce",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.4269499999999997,
+              "y": 85.3772,
+              "width": 5.6819,
+              "height": 10.5486,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "586ecedd-2091-4f8a-92aa-2ebec36b4846",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 72.45845,
+              "y": 25.24615,
+              "width": 4.1331,
+              "height": 6.3391,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "acd73934-b784-4798-b6be-de8502144033",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 54.54925000000001,
+              "y": 63.30674999999999,
+              "width": 4.1181,
+              "height": 8.629100000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-07-45.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "1bdb9fe3-b1ee-4544-8d0c-958c4ad784b9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 80.08475,
+              "y": 14.9522,
+              "width": 19.9153,
+              "height": 36.1598,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "1553dca3-3e62-4ccd-9cef-8243026e2da0",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 46.00110000000001,
+              "y": 1.2906500000000016,
+              "width": 20.6842,
+              "height": 31.7337,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "54b7d1a1-8a49-422f-9351-990feae32ec3",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 54.5675,
+              "y": 35.5133,
+              "width": 24.0928,
+              "height": 39.283,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-41-36.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "7205d619-b526-4d65-a626-a14744b315ec",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 53.7874,
+              "y": 25.837449999999997,
+              "width": 4.031,
+              "height": 8.6891,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "97a70656-9609-4ba3-a630-52b1229b433b",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 46.1426,
+              "y": 44.6541,
+              "width": 4.7838,
+              "height": 7.9079999999999995,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "e879b1f3-5fde-456e-bcb1-18c951b804a6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 15.179899999999998,
+              "y": 81.11345000000001,
+              "width": 6.0854,
+              "height": 8.0701,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "95f7c8dc-d170-4c0b-b0da-29b59a78ee1d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 32.39905,
+              "y": 72.611,
+              "width": 5.0531,
+              "height": 11.3186,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "970e6143-dd13-43e4-8754-52b1acd89e9f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 32.5262,
+              "y": 72.64320000000001,
+              "width": 4.902,
+              "height": 11.268799999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-32-02.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "6edbb037-3627-4670-93db-89cb0aa5b434",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 0.026500000000000135,
+              "y": 68.78505,
+              "width": 4.0666,
+              "height": 10.1133,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-45-37.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "5317f61d-9788-402b-a2b0-3defd90808ed",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 52.96465,
+              "y": 75.3841,
+              "width": 5.2157,
+              "height": 10.055,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-30-15.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "05bba236-bb2b-4c22-b2b9-c33186ef8518",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 65.3077,
+              "y": 10.19535,
+              "width": 2.9694000000000003,
+              "height": 6.3359,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "38367f0b-a524-4c7c-9e35-eb8d7c58c804",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 2.643,
+              "y": 85.5564,
+              "width": 5.3612,
+              "height": 9.439599999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-02-40.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "dfb27003-966c-4b6e-9b86-d929290427f2",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 74.77385000000001,
+              "y": 18.6724,
+              "width": 4.7699,
+              "height": 7.853000000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "6db97f67-4d05-465a-a2e0-620a838f5d7e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 47.35355,
+              "y": 67.7248,
+              "width": 2.3241,
+              "height": 8.059,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "a23780f5-014e-412c-ae18-c9fe7b0786e9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 45.018750000000004,
+              "y": 65.5226,
+              "width": 2.7451,
+              "height": 8.3846,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2014-41-07.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "31746e55-8f5a-48ce-8dc9-b0fd46240b24",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 89.34944999999999,
+              "y": 51.6332,
+              "width": 9.3297,
+              "height": 14.479000000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "de5273c4-642e-46cd-b3fe-1e84ef2e8d0a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 12.00425,
+              "y": 2.3991499999999997,
+              "width": 8.2587,
+              "height": 12.0953,
+              "rotation": 0,
+              "rectanglelabels": [
+                "purple_4"
+              ]
+            }
+          },
+          {
+            "id": "8dfa94a3-3835-49b4-b8d0-bbe552bd776e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 6.80905,
+              "y": 67.2569,
+              "width": 7.585500000000001,
+              "height": 14.285400000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "d618b79c-dad1-40c2-87de-f75caf56894f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 3.0364999999999998,
+              "y": 57.35184999999999,
+              "width": 7.485799999999999,
+              "height": 13.609499999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "a783f769-481e-411a-9da4-0acdbd9b9bb1",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 30.7761,
+              "y": 80.74510000000001,
+              "width": 8.5454,
+              "height": 16.2294,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "8f893615-6a93-48f5-ac02-1d52e71b631d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 89.62845,
+              "y": 18.83165,
+              "width": 7.0310999999999995,
+              "height": 13.7605,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "86244726-47c2-4a41-ae0c-883d640bfcb6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 30.813500000000005,
+              "y": 81.17255,
+              "width": 8.3764,
+              "height": 15.7775,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_11"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/bolas-pool-aramith-tournament-black-.jpg"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "b4e673db-7e32-4817-8b8e-5b1aaec7f949",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 36.314099999999996,
+              "y": 51.5026,
+              "width": 10.1672,
+              "height": 7.1564000000000005,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "dff8a076-317c-457f-a3d3-16683ab5370a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.8262,
+              "y": 51.76405,
+              "width": 11.2122,
+              "height": 6.8299,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "b3e02b9b-a544-4442-a690-47c2ec901e16",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 47.19695,
+              "y": 57.681000000000004,
+              "width": 10.2817,
+              "height": 7.1302,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "2cad8d4f-3f30-4f2f-b903-dbc125eade38",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 47.41475,
+              "y": 51.6347,
+              "width": 10.3741,
+              "height": 6.8444,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_11"
+              ]
+            }
+          },
+          {
+            "id": "4e318de4-ca3a-4ad4-a61b-3f13c7943274",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 33.2572,
+              "y": 63.390049999999995,
+              "width": 11.751399999999999,
+              "height": 7.3577,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          },
+          {
+            "id": "14ba8854-7472-4e64-8bee-7dcc828284f7",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 45.369749999999996,
+              "y": 70.07650000000001,
+              "width": 11.6925,
+              "height": 14.493400000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_14"
+              ]
+            }
+          },
+          {
+            "id": "f3b2df6e-1061-440a-a6bc-b4e994a287fe",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 23.68755,
+              "y": 57.30015,
+              "width": 9.929499999999999,
+              "height": 6.355099999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "a128128e-dcd5-4f5f-a2e6-247360b5eb54",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 34.57915,
+              "y": 57.67295,
+              "width": 11.1851,
+              "height": 6.7597000000000005,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "5b71dbea-11e1-48f6-a692-c7e67b65f9be",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 46.735749999999996,
+              "y": 63.6293,
+              "width": 11.302900000000001,
+              "height": 6.6674,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_11"
+              ]
+            }
+          },
+          {
+            "id": "cf4c37ce-7dc6-4810-b433-3e6740f6a9ec",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 33.44815,
+              "y": 63.444250000000004,
+              "width": 11.5799,
+              "height": 7.287100000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "0fd41181-9ef0-4c56-a7c5-84ed43904ed1",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 3.370399999999999,
+              "y": 13.0036,
+              "width": 8.053,
+              "height": 7.581799999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_10"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-14-51.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "4ff9f424-468f-4520-8908-3d4130d121ff",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 21.403850000000002,
+              "y": 20.85285,
+              "width": 3.5477000000000003,
+              "height": 8.4581,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "a08fdc89-5e57-42fa-86fb-f69b0b044ee6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 20.013,
+              "y": 40.048249999999996,
+              "width": 4.7498,
+              "height": 7.7833,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "fc9a8801-fa3c-42a8-bfb1-b4a22d33fc7e",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 8.652750000000001,
+              "y": 55.93910000000001,
+              "width": 4.0377,
+              "height": 8.4088,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "4bba5b15-a5a0-4b30-b640-c638f3029da6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 72.60375,
+              "y": 68.02945,
+              "width": 3.2035,
+              "height": 6.6123,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_5"
+              ]
+            }
+          },
+          {
+            "id": "d68b580b-b733-4143-a48e-cfda2baa128d",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 58.8173,
+              "y": 74.96875,
+              "width": 3.7022,
+              "height": 8.3193,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-05-11.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "41221dce-edd7-4c8a-9c1c-ed3a12e41abf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 22.8609,
+              "y": 26.615250000000003,
+              "width": 4.9914,
+              "height": 7.8881000000000006,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "9a6766e7-6623-479d-bd34-6a45760f5964",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 52.93375,
+              "y": 51.3726,
+              "width": 5.1849,
+              "height": 7.4190000000000005,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "754c64fc-1b59-40bd-8c5e-ef27c7cabcda",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 32.05525,
+              "y": 76.0587,
+              "width": 4.6075,
+              "height": 11.081000000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-31-29.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "1c7bc3f0-a684-4130-a0d3-b136f877c4cf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 48.07144999999999,
+              "y": 11.165700000000001,
+              "width": 4.4019,
+              "height": 21.8638,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "bb966b92-bec4-49bc-8198-cb39c01f74dd",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 59.9678,
+              "y": 66.30030000000001,
+              "width": 6.5692,
+              "height": 25.878800000000002,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "2867c069-00af-4643-8fda-ddbf2d162386",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 82.27515,
+              "y": 49.77524999999999,
+              "width": 5.7595,
+              "height": 24.9751,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          },
+          {
+            "id": "75e9cc63-e711-466c-84e6-fb519463ba92",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 61.60099999999999,
+              "y": 50.6507,
+              "width": 6.0426,
+              "height": 21.0858,
+              "rotation": 0,
+              "rectanglelabels": [
+                "white"
+              ]
+            }
+          },
+          {
+            "id": "008ef807-37dd-4fbb-9c0f-c5b0470ef79f",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 33.45885,
+              "y": 42.8633,
+              "width": 6.1155,
+              "height": 25.3382,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "32ea85ab-ddea-4021-ad44-4a7f12e83e4c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 44.048500000000004,
+              "y": 8.54975,
+              "width": 3.6458,
+              "height": 15.9635,
+              "rotation": 0,
+              "rectanglelabels": [
+                "green_6"
+              ]
+            }
+          },
+          {
+            "id": "902a88f7-dbf2-4706-99d0-4434a46c57f6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 3.1310000000000002,
+              "y": 17.51885,
+              "width": 4.194599999999999,
+              "height": 20.6223,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "8ef71921-26b3-4811-bb3d-e437cf8c03a9",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 88.86084999999999,
+              "y": 57.17095,
+              "width": 5.9349,
+              "height": 26.833299999999998,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "b80f250d-ea1d-4ff6-b25c-f20c1337e6c4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 3.1523499999999998,
+              "y": 17.404799999999998,
+              "width": 4.1813,
+              "height": 20.386000000000003,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "4b487eb5-7fc9-4f19-85ca-1033a6cf4194",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 52.393750000000004,
+              "y": 52.254,
+              "width": 5.9089,
+              "height": 26.4252,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-13-52.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": []
+      }
+    ]
+  },
+  {
+    "data": {
+      "image": "/data/local-files/?d=src/Proyecto_Bolas_LS/imagenes/2025-06-15%2020-46-17.png"
+    },
+    "predictions": [
+      {
+        "model_version": "yolov8_pretrained",
+        "result": [
+          {
+            "id": "65cb9da3-7bb8-401f-b5ed-f2ad29e49f8a",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 7.088500000000001,
+              "y": 43.735099999999996,
+              "width": 5.4441999999999995,
+              "height": 12.4568,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "91e392b6-8ca6-4e04-ac61-b665383a58c5",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 27.60815,
+              "y": 42.894600000000004,
+              "width": 5.1373,
+              "height": 9.3636,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_9"
+              ]
+            }
+          },
+          {
+            "id": "36115f6e-e37f-408f-8b84-fe53cde4067c",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 67.56020000000001,
+              "y": 38.6322,
+              "width": 4.763599999999999,
+              "height": 10.499799999999999,
+              "rotation": 0,
+              "rectanglelabels": [
+                "yellow_1"
+              ]
+            }
+          },
+          {
+            "id": "eef77bd9-de49-4466-a894-825a0bc710ca",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 22.704700000000003,
+              "y": 41.9975,
+              "width": 4.827,
+              "height": 10.5628,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "0b274e15-6086-4317-8f22-3f60e1d386e6",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 36.852050000000006,
+              "y": 40.6107,
+              "width": 4.5195,
+              "height": 11.1634,
+              "rotation": 0,
+              "rectanglelabels": [
+                "dred_7"
+              ]
+            }
+          },
+          {
+            "id": "9d6c1e3d-e922-4bc1-938c-ea69f138cdc4",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 32.556050000000006,
+              "y": 40.8906,
+              "width": 3.9909,
+              "height": 10.9282,
+              "rotation": 0,
+              "rectanglelabels": [
+                "black_8"
+              ]
+            }
+          },
+          {
+            "id": "fbca094a-bddf-4236-959e-d0943dc5c5cf",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 62.3251,
+              "y": 38.63845,
+              "width": 4.0048,
+              "height": 11.5385,
+              "rotation": 0,
+              "rectanglelabels": [
+                "blue_2"
+              ]
+            }
+          },
+          {
+            "id": "f930ff5d-827d-4d08-a4d6-0b9e4970aa33",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 46.4867,
+              "y": 39.69915,
+              "width": 4.4448,
+              "height": 11.6275,
+              "rotation": 0,
+              "rectanglelabels": [
+                "orange_13"
+              ]
+            }
+          },
+          {
+            "id": "9a98f575-a110-4537-ad57-6211aa7713aa",
+            "from_name": "label",
+            "to_name": "image",
+            "type": "rectanglelabels",
+            "value": {
+              "x": 56.53275000000001,
+              "y": 38.76969999999999,
+              "width": 4.3829,
+              "height": 11.561200000000001,
+              "rotation": 0,
+              "rectanglelabels": [
+                "red_3"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

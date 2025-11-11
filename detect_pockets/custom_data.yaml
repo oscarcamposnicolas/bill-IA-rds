@@ -1,0 +1,16 @@
+# custom_data_shared_labels.yaml
+
+path: detect_pockets/dataset_final_pockets
+
+train: images/train
+val: images/valid
+test: images/test
+
+# Número de clases total
+nc: 2 # O tu número final de clases
+
+# Lista de clases maestra y definitiva
+names: [
+  'pocket_corner',
+  'pocket_side',
+  ]
