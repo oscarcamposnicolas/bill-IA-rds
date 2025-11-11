@@ -10,7 +10,7 @@ Toda la metodología, la evolución del proyecto, el análisis técnico de cada 
 
 ### [➡️ Archivo de la presentacion del Proyecto de deteccion de bolas ⬅️](https://github.com/oscarcamposnicolas/bill-IA-rds/blob/main/fases_html/bloque0.html)
 
-### [➡️ Accede al Wiki del Proyecto aquí ⬅️](https://www.google.com/search?q=https://github.com/oscarcamposnicolas/bill-IA-rds/wiki)
+### [➡️ Accede al Wiki del Proyecto aquí ⬅️](https://github.com/oscarcamposnicolas/bill-IA-rds/wiki)
 
 El Wiki está estructurado por fases, replicando la cronología del desarrollo del proyecto:
 
