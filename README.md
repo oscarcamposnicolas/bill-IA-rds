@@ -12,7 +12,7 @@ Incluye motor de reglas RAG (LLM) local para consulta experta.
 
 ## 1. Resumen del Proyecto
 
-**Documentacion proyecto (detect_balls): ./fases_html/portada.html**
+Documentacion proyecto (detect_balls): **./fases_html/bloque0.html**
 
 `bill-IA-rds` es un sistema de Inteligencia Artificial diseñado para realizar un análisis completo de una mesa de billar pool a partir de una sola imagen. A diferencia de un simple detector de objetos, este proyecto resuelve problemas complejos de **visión por computadora, perspectiva y clasificación de contexto** mediante una arquitectura híbrida.
 
