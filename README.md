@@ -1,4 +1,6 @@
-# bill-IA-rds: Sistema Híbrido de Análisis y Arbitraje para Billar Pool
+# bill-IA-rds: 
+
+# Sistema de Análisis y Arbitraje para Billar Pool
 
 Sistema de IA (100% on-premise) para billar pool. 
 
@@ -9,6 +11,8 @@ Resuelve la orientación semántica de la mesa y genera coordenadas precisas par
 Incluye motor de reglas RAG (LLM) local para consulta experta.
 
 ## 1. Resumen del Proyecto
+
+Documentacion proyecto (detect_balls): ./fases_html/portada.html
 
 `bill-IA-rds` es un sistema de Inteligencia Artificial diseñado para realizar un análisis completo de una mesa de billar pool a partir de una sola imagen. A diferencia de un simple detector de objetos, este proyecto resuelve problemas complejos de **visión por computadora, perspectiva y clasificación de contexto** mediante una arquitectura híbrida.
 
