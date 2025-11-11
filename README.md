@@ -1,4 +1,4 @@
-# 🎱 bill-IA-rds: Sistema Híbrido de Análisis y Arbitraje para Billar Pool
+# bill-IA-rds: Sistema Híbrido de Análisis y Arbitraje para Billar Pool
 
 Sistema de IA (100% on-premise) para billar pool. 
 
