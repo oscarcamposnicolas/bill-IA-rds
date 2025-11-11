@@ -1,4 +1,17 @@
-# verificar_etiquetas_yolo.py
+"""
+Módulo de Verificación Visual de Anotaciones (Fase 3, Paso 5).
+
+Este script de control de calidad visualiza las imágenes y sus correspondientes
+bounding boxes (bboxes) a partir de los archivos de etiqueta YOLO (.txt).
+
+Propósito principal:
+1.  Validación de Integridad: Confirmar que las coordenadas normalizadas en los archivos .txt
+    se traducen correctamente a bboxes en la imagen.
+2.  Detección de Errores: Identificar errores humanos de etiquetado o fallos en el proceso
+    de conversión de formatos (JSON -> YOLO).
+3.  Sanity Check: Asegurar que las bboxes generadas por la aumentación de datos son precisas.
+"""
+
 import os
 import random
 
@@ -30,7 +43,7 @@ print("Verification: ", VERIFICATION_DIR)
 
 # YOLO_LABELS_OUTPUT_DIR = "Proyecto_Bolas_LS/final_yolo_labels/"
 
-# Tu lista de clases maestra. ¡DEBE SER IDÉNTICA A LA DEL SCRIPT ANTERIOR!
+# Lista de clases maestra. ¡DEBE SER IDÉNTICA A LA DEL SCRIPT ANTERIOR!
 CLASES_MAESTRA = [
     "black_8",
     "blue_10",
@@ -94,7 +107,7 @@ CLASES_MAESTRA = [
 ]
 print("Clases_maestra: ", CLASES_MAESTRA)
 
-# Número de imágenes aleatorias que quieres verificar
+# Número de imágenes aleatorias a verificar
 NUM_IMAGENES_A_VERIFICAR = 5
 
 # --- FIN DE LA CONFIGURACIÓN ---

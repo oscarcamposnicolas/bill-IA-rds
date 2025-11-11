@@ -1,3 +1,18 @@
+"""
+Módulo de Integración Visual de Homografía con Pygame (Fase 5, Paso 6).
+
+Este script actúa como el punto de integración y verificación final de la Fase 5.
+Combina el detector de esquinas, el cálculo de Homografía y la corrección de
+orientación para mostrar la mesa de billar perfectamente rectificada (vista cenital)
+y siempre en un formato horizontal estándar (1000x500 píxeles).
+
+Propósito principal:
+1.  Validación del Pipeline: Confirmar que la detección de IA + matemáticas de
+    perspectiva funcionan en conjunto.
+2.  Visualización de Alto Nivel: Presentar la imagen final del plano de juego
+    que serviría de fondo para la IA de juego (movimiento de bolas).
+"""
+
 import itertools
 import math
 
@@ -8,19 +23,6 @@ import pygame
 # =========================================================================
 # I. FUNCIONES MATEMÁTICAS AUXILIARES (EL NÚCLEO DE ROBUSTEZ)
 # =========================================================================
-
-'''
-def encontrar_punto_interseccion(line1_coords, line2_coords):
-    """Calcula el punto de intersección de dos líneas."""
-    x1, y1, x2, y2 = line1_coords
-    x3, y3, x4, y4 = line2_coords
-
-    A1, B1 = y2 - y1, x1 - x2
-    C1 = A1 * x1 + B1 * y1
-
-    A2, B2 = y4 - y3, x3 - x4
-    C2 = A2 * x3 + B2 * y3
-'''
 
 
 def encontrar_punto_interseccion(line1_coords, line2_coords):
@@ -115,7 +117,6 @@ def score_quadrilateral(puntos_esquina, image_area):
     return area
 
 
-# Versión CORREGIDA de find_best_quadrilateral (Filtro por Ratio de Área)
 def find_best_quadrilateral(horizontal_lines, vertical_lines, image_shape):
     """
     Busca la mejor combinación de 2 líneas H y 2 líneas V.
@@ -173,12 +174,12 @@ def find_best_quadrilateral(horizontal_lines, vertical_lines, image_shape):
                     )
 
     # --------------------------------------------------------
-    # NUEVA LÓGICA FINAL: SELECCIÓN POR ÁREA MÍNIMA (EL MÁS INTERIOR)
+    # SELECCIÓN POR ÁREA MÍNIMA (EL MÁS INTERIOR)
     # --------------------------------------------------------
     if not all_candidates:
         return None, 0.0, None
 
-    # 1. Filtro de Área Mínima (Tu restricción)
+    # 1. Filtro de Área Mínima
     # Descartamos ruido que sea menor al 10% del área de la imagen
     MIN_AREA_THRESHOLD = image_area * 0.10
 
@@ -248,7 +249,7 @@ def filter_by_color(original_image, lines_list, color_tolerance=35):
     return filtered_lines
 
 
-# --- FUNCIONES DE HOMOGRAFÍA Y PYGAME (NUEVAS) ---
+# --- FUNCIONES DE HOMOGRAFÍA Y PYGAME ---
 
 
 def _calcular_orientacion_mesa(esquinas):
@@ -419,8 +420,6 @@ ALTO_FINAL_HORIZONTAL = 500
 image_path = "detect_balls/tests/Black/test_pool_table_1.png"
 image_path = "detect_balls/tests/Black/test_pool_table_2.png"
 image_path = "detect_balls/tests/Black/test_pool_table_3.png"
-# NOTA: Prueba también con una imagen que sepas que es VERTICAL
-# image_path = "ruta/a/tu/imagen_vertical.png"
 
 imagen_cv_original = cv2.imread(image_path)
 
@@ -464,7 +463,6 @@ else:
             )
 
         # --- 7. Mostrar con Pygame ---
-        # (Asegúrate de tener esta función definida)
         print("Mostrando resultado final en Pygame (cierra la ventana para salir).")
         mostrar_imagen_pygame(
             mesa_transformada, titulo="Mesa Aplanada y Orientada (1000x500)"

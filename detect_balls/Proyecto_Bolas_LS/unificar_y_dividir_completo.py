@@ -1,4 +1,20 @@
-# unificar_y_dividir_completo.py
+"""
+Módulo de Unificación y División Completa del Dataset (Fase 3, Paso 6).
+
+Este script realiza la consolidación final de todos los conjuntos de datos
+de imágenes y etiquetas generados a lo largo del proyecto (datasets originales,
+datasets pre-etiquetados, datasets aumentados, etc.).
+
+Su principal función es asegurar que el modelo YOLO se entrene sobre un único
+conjunto de datos coherente, dividido rigurosamente en los subconjuntos
+Train/Valid/Test.
+
+Propósito principal:
+1.  Consolidación: Combinar datos de múltiples fuentes en un solo repositorio.
+2.  División Final: Aplicar una división aleatoria y reproducible (80/10/10)
+    para el entrenamiento final del modelo.
+"""
+
 import os
 import shutil
 

@@ -1,14 +1,26 @@
-# pre_etiquetado_definitivo.py
+"""
+Módulo de Pre-etiquetado (Pre-labeling) Asistido (Fase 2, Utilidad).
+
+Este script utiliza un modelo YOLO previamente entrenado (o una versión de un checkpoint intermedio)
+para generar predicciones iniciales (bounding boxes y clases) sobre un nuevo conjunto de imágenes
+que aún no han sido anotadas manualmente.
+
+Propósito principal:
+1. Acelerar el proceso de etiquetado manual, sirviendo como "etiquetador automático".
+2. Reducir el coste y el tiempo de la Fase de Adquisición de Datos (Human-in-the-Loop).
+3. Asegurar la consistencia inicial de las anotaciones.
+"""
+
 import os
 
 from ultralytics import YOLO
 
 # --- 1. CONFIGURACIÓN ---
 
-# Ruta a tu mejor modelo entrenado hasta ahora
+# Ruta al mejor modelo entrenado hasta ahora
 MODELO_PATH = "./detect_balls/runs/detect_balls_v12/weights/best.pt"
 
-# Carpeta donde tienes TODAS tus nuevas imágenes "black edition" sin etiquetar
+# Carpeta donde estan TODAS tus nuevas imágenes "black edition" sin etiquetar
 IMAGENES_NUEVAS_DIR = "./detect_balls/datasets/black_edition_raw/images/"
 
 # Carpeta donde se guardarán las etiquetas generadas por la IA
@@ -17,8 +29,8 @@ ETIQUETAS_GENERADAS_DIR = "./detect_balls/datasets/black_edition_raw/labels/"
 # Umbral de confianza
 UMBRAL_CONFIANZA = 0.25
 
-# ¡¡CRUCIAL!! Esta lista y su orden deben ser IDÉNTICOS a los del `data.yaml`
-# con el que se entrenó el modelo que estás usando en MODELO_PATH.
+# Esta lista y su orden deben ser IDÉNTICOS a los del `data.yaml`
+# con el que se entrenó el modelo que se está usando en MODELO_PATH.
 CLASSES = [
     "black_8",
     "blue_10",

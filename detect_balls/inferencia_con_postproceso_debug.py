@@ -1,4 +1,18 @@
-# inferencia_con_postproceso_debug.py
+"""
+Módulo de Inferencia Híbrida con Funcionalidad de Debug (Fase 2, Utilidad).
+
+Este script extiende la funcionalidad del módulo de inferencia principal
+(inferencia_con_postproceso.py) añadiendo herramientas de diagnóstico.
+
+Propósito principal:
+1.  Debugging Visual: Mostrar la imagen con las detecciones de YOLO y las etiquetas
+    de clasificación para la validación visual y manual.
+2.  Diagnóstico de Datos: Imprimir el vector de características exacto que se pasa
+    al clasificador de Machine Learning (Random Forest).
+3.  Prueba Unitária: Asegurar que el sistema híbrido toma la decisión correcta
+    (contexto Clásico/BE) en un entorno controlado.
+"""
+
 import os
 
 import cv2
@@ -6,7 +20,7 @@ import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
-# --- 1. CONFIGURACIÓN (Mantén la tuya) ---
+# --- 1. CONFIGURACIÓN ---
 base_project_dir = os.path.join(".", "detect_balls")
 train_version = "Modelo_Hibrido_v1"
 runs_dir = os.path.join(base_project_dir, "runs")
@@ -79,7 +93,7 @@ def post_procesar_detecciones(detecciones_yolo):
     for delator in DELATORES_BE:
         if delator in nombres_clases_detectadas:
             contexto = "black_edition"
-            delator_encontrado = delator  # Guardamos qué delator activó el cambio
+            delator_encontrado = delator  # Guardar qué delator activó el cambio
             break
 
     print(f"\n  > Iniciando Post-Procesamiento...")
@@ -153,7 +167,7 @@ def inferencia_final_debug():
 
         detecciones_finales = post_procesar_detecciones(detecciones_yolo)
 
-        # --- Visualización con las etiquetas finales (sin cambios aquí) ---
+        # --- Visualización con las etiquetas finales ---
         image = cv2.imread(test_image_path)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         fig, ax = plt.subplots(1, figsize=(12, 8))

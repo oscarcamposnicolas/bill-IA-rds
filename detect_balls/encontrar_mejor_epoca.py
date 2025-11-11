@@ -1,8 +1,19 @@
-# encontrar_mejor_epoca.py
+"""
+Módulo de Análisis Post-Entrenamiento y Selección de Modelo Óptimo (Fase 2, Utilidad).
+
+Este script analiza el rendimiento de un modelo YOLO a lo largo de su entrenamiento
+para identificar la 'mejor época' (best epoch). La mejor época se define como el
+punto de entrenamiento donde se logra la máxima precisión (Mean Average Precision, mAP),
+optimizando así el equilibrio entre aprendizaje y generalización, y previniendo
+el sobreajuste (overfitting).
+
+Este módulo requiere que el entrenamiento haya guardado el archivo 'results.csv'.
+"""
+
 import pandas as pd
 
 # --- CONFIGURACIÓN ---
-# Ruta al archivo results.csv de tu último entrenamiento
+# Ruta al archivo results.csv del último entrenamiento
 RUTA_RESULTS_CSV = "./detect_balls/runs/Modelo_Hibrido_v1/results.csv"
 # --- FIN DE LA CONFIGURACIÓN ---
 

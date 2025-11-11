@@ -1,12 +1,26 @@
+"""
+Módulo de Consulta RAG a través de Interfaz API (Fase 7, Paso 1).
+
+Este script demuestra el componente de despliegue del Sistema Experto. Su función
+es exponer la lógica del motor RAG (Retrieval-Augmented Generation) a través de
+una API REST utilizando un framework ligero (ej., Flask o FastAPI).
+
+Propósito principal:
+1.  Demostrar la capacidad de integración del sistema experto en una aplicación cliente
+    (ej., la web de presentación).
+2.  Permitir que la lógica del LLM sea consumida como un servicio web desacoplado.
+"""
+
 import os
 import time
+
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
 from langchain_community.vectorstores import FAISS
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Cambio recomendado por el warning: usamos la nueva librería para los embeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
 
 # --- CONFIGURACIÓN ---
 VECTORSTORE_NAME = "llm_rag/billar_expert_db"

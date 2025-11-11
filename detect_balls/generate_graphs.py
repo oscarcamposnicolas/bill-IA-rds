@@ -1,4 +1,17 @@
-# prompt: vuelve a generar las graficas regogiendo los datos del archivo "data.csv", creando una grafica diferente por grupos: train, metrics, val, lr
+"""
+Módulo de Generación de Gráficos de Análisis (Fase 2, Utilidad).
+
+Este script de post-procesamiento lee el archivo 'results.csv' generado por el
+entrenamiento del modelo YOLO y genera un conjunto de gráficos de línea de alta
+calidad (usando Matplotlib y Seaborn) para analizar la convergencia, el rendimiento
+y el sobreajuste del modelo.
+
+Se generan cuatro gráficos clave:
+1.  Pérdidas de Entrenamiento (Train Losses).
+2.  Métricas de Rendimiento (mAP, Precision, Recall).
+3.  Pérdidas de Validación (Validation Losses).
+4.  Tasas de Aprendizaje (Learning Rates).
+"""
 
 #!pip install pandas matplotlib seaborn
 
@@ -26,7 +39,7 @@ plt.legend()
 # plt.show()
 # Guarda la figura en un archivo PNG en la misma carpeta del script
 plt.savefig(os.path.join(base_project_dir, "graph_results", "graph_train.png"))
-# Es una buena práctica cerrar la figura para liberar memoria
+# Cerrar la figura para liberar memoria
 plt.close()
 
 # Plotting metrics
@@ -42,7 +55,7 @@ plt.legend()
 # plt.show()
 # Guarda la figura en un archivo PNG en la misma carpeta del script
 plt.savefig(os.path.join(base_project_dir, "graph_results", "graph_metrics.png"))
-# Es una buena práctica cerrar la figura para liberar memoria
+# Cerrar la figura para liberar memoria
 plt.close()
 
 # Plotting validation losses
@@ -57,7 +70,7 @@ plt.legend()
 # plt.show()
 # Guarda la figura en un archivo PNG en la misma carpeta del script
 plt.savefig(os.path.join(base_project_dir, "graph_results", "graph_validation.png"))
-# Es una buena práctica cerrar la figura para liberar memoria
+# Cerrar la figura para liberar memoria
 plt.close()
 
 # Plotting learning rates
@@ -72,5 +85,5 @@ plt.legend()
 # plt.show()
 # Guarda la figura en un archivo PNG en la misma carpeta del script
 plt.savefig(os.path.join(base_project_dir, "graph_results", "graph_learning_rates.png"))
-# Es una buena práctica cerrar la figura para liberar memoria
+# Cerrar la figura para liberar memoria
 plt.close()

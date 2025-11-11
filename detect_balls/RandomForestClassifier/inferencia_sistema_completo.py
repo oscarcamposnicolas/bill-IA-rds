@@ -1,4 +1,16 @@
-# inferencia_sistema_completo.py
+"""
+Módulo de Inferencia y Validación del Sistema Híbrido Completo (Fase 4, Paso 3).
+
+Este script realiza una prueba de estrés del sistema híbrido de inferencia sobre
+un lote de imágenes de prueba con etiquetas de verdad fundamental (ground truth).
+
+Propósito principal:
+1.  Validar la precisión de la Clasificación de Contexto (Random Forest) en un entorno
+    de producción (usando las detecciones reales de YOLO como input).
+2.  Medir métricas de rendimiento globales (ej., precisión del 98% en la clasificación de contexto).
+3.  Simular el proceso de arbitraje que se utilizaría en la presentación del concurso.
+"""
+
 import os
 
 import cv2
@@ -94,7 +106,7 @@ MAPA_CORRECCION_CONTEXTUAL = {
 
 
 def extraer_features_para_contexto(detecciones_yolo):
-    """Extrae las características de las detecciones para alimentar al clasificador de contexto."""
+    """Extraer las características de las detecciones para alimentar al clasificador de contexto."""
     puntuacion_be = sum(
         d["conf"] for d in detecciones_yolo if d["clase"] in DELATORES_BE
     )
@@ -201,7 +213,6 @@ def main():
             detecciones_finales.append(deteccion)
 
         # 4. Se visualizan los resultados finales
-        # ... (código de visualización igual que antes) ...
         img = cv2.imread(test_image_path)
         for d in detecciones_finales:
             x1, y1, x2, y2 = map(int, d["box_xyxy"])

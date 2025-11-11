@@ -1,3 +1,14 @@
+"""
+Módulo de Entrenamiento del Modelo YOLO.
+
+Este script inicializa y ejecuta el proceso de entrenamiento del modelo de Detección
+de Bolas, utilizando la arquitectura YOLOv11m pre-entrenada y un conjunto
+de datos de billar personalizado.
+
+El entrenamiento se configura con parada anticipada (Early Stopping) para optimizar
+el uso de recursos y prevenir el sobreajuste (overfitting).
+"""
+
 import os
 
 from ultralytics import YOLO
@@ -55,7 +66,7 @@ print("--- INICIANDO FASE 1: ENTRENAMIENTO DE LA CABEZA (BACKBONE CONGELADO) ---
 # Cargar el modelo experto en bolas clásicas
 model_fase1 = YOLO(os.path.join(base_project_dir, "models_custom", "pool_classic.pt"))
 
-# El parámetro clave aquí es 'freeze=11'. Congela las primeras 11 capas del modelo.
+# El parámetro clave aquí es 'freeze=11'. Congelar las primeras 11 capas del modelo.
 # Usamos menos épocas y paciencia porque solo queremos estabilizar la nueva capa de clasificación.
 results_fase1 = model_fase1.train(
     data=data_yaml_path,
@@ -112,7 +123,7 @@ print(f"El 'Supermodelo' final está listo en: {path_fase2_best}")
 print("\nIniciando entrenamiento del modelo...")
 
 results = model.train(
-    data=data_yaml_path,  # Ruta a tu archivo de configuración del dataset
+    data=data_yaml_path,  # Ruta al archivo de configuración del dataset
     epochs=execution_epochs,  # Número de épocas de entrenamiento (ajustable)
     imgsz=execution_image_resize,  # Tamaño de la imagen de entrada (640x640 es un buen inicio)
     batch=execution_batch,  # Tamaño del batch (ajustable, depende de tu RAM/VRAM)

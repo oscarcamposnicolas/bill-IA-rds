@@ -1,4 +1,17 @@
-# entrenar_clasificador_contexto.py
+"""
+Módulo de Entrenamiento del Clasificador de Contexto (Fase 4, Paso 2).
+
+Este script entrena el modelo de Machine Learning (ML) Random Forest para la tarea
+de Clasificación de Contexto ('Clásico' vs 'Black Edition').
+
+El clasificador utiliza el Meta-Dataset generado por el modelo YOLO, basando su
+decisión únicamente en el conteo de bolas de cada tipo detectado en la mesa.
+
+Propósito principal:
+1.  Construir y persistir el clasificador final de la Fase 4.
+2.  Evaluar el rendimiento del ML clásico sobre las características extraídas por el DL.
+"""
+
 import joblib
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier

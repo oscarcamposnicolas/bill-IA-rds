@@ -1,3 +1,17 @@
+"""
+Módulo de Selección Manual de Esquinas (Fase 5, Paso 1 - Herramienta de Validación).
+
+Este script de utilidad permite la selección interactiva y manual de las cuatro
+esquinas de la mesa de billar en una imagen.
+
+Propósito principal:
+1.  Validación Inicial: Probar el cálculo de la Matriz de Homografía con un
+    input de coordenadas garantizadas, antes de integrar el detector automático
+    (filter_table_borders.py).
+2.  Generación de Datos: Obtener los puntos de origen (source points) para testear
+    las funciones de Homografía de forma aislada.
+"""
+
 import cv2
 import numpy as np
 
@@ -70,19 +84,12 @@ def get_manual_corners(image_path):
 
 # --- Uso ---
 if __name__ == "__main__":
-    # Reemplaza 'ruta/a/tu/imagen_de_billar.jpg' con la ruta a una de tus imágenes
     image_file = "detect_table/tests/test_pool_table_1.png"
-
-    # Para probar, puedes usar una de las imágenes de ejemplo que vienen con el modelo YOLO
-    # o una que tengas de una mesa de billar.
-    # Por ejemplo, si tienes una imagen llamada "mesa1.jpg" en la misma carpeta:
-    # image_file = 'mesa1.jpg'
-
     selected_corners = get_manual_corners(image_file)
 
     if selected_corners is not None:
         # Aquí 'selected_corners' es un array de NumPy con los 4 puntos.
-        # Estos son tus "Puntos de Origen" para la homografía.
+        # Estos son los "Puntos de Origen" para la homografía.
         print("\nCoordenadas de las esquinas en la imagen (Puntos de Origen):")
         print(selected_corners)
 

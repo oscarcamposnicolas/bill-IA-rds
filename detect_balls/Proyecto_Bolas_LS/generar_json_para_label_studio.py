@@ -1,4 +1,16 @@
-# generar_json_definitivo.py
+"""
+Módulo de Pre-procesamiento de Datos para Label Studio (Fase 3, Paso 3).
+
+Este script genera un archivo JSON en el formato de tareas esperado por la API de
+Label Studio. Este JSON es el input masivo que permite importar un lote completo
+de imágenes para el etiquetado de forma programática.
+
+Propósito principal:
+1.  Formatear listas de URLs de imágenes (locales o en la nube) en la estructura de tareas.
+2.  Facilitar la automatización de la adquisición de datos (Human-in-the-Loop).
+3.  Establecer la base para el pre-etiquetado.
+"""
+
 import json
 import os
 import uuid
@@ -6,13 +18,12 @@ from urllib.parse import quote
 
 # --- 1. CONFIGURACIÓN ---
 
-# La ruta a la carpeta que contiene tus archivos .txt de pre-etiquetado
+# La ruta a la carpeta que contiene los archivos .txt de pre-etiquetado
 ETIQUETAS_DIR = "/home/oscar/Documentos/Estudios/Curso.Especialista.IA/Proyecto/src/detect_balls/datasets/black_edition_raw/labels/"
 
-# La ruta RELATIVA desde tu "DOCUMENT_ROOT" de Label Studio hasta las imágenes
-# Tu DOCUMENT_ROOT es: .../Proyecto/
-# Tus imágenes están en: .../Proyecto/src/Proyecto_Bolas_LS/imagenes/
-# Por lo tanto, la ruta relativa es:
+# La ruta RELATIVA desde "DOCUMENT_ROOT" de Label Studio hasta las imágenes
+# DOCUMENT_ROOT es: .../Proyecto/
+# Las imágenes están en: .../Proyecto/src/Proyecto_Bolas_LS/imagenes/
 RUTA_RELATIVA_IMAGENES = "src/Proyecto_Bolas_LS/imagenes"
 
 # El nombre del archivo JSON de salida
@@ -53,8 +64,8 @@ def crear_tareas_finales():
         # Esto es para encontrar el nombre completo del archivo de imagen
         nombre_imagen_completo = None
         # Recreamos el nombre original buscando la extensión
-        # NOTA: Esto asume que tienes las imágenes originales en alguna parte para saber su extensión
-        # Si todas son png, por ejemplo, puedes simplificarlo.
+        # NOTA: Esto asume que estan las imágenes originales en alguna parte para saber su extensión
+        # Si todas son png, por ejemplo, se puede simplificar.
         for ext in [".png", ".jpg", ".jpeg"]:
             # Solo para obtener el nombre correcto, no para acceder al archivo
             if os.path.exists(

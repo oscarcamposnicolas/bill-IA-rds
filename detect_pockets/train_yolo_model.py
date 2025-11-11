@@ -1,3 +1,16 @@
+"""
+Módulo de Entrenamiento del Modelo YOLO Especializado (Fase 6, Paso 5).
+
+Este script inicializa y ejecuta el proceso de entrenamiento del modelo de
+Detección de Troneras (P1.5), utilizando la arquitectura YOLOv8n (u otra versión)
+pre-entrenada y el dataset de troneras (pocket_corner, pocket_side) generado
+y dividido en la Fase 6.
+
+El objetivo principal es crear un modelo especializado de alto rendimiento para
+proporcionar características semánticas (la ubicación de las 6 troneras) que son
+invariantes a la perspectiva, resolviendo así el problema de la orientación de la mesa.
+"""
+
 import os
 
 from ultralytics import YOLO
@@ -32,7 +45,7 @@ model = YOLO(os.path.join(base_project_dir, "models_yolo11", "yolo11n.pt"))
 print("\nIniciando entrenamiento del modelo...")
 
 results = model.train(
-    data=data_yaml_path,  # Ruta a tu archivo de configuración del dataset
+    data=data_yaml_path,  # Ruta al archivo de configuración del dataset
     epochs=execution_epochs,  # Número de épocas de entrenamiento (ajustable)
     imgsz=execution_image_resize,  # Tamaño de la imagen de entrada (640x640 es un buen inicio)
     batch=execution_batch,  # Tamaño del batch (ajustable, depende de tu RAM/VRAM)

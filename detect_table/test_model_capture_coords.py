@@ -1,3 +1,15 @@
+"""
+Módulo de Test de Integración de Coordenadas (Fase 5, Paso 7).
+
+Este script es la prueba final de la Fase 5. Su propósito es simular la ejecución
+del pipeline completo de Visión por Computadora, uniendo:
+1.  La salida de la Detección de Bolas (YOLO).
+2.  La Matriz de Homografía (H).
+
+El objetivo es obtener las coordenadas finales de las bolas en el plano de mesa ideal
+(x_mesa, y_mesa), que es el dato esencial que la IA de juego consumirá.
+"""
+
 import cv2
 import numpy as np
 from ultralytics import YOLO
@@ -6,9 +18,7 @@ from ultralytics import YOLO
 # PASO 0: CONFIGURACIÓN INICIAL
 # -----------------------------------------------------------------------------
 
-# Tu MATRIZ DE HOMOGRAFÍA (Calculada en el paso anterior)
-# Asegúrate de que esta es la matriz correcta que calculaste para la imagen
-# que vas a procesar o para una configuración de cámara similar.
+# MATRIZ DE HOMOGRAFÍA (Calculada en el paso anterior)
 H_matrix = np.array(
     [
         [9.01494445e-01, 1.69172272e-17, -8.56419723e01],
@@ -17,12 +27,11 @@ H_matrix = np.array(
     ]
 )
 
-# Ruta a tu modelo YOLO entrenado (el archivo .pt)
+# Ruta al modelo YOLO entrenado (el archivo .pt)
 MODEL_PATH = "poolballs36.pt"  # Cambia esto
-# Ejemplo: MODEL_PATH = 'runs/detect/train/weights/best.pt'
 
-# Nombres de las clases: Deben estar en el MISMO ORDEN que usó tu modelo para entrenar.
-# Generalmente este orden viene del archivo .yaml que usaste para el entrenamiento.
+# Nombres de las clases: Deben estar en el MISMO ORDEN que usó el modelo para entrenar.
+# Generalmente este orden viene del archivo .yaml que usado para el entrenamiento.
 CLASS_NAMES = [
     "white",
     "blue_10",
@@ -39,12 +48,10 @@ CLASS_NAMES = [
     "yellow_1",
     "orange_5",
     "yellow_9",
-]  # ¡¡AJUSTA ESTA LISTA A TUS CLASES Y SU ORDEN CORRECTO!!
+]
 
-# Ruta a la imagen que quieres procesar
-IMAGE_PATH = "tests/test_pool_table_1.png"  # Cambia esto
-# Idealmente, usa la misma imagen para la cual seleccionaste las esquinas manualmente,
-# o una tomada desde una perspectiva muy similar.
+# Ruta a la imagen a procesar
+IMAGE_PATH = "tests/test_pool_table_1.png"
 
 # -----------------------------------------------------------------------------
 # PASO 1: CARGAR MODELO Y REALIZAR INFERENCIA
@@ -71,12 +78,12 @@ detected_balls_on_table_plane = []
 # -----------------------------------------------------------------------------
 # PASO 2: PROCESAR DETECCIONES Y TRANSFORMAR COORDENADAS
 # -----------------------------------------------------------------------------
-# 'results' es una lista, generalmente con un solo elemento si procesas una imagen.
+# 'results' es una lista, generalmente con un solo elemento si se procesa una imagen.
 if results and len(results) > 0:
     result = results[0]  # Tomamos el primer (y único) resultado
     boxes = (
         result.boxes
-    )  # Accedemos al atributo 'boxes' que contiene la información de detección
+    )  # Acceder al atributo 'boxes' que contiene la información de detección
 
     print(f"Se detectaron {len(boxes)} objetos.")
 
@@ -147,13 +154,6 @@ print("\n--- Proceso de Detección y Transformación Completado ---")
 print(f"Bolas procesadas y transformadas: {len(detected_balls_on_table_plane)}")
 for ball_data in detected_balls_on_table_plane:
     print(ball_data)
-
-# -----------------------------------------------------------------------------
-# OPCIONAL: MOSTRAR LA IMAGEN CON LAS DETECCIONES ORIGINALES (DE YOLO)
-# -----------------------------------------------------------------------------
-# Puedes descomentar estas líneas para ver los bounding boxes que YOLO dibuja
-# en la imagen original. Esto es útil para verificar que YOLO está detectando
-# las bolas correctamente antes de la transformación.
 
 annotated_frame = results[0].plot()  # El método plot() dibuja las detecciones
 cv2.imshow("Detecciones YOLO en Imagen Original", annotated_frame)

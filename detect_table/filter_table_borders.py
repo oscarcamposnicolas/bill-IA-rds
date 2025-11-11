@@ -1,3 +1,17 @@
+"""
+Módulo de Filtrado Robusto de Líneas y Selección de Esquinas (Fase 5, Paso 3).
+
+Este script implementa la lógica de Machine Learning Clásico y Geometría Computacional
+para tomar la decisión final sobre cuáles de las líneas candidatas (generadas por Hough)
+definen el área de juego.
+
+El corazón del módulo es la HEURÍSTICA DE ÁREA MÍNIMA VÁLIDA, diseñada para:
+1.  Ignorar el ruido periférico (sombras, reflejos).
+2.  Descartar el borde exterior de la madera.
+3.  Seleccionar el borde del fieltro (la superficie de juego) como el cuadrilátero
+    válido más pequeño.
+"""
+
 import itertools
 import math
 

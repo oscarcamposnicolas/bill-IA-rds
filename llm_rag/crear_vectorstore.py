@@ -1,3 +1,17 @@
+"""
+Módulo de Creación de la Base de Datos Vectorial (Vector Store) (Fase 7, Paso 1).
+
+Este script inicializa el componente de Memoria Externa para el LLM, utilizando
+la arquitectura RAG (Retrieval-Augmented Generation). Su función es procesar
+la documentación del proyecto (reglas, especificaciones) y convertirla en un
+formato vectorial indexado para consultas semánticas.
+
+Propósito principal:
+1.  Habilitar el LLM para responder preguntas específicas y complejas sobre el billar
+    Bola 9, yendo más allá de su conocimiento general.
+2.  Crear la base de datos de conocimiento persistente del sistema experto.
+"""
+
 import os
 import time
 
@@ -64,7 +78,7 @@ def crear_base_de_datos_vectorial():
     )
     print(f"Tiempo total de ejecución: {end_time - start_time:.2f} segundos.")
 
-    # (Opcional) Hacer una prueba rápida de búsqueda
+    # Hacer una prueba rápida de búsqueda
     print("\nRealizando una búsqueda de prueba...")
     test_query = "Cual es la regla para una falta?"
     results = vectorstore.similarity_search(test_query, k=2)

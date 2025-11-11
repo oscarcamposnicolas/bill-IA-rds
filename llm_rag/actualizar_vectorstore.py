@@ -1,9 +1,24 @@
+"""
+Módulo de Mantenimiento y Actualización de la Base de Datos Vectorial (Fase 7, Paso 1).
+
+Este script gestiona la actualización incremental del Vector Store existente.
+Su función es procesar nuevos documentos o cambios en la documentación del proyecto,
+generar sus embeddings y añadirlos a la base de datos persistente (ChromaDB)
+sin eliminar el conocimiento previo.
+
+Propósito principal:
+1.  Eficiencia: Evitar la costosa recreación completa de la Vector Store.
+2.  Mantenimiento: Asegurar que el LLM experto siempre tenga acceso al conocimiento
+    más reciente del proyecto (ej., nuevas reglas de juego o especificaciones técnicas).
+"""
+
 import os
 import time
-from langchain_community.document_loaders import PyPDFLoader
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
 
 # --- CONFIGURACIÓN ---
 PDFS_PATH = "llm_rag/corpus_billar/"
@@ -91,7 +106,7 @@ def actualizar_base_de_datos():
 
 if __name__ == "__main__":
     # La primera vez, necesitamos crear el log con los archivos iniciales.
-    # Descomenta y ejecuta esta parte SOLO si nunca has creado el 'processed_files.log'
+    # Descomentar y ejecuta esta parte SOLO si nunca has creado el 'processed_files.log'
     # if not os.path.exists(PROCESSED_LOG_FILE):
     #   print("Creando archivo de registro inicial...")
     #   initial_files = [f for f in os.listdir(PDFS_PATH) if f.endswith(".pdf")]

@@ -1,4 +1,17 @@
-# traducir_labels_a_schema_hibrido.py
+"""
+Módulo de Traducción de Esquema de Clases (Fase 2, Utilidad).
+
+Este script realiza una traducción crítica de las etiquetas de los datasets originales
+(que pueden tener un alto número de clases específicas) a un esquema de clases más
+reducido y optimizado. El objetivo es consolidar clases similares o redundantes
+para mejorar la generalización del modelo de detección YOLO (P1).
+
+Propósito principal:
+1.  Reducir la complejidad del problema de clasificación.
+2.  Mejorar el rendimiento del modelo en tareas de detección con un dataset limitado.
+3.  Asegurar la compatibilidad con el esquema final de clases híbrido (ej., Black Edition).
+"""
+
 import os
 import shutil
 
@@ -9,7 +22,7 @@ LABELS_ORIGINALES_DIR = "detect_balls/dataset_unificado_aumentado/labels/"
 # Directorio de salida para las nuevas etiquetas "híbridas"
 LABELS_HIBRIDAS_DIR = "detect_balls/dataset_hibrido/labels/"
 
-# Tu lista MAESTRA ORIGINAL con la que se generaron las etiquetas (32 clases)
+# Lista MAESTRA ORIGINAL con la que se generaron las etiquetas (32 clases)
 CLASES_MAESTRA_ORIGINAL = [
     "black_8",
     "blue_10",
@@ -45,7 +58,7 @@ CLASES_MAESTRA_ORIGINAL = [
     "be_yellow_9",
 ]
 
-# Tu NUEVA lista HÍBRIDA de 25 clases
+# NUEVA lista HÍBRIDA de 25 clases
 CLASES_HIBRIDAS = [
     "black_8",
     "blue_10",

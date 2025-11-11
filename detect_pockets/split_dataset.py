@@ -1,10 +1,23 @@
+"""
+Módulo de División Final del Dataset (Fase 6, Paso 4).
+
+Este script realiza la división rigurosa del conjunto de datos de troneras
+aumentado en los conjuntos de Entrenamiento, Validación y Prueba (Train/Valid/Test)
+siguiendo los ratios 80/10/10.
+
+Propósito principal:
+1.  Garantizar la reproducibilidad del entrenamiento mediante la aleatorización.
+2.  Crear la estructura de directorios estándar esperada por el framework YOLO.
+3.  Asegurar que el modelo sea evaluado sobre datos que nunca ha visto (Conjunto Test).
+"""
+
 import os
 import random
 import shutil
 
 # --- 1. CONFIGURACIÓN DE RUTAS ---
 
-# Directorio de origen (donde están tus 780 imágenes/etiquetas)
+# Directorio de origen (donde están las 780 imágenes/etiquetas)
 SOURCE_IMAGES_DIR = "detect_pockets/dataset_aumentado/images/"
 SOURCE_LABELS_DIR = "detect_pockets/dataset_aumentado/labels/"
 

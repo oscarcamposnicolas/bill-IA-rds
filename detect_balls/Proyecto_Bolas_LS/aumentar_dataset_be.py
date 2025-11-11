@@ -1,4 +1,17 @@
-# aumentar_dataset_be.py
+"""
+Módulo de Aumentación de Dataset (Black Edition) (Fase 3, Paso 1).
+
+Este script aplica un pipeline de transformaciones geométricas y de color
+a las imágenes y anotaciones del dataset de billar.
+
+El objetivo es incrementar artificialmente el tamaño del dataset de entrenamiento
+y exponer el modelo YOLO a variaciones de iluminación, perspectiva y escala,
+lo cual es vital para la robustez en el entorno real.
+
+Se utiliza la librería Albumentations para manejar la compleja recalculación
+de las bounding boxes tras cada transformación.
+"""
+
 import os
 import random
 
@@ -6,7 +19,7 @@ import albumentations as A
 import cv2
 
 # --- CONFIGURACIÓN ---
-# Directorios de origen (tus 60 imágenes y etiquetas corregidas)
+# Directorios de origen (60 imágenes y etiquetas corregidas)
 IMAGENES_ORIGINALES_DIR = "Proyecto_Bolas_LS/imagenes/"
 LABELS_ORIGINALES_DIR = "Proyecto_Bolas_LS/final_yolo_labels/"
 
@@ -14,7 +27,7 @@ LABELS_ORIGINALES_DIR = "Proyecto_Bolas_LS/final_yolo_labels/"
 IMAGENES_AUMENTADAS_DIR = "Proyecto_Bolas_LS/dataset_be_aumentado/images/"
 LABELS_AUMENTADAS_DIR = "Proyecto_Bolas_LS/dataset_be_aumentado/labels/"
 
-# Número de versiones nuevas que quieres crear por cada imagen original
+# Número de versiones nuevas a crear por cada imagen original
 NUM_AUMENTACIONES_POR_IMAGEN = 15
 # --- FIN DE LA CONFIGURACIÓN ---
 
@@ -24,7 +37,7 @@ def augment_dataset():
     os.makedirs(IMAGENES_AUMENTADAS_DIR, exist_ok=True)
     os.makedirs(LABELS_AUMENTADAS_DIR, exist_ok=True)
 
-    # Definir el pipeline de aumentación. ¡Aquí está la magia!
+    # Definir el pipeline de aumentación.
     # BboxParams se asegura de que las cajas se transformen junto con la imagen.
     transform = A.Compose(
         [

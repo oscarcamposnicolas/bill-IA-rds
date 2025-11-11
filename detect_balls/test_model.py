@@ -1,4 +1,15 @@
-# detect_balls/test_model.py
+"""
+Módulo de Simulación de Detección (Fase 2, Utilidad).
+
+Este script actúa como un PLACEHOLDER o un módulo de MOCK para el sistema real
+de Detección de Bolas (YOLO). Su función es simular la inferencia de un modelo
+de Machine Learning generando resultados aleatorios.
+
+Propósito principal:
+1. Pruebas de integración de la interfaz de usuario y del post-procesamiento.
+2. Servir como módulo de fallback o prueba de concepto sin hardware de aceleración.
+"""
+
 import os
 import random
 
@@ -6,8 +17,8 @@ import random
 def detect_billiard_balls(image_path):
     """
     Función de simulación de un modelo de detección de objetos.
-    En una aplicación real, aquí es donde cargarías tu modelo (por ejemplo, con TensorFlow, PyTorch, OpenCV)
-    y procesarías la imagen para encontrar objetos.
+    En una aplicación real, aquí es donde se cargaría el modelo (por ejemplo, con TensorFlow, PyTorch, OpenCV)
+    y se procesaría la imagen para encontrar objetos.
 
     Args:
         image_path (str): La ruta al archivo de imagen subido.

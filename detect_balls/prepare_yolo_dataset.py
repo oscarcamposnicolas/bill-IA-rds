@@ -1,3 +1,14 @@
+"""
+Módulo de Preparación Inicial del Dataset YOLO (Fase 2, Paso 1).
+
+Este script realiza la configuración inicial y la división del dataset de imágenes y
+etiquetas de billar en los conjuntos de entrenamiento, validación y prueba (Train/Valid/Test),
+siguiendo el formato estándar de directorios de Ultralytics YOLO.
+
+El objetivo es asegurar que los modelos se entrenen sobre datos representativos
+y se validen correctamente para evitar el sobreajuste (overfitting).
+"""
+
 import os
 import shutil
 
@@ -12,7 +23,7 @@ data_base_dir = os.path.join(base_project_dir, "data", "BallsDataset")
 train_src_dir = os.path.join(data_base_dir, "train")
 test_src_dir = os.path.join(
     data_base_dir, "test"
-)  # Usaremos test como 'val' si no hay una carpeta 'valid'
+)  # Usar test como 'val' si no hay una carpeta 'valid'
 val_src_dir = os.path.join(
     data_base_dir, "valid"
 )  # Si existe una carpeta 'valid' separada
@@ -161,4 +172,3 @@ print(
 )
 
 print("\n¡Preparación del dataset completada!")
-print("Puedes continuar con el entrenamiento de tu modelo YOLO.")

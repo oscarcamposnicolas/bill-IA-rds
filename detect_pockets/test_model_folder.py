@@ -1,4 +1,17 @@
-# test_modelo_bucle.py
+"""
+Módulo de Benchmarking y Test de Lote (Fase 6, Paso 6).
+
+Este script automatiza la inferencia del modelo YOLO de Detección de Troneras
+sobre una carpeta completa de imágenes de prueba. Es fundamental para:
+
+1.  Validación Funcional: Confirmar que el modelo especializado detecta correctamente
+    las clases 'pocket_corner' y 'pocket_side'.
+2.  Benchmarking: Medir la latencia y la confianza promedio sobre un lote de imágenes
+    antes de la integración final.
+3.  Generación de Evidencia: Crear imágenes de resultados con bounding boxes para
+    la documentación y el informe final del proyecto.
+"""
+
 import os
 
 import cv2
@@ -7,14 +20,13 @@ import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
 # --- 1. CONFIGURACIÓN ---
-# Mantén todas las variables que puedas querer cambiar aquí arriba
 
 # --- Rutas del Proyecto ---
 base_project_dir = os.path.join(".", "detect_pockets")
 runs_dir = os.path.join(base_project_dir, "runs")
 train_version = "detect_pockets_v12"
 
-# Debes crear esta carpeta y colocar dentro todas las imágenes que quieras probar.
+# Crear esta carpeta y colocar dentro todas las imágenes a probar.
 TEST_IMAGES_DIR = os.path.join(base_project_dir, "tests", "Classic")
 # TEST_IMAGES_DIR = os.path.join(base_project_dir, "tests", "Black")
 
@@ -23,7 +35,7 @@ output_dir = os.path.join(base_project_dir, "tests", "results_classic")
 # output_dir = os.path.join(base_project_dir, "tests", "results_black")
 
 # --- Ruta al Modelo ---
-# Apunta al mejor modelo de tu entrenamiento final
+# Apunta al mejor modelo de entrenamiento final
 model_path = os.path.join(
     runs_dir,
     train_version,
@@ -35,7 +47,7 @@ model_path = os.path.join(
 CONFIDENCE_THRESHOLD = 0.4  # Umbral de confianza (ajústalo según necesites)
 
 # --- Lista de Clases Maestra ---
-# Asegúrate de que esta lista sea la definitiva y correcta para tu modelo
+# Lista definitiva y correcta para el modelo
 classes = ["pocket_corner", "pocket_side"]
 
 # --- FIN DE LA CONFIGURACIÓN ---

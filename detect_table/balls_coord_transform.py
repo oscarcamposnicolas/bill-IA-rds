@@ -1,7 +1,19 @@
+"""
+Módulo de Conversión de Coordenadas (Fase 5, Paso 5).
+
+Este script ejecuta la etapa final de la Visión por Computadora: la transformación
+de coordenadas. Su propósito es mapear los centroides de las bolas detectadas
+por YOLO (coordenadas de píxeles distorsionadas por la perspectiva) al sistema
+de coordenadas plano y cenital de la mesa ideal (0 a 1000 en X, 0 a 500 en Y).
+
+Este proceso es CRUCIAL, ya que convierte datos visuales en datos geométricos
+analizables para la IA de juego.
+"""
+
 import cv2
 import numpy as np
 
-# Tu Matriz de Homografía calculada
+# Matriz de Homografía calculada
 H_matrix = np.array(
     [
         [9.01494445e-01, 1.69172272e-17, -8.56419723e01],
@@ -11,7 +23,7 @@ H_matrix = np.array(
 )
 
 # Coordenadas de ejemplo de los centros de las bolas en la IMAGEN ORIGINAL (en píxeles)
-# (Más adelante, estos vendrán de la salida de tu modelo YOLO)
+# (Más adelante, estos vendrán de la salida del modelo YOLO)
 image_ball_centers = np.array(
     [
         [[300.0, 350.0]],  # Centro de la Bola Blanca (ejemplo)
@@ -19,10 +31,6 @@ image_ball_centers = np.array(
     ],
     dtype="float32",
 )
-
-# Asegúrate de que el array de puntos tiene la forma correcta (N, 1, 2) o (1, N, 2)
-# Si tienes una lista simple de tuplas [(x1,y1), (x2,y2)], puedes hacer:
-# points_to_transform = np.array([[(x1,y1)], [(x2,y2)]], dtype="float32")
 
 if image_ball_centers.ndim == 2:  # Si es (N,2)
     # Necesita ser (N,1,2) para perspectiveTransform
@@ -39,7 +47,7 @@ if table_ball_centers is not None:
     print("\nCoordenadas de las bolas transformadas (en el plano de la mesa ideal):")
     for i, point in enumerate(table_ball_centers):
         print(f"  Bola {i+1}: ({point[0][0]:.1f}, {point[0][1]:.1f})")
-        # Estos son los puntos (x_mesa, y_mesa) que usarías para Pygame, por ejemplo.
-        # Recuerda que estarán en el rango de 0 a TABLE_VIEW_WIDTH-1 y 0 a TABLE_VIEW_HEIGHT-1.
+        # Estos son los puntos (x_mesa, y_mesa) que usaríamos para Pygame, por ejemplo.
+        # Recordar que estarán en el rango de 0 a TABLE_VIEW_WIDTH-1 y 0 a TABLE_VIEW_HEIGHT-1.
 else:
     print("Error durante la transformación de perspectiva.")

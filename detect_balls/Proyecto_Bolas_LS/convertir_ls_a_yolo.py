@@ -1,4 +1,17 @@
-# convertir_ls_a_yolo_FINAL.py
+"""
+Módulo de Conversión de Formato de Anotación (Fase 3, Paso 4).
+
+Este script transforma los datos de anotación exportados por Label Studio
+(formato JSON, coordenadas en porcentaje de imagen) al formato de etiquetas
+estándar requerido por Ultralytics YOLO (archivos .txt con coordenadas normalizadas
+de centro, ancho y alto).
+
+Propósito principal:
+1.  Servir de puente entre la herramienta de etiquetado manual y el framework de entrenamiento.
+2.  Asegurar la precisión y el formato correcto de las coordenadas para YOLO.
+3.  Implementar la lógica para sanear nombres de archivo (eliminando prefijos/IDs).
+"""
+
 import json
 import os
 import uuid
@@ -10,7 +23,7 @@ from urllib.parse import unquote
 # Ruta al archivo JSON exportado desde Label Studio
 LABEL_STUDIO_JSON_PATH = "Proyecto_Bolas_LS/ls-export.json"
 
-# Ruta al archivo XML que guardaste desde la interfaz de Label Studio
+# Ruta al archivo XML guardado desde la interfaz de Label Studio
 LABEL_STUDIO_XML_CONFIG_PATH = "Proyecto_Bolas_LS/config.xml"
 
 # Carpeta donde se guardarán las nuevas etiquetas en formato YOLO (.txt)
@@ -20,7 +33,7 @@ YOLO_LABELS_OUTPUT_DIR = "Proyecto_Bolas_LS/final_yolo_labels/"
 
 
 def leer_clases_desde_xml(xml_path):
-    """Lee el archivo de configuración XML de Label Studio para extraer las clases en orden."""
+    """Leer el archivo de configuración XML de Label Studio para extraer las clases en orden."""
     try:
         tree = ET.parse(xml_path)
         root = tree.getroot()

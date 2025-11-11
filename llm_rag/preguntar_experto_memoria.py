@@ -1,13 +1,28 @@
+"""
+Módulo de Consulta RAG con Memoria Conversacional (Fase 7, Paso 1).
+
+Este script implementa un agente conversacional RAG (Retrieval-Augmented Generation)
+con memoria. A diferencia de 'preguntar_experto.py', este módulo mantiene el
+historial de la conversación, permitiendo al usuario hacer preguntas de
+seguimiento (ej., "¿Y qué pasa si fallo?").
+
+Propósito principal:
+1.  Demostrar un sistema de IA de vanguardia que simula una conversación fluida.
+2.  Implementar la cadena 'ConversationalRetrievalChain' de LangChain.
+3.  Utilizar 'ConversationBufferMemory' para gestionar el estado del chat.
+"""
+
 import os
 import time
-from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_ollama.llms import OllamaLLM
+
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate  # Importamos PromptTemplate
+from langchain_community.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_ollama.llms import OllamaLLM
 
-# --- CONFIGURACIÓN (sin cambios) ---
+# --- CONFIGURACIÓN ---
 VECTORSTORE_NAME = "llm_rag/billar_expert_db"
 EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 LOCAL_MODEL = "gemma3:12b"
@@ -18,7 +33,7 @@ def main():
     Función principal para inicializar el chatbot CON MEMORIA y EN ESPAÑOL.
     """
     print(
-        f"Iniciando el Asistente de Billar en MODO CONVERSACIONAL... 🧠🇪🇸 (Modelo: {LOCAL_MODEL})"
+        f"Iniciando el Asistente de Billar en MODO CONVERSACIONAL... (Modelo: {LOCAL_MODEL})"
     )
 
     # --- Carga de componentes (sin cambios) ---

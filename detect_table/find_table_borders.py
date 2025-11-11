@@ -1,3 +1,16 @@
+"""
+Módulo de Detección Inicial de Bordes y Líneas (Fase 5, Paso 2).
+
+Este script realiza las etapas de pre-procesamiento y feature extraction de Visión
+por Computadora Clásica, que sirven como el "sensor" para el subsistema de Detección
+de Mesa.
+
+Propósito principal:
+1.  Generar un mapa de bordes robusto (Canny).
+2.  Extraer todas las líneas candidatas (Transformada de Hough) que serán
+    filtradas posteriormente por el "cerebro" (filter_table_borders.py).
+"""
+
 import cv2
 import numpy as np
 

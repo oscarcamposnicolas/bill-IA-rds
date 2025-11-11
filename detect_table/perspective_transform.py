@@ -1,3 +1,20 @@
+"""
+Módulo de Cálculo de Homografía (Fase 5, Paso 4 - Herramienta de Validación).
+
+Este script calcula la Matriz de Homografía (H) necesaria para la 'rectificación'
+de la imagen. La Homografía es la transformación matemática que corrige la distorsión
+de perspectiva (vista angular) y mapea el plano 2D de la mesa a un plano 2D ideal
+(vista cenital).
+
+Propósito principal:
+1.  Obtener la matriz H a partir de 4 puntos de origen y 4 de destino.
+2.  Servir como validación del cálculo matemático antes de integrarlo al pipeline
+    de detección de bolas.
+
+NOTA: Los puntos de origen se mantienen hardcodeados para la prueba, asumiendo
+que fueron obtenidos del script 'select_table_corners.py'.
+"""
+
 import cv2
 import numpy as np
 
@@ -39,7 +56,7 @@ if H_matrix is not None:
 
     # ¿Qué podemos hacer ahora con esta matriz?
     # 1. Aplicar la transformación a toda la imagen para obtener una vista cenital (opcional, bueno para visualización)
-    # 2. Transformar las coordenadas específicas de las bolas detectadas por YOLO (nuestro objetivo principal)
+    # 2. Transformar las coordenadas específicas de las bolas detectadas por YOLO (objetivo principal)
 
     # Ejemplo de cómo obtener la vista cenital de la mesa (Paso Opcional de Visualización)
     # Carga la imagen original de nuevo

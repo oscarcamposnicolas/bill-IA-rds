@@ -1,4 +1,17 @@
-# inferencia_con_razonamiento_final.py
+"""
+Módulo de Inferencia con Post-procesamiento y Clasificación de Contexto (Fase 2, Paso Final).
+
+Este script representa la lógica final del subsistema de Detección de Bolas (P1).
+Combina la inferencia del modelo YOLO (Deep Learning) con un clasificador de contexto
+adicional (Machine Learning Clásico, ej., Random Forest) para determinar el tipo
+de mesa ('Clásico' o 'Black Edition').
+
+El post-procesamiento es esencial para:
+1.  Estabilizar las detecciones.
+2.  Extraer métricas del conjunto de bolas.
+3.  Aplicar lógica de negocio (identificación de la regla de juego).
+"""
+
 import os
 
 import cv2
@@ -73,7 +86,7 @@ DELATORES_CLASSIC = {
     "yellow_9",
 }
 
-# Tu mapa de corrección, la "inteligencia experta"
+# Mapa de corrección, la "inteligencia experta"
 MAPA_CORRECCION_CONTEXTUAL = {
     # Si el contexto es CLASSIC pero el modelo predice una bola BE...
     "be_pink_4": "red_3",

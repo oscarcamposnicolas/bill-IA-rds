@@ -1,3 +1,12 @@
+"""
+Módulo de Verificación Funcional del Modelo YOLO (Fase 2, Utilidad).
+
+Este script de utilidad tiene como propósito principal verificar la instalación y
+funcionalidad básica del modelo entrenado de Detección de Bolas (P1).
+A diferencia de 'test_model.py' (simulación), este módulo carga los pesos reales
+y ejecuta la inferencia sobre una imagen de prueba única.
+"""
+
 import os
 
 import cv2
@@ -77,7 +86,7 @@ test_image_path_2 = os.path.join(
 nombre_imagen_test = nombre_imagen_test_1
 test_image_path = test_image_path_1
 
-# Clases de tu dataset (debe coincidir con la lista usada en custom_data.yaml y en prepare_yolo_dataset.py)
+# Clases del dataset (debe coincidir con la lista usada en custom_data.yaml y en prepare_yolo_dataset.py)
 classes = [
     "black_8",
     "blue_10",
@@ -128,7 +137,7 @@ except Exception as e:
 print(f"Realizando inferencia en: {test_image_path}")
 # La función predict devuelve un objeto Results.
 # verbose=False para no imprimir los detalles de inferencia en consola,
-# conf=0.25 es el umbral de confianza para mostrar detecciones (ajústalo si detecta demasiado o muy poco)
+# conf=0.25 es el umbral de confianza para mostrar detecciones
 results = model.predict(
     source=test_image_path, save=False, imgsz=1024, conf=0.4, verbose=True
 )
@@ -202,8 +211,8 @@ if results:
 
     plt.show()
 
-    # Si quisieras las coordenadas normalizadas (0 a 1) para un uso posterior:
-    # Puedes usar result.boxes.xyxyn para obtenerlas directamente.
+    # Si se quisieran las coordenadas normalizadas (0 a 1) para un uso posterior:
+    # Se puede usar result.boxes.xyxyn para obtenerlas directamente.
     # Por ejemplo:
     # normalized_boxes = result.boxes.xyxyn
     # for i, bbox_norm in enumerate(normalized_boxes):

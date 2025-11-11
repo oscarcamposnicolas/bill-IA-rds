@@ -1,4 +1,17 @@
-# app.py (Versión final que usa el motor de inferencia externo)
+"""
+Módulo del Servidor Web (Aplicación Flask).
+
+Este script lanza un servidor web local utilizando Flask que sirve como el backend
+para la aplicación de análisis de billar. Proporciona una interfaz web simple
+(`index.html`) y un endpoint API (`/detect`) para la inferencia.
+
+Propósito principal:
+1.  Servir la interfaz de usuario (HTML/CSS/JS).
+2.  Manejar las solicitudes de subida de imágenes (POST).
+3.  Invocar el motor de inferencia híbrida (motor_inferencia.py).
+4.  Devolver los resultados de la IA (coordenadas y contexto) en formato JSON.
+"""
+
 import os
 import uuid
 

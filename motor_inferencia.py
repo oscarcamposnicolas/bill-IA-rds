@@ -1,4 +1,21 @@
-# motor_inferencia.py
+"""
+Módulo del Motor de Inferencia Híbrido (Fase 4).
+
+Este script es el corazón del sistema de IA, combinando Deep Learning (YOLO)
+y Machine Learning Clásico (Random Forest) para realizar un análisis completo
+de la escena.
+
+Propósito principal:
+1.  **Detección (DL):** Utiliza YOLOv11 ('pool_hybrid.pt') para detectar y
+    localizar todas las bolas en la imagen.
+2.  **Extracción de Features (CV):** Procesa las detecciones de YOLO para
+    construir un vector de características numéricas (conteo de bolas).
+3.  **Clasificación (ML):** Utiliza un Random Forest ('context_classifier.joblib')
+    para clasificar el contexto de la mesa (ej. 'Classic' o 'BE').
+4.  **Output Dual:** Devuelve tanto los centroides de las bolas (para la Homografía)
+    como la etiqueta del contexto (para la lógica de reglas).
+"""
+
 import os
 
 import cv2

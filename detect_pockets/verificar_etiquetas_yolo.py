@@ -1,4 +1,18 @@
-# verificar_etiquetas_yolo.py
+"""
+Módulo de Verificación Visual de Anotaciones de Troneras (Fase 6, Paso 3).
+
+Este script de Control de Calidad (QC) visualiza las imágenes y sus correspondientes
+bounding boxes (bboxes) a partir de los archivos de etiqueta YOLO (.txt).
+
+Propósito principal:
+1.  Validación de Integridad: Confirmar que las coordenadas normalizadas se traducen
+    correctamente a bboxes en la imagen para el nuevo dataset de troneras.
+2.  Sanity Check: Asegurar que el proceso de aumentación no ha introducido bboxes
+    malformadas o que han quedado fuera de la imagen.
+3.  Inspección Humana: Permitir la revisión manual de la calidad de las anotaciones
+    antes de iniciar el entrenamiento del modelo especializado.
+"""
+
 import os
 import random
 
@@ -20,11 +34,11 @@ print("Labels: ", YOLO_LABELS_DIR)
 VERIFICATION_DIR = "detect_pockets/images_verification_results/"
 print("Verification: ", VERIFICATION_DIR)
 
-# Tu lista de clases maestra. ¡DEBE SER IDÉNTICA A LA DEL SCRIPT ANTERIOR!
+# Lista de clases maestra. ¡DEBE SER IDÉNTICA A LA DEL SCRIPT ANTERIOR!
 CLASES_MAESTRA = ["pocket_corner", "pocket_side"]
 print("Clases_maestra: ", CLASES_MAESTRA)
 
-# Número de imágenes aleatorias que quieres verificar
+# Número de imágenes aleatorias a verificar
 NUM_IMAGENES_A_VERIFICAR = 15
 
 # --- FIN DE LA CONFIGURACIÓN ---

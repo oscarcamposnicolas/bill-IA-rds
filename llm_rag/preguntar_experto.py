@@ -1,10 +1,24 @@
+"""
+Módulo de Consulta Básica RAG (Retrieval-Augmented Generation) (Fase 7, Paso 1).
+
+Este script implementa el flujo de consulta fundamental del Sistema Experto.
+Su función es demostrar cómo el modelo de lenguaje grande (LLM) es aumentado
+con la información específica del proyecto almacenada en la Vector Store,
+permitiéndole actuar como un experto en las reglas de billar Bola 9.
+
+Propósito principal:
+1.  Validar la funcionalidad RAG (Recuperación y Generación).
+2.  Servir como la prueba de concepto para la aplicación de agente conversacional.
+"""
+
 import os
 import time
+
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama.llms import OllamaLLM
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
 
 # --- CONFIGURACIÓN OPTIMIZADA ---
 VECTORSTORE_NAME = "llm_rag/billar_expert_db"
@@ -17,10 +31,8 @@ def main():
     Función principal para inicializar el chatbot y responder preguntas en modo 100% local y acelerado por GPU.
     """
     print(
-        f"Iniciando el Asistente de Billar en MODO LOCAL OPTIMIZADO... 🚀 (Modelo: {LOCAL_MODEL})"
+        f"Iniciando el Asistente de Billar en MODO LOCAL OPTIMIZADO... (Modelo: {LOCAL_MODEL})"
     )
-
-    # ... (El resto del código es exactamente el mismo que en la versión anterior)
 
     print("Cargando modelo de embeddings...")
     embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)

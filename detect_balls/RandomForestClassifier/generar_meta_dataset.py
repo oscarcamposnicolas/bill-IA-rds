@@ -1,4 +1,15 @@
-# generar_meta_dataset.py
+"""
+Módulo de Generación de Meta-Dataset (Fase 4, Paso 1).
+
+Este script es la primera etapa en la construcción del Clasificador de Contexto
+(Random Forest). Su propósito es transformar las detecciones crudas del modelo YOLO
+en un 'Meta-Dataset' de características (features) que puedan ser utilizadas
+para entrenar un modelo de Machine Learning clásico.
+
+El Meta-Dataset se utiliza para clasificar la regla de juego (ej., 'Clásica' o
+'Black Edition') basándose en el conteo y tipo de bolas detectadas en la mesa.
+"""
+
 import os
 
 import pandas as pd
@@ -13,7 +24,7 @@ DATASET_ORIGINAL_UNIFICADO_DIR = (
     "detect_balls/dataset_hibrido/"  # Necesario para el ground truth
 )
 
-# Ruta a tu mejor modelo híbrido
+# Ruta al mejor modelo híbrido
 MODEL_PATH = "detect_balls/runs/Modelo_Hibrido_v1/weights/best.pt"
 
 # Nombre del archivo de salida
@@ -111,7 +122,7 @@ CLASES_MAESTRA_ORIGINAL = [
 
 def get_ground_truth_context(label_path_original):
     """
-    Lee el archivo de etiqueta del dataset original (32 clases) para determinar el contexto real.
+    Leer el archivo de etiqueta del dataset original (32 clases) para determinar el contexto real.
     Devuelve 1 si es 'black_edition', 0 si es 'classic'.
     """
     try:
@@ -206,6 +217,5 @@ def generar_dataset():
 
 
 if __name__ == "__main__":
-    # Necesitarás instalar pandas y tqdm si no los tienes
-    # pip install pandas tqdm
+    # Necesario: pip install pandas tqdm
     generar_dataset()

@@ -1,4 +1,16 @@
-# procesador_final.py
+"""
+Módulo de Procesamiento Final y Control de Calidad del Dataset (Fase 3, Paso 7).
+
+Este script actúa como el último filtro antes del entrenamiento. Su objetivo es
+revisar y limpiar el conjunto final de archivos de etiquetas, eliminando cualquier
+registro inconsistente, duplicado o incompleto que pudiera haberse generado
+durante las fases de aumentación o conversión.
+
+Propósito principal:
+1.  Control de Calidad: Asegurar la integridad de todos los pares imagen/etiqueta.
+2.  Consolidación: Dejar el dataset en su estado final y listo para el entrenamiento.
+"""
+
 import json
 import os
 import random
@@ -10,8 +22,7 @@ import matplotlib.pyplot as plt
 
 # --- 1. CONFIGURACIÓN ---
 
-# ¡¡¡PASO MÁS IMPORTANTE!!!
-# REEMPLAZA ESTA LISTA CON TU LISTA DE CLASES, EN EL ORDEN EXACTO EN QUE APARECE EN LABEL STUDIO.
+# LISTA DE CLASES, EN EL ORDEN EXACTO EN QUE APARECE EN LABEL STUDIO.
 CLASES_MAESTRA = [
     "black_8",
     "blue_10",

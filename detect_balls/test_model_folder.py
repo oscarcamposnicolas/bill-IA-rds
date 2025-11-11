@@ -1,4 +1,16 @@
-# test_modelo_bucle.py
+"""
+Módulo de Benchmarking y Test de Lote (Fase 2, Paso 3).
+
+Este script automatiza la inferencia del modelo YOLO de Detección de Bolas sobre
+una carpeta completa de imágenes de prueba. Es fundamental para:
+
+1.  Benchmarking: Medir la confianza promedio y la latencia del modelo.
+2.  Validación Visual: Generar imágenes de resultados con bounding boxes para
+    la documentación y el informe final.
+3.  Prueba de Robustez: Evaluar el rendimiento del modelo en diferentes escenarios
+    de iluminación o tipos de mesa (Clásico/Black Edition).
+"""
+
 import os
 
 import cv2
@@ -7,7 +19,6 @@ import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
 # --- 1. CONFIGURACIÓN ---
-# Mantén todas las variables que puedas querer cambiar aquí arriba
 
 # --- Rutas del Proyecto ---
 base_project_dir = os.path.join(".", "detect_balls")
@@ -16,8 +27,7 @@ train_version = "Modelo_Hibrido_v1"
 
 runs_dir = os.path.join(base_project_dir, "runs")
 
-# --- ¡NUEVO! Define aquí la carpeta con tus imágenes de prueba ---
-# Debes crear esta carpeta y colocar dentro todas las imágenes que quieras probar.
+# --- Carpetas con las imágenes de prueba ---
 TEST_IMAGES_DIR = os.path.join(base_project_dir, "tests", "Classic")
 TEST_IMAGES_DIR = os.path.join(base_project_dir, "tests", "Black")
 TEST_IMAGES_DIR = os.path.join(base_project_dir, "tests", "Mix")
@@ -30,7 +40,7 @@ output_dir = os.path.join(base_project_dir, "tests", "results_mix")
 output_dir = os.path.join(base_project_dir, "tests", "results_classic2")
 
 # --- Ruta al Modelo ---
-# Apunta al mejor modelo de tu entrenamiento final
+# Apunta al mejor modelo del entrenamiento final
 model_path = os.path.join(
     runs_dir,
     train_version,
@@ -39,10 +49,10 @@ model_path = os.path.join(
 )
 
 # --- Parámetros de Inferencia ---
-CONFIDENCE_THRESHOLD = 0.4  # Umbral de confianza (ajústalo según necesites)
+CONFIDENCE_THRESHOLD = 0.4  # Umbral de confianza
 
 # --- Lista de Clases Maestra ---
-# Asegúrate de que esta lista sea la definitiva y correcta para tu modelo
+# Lista definitiva y correcta para el modelo
 classes = [
     "black_8",
     "blue_10",
