@@ -8,8 +8,6 @@ Este repositorio contiene el código fuente completo y la documentación del pro
 
 Toda la metodología, la evolución del proyecto, el análisis técnico de cada script y la justificación de las decisiones de ingeniería (I+D) se encuentran documentados en el **Wiki oficial del repositorio**.
 
-### [➡️ Archivo de la presentacion del Proyecto de deteccion de bolas ⬅️](https://github.com/oscarcamposnicolas/bill-IA-rds/blob/main/fases_html/bloque0.html)
-
 ### [➡️ Accede al Wiki del Proyecto aquí ⬅️](https://github.com/oscarcamposnicolas/bill-IA-rds/wiki)
 
 El Wiki está estructurado por fases, replicando la cronología del desarrollo del proyecto:
