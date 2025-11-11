@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Fase 10 - Aplicación Web de Presentación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!--<div class="flex items-center"><span class="font-bold text-xl text-white">Proyecto Billar IA</span></div>-->
+                <span class="nav-link hidden md:block">
+                    <audio controls>
+                        <source src="audio/Fase_10_Building_a_Flask_Web_App_for_AI_Inference.mp3" type="audio/mpeg">
+                    </audio>
+                </span>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque9.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#resultados" class="nav-link">Arquitectura</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_10_Presentacion_WEB.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque_resumen.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Fase 10: Aplicación Web de
+                    Presentación</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Culminando el proyecto con la creación de
+                    una aplicación web interactiva usando Flask para demostrar el sistema de IA, permitiendo la carga de
+                    imágenes y la visualización de resultados en tiempo real.</p>
+                <img src="images/bloque10.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Portfolio+Web'"
+                    alt="Dashboard con gráficas y datos representando una aplicación web"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">De la Consola a la Interfaz Gráfica</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">Un modelo de IA, por muy potente que sea, tiene un impacto
+                            limitado si no se puede interactuar con él. Se necesita una interfaz para que los usuarios
+                            puedan probarlo y ver los resultados.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Desarrollar una aplicación web completa con Flask, un
+                            micro-framework de Python, que sirva de portfolio interactivo para todo el proyecto.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Estructuración del proyecto web (carpetas `static`, `templates`).</li>
+                            <li>Refactorización del código de IA a un módulo (`motor_inferencia.py`).</li>
+                            <li>Creación del servidor web con `app.py`.</li>
+                            <li>Diseño de la interfaz de usuario con HTML, CSS y JS.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Una aplicación web funcional y profesional que sirve de portfolio
+                            multimedia, permite probar el modelo en tiempo real e incluye toda la documentación del
+                            proyecto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Refactorización: Separando la Lógica de la Presentación</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">Backend: `app.py` y el Motor de IA</h3>
+                            <p class="text-slate-300 mb-4">El código se reestructura en dos módulos.
+                                `motor_inferencia.py` encapsula toda la lógica de IA (carga de modelos, predicción,
+                                post-procesamiento). El archivo `app.py` actúa como un controlador ligero: gestiona las
+                                peticiones web y simplemente llama a las funciones del motor de IA.</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">app.py (Controlador Web)</h4>
+                            <pre><code>from motor_inferencia import procesar_imagen
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    # ... gestiona la subida de archivo ...
+    
+    # Llama al motor de IA externo
+    detecciones = procesar_imagen(input, output)
+    
+    # Devuelve el resultado
+    return jsonify({'result_image': url_salida})</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">Frontend: HTML, CSS y JavaScript</h3>
+                            <p class="text-slate-300 mb-4">Se crea una interfaz de usuario interactiva. El archivo
+                                `inferencia.html` contiene los elementos para subir la imagen. El `script.js` se encarga
+                                de enviar la imagen al servidor mediante una petición `fetch` a la API `/predict` sin
+                                recargar la página, y de mostrar el resultado dinámicamente.</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">script.js (Lógica del Navegador)</h4>
+                            <pre><code>predictBtn.addEventListener('click', async () => {
+    // ... prepara el FormData ...
+
+    const response = await fetch('/predict', {
+        method: 'POST',
+        body: formData
+    });
+    const data = await response.json();
+
+    // Muestra la imagen resultante
+    resultImage.src = data.result_image;
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Flask</h3>
+                        <p class="text-slate-300">Micro-framework de Python utilizado para construir el servidor web de
+                            forma rápida y sencilla, gestionando rutas y peticiones HTTP.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Arquitectura Cliente-Servidor</h3>
+                        <p class="text-slate-300">Diseño fundamental de la web, donde el navegador (cliente) solicita
+                            información a un servidor, que la procesa y devuelve una respuesta.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Refactorización de Código</h3>
+                        <p class="text-slate-300">Práctica de reestructurar el código en módulos lógicos (ej. `app.py`
+                            vs `motor_inferencia.py`) para mejorar su legibilidad, mantenibilidad y reutilización.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">API REST</h3>
+                        <p class="text-slate-300">Creación de un endpoint (`/predict`) que acepta peticiones POST para
+                            realizar una acción específica (la inferencia) y devolver un resultado en formato JSON.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">JavaScript Asíncrono (Fetch API)</h3>
+                        <p class="text-slate-300">Uso de JavaScript para comunicarse con el servidor en segundo plano,
+                            permitiendo una experiencia de usuario dinámica sin necesidad de recargar la página.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Plantillas Jinja2</h3>
+                        <p class="text-slate-300">Sistema de plantillas de Flask que permite crear un `base.html` y
+                            extenderlo para reutilizar código HTML común (cabecera, navegación) en todas las páginas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados -->
+        <section id="resultados" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Arquitectura de la Aplicación Web</h2>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Diagrama de Flujo del Sistema</h3>
+                    <p class="text-center text-slate-300 mb-6">Este diagrama ilustra el flujo de información desde que
+                        el usuario sube una imagen hasta que recibe el resultado procesado por la arquitectura de IA
+                        completa.</p>
+                    <div class="relative h-[40vh] max-h-[400px] w-full"><canvas id="appArchitectureChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones -->
+        <section id="conclusiones" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusión del Proyecto</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Lecciones Finales</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La creación de una interfaz de usuario no es un paso final, sino una parte
+                                    integral del desarrollo de IA que permite la validación, depuración y demostración
+                                    del valor del proyecto.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Una buena arquitectura de software (separando backend y frontend, y la
+                                    lógica de la aplicación de la lógica de IA) es fundamental para crear sistemas
+                                    escalables y mantenibles.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">¡Proyecto Desplegado!</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">Objetivo Alcanzado</h4>
+                                <p class="text-slate-300">El proyecto culmina con una aplicación web funcional y
+                                    profesional que no solo sirve como un portfolio dinámico, sino que demuestra de
+                                    forma práctica y tangible el poder y la precisión del sistema de IA desarrollado.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">Futuro del Proyecto</h4>
+                                <p class="text-slate-300">Con la interfaz web como base, el sistema puede expandirse
+                                    para procesar vídeo en tiempo real, añadir bases de datos de partidas o incluso ser
+                                    desplegado en la nube para un acceso público.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- GRÁFICA: ARQUITECTURA DE LA APP ---
+            const ctx = document.getElementById('appArchitectureChart')?.getContext('2d');
+            if (ctx) {
+                const data = {
+                    labels: ['Usuario', 'Frontend (JS)', 'Backend (Flask)', 'Motor IA (Python)'],
+                    datasets: [{
+                        label: 'Flujo de Petición',
+                        data: [1, 2, 3, 4], // Simboliza el orden del flujo
+                        backgroundColor: [
+                            'rgba(168, 85, 247, 0.7)',
+                            'rgba(59, 130, 246, 0.7)',
+                            'rgba(249, 115, 22, 0.7)',
+                            'rgba(34, 197, 94, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(168, 85, 247, 1)',
+                            'rgba(59, 130, 246, 1)',
+                            'rgba(249, 115, 22, 1)',
+                            'rgba(34, 197, 94, 1)'
+                        ],
+                        borderWidth: 1,
+                        categoryPercentage: 0.5,
+                        barPercentage: 0.5,
+                    }]
+                };
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: data,
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            title: { display: true, text: 'Flujo de una Petición de Inferencia', color: '#e2e8f0', font: { size: 16 } }
+                        },
+                        scales: {
+                            x: { display: false },
+                            y: { ticks: { color: '#e2e8f0', font: { size: 14 } }, grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

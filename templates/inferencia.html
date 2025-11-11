@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Prueba de Inferencia en Tiempo Real</h2>
+    <p>Sube una imagen de una mesa de billar para ver las detecciones del modelo. Haz clic en cualquier imagen para
+        ampliarla.</p>
+    <div class="inference-box">
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="predictBtn">Detectar Bolas</button>
+        <div id="spinner" class="spinner" style="display:none;"></div>
+    </div>
+    <div class="results-container">
+        <div class="image-box">
+            <h3>Imagen Original</h3>
+            <img id="imagePreview" src="" alt="Vista previa de la imagen" class="zoomable">
+        </div>
+        <div class="image-box">
+            <h3>Resultado de la Detección</h3>
+            <img id="resultImage" src="" alt="Resultado del modelo" class="zoomable">
+        </div>
+    </div>
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

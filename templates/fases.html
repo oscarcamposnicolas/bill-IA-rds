@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <!-- <h2>Fases y Documentación del Proyecto</h2>
+    <p>Usa el menú para navegar por los diferentes documentos HTML del proyecto.</p> -->
+    <div class="iframe-container">
+        <iframe name="iframe_contenido" src="{{ url_for('serve_fases_html', filename='bloque0.html') }}"></iframe>
+    </div>
+</div>
+{% endblock %}

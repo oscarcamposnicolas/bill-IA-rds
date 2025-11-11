@@ -1,0 +1,166 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inference-box {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.image-box {
+    width: 45%;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.image-box h3 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.iframe-container {
+    width: 100%;
+    height: 80vh;
+    border: 1px solid #ddd;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #003366;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- Estilos para la Imagen Ampliable y la Ventana Modal --- */
+
+/* Estilo para que el cursor cambie al pasar sobre las imágenes */
+.zoomable {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.zoomable:hover {
+    transform: scale(1.03);
+    /* Efecto de zoom sutil al pasar el ratón */
+}
+
+/* El fondo de la ventana modal (la superposición oscura) */
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    /* Se queda fijo en la pantalla */
+    z-index: 1000;
+    /* Se asegura de que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Permite scroll si la imagen es muy grande */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo negro semitransparente */
+}
+
+/* El contenido de la modal (la imagen ampliada) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    /* Ocupa como máximo el 80% de la altura de la ventana */
+    /* Animación de zoom al aparecer */
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* El botón de cerrar (la 'X') */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

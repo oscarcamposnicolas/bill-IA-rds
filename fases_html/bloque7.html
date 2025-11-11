@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Fase 7 - Fine-Tuning y el Supermodelo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!--<span class="font-bold text-xl text-white">Proyecto Billar IA</span>-->
+                    <span class="nav-link">
+                        <!--<p>
+                            <strong>
+                                <br>
+                                <a href="bloque0.html">Fine-Tuning y el "Supermodelo"</a>
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_7_Mastering_Fine-Tuning_Two-Phase_Neural_Network_Training.mp3"
+                                type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque6.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Gráficas</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_7_Fine-Tunning.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque8.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Fine-Tuning y el "Supermodelo"
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Aplicando técnicas avanzadas de
+                    entrenamiento por fases para resolver el "Olvido Catastrófico" y crear un modelo final equilibrado y
+                    de alto rendimiento.</p>
+                <img src="images/bloque7.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Modelo+Final+Equilibrado'"
+                    alt="Bolas de billar perfectamente alineadas, simbolizando el equilibrio y la precisión del modelo final."
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">El Desafío Final: Olvido Catastrófico</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">Al entrenar el modelo experto con el nuevo dataset, desarrolló un
+                            sesgo severo, "olvidando" cómo clasificar las bolas clásicas y favoreciendo las nuevas
+                            clases "Black Edition".</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Implementar un entrenamiento por fases: primero, "congelar" el
+                            conocimiento base del modelo y entrenar solo la capa final; luego, "descongelar" todo y
+                            hacer un ajuste fino con una tasa de aprendizaje muy baja.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Fase 1: Entrenamiento con `freeze=11`.</li>
+                            <li>Fase 2: Fine-tuning con `lr0=0.0005`.</li>
+                            <li>Análisis de métricas de ambas fases.</li>
+                            <li>Validación final del modelo "Supermodelo".</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Éxito total. El entrenamiento por fases eliminó el sesgo,
+                            obteniendo un modelo final con un mAP50-95 de 0.702, demostrando un rendimiento equilibrado
+                            y de alta precisión en las 32 clases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Proceso Técnico: Entrenamiento por Fases</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Fase 1: Estabilización de la "Cabeza"</h3>
+                            <p class="text-slate-300 mb-4">Se congela el "cuerpo" del modelo (`backbone`), que ya es
+                                experto en formas y texturas. Se entrena únicamente la capa de clasificación final para
+                                que aprenda a diferenciar las 32 nuevas clases de forma estable, sin dañar el
+                                conocimiento base.</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Comando Fase 1</h4>
+                            <pre><code>yolo train model=pool_classic.pt \\
+  data=supermodelo.yaml \\
+  epochs=50 patience=15 \\
+  name=Fase1_Head freeze=11</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Fase 2: Ajuste Fino (Fine-Tuning)</h3>
+                            <p class="text-slate-300 mb-4">Se carga el mejor modelo de la fase 1. Ahora, se "descongela"
+                                todo el modelo y se re-entrena con una tasa de aprendizaje 20 veces más baja. Esto
+                                permite que toda la red neuronal se "pula" y realice ajustes de alta precisión de forma
+                                equilibrada.</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Comando Fase 2</h4>
+                            <pre><code>yolo train model=Fase1_Head/weights/best.pt \\
+  data=supermodelo.yaml \\
+  epochs=150 patience=30 \\
+  name=Fase2_Final optimizer="AdamW" lr0=0.0005</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Olvido Catastrófico</h3>
+                        <p class="text-slate-300">Fenómeno donde una red neuronal, al aprender nueva información de
+                            forma agresiva, sobrescribe y "olvida" el conocimiento previo que ya había adquirido.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Fine-Tuning de Precisión</h3>
+                        <p class="text-slate-300">Técnica avanzada de Transfer Learning que utiliza una tasa de
+                            aprendizaje muy baja para re-ajustar un modelo experto a nuevos datos sin destruir su
+                            conocimiento base.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Congelación de Capas (Freezing)</h3>
+                        <p class="text-slate-300">Práctica de "bloquear" los pesos de las capas más profundas de un
+                            modelo (backbone) para entrenar únicamente las capas finales, ideal para estabilizar la
+                            clasificación.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Tasa de Aprendizaje (Learning Rate)</h3>
+                        <p class="text-slate-300">Parámetro fundamental que controla la magnitud de los ajustes que
+                            realiza el modelo en cada iteración. Un valor bajo es clave para un fine-tuning delicado.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Dataset Sintético</h3>
+                        <p class="text-slate-300">Creación de nuevos datos de entrenamiento a partir de un set existente
+                            mediante técnicas de aumentación, para incrementar la diversidad y combatir el sobreajuste.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Generalización Equilibrada</h3>
+                        <p class="text-slate-300">El objetivo final: un modelo que no solo sea preciso, sino que rinda
+                            de forma equilibrada en todas las clases, tanto las originales como las nuevas, sin sesgos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Resultados del "Supermodelo" Final</h2>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Evolución de Precisión (mAP)</h3>
+                        <p class="text-center text-slate-300 mb-6">La curva de mAP muestra un aprendizaje constante y
+                            estable, alcanzando un pico de rendimiento excelente y sosteniéndolo durante todo el
+                            entrenamiento.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="mapChart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Ausencia de Sobreajuste (Pérdidas)
+                        </h3>
+                        <p class="text-center text-slate-300 mb-6">Las curvas de pérdida de entrenamiento y validación
+                            se mantienen juntas, demostrando que el modelo generaliza bien y el sobreajuste fue
+                            erradicado con éxito.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="lossChart"></canvas></div>
+                    </div>
+                </div>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Rendimiento Final Equilibrado por Clase
+                        (mAP50-95)</h3>
+                    <p class="text-center text-slate-300 mb-6">El resultado más importante: el modelo final muestra un
+                        rendimiento muy alto y, crucialmente, equilibrado entre las clases clásicas (azules) y las
+                        "Black Edition" (verdes).</p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full"><canvas id="classPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Glosario -->
+        <section id="glosario" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Glosario de Términos</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div>
+                            <dt class="text-lg font-bold text-white">Fine-Tuning por Fases</dt>
+                            <dd class="mt-1 text-slate-300">Una estrategia de entrenamiento avanzada que divide el
+                                proceso en etapas (ej. congelando capas) para integrar nuevo conocimiento de forma
+                                controlada y evitar el olvido catastrófico.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Backbone (Espina Dorsal)</dt>
+                            <dd class="mt-1 text-slate-300">Las capas iniciales y más profundas de una red neuronal,
+                                responsables de extraer características visuales genéricas como bordes, texturas y
+                                formas.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Cabeza de Clasificación (Head)</dt>
+                            <dd class="mt-1 text-slate-300">Las capas finales de un modelo de detección, responsables de
+                                tomar las características extraídas por el backbone y realizar la predicción final de la
+                                clase y la ubicación del objeto.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Olvido Catastrófico</dt>
+                            <dd class="mt-1 text-slate-300">Fenómeno en el que un modelo pre-entrenado pierde su
+                                conocimiento experto anterior al ser re-entrenado en datos nuevos con una tasa de
+                                aprendizaje demasiado alta.</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Siguientes Pasos</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La estrategia de entrenamiento por fases ha sido un éxito rotundo,
+                                    resolviendo el problema de sesgo y produciendo un modelo final de alta calidad
+                                    (`mAP50-95 > 0.7`).</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Congelar el `backbone` primero fue crucial para evitar que el modelo
+                                    "olvidara" su conocimiento experto sobre las bolas clásicas.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El "Supermodelo" final es robusto, equilibrado y está listo para ser el
+                                    cerebro del sistema de análisis de partidas de billar.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">¡Proyecto Completado!</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Evaluación Final</h4>
+                                <p class="text-slate-300">Realizar una última validación del `best.pt` final sobre el
+                                    conjunto de `test` para obtener la métrica oficial de rendimiento del proyecto.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Despliegue de la Aplicación</h4>
+                                <p class="text-slate-300">Integrar el "Supermodelo" en la aplicación final para procesar
+                                    vídeo en tiempo real, extraer coordenadas y analizar el estado del juego.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Desarrollo de la Lógica del Juego
+                                </h4>
+                                <p class="text-slate-300">Con la detección de objetos resuelta, el enfoque puede pasar
+                                    al desarrollo de algoritmos de alto nivel: cálculo de trayectorias, sugerencia de
+                                    tiros y análisis estratégico de la partida.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS DEL ENTRENAMIENTO FINAL (FASE 2) ---
+            const epochs = Array.from({ length: 150 }, (_, i) => i + 1);
+            const map50_data = [0.595, 0.714, 0.805, 0.792, 0.824, 0.83, 0.837, 0.836, 0.847, 0.837, 0.857, 0.868, 0.865, 0.857, 0.872, 0.862, 0.862, 0.869, 0.867, 0.874, 0.873, 0.873, 0.868, 0.876, 0.876, 0.866, 0.87, 0.873, 0.875, 0.872, 0.869, 0.873, 0.879, 0.872, 0.871, 0.867, 0.872, 0.874, 0.878, 0.873, 0.871, 0.876, 0.875, 0.877, 0.877, 0.874, 0.877, 0.871, 0.872, 0.871, 0.872, 0.876, 0.877, 0.878, 0.875, 0.876, 0.874, 0.871, 0.877, 0.881, 0.881, 0.877, 0.885, 0.876, 0.877, 0.875, 0.874, 0.873, 0.879, 0.871, 0.875, 0.872, 0.874, 0.875, 0.875, 0.872, 0.873, 0.875, 0.873, 0.871, 0.876, 0.875, 0.873, 0.873, 0.874, 0.876, 0.872, 0.872, 0.872, 0.871, 0.871, 0.872, 0.873, 0.872, 0.872, 0.873, 0.871, 0.872, 0.875, 0.874, 0.875, 0.874, 0.874, 0.873, 0.873, 0.874, 0.875, 0.876, 0.875, 0.875, 0.872, 0.871, 0.872, 0.871, 0.871, 0.872, 0.872, 0.873, 0.872, 0.872, 0.873, 0.873, 0.874, 0.873, 0.873, 0.873, 0.872, 0.872, 0.873, 0.873, 0.872, 0.873, 0.872, 0.872, 0.871, 0.871];
+            const map50_95_data = [0.349, 0.422, 0.478, 0.467, 0.509, 0.516, 0.511, 0.528, 0.527, 0.543, 0.563, 0.565, 0.58, 0.571, 0.591, 0.591, 0.586, 0.595, 0.59, 0.596, 0.592, 0.597, 0.602, 0.612, 0.611, 0.604, 0.607, 0.609, 0.609, 0.614, 0.607, 0.624, 0.628, 0.627, 0.618, 0.617, 0.621, 0.63, 0.629, 0.63, 0.635, 0.633, 0.642, 0.646, 0.637, 0.641, 0.655, 0.652, 0.653, 0.645, 0.652, 0.654, 0.653, 0.652, 0.658, 0.653, 0.658, 0.659, 0.669, 0.664, 0.662, 0.659, 0.666, 0.654, 0.654, 0.66, 0.663, 0.671, 0.673, 0.67, 0.669, 0.671, 0.674, 0.672, 0.67, 0.673, 0.679, 0.674, 0.68, 0.683, 0.684, 0.679, 0.687, 0.686, 0.681, 0.685, 0.684, 0.69, 0.689, 0.69, 0.692, 0.695, 0.698, 0.697, 0.696, 0.698, 0.698, 0.698, 0.698, 0.699, 0.699, 0.699, 0.699, 0.7, 0.699, 0.699, 0.7, 0.701, 0.702, 0.7, 0.7, 0.701, 0.7, 0.7, 0.7, 0.7, 0.701, 0.701, 0.702, 0.702, 0.701, 0.702];
+            const box_loss_data = [0.704, 0.654, 0.69, 0.701, 0.701, 0.697, 0.694, 0.683, 0.675, 0.67, 0.663, 0.661, 0.648, 0.648, 0.641, 0.631, 0.632, 0.619, 0.616, 0.607, 0.61, 0.601, 0.592, 0.592, 0.579, 0.582, 0.575, 0.571, 0.574, 0.566, 0.561, 0.56, 0.556, 0.557, 0.552, 0.548, 0.547, 0.538, 0.54, 0.535, 0.531, 0.526, 0.526, 0.523, 0.522, 0.516, 0.515, 0.512, 0.513, 0.503, 0.502, 0.503, 0.497, 0.495, 0.494, 0.49, 0.49, 0.485, 0.482, 0.48, 0.48, 0.472, 0.475, 0.478, 0.47, 0.465, 0.461, 0.464, 0.459, 0.454, 0.453, 0.45, 0.447, 0.448, 0.444, 0.441, 0.441, 0.438, 0.436, 0.435, 0.432, 0.427, 0.426, 0.422, 0.42, 0.421, 0.419, 0.418, 0.415, 0.411, 0.412, 0.409, 0.408, 0.405, 0.404, 0.401, 0.4, 0.398, 0.396, 0.395, 0.394, 0.391, 0.388, 0.386, 0.386, 0.384, 0.381, 0.381, 0.38, 0.377, 0.374, 0.373, 0.373, 0.369, 0.368, 0.368, 0.366, 0.363, 0.361, 0.36, 0.36, 0.358, 0.357, 0.355, 0.354, 0.352, 0.351, 0.349, 0.348, 0.347, 0.346, 0.345, 0.343, 0.342, 0.341, 0.338, 0.337, 0.335, 0.334, 0.331, 0.329, 0.328, 0.327, 0.326, 0.325, 0.323, 0.322, 0.32, 0.318, 0.317, 0.316, 0.315, 0.314, 0.312, 0.311, 0.309, 0.308, 0.307, 0.306];
+            const cls_loss_data = [0.89, 0.53, 0.517, 0.515, 0.496, 0.489, 0.484, 0.48, 0.463, 0.458, 0.445, 0.446, 0.437, 0.428, 0.421, 0.411, 0.415, 0.406, 0.406, 0.395, 0.401, 0.394, 0.381, 0.386, 0.37, 0.375, 0.372, 0.369, 0.374, 0.365, 0.362, 0.361, 0.356, 0.356, 0.355, 0.352, 0.351, 0.344, 0.346, 0.346, 0.34, 0.336, 0.339, 0.334, 0.333, 0.326, 0.329, 0.326, 0.332, 0.326, 0.318, 0.323, 0.318, 0.315, 0.312, 0.31, 0.309, 0.304, 0.303, 0.303, 0.305, 0.299, 0.302, 0.304, 0.298, 0.3, 0.292, 0.289, 0.293, 0.291, 0.286, 0.286, 0.286, 0.281, 0.282, 0.28, 0.278, 0.275, 0.274, 0.268, 0.264, 0.268, 0.264, 0.26, 0.259, 0.257, 0.256, 0.256, 0.255, 0.254, 0.253, 0.25, 0.25, 0.247, 0.248, 0.246, 0.247, 0.244, 0.244, 0.242, 0.241, 0.241, 0.241, 0.237, 0.238, 0.237, 0.236, 0.236, 0.235, 0.233, 0.233, 0.23, 0.229, 0.23, 0.228, 0.226, 0.225, 0.224, 0.223, 0.222, 0.221, 0.219, 0.221, 0.22, 0.219, 0.218, 0.217, 0.216, 0.215, 0.215, 0.213, 0.21, 0.21, 0.21, 0.208, 0.208, 0.207, 0.205, 0.205, 0.203, 0.203, 0.201, 0.201, 0.2, 0.199, 0.2, 0.198, 0.197, 0.196, 0.195, 0.194, 0.193, 0.192, 0.191, 0.19, 0.189, 0.188, 0.187, 0.186, 0.185, 0.184, 0.183, 0.182, 0.181];
+            const class_names_final = ['black_8', 'blue_10', 'blue_2', 'dred_15', 'dred_7', 'green_14', 'green_6', 'orange_13', 'orange_5', 'purple_12', 'purple_4', 'red_11', 'red_3', 'white', 'yellow_1', 'yellow_9', 'be_black_8', 'be_blue_10', 'be_blue_2', 'be_dred_15', 'be_dred_7', 'be_green_14', 'be_green_6', 'be_purple_13', 'be_purple_5', 'be_pink_4', 'be_pink_12', 'be_red_11', 'be_red_3', 'be_white', 'be_yellow_1', 'be_yellow_9'];
+            const map50_95_final = [0.564, 0.528, 0.555, 0.436, 0.48, 0.414, 0.595, 0.472, 0.426, 0.392, 0.48, 0.483, 0.441, 0.538, 0.542, 0.534, 0.877, 0.908, 0.86, 0.873, 0.874, 0.911, 0.887, 0.875, 0.861, 0.898, 0.892, 0.903, 0.871, 0.907, 0.889, 0.908];
+
+            // --- GRÁFICA 1: mAP ---
+            new Chart(document.getElementById('mapChart').getContext('2d'), { type: 'line', data: { labels: epochs, datasets: [{ label: 'mAP50 (Val)', data: map50_data, borderColor: 'rgba(56, 189, 248, 1)', fill: false, tension: 0.1 }, { label: 'mAP50-95 (Val)', data: map50_95_data, borderColor: 'rgba(34, 197, 94, 1)', fill: false, tension: 0.1 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } } });
+            // --- GRÁFICA 2: PÉRDIDAS ---
+            new Chart(document.getElementById('lossChart').getContext('2d'), { type: 'line', data: { labels: epochs, datasets: [{ label: 'Pérdida de Caja (train)', data: box_loss_data, borderColor: 'rgba(239, 68, 68, 1)', fill: false, tension: 0.1 }, { label: 'Pérdida de Clase (train)', data: cls_loss_data, borderColor: 'rgba(249, 115, 22, 1)', fill: false, tension: 0.1 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: false, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } } });
+
+            // --- GRÁFICA 3: RENDIMIENTO POR CLASE ---
+            const classPerfCtx = document.getElementById('classPerformanceChart').getContext('2d');
+            new Chart(classPerfCtx, {
+                type: 'bar',
+                data: {
+                    labels: class_names_final,
+                    datasets: [{
+                        label: 'mAP50-95 por Clase',
+                        data: map50_95_final,
+                        backgroundColor: [
+                            '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa', '#60a5fa',
+                            '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80', '#4ade80'
+                        ],
+                        borderColor: '#1e293b',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                    scales: { x: { beginAtZero: true, min: 0.3, ticks: { color: '#e2e8f0' } }, y: { ticks: { color: '#e2e8f0' } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

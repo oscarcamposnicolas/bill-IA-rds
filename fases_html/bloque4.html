@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Fase 4 - Experimentando con YOLOv11m</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!--<span class="font-bold text-xl text-white">Proyecto Billar IA</span>-->
+                    <span class="nav-link">
+                        <!--<p>
+                            <strong>
+                                <br>
+                                <a href="bloque0.html">Aumentando la Capacidad del Modelo</a>
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_4_YOLO_Model_Training_and_Real-World_Performance_Analysis.mp3"
+                                type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque3.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Gráficas</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_4_Yolo11m.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque5.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Aumentando la
+                    Capacidad del Modelo</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Exploramos los límites del rendimiento
+                    cambiando a una arquitectura superior (YOLOv11m) y descubrimos la importancia de la brecha de
+                    generalización entre los datos de entrenamiento y el mundo real.</p>
+                <img src="images/bloque4.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Red+Neuronal+Avanzada'"
+                    alt="Visualización de una red neuronal más compleja y potente"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">El Límite del Modelo y la Brecha con la Realidad</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">El modelo anterior (YOLOv8n), aunque optimizado, alcanzó un techo
+                            de rendimiento. Se planteó la hipótesis de que la propia capacidad del modelo era el factor
+                            limitante.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Realizar un nuevo entrenamiento comparativo utilizando un modelo
+                            de mayor capacidad (YOLOv11m), manteniendo la misma configuración de datos y aumentación
+                            para una evaluación justa.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Cambio de modelo base a `yolo11m.pt`.</li>
+                            <li>Ajuste de `batch_size` a 24 para gestionar la VRAM.</li>
+                            <li>Entrenamiento en GPU local (ROCm).</li>
+                            <li>Análisis comparativo de `best.pt` vs. `last.pt`.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">El modelo `medium` superó claramente al `nano`, alcanzando un
+                            mAP50 de ~0.80. Se identificó una brecha de generalización ("Domain Gap") entre los datos
+                            del dataset y las imágenes del mundo real.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Análisis Comparativo: `best.pt` vs `last.pt`</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">La Trampa del Sobreajuste: `last.pt`</h3>
+                            <p class="text-slate-300 mb-4">El modelo de la última época (`last.pt`) está altamente
+                                especializado en los datos de entrenamiento. Al probarlo en imágenes nuevas del "mundo
+                                real", su rendimiento decae drásticamente, ya que ha "memorizado" en lugar de "aprender
+                                a generalizar".</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Características de `last.pt`</h4>
+                            <ul class="mt-2 text-slate-300 list-disc list-inside">
+                                <li>Excelente rendimiento en datos del mismo dominio.</li>
+                                <li>Bajo rendimiento en datos de dominios diferentes.</li>
+                                <li>Propenso a ignorar objetos en condiciones de luz o ángulos no vistos.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">El Modelo Campeón: `best.pt`</h3>
+                            <p class="text-slate-300 mb-4">YOLO guarda automáticamente el modelo que obtiene el mejor
+                                rendimiento en el set de validación (`best.pt`). Este modelo, proveniente de una época
+                                anterior (época 26 en este caso), está mucho menos sobreajustado y demuestra una
+                                capacidad de generalización muy superior, siendo la elección correcta para producción.
+                            </p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Características de `best.pt`</h4>
+                            <ul class="mt-2 text-slate-300 list-disc list-inside">
+                                <li>Mejor equilibrio entre Precisión y Recall.</li>
+                                <li>Mayor capacidad para detectar objetos en imágenes nuevas.</li>
+                                <li>Representa el punto óptimo del aprendizaje del modelo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Capacidad del Modelo</h3>
+                        <p class="text-slate-300">Un modelo más grande (más parámetros) tiene un potencial de
+                            aprendizaje superior, pero también es más propenso al sobreajuste y requiere más recursos
+                            computacionales.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Brecha de Dominio (Domain Gap)</h3>
+                        <p class="text-slate-300">La diferencia de rendimiento que sufre un modelo cuando se enfrenta a
+                            datos de un "dominio" (ej. fotos reales) diferente al dominio con el que fue entrenado (ej.
+                            dataset curado).</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Análisis Cualitativo</h3>
+                        <p class="text-slate-300">Inspección visual de los resultados del modelo para entender *por qué*
+                            falla (oclusiones, reflejos, etc.), más allá de las métricas numéricas, para guiar la mejora
+                            de los datos.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Ajuste Fino (Fine-Tuning)</h3>
+                        <p class="text-slate-300">Proceso de tomar un modelo ya entrenado (`best.pt`) y continuar su
+                            entrenamiento con un dataset nuevo o enriquecido para mejorar su rendimiento en casos
+                            específicos.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Curva de Aprendizaje</h3>
+                        <p class="text-slate-300">Representación gráfica de la mejora del modelo a lo largo de las
+                            épocas, observando la evolución de las métricas de pérdida (loss) y precisión (mAP).</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Control de Potencia de GPU</h3>
+                        <p class="text-slate-300">Uso de herramientas como CoreCtrl para gestionar la temperatura y el
+                            consumo de la GPU durante entrenamientos largos, asegurando la estabilidad del hardware.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Rendimiento del Modelo YOLOv11m</h2>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Evolución del mAP (Época 26 Óptima)
+                        </h3>
+                        <p class="text-center text-slate-300 mb-6">El rendimiento alcanzó un pico en la época 26 y luego
+                            se estabilizó. Early Stopping detuvo el entrenamiento eficientemente.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="mapChart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Control del Sobreajuste (Pérdidas)
+                        </h3>
+                        <p class="text-center text-slate-300 mb-6">La brecha entre la pérdida de entrenamiento
+                            (continua) y validación (discontinua) es visible pero se mantiene controlada.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="lossChart"></canvas></div>
+                    </div>
+                </div>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Rendimiento del Modelo Óptimo por Clase
+                        (mAP50)</h3>
+                    <p class="text-center text-slate-300 mb-6">Rendimiento del `best.pt` (época 26). Destacan `green_6`
+                        y `black_8`. El área de mejora principal sigue siendo `purple_12`.</p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full"><canvas id="classPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Glosario -->
+        <section id="glosario" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Glosario de Términos</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div>
+                            <dt class="text-lg font-bold text-white">Modelo `medium`</dt>
+                            <dd class="mt-1 text-slate-300">Una versión de la arquitectura YOLO con mayor capacidad (más
+                                parámetros) que los modelos `nano` o `small`, diseñada para ofrecer mayor precisión a
+                                cambio de un mayor coste computacional.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">`best.pt`</dt>
+                            <dd class="mt-1 text-slate-300">El archivo de pesos guardado por Ultralytics que corresponde
+                                a la época con el mejor rendimiento en el conjunto de datos de validación. Es el modelo
+                                ideal para producción.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">`last.pt`</dt>
+                            <dd class="mt-1 text-slate-300">El archivo de pesos que corresponde a la última época
+                                completada del entrenamiento. A menudo está más sobreajustado que `best.pt`.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Inferencia</dt>
+                            <dd class="mt-1 text-slate-300">El proceso de utilizar un modelo ya entrenado para hacer
+                                predicciones sobre datos nuevos que no ha visto antes.</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Siguientes Pasos</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Un modelo de mayor capacidad (YOLOv11m) superó objetivamente al modelo
+                                    `nano`, validando la hipótesis de que el tamaño del modelo era un factor
+                                    limitante.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El análisis de la brecha de dominio es fundamental: el rendimiento de un
+                                    modelo puede variar drásticamente entre datos del dataset y datos del mundo
+                                    real.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La solución para mejorar la robustez del modelo ya no reside en ajustar
+                                    hiperparámetros, sino en enriquecer el dataset con imágenes que cubran los casos de
+                                    fallo detectados.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Próximos Pasos</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Cerrar la Brecha de Dominio</h4>
+                                <p class="text-slate-300">Enfocarse en añadir al dataset imágenes "reales",
+                                    especialmente con características similares a las de las pruebas donde el modelo
+                                    falló (ej. `test_pool_table_5`).</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Abordar Confusiones de Clase</h4>
+                                <p class="text-slate-300">Añadir ejemplos de primer plano y en diferentes iluminaciones
+                                    de las bolas que el modelo confunde, como las lisas y rayadas del mismo color
+                                    (`purple_4` vs `purple_12`).</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Fine-Tuning Final</h4>
+                                <p class="text-slate-300">Realizar un último ciclo de entrenamiento (fine-tuning)
+                                    partiendo del `best.pt` actual, pero con el nuevo y mejorado conjunto de datos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS DEL ENTRENAMIENTO YOLOv11m ---
+            const epochs = Array.from({ length: 46 }, (_, i) => i + 1);
+            const map50 = [0.728, 0.751, 0.749, 0.773, 0.759, 0.787, 0.77, 0.782, 0.776, 0.787, 0.769, 0.782, 0.799, 0.792, 0.755, 0.788, 0.785, 0.79, 0.788, 0.782, 0.776, 0.761, 0.763, 0.77, 0.78, 0.789, 0.773, 0.775, 0.768, 0.757, 0.769, 0.756, 0.764, 0.778, 0.763, 0.763, 0.755, 0.759, 0.761, 0.749, 0.765, 0.756, 0.762, 0.769, 0.764, 0.75];
+            const map50_95 = [0.418, 0.449, 0.447, 0.469, 0.453, 0.484, 0.476, 0.468, 0.478, 0.493, 0.467, 0.477, 0.489, 0.485, 0.459, 0.475, 0.485, 0.495, 0.487, 0.487, 0.48, 0.475, 0.468, 0.477, 0.488, 0.496, 0.479, 0.487, 0.48, 0.468, 0.482, 0.474, 0.48, 0.488, 0.487, 0.483, 0.471, 0.482, 0.474, 0.474, 0.482, 0.477, 0.482, 0.483, 0.491, 0.474];
+            const box_loss = [1.313, 1.116, 1.138, 1.111, 1.072, 1.01, 0.98, 0.947, 0.913, 0.882, 0.863, 0.833, 0.816, 0.793, 0.778, 0.763, 0.74, 0.729, 0.717, 0.708, 0.697, 0.689, 0.675, 0.67, 0.656, 0.648, 0.643, 0.631, 0.628, 0.622, 0.612, 0.61, 0.598, 0.592, 0.591, 0.587, 0.576, 0.576, 0.565, 0.565, 0.558, 0.558, 0.554, 0.547, 0.547, 0.537];
+            const cls_loss = [2.109, 1.146, 1.122, 1.059, 0.956, 0.868, 0.804, 0.741, 0.692, 0.661, 0.637, 0.605, 0.594, 0.564, 0.544, 0.534, 0.503, 0.497, 0.489, 0.481, 0.465, 0.463, 0.451, 0.445, 0.437, 0.431, 0.425, 0.416, 0.413, 0.412, 0.4, 0.4, 0.391, 0.387, 0.385, 0.383, 0.377, 0.378, 0.369, 0.37, 0.365, 0.364, 0.358, 0.35, 0.354, 0.347];
+            const class_names_final = ['black_8', 'blue_10', 'blue_2', 'dred_15', 'dred_7', 'green_14', 'green_6', 'orange_13', 'orange_5', 'purple_12', 'purple_4', 'red_11', 'red_3', 'white', 'yellow_1', 'yellow_9'];
+            const map50_final = [0.831, 0.811, 0.825, 0.78, 0.78, 0.842, 0.877, 0.758, 0.726, 0.618, 0.736, 0.791, 0.748, 0.816, 0.793, 0.787];
+
+            new Chart(document.getElementById('mapChart').getContext('2d'), { type: 'line', data: { labels: epochs, datasets: [{ label: 'mAP50 (Val)', data: map50, borderColor: 'rgba(56, 189, 248, 1)', fill: false, tension: 0.1 }, { label: 'mAP50-95 (Val)', data: map50_95, borderColor: 'rgba(34, 197, 94, 1)', fill: false, tension: 0.1 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } } });
+            new Chart(document.getElementById('lossChart').getContext('2d'), { type: 'line', data: { labels: epochs, datasets: [{ label: 'Pérdida de Caja (train)', data: box_loss, borderColor: 'rgba(239, 68, 68, 1)', fill: false, tension: 0.2 }, { label: 'Pérdida de Clase (train)', data: cls_loss, borderColor: 'rgba(249, 115, 22, 1)', fill: false, tension: 0.2 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: false, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } } });
+
+            const classPerfCtx = document.getElementById('classPerformanceChart').getContext('2d');
+            new Chart(classPerfCtx, {
+                type: 'bar',
+                data: {
+                    labels: class_names_final,
+                    datasets: [{
+                        label: 'mAP50 por Clase',
+                        data: map50_final,
+                        backgroundColor: [
+                            'rgba(107, 114, 128, 0.8)', 'rgba(59, 130, 246, 0.8)', 'rgba(96, 165, 250, 0.8)', 'rgba(239, 68, 68, 0.8)',
+                            'rgba(185, 28, 28, 0.8)', 'rgba(34, 197, 94, 0.8)', 'rgba(74, 222, 128, 0.8)', 'rgba(249, 115, 22, 0.8)',
+                            'rgba(251, 146, 60, 0.8)', 'rgba(168, 85, 247, 0.8)', 'rgba(192, 132, 252, 0.8)', 'rgba(220, 38, 38, 0.8)',
+                            'rgba(248, 113, 113, 0.8)', 'rgba(255, 255, 255, 0.8)', 'rgba(252, 211, 77, 0.8)', 'rgba(234, 179, 8, 0.8)'
+                        ],
+                        borderColor: '#1e293b',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                    scales: { x: { beginAtZero: true, min: 0.3, ticks: { color: '#e2e8f0' } }, y: { ticks: { color: '#e2e8f0' } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

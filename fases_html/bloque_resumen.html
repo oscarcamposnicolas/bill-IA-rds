@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Informe Ejecutivo Final</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!--<div class="flex items-center"><span class="font-bold text-xl text-white">Informe Final del
+                        Proyecto</span></div>-->
+                <span class="nav-link hidden md:block">
+                    <audio controls>
+                        <source src="audio/Fase_12_AI_Billiards_Project_Analysis.mp3" type="audio/mpeg">
+                    </audio>
+                </span>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque10.html" class="nav-link">
+                            << </a>
+                                <a href="#resumen" class="nav-link">Resumen</a>
+                                <a href="#evolucion" class="nav-link">Evolución</a>
+                                <a href="#arquitectura" class="nav-link">Arquitectura Final</a>
+                                <a href="#resultados" class="nav-link">Resultados</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_11_Resumen.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque_glosario.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Del Dato a la Detección
+                    Inteligente</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Un resumen ejecutivo del ciclo de vida
+                    completo del proyecto de IA para la detección de bolas de billar, detallando los desafíos, las
+                    estrategias implementadas y los resultados finales.</p>
+                <img src="images/bloque_resumen.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Proyecto+Completado'"
+                    alt="Una persona presentando los resultados de un proyecto de tecnología en un entorno profesional."
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl">
+            </div>
+        </section>
+
+        <!-- Resumen Ejecutivo -->
+        <section id="resumen" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Resumen Ejecutivo</h2>
+                <div class="card max-w-4xl mx-auto text-center">
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        Este proyecto documenta el desarrollo de un sistema avanzado de visión por computador para la
+                        detección y clasificación de bolas de billar de múltiples sets (clásico y "Black Edition"). A lo
+                        largo de diez fases, el proyecto ha navegado por un ciclo de vida de IA completo, enfrentando y
+                        superando desafíos de ingeniería de datos, optimización de modelos, y depuración de
+                        arquitecturas complejas. Partiendo de un simple dataset y entrenamientos lentos en CPU, el
+                        proyecto evolucionó hacia el uso de GPU, modelos más potentes, y técnicas de regularización
+                        avanzadas. El principal hito fue el diagnóstico y solución del "olvido catastrófico" mediante el
+                        diseño de una **arquitectura híbrida final**, que combina un modelo de percepción visual (YOLO)
+                        con un módulo de lógica contextual (un clasificador Random Forest). El resultado es un
+                        **Supermodelo robusto, equilibrado y de alto rendimiento**, con un **mAP50-95 de 0.716** en el
+                        set de pruebas final, validando el éxito de la estrategia de ingeniería aplicada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evolución del Proyecto -->
+        <section id="evolucion" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Evolución del Proyecto: De Problema a Solución</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Fases 1-3: Fundación y Desafíos Iniciales</h3>
+                        <p class="text-slate-300">Se preparó el dataset inicial en formato YOLO y se superó el primer
+                            gran obstáculo: la lentitud de la CPU, migrando el entrenamiento a un entorno con GPU.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Fases 4-5: Optimización y Diagnóstico Avanzado
+                        </h3>
+                        <p class="text-slate-300">Se escaló a modelos más potentes (YOLOv11m), mejorando el rendimiento
+                            (mAP50 de ~0.80). Sin embargo, esto destapó problemas de sobreajuste y una "brecha de
+                            dominio" con imágenes reales.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Fases 6-7: Curación de Datos y Fine-Tuning</h3>
+                        <p class="text-slate-300">Se creó un dataset custom para las "Black Edition" y se aplicaron
+                            técnicas avanzadas de fine-tuning por fases para combatir el olvido catastrófico.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Fases 8-10: Arquitectura Final y Despliegue</h3>
+                        <p class="text-slate-300">Ante un sesgo residual intratable, se rediseñó la solución a una
+                            arquitectura híbrida (IA + Lógica) y se desplegó en una aplicación web interactiva con
+                            Flask.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Arquitectura Final -->
+        <section id="arquitectura" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Arquitectura Final del Sistema</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Etapa 1: Percepción Visual (El "Ojo")</h3>
+                            <p class="text-slate-300 mb-4">Un modelo **YOLOv8m** entrenado desde cero con 25 "clases
+                                compartidas". Su única misión es detectar las bolas y su tipo principal (ej. `white`,
+                                `red_3`, `be_pink_4`) con alta precisión visual, delegando la desambiguación.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Etapa 2: Lógica Contextual (El "Cerebro")
+                            </h3>
+                            <p class="text-slate-300 mb-4">Un clasificador **Random Forest** que analiza la salida de
+                                YOLO. Predice el set de juego con un **99.9% de precisión** y permite a un módulo de
+                                lógica final corregir y refinar las etiquetas para la salida definitiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados -->
+        <section id="resultados" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Resultados Finales del Proyecto</h2>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Comparativa de Rendimiento de Modelos
+                        (mAP50-95)</h3>
+                    <p class="text-center text-slate-300 mb-6">Esta gráfica muestra la evolución de la precisión
+                        estricta a lo largo del proyecto, destacando el salto cualitativo logrado por el "Supermodelo"
+                        final con la arquitectura híbrida, que supera ampliamente a los enfoques anteriores.</p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full"><canvas id="finalPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conclusiones y Futuro -->
+        <section id="conclusiones" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Futuro</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Lecciones Aprendidas</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>**Calidad de Datos > Complejidad del Modelo:** La solución a los problemas
+                                    más difíciles se encontró casi siempre mejorando el dataset y la estrategia de
+                                    datos, no necesariamente usando un modelo más grande.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>**El Desarrollo de IA es Iterativo:** El éxito no es un camino recto, sino
+                                    un ciclo constante de experimentación, análisis de errores, formulación de nuevas
+                                    hipótesis y refinamiento.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>**La Arquitectura Híbrida es Poderosa:** Separar la percepción (IA) del
+                                    razonamiento (lógica de código o ML clásico) es una estrategia de ingeniería robusta
+                                    que conduce a sistemas más fiables, predecibles y fáciles de mantener.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Próximos Pasos</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Integración en Vídeo y Tracking</h4>
+                                <p class="text-slate-300">Aplicar el sistema de visión completo a un stream de vídeo
+                                    para realizar el seguimiento (tracking) de las bolas frame a frame, manteniendo su
+                                    identidad a lo largo del tiempo.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Desarrollar la Aplicación Final</h4>
+                                <p class="text-slate-300">Con la detección de objetos resuelta, el enfoque puede pasar
+                                    al desarrollo de algoritmos de alto nivel: cálculo de trayectorias, predicción de
+                                    colisiones, sugerencia de jugadas o arbitraje virtual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS PARA LA GRÁFICA COMPARATIVA FINAL ---
+            const finalPerfCtx = document.getElementById('finalPerformanceChart')?.getContext('2d');
+            if (finalPerfCtx) {
+                const final_model_labels = ['YOLOv8n (CPU)', 'YOLOv11m (Sobreajustado)', 'Supermodelo Híbrido Final'];
+                const final_map50_95 = [0.477, 0.489, 0.716]; // mAP50-95 de cada modelo clave
+                new Chart(finalPerfCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: final_model_labels,
+                        datasets: [{
+                            label: 'Rendimiento Final (mAP50-95)',
+                            data: final_map50_95,
+                            backgroundColor: [
+                                'rgba(239, 68, 68, 0.7)',  // Rojo para el primer modelo
+                                'rgba(249, 115, 22, 0.7)', // Naranja para el segundo
+                                'rgba(34, 197, 94, 0.7)'   // Verde para el modelo final exitoso
+                            ],
+                            borderColor: [
+                                'rgba(239, 68, 68, 1)',
+                                'rgba(249, 115, 22, 1)',
+                                'rgba(34, 197, 94, 1)'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'x',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: { ticks: { color: '#e2e8f0', font: { size: 14 } } },
+                            y: { beginAtZero: true, min: 0.4, max: 0.8, ticks: { color: '#e2e8f0' } }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

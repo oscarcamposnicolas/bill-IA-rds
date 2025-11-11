@@ -1,59 +1,61 @@
+"""
+Módulo de Verificación de Entorno (Fase 1: Preparación de GPU).
+
+Este script verifica la disponibilidad de aceleración por GPU para el framework TensorFlow
+en sistemas que utilizan la plataforma ROCm (Radeon Open Compute) de AMD.
+Es una prueba esencial para confirmar la configuración del entorno virtual.
+"""
+
+import platform
+
 import tensorflow as tf
 
-print(f"TensorFlow Version: {tf.__version__}")
 
-# Intentar configurar la memoria de la GPU para evitar problemas de asignación comunes
-gpus = tf.config.list_physical_devices("GPU")
-if gpus:
-    try:
-        # Configura el crecimiento de memoria para todas las GPUs disponibles
+def verify_tensorflow_rocm_support():
+    """
+    Verifica y reporta la disponibilidad de dispositivos GPU y los detalles
+    de la compilación de TensorFlow.
+
+    Returns:
+        str: Un resumen del estado de soporte de la GPU y la versión del sistema.
+    """
+
+    # --- 1. Información General del Sistema ---
+    print("===================================================================")
+    print("           Diagnóstico de Soporte TensorFlow/ROCm                  ")
+    print("===================================================================")
+    print(f"Versión del Sistema Operativo: {platform.platform()}")
+    print(f"Versión de Python: {platform.python_version()}")
+    print(f"Versión de TensorFlow: {tf.__version__}")
+
+    # --- 2. Verificación de Aceleración por GPU ---
+
+    # tf.config.list_physical_devices('GPU') es el método estándar para listar hardware
+    # disponible y visible para TensorFlow.
+    gpus = tf.config.list_physical_devices("GPU")
+
+    if gpus:
+        print(
+            "\n¡Aceleración por GPU detectada! Dispositivos visibles para TensorFlow:"
+        )
         for gpu in gpus:
-            tf.config.experimental.set_memory_growth(gpu, True)
-        print(f"Memory growth set for {len(gpus)} GPU(s)")
-    except RuntimeError as e:
-        # El crecimiento de memoria debe establecerse antes de que las GPUs hayan sido inicializadas
-        print(f"Error setting memory growth: {e}")
+            print(f"   - Dispositivo encontrado: {gpu.name} | Tipo: {gpu.device_type}")
 
-print("Num GPUs Available: ", len(gpus))
+        # Opcional: Mostrar que TensorFlow fue compilado con soporte para XLA (ROCm/CUDA)
+        print("\nInformación de compilación de TensorFlow:")
+        print(
+            f"   - Soporte para compilación XLA (Aceleración): {tf.config.experimental.list_devices('XLA_GPU')}"
+        )
+    else:
+        print("\nAceleración por GPU NO detectada.")
+        print(
+            "   - TensorFlow está utilizando la CPU para el entrenamiento y la inferencia."
+        )
 
-if len(gpus) > 0:
-    print("GPU(s) detected:", gpus)
-    for i, gpu_device in enumerate(gpus):
-        print(f"--- Details for GPU {i} ---")
-        print(f"  Name: {gpu_device.name}")
-        """
-        try:
-            print(f"  Attempting operation on GPU {i}...")
-            with tf.device(gpu_device.name):
-                a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
-                b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
-                c = tf.matmul(a, b)
-                print(f"  Matrix multiplication successful on GPU {i}:\n{c.numpy()}")
-        except RuntimeError as e:
-            print(f"  Error during GPU {i} operation test: {e}")
-        """
-else:
-    print("No GPU detected by TensorFlow.")
-    print(
-        "Ensure ROCm is correctly installed, environment variables (PATH, LD_LIBRARY_PATH) point to ROCm,"
-    )
-    print("and your TensorFlow version supports your ROCm version.")
+    print("\n===================================================================")
+    return gpus
 
-# Información adicional de la build de TensorFlow
-print(
-    f"Is TensorFlow built with CUDA support? {tf.test.is_built_with_cuda()}"
-)  # Esperamos False o que no importe si ROCm es True
-print(
-    f"Is TensorFlow built with ROCm support? {tf.test.is_built_with_rocm()}"
-)  # ¡Esperamos True!
 
-from tensorflow.python.framework import test_util
-
-if tf.config.list_physical_devices("GPU"):  # Usando la forma actualizada
-    print(
-        "TensorFlow reports GPU is available via tf.config.list_physical_devices('GPU')."
-    )
-else:
-    print(
-        "TensorFlow reports GPU is NOT available via tf.config.list_physical_devices('GPU')."
-    )
+# --- Punto de Entrada del Script ---
+if __name__ == "__main__":
+    verify_tensorflow_rocm_support()

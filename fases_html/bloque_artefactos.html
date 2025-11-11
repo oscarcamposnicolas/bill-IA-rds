@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Glosario de Archivos y Scripts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-cyan-400 border-b-2 border-slate-600 pb-4 mb-8;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .list-item {
+            @apply bg-slate-800 p-6 rounded-lg border-2 border-slate-700 transition-all duration-300 hover:border-cyan-500 hover:shadow-cyan-400/20 hover:-translate-y-1;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <span class="font-bold text-xl text-white">Carpetas, Archivos y Scripts</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque_glosario.html" class="nav-link">
+                            << </a>
+                                <a href="pdf/Fase_15_Scripts.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="portada.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-[60vh] flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900 to-slate-900"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Artefactos del Proyecto</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Un listado técnico de los principales
+                    scripts, archivos de datos y modelos que se han desarrollado y utilizado a lo largo de cada fase del
+                    proyecto.</p>
+                <img src="images/artefactos.png"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Imagen+de+Bolas+de+Billar'"
+                    alt="Mesa de billar con bolas coloridas listas para jugar"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Contenido del Glosario -->
+        <!--<section class="py-24">-->
+        <!--<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">-->
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 1 -->
+        <section id="desafios" class="py-24 bg-slate-800/80 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 1: Preparación del Dataset para YOLO</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>prepare_yolo_dataset.py</code></h4>
+                        <p class="text-slate-300 mt-2">Script fundamental para convertir las anotaciones CSV al
+                            formato `.txt` de YOLO, organizar el dataset en `train/valid/test` y generar el
+                            archivo
+                            `custom_data.yaml`.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>_annotations.csv</code></h4>
+                        <p class="text-slate-300 mt-2">Archivo de datos original que contenía las etiquetas de
+                            las
+                            bolas, incluyendo coordenadas de las cajas y nombres de clase.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>Archivos de imagen (.jpg, .png, .jpeg)</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Las imágenes reales de las bolas de billar en las que se
+                            realizó la detección. Se organizaron en subcarpetas como imagen_train1.jpg,
+                            imagen_test1.jpg, etc..</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>Archivos de etiquetas en formato YOLO (.txt)</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Para cada imagen, un archivo de texto con el mismo nombre
+                            (ej. imagen1.txt para imagen1.jpg) que contiene los IDs de clase y las coordenadas
+                            normalizadas de las cajas delimitadoras de cada objeto detectado.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>classes.txt o data.yaml</code></h4>
+                        <p class="text-slate-300 mt-2">Archivos que listan los nombres de todas las clases en el
+                            orden en que se asignan sus IDs numéricos.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>custom_data.yaml</code></h4>
+                        <p class="text-slate-300 mt-2">Archivo de configuración crucial que indica a YOLO las
+                            rutas
+                            a los datos, el número de clases y sus nombres.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>yolov8n.pt</code></h4>
+                        <p class="text-slate-300 mt-2">El modelo pre-entrenado de YOLOv8 "nano" que se usó como
+                            punto de partida para el entrenamiento por transferencia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 2 -->
+        <section id="desafios" class="py-24 bg-slate-900/50 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 2: Entrenamiento y Prueba Inicial</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>train_yolo_model.py</code></h4>
+                        <p class="text-slate-300 mt-2">Script principal para iniciar y reanudar el entrenamiento
+                            del
+                            modelo, especificando hiperparámetros como épocas, tamaño de lote y resolución de
+                            imagen.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>test_model.py</code></h4>
+                        <p class="text-slate-300 mt-2">Script para realizar inferencias en imágenes de prueba,
+                            permitiendo una retroalimentación visual del progreso del modelo.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>last.pt</code> / <code>best.pt</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Archivos de pesos guardados durante el entrenamiento.
+                            `last.pt` es para reanudar y `best.pt` es el modelo con mejor rendimiento en
+                            validación.
+                        </p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>runs/billar_balls_detection_vX/</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Directorio donde Ultralytics guarda todos los resultados
+                            de
+                            una ejecución de entrenamiento: pesos, logs, gráficos, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 3 -->
+        <section id="desafios" class="py-24 bg-slate-800/80 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 3: Optimización del Entrenamiento</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>results.csv</code></h4>
+                        <p class="text-slate-300 mt-2">Archivo CSV generado por YOLO que contiene las métricas
+                            detalladas de cada época, fundamental para el análisis cuantitativo del rendimiento.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>box_loss_evolution.png, cls_loss_evolution.png, map_metrics_evolution.png, precision_recall_evolution.png</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Gráficos generados en formato PNG que visualizan la evolución
+                            de las métricas de pérdida de la caja delimitadora, pérdida de clasificación, mAP y
+                            precisión/exhaustividad a lo largo del entrenamiento.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">Gráficos de Entrenamiento (<code>.png</code>)
+                        </h4>
+                        <p class="text-slate-300 mt-2">Archivos como `box_loss_evolution.png` o
+                            `map_metrics_evolution.png` que visualizan la evolución de las métricas a lo largo del
+                            entrenamiento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 4 -->
+        <section id="desafios" class="py-24 bg-slate-900/50 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 4: Experimentación con Modelos Superiores</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>yolo11n.pt</code></h4>
+                        <p class="text-slate-300 mt-2">El modelo pre-entrenado de yolo11n (la versión "nano"),
+                            utilizado en un experimento para ver si un modelo más moderno mejoraba el rendimiento.
+                        </p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>yolo11m.pt</code></h4>
+                        <p class="text-slate-300 mt-2">Referencia a un modelo `yolo11m.pt` (medium) que se usó para
+                            escalar la capacidad de la red, buscando una mayor precisión.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">Imágenes "Reales"</h4>
+                        <p class="text-slate-300 mt-2">Conjunto de imágenes de prueba (ej. `test_pool_table_X.jpg`)
+                            no incluidas en el dataset original, usadas para evaluar la generalización del modelo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fase 5 -->
+        <section id="desafios" class="py-24 bg-slate-800/80 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 5: Mejora de la Robustez y Análisis de Errores</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>pre_etiquetado.py (o pre-labeling.py)</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Este script se introdujo para acelerar el proceso de
+                            etiquetado de nuevas imágenes (como las del set "black edition"). Utiliza tu modelo ya
+                            entrenado para generar propuestas de anotación iniciales en formato .txt, las cuales
+                            luego puedes revisar y corregir manualmente en una herramienta de etiquetado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 6 -->
+        <section id="desafios" class="py-24 bg-slate-900/50 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 6: Creación del Dataset "Black Edition" y Unificación</h2>
+                <div class="space-y-6">
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>`generar_json_para_label_studio.py` (también referido como `generar_json_definitivo.py`)</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Aunque no se proporciona el código completo en la fuente, se
+                            describe su propósito de crear el archivo `tasks.json` necesario para importar las
+                            imágenes y pre-anotaciones a Label Studio, asegurando que las URLs de las imágenes
+                            locales sean correctas para la interfaz.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>convertir_ls_a_yolo.py</code></h4>
+                        <p class="text-slate-300 mt-2">Un script creado para "traducir" el archivo JSON exportado
+                            desde Label Studio (que contiene tus anotaciones corregidas) a los archivos `.txt` en
+                            formato YOLO que el modelo necesita para el entrenamiento.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>verificar_etiquetas_yolo.py</code></h4>
+                        <p class="text-slate-300 mt-2">Diseñado para verificar visualmente la corrección de las
+                            etiquetas generadas en formato YOLO (`.txt`). Lee estos archivos y dibuja las cajas
+                            delimitadoras sobre las imágenes correspondientes, mostrando y guardando el resultado.
+                        </p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>procesador_final.py</code></h4>
+                        <p class="text-slate-300 mt-2">Este script es una versión "todo en uno" que unifica la
+                            conversión de Label Studio a YOLO y la verificación visual. Asegura que la lista de
+                            clases maestra sea la misma para ambos procesos (escritura y lectura de etiquetas),
+                            eliminando inconsistencias. Este sustituyó a `convertir_ls_a_yolo.py` y
+                            `verificar_etiquetas_yolo.py`.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>unificar_y_dividir_completo.py</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Un script crucial para unificar los diferentes datasets
+                            (clásico y "black edition") en una única estructura, manteniendo la división en
+                            conjuntos de entrenamiento, validación y prueba.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>Proyecto_Bolas_LS/imagenes/</code></h4>
+                        <p class="text-slate-300 mt-2">Directorio que contenía las nuevas imágenes del set "black
+                            edition" para ser etiquetadas en Label Studio.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>final_yolo_labels/</code></h4>
+                        <p class="text-slate-300 mt-2">Carpeta de salida para los archivos .txt de las etiquetas en
+                            formato YOLO después de la corrección manual en Label Studio y el proceso de conversión.
+                        </p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>ls-export.json</code></h4>
+                        <p class="text-slate-300 mt-2">El archivo JSON exportado desde Label Studio que contiene
+                            todas las anotaciones (tanto las pre-etiquetadas como las corregidas manualmente).</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>verification_results/</code></h4>
+                        <p class="text-slate-300 mt-2">Directorio para guardar las imágenes con las cajas
+                            delimitadoras dibujadas, usadas para la verificación visual de las etiquetas.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>dataset_be_aumentado/images/, dataset_be_aumentado/labels/</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Nuevos directorios que almacenaron las imágenes y etiquetas
+                            del set "black edition" después de aplicar aumentación de datos masiva con
+                            Albumentations.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>dataset_unificado/images/, dataset_unificado/labels/</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Directorios que contienen el dataset completo y unificado,
+                            combinando el set clásico original y el set "black edition" (ya aumentado).</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>supermodelo_data.yaml</code></h4>
+                        <p class="text-slate-300 mt-2">Archivo de configuración data.yaml para el entrenamiento del
+                            "supermodelo", apuntando al dataset unificado y actualizado con todas las clases.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>pool_classic.pt</code></h4>
+                        <p class="text-slate-300 mt-2">Un modelo best.pt específicamente entrenado en el dataset
+                            clásico, que se utilizó como punto de partida para el fine-tuning del "Supermodelo" en
+                            las fases posteriores.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 7 -->
+        <section id="desafios" class="py-24 bg-slate-800/80 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 7: Fine-Tuning y Estrategias Avanzadas</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>aumentar_dataset_be.py</code></h4>
+                        <p class="text-slate-300 mt-2">Utiliza la librería Albumentations para crear un dataset
+                            sintético y variado, generando múltiples versiones de cada imagen para combatir el
+                            sobreajuste.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>train_supermodelo_por_fases.py</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Implementa la estrategia de entrenamiento por fases para
+                            evitar el "Olvido Catastrófico", entrenando primero la "cabeza" de la red y luego
+                            afinando el modelo completo.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>custom_data_supermodelo_aumentado.yaml</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Versión actualizada del archivo de configuración para el
+                            supermodelo, que incluye las rutas al dataset unificado y aumentado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 8 -->
+        <section id="desafios" class="py-24 bg-slate-900/50 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 8: Nuevo Enfoque y Arquitectura Híbrida</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>traducir_a_schema_hibrido.py</code></h4>
+                        <p class="text-slate-300 mt-2">Script para adaptar todo el dataset a un nuevo esquema de 25
+                            clases "híbridas", unificando clases visualmente idénticas de ambos sets.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>dataset_hibrido/images/, dataset_hibrido/labels/</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Directorios para el nuevo dataset con la estructura de clases
+                            "híbridas" o compartidas.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>hibrido_data.yaml</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Archivo de configuración para el modelo con las 25 clases
+                            híbridas.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>labels_correlogram.jpg</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Un gráfico que sirve como "auditoría de calidad" del dataset
+                            de entrenamiento, mostrando correlaciones entre características de las etiquetas.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">
+                            <code>runs/Modelo_Hibrido_v1/weights/best.pt</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">El modelo final "campeón" de YOLO entrenado con la nueva
+                            arquitectura de clases híbridas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 9 -->
+        <section id="desafios" class="py-24 bg-slate-800/80 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 9: Detector de Contexto</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>generar_meta_dataset.py</code></h4>
+                        <p class="text-slate-300 mt-2">Extrae características de las detecciones de YOLO y las
+                            guarda en `meta_dataset.csv` para entrenar el clasificador de contexto.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>entrenar_clasificador_contexto.py</code>
+                        </h4>
+                        <p class="text-slate-300 mt-2">Usa el `meta_dataset.csv` para entrenar un clasificador
+                            Random Forest que predice el contexto, guardando el modelo en
+                            `context_classifier.joblib`.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>meta_dataset.csv</code></h4>
+                        <p class="text-slate-300 mt-2">Un archivo CSV que contiene las características extraídas de
+                            las detecciones de YOLO (como confianzas y recuentos por clase) para cada imagen, junto
+                            con el contexto real de la mesa (clásico o "black edition"). Este dataset se usa para
+                            entrenar el clasificador de contexto.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>context_classifier.joblib</code></h4>
+                        <p class="text-slate-300 mt-2">El modelo de clasificador de contexto (Random Forest)
+                            entrenado y guardado, listo para ser usado.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>tests_classic_set/</code></h4>
+                        <p class="text-slate-300 mt-2">Un directorio específico para imágenes de prueba del set
+                            clásico, usado para evaluar el sistema completo.</p>
+                    </div>
+
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>results_sistema_final/</code></h4>
+                        <p class="text-slate-300 mt-2">Directorio donde se guardan los resultados finales del
+                            sistema de inferencia completo.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fase 10 -->
+        <section id="desafios" class="py-24 bg-slate-900/50 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h2 class="section-title">Fase 10: Presentación Web y Sistema Completo</h2>
+                <div class="space-y-6">
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>app.py</code></h4>
+                        <p class="text-slate-300 mt-2">El "corazón" de la aplicación web Flask. Actúa como servidor,
+                            gestiona las rutas, la subida de archivos y llama al `motor_inferencia.py`.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white"><code>motor_inferencia.py</code></h4>
+                        <p class="text-slate-300 mt-2">Módulo final y refactorizado que encapsula toda la lógica de
+                            IA: carga los modelos de detección y contexto, y realiza el post-procesamiento.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4 class="text-xl font-semibold text-white">Estructura Web (<code>static/</code>,
+                            <code>templates/</code>)
+                        </h4>
+                        <p class="text-slate-300 mt-2">Los archivos (`.html`, `.css`, `.js`) que componen
+                            la interfaz de usuario de la aplicación web, permitiendo la interactividad.</p>
+                        <p class="text-slate-300 mt-2">Las carpetas (`static`, `templates`, `fases_html`, `upload`)
+                            que componen
+                            la estructura de la aplicación web.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--</div>-->
+        <!--</section>-->
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

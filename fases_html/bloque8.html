@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Fase 8 - Arquitectura Híbrida y Modelo Final</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!--<span class="font-bold text-xl text-white">Proyecto Billar IA</span>-->
+                    <span class="nav-link">
+                        <!--<p>
+                            <strong>
+                                <br>
+                                <a href="bloque0.html">Arquitectura Híbrida y Modelo Final</a>
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_8_Hybrid_AI_for_Billiard_Ball_Detection.mp3" type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque7.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Resultados</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_8_Nuevo_enfoque.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque9.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Arquitectura Híbrida y
+                    Modelo Final</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Rediseñando la solución para separar la
+                    percepción de la lógica. Un nuevo enfoque que resuelve los problemas de sesgo y produce el modelo
+                    definitivo del proyecto.</p>
+                <img src="images/bloque8.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Arquitectura+Final'"
+                    alt="Dos manos uniendo dos piezas de un rompecabezas, simbolizando la unión de la IA y la lógica"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">El Fracaso del Fine-Tuning y el Nuevo Paradigma</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">El modelo "Supermodelo" (fine-tuned) demostró un sesgo intratable
+                            hacia las clases `be_`, clasificando incorrectamente las bolas clásicas debido al fenómeno
+                            de Olvido Catastrófico.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Adoptar una arquitectura híbrida: entrenar un modelo YOLO más
+                            simple con "clases compartidas" y añadir un módulo de lógica para desambiguar el contexto
+                            del set de bolas.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Re-etiquetado automático del dataset a 25 clases híbridas.</li>
+                            <li>Entrenamiento de `yolov8m.pt` desde cero.</li>
+                            <li>Diseño de lógica de post-procesamiento con "votación".</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Un sistema final mucho más fiable, modular y predecible. El nuevo
+                            modelo híbrido alcanzó un rendimiento excelente y la lógica contextual resolvió los casos de
+                            ambigüedad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Arquitectura Híbrida: Percepción + Lógica</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Etapa 1: Detector Semi-Específico (YOLO)</h3>
+                            <p class="text-slate-300 mb-4">Se entrena un modelo YOLO con una tarea simplificada:
+                                aprender a reconocer 25 clases "compartidas". Por ejemplo, la bola blanca clásica y la
+                                `be_white` se unifican en una sola clase `white`. El objetivo del modelo es la
+                                percepción visual robusta, no la desambiguación contextual.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Etapa 2: Módulo de Lógica y Votación</h3>
+                            <p class="text-slate-300 mb-4">Un script de post-procesamiento recibe las detecciones de
+                                YOLO. Realiza una "votación" ponderada por confianza usando las "bolas delatoras" para
+                                determinar el set de juego. Luego, refina las etiquetas de las clases compartidas según
+                                el contexto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Arquitectura Híbrida</h3>
+                        <p class="text-slate-300">Diseño de sistemas que combinan modelos de deep learning (para
+                            percepción) con módulos de lógica de programación clásica (para razonamiento y reglas),
+                            obteniendo lo mejor de ambos mundos.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Post-procesamiento</h3>
+                        <p class="text-slate-300">Etapa en un flujo de IA donde la salida "cruda" de un modelo se
+                            refina, se filtra o se enriquece mediante código adicional para mejorar la precisión y
+                            utilidad del resultado final.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Lógica Contextual</h3>
+                        <p class="text-slate-300">Capacidad de un sistema para tomar decisiones basadas no solo en una
+                            detección aislada, sino en el contexto global de la escena (ej. el tipo de set de bolas
+                            presente en la mesa).</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Modularidad</h3>
+                        <p class="text-slate-300">Principio de diseño de software que separa un sistema en componentes
+                            independientes. Facilita el mantenimiento y la escalabilidad (ej. añadir un nuevo set de
+                            bolas solo requiere modificar la lógica).</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Re-etiquetado Automatizado</h3>
+                        <p class="text-slate-300">Uso de scripts para "traducir" un dataset de un esquema de clases a
+                            otro, una tarea fundamental para poder probar nuevas arquitecturas sin re-etiquetar todo
+                            manualmente.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Entrenamiento desde Cero (Tabula Rasa)</h3>
+                        <p class="text-slate-300">Estrategia de entrenar un modelo desde una base genérica (como
+                            `yolov8m.pt` pre-entrenado en COCO) para evitar los sesgos y el olvido catastrófico de un
+                            modelo ya especializado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Resultados del Modelo Híbrido Final</h2>
+
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Rendimiento Final por Clase (mAP50-95)
+                    </h3>
+                    <p class="text-center text-slate-300 mb-6">El modelo final muestra un rendimiento excepcional en las
+                        clases `be_` (verdes) y un rendimiento sólido y equilibrado en las clases clásicas (azules),
+                        validando el éxito de la nueva arquitectura.</p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full"><canvas id="classPerformanceChart"></canvas>
+                    </div>
+                </div>
+
+                <div style="page-break-before: always;"></div>
+
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Matriz de confusión</h3>
+
+                    <ol>
+                        <li>Rendimiento Dual del Modelo: El modelo exhibe dos niveles de rendimiento muy diferentes. Es
+                            perfecto para un subconjunto de clases (las que empiezan con be_) y tiene un rendimiento
+                            bueno, pero con confusiones notables, para el otro subconjunto de clases.</li>
+                        <br>
+                        <li>Alta Precisión General: A pesar de algunas confusiones, la mayoría de las clases tienen una
+                            tasa
+                            de acierto (precisión en la diagonal) superior al 80%, lo que indica un modelo generalmente
+                            robusto.</li>
+                        <br>
+                        <li>La clase background es bien reconocida: El modelo es bastante fiable identificando cuándo no
+                            hay
+                            ningún objeto de interés (92% de acierto) y, lo que es más importante, casi nunca confunde
+                            el
+                            fondo con un objeto.</li>
+                    </ol>
+                    <img src="images/bloque_8_confusion_matrix.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Arquitectura+Final'"
+                        alt="Dos manos uniendo dos piezas de un rompecabezas, simbolizando la unión de la IA y la lógica"
+                        class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-4xl">
+                    <p><br>
+
+                        <!-- Styled Table -->
+                    <div class="overflow-x-auto bg-slate-800/50 border border-slate-700 rounded-xl shadow-lg">
+                        <table class="w-full text-sm text-left text-slate-400">
+                            <thead class="text-xs text-white uppercase bg-slate-700/50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Categoría</th>
+                                    <th scope="col" class="px-6 py-3">Conclusión</th>
+                                    <th scope="col" class="px-6 py-3">Acciones Recomendadas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-slate-700 hover:bg-slate-800">
+                                    <th scope="row" class="px-6 py-4 font-medium text-slate-200 whitespace-nowrap">
+                                        Rendimiento General</th>
+                                    <td class="px-6 py-4">Fuerte pero inconsistente entre dos grupos de clases.</td>
+                                    <td class="px-6 py-4">Investigar por qué las clases `be_` son perfectas. ¿Son de un
+                                        dataset diferente?</td>
+                                </tr>
+                                <tr class="border-b border-slate-700 hover:bg-slate-800">
+                                    <th scope="row" class="px-6 py-4 font-medium text-slate-200 whitespace-nowrap">Mayor
+                                        Confusión</th>
+                                    <td class="px-6 py-4">`red_11` y `purple_4` se confunden entre sí.</td>
+                                    <td class="px-6 py-4">Revisar manualmente imágenes de estas clases. Podrían
+                                        necesitar más datos o mejor diferenciación.</td>
+                                </tr>
+                                <tr class="border-b border-slate-700 hover:bg-slate-800">
+                                    <th scope="row" class="px-6 py-4 font-medium text-slate-200 whitespace-nowrap">
+                                        Segunda Confusión</th>
+                                    <td class="px-6 py-4">`yellow_1` y `green_14` muestran confusión significativa.</td>
+                                    <td class="px-6 py-4">Aplicar Data Augmentation centrada en variaciones de color
+                                        para robustecer el modelo.</td>
+                                </tr>
+                                <tr class="border-b border-slate-700 hover:bg-slate-800">
+                                    <th scope="row" class="px-6 py-4 font-medium text-slate-200 whitespace-nowrap">
+                                        Falsos Negativos</th>
+                                    <td class="px-6 py-4">La clase `red_11` a veces es ignorada (clasificada como
+                                        `background`).</td>
+                                    <td class="px-6 py-4">Revisar umbral de detección o mejorar las características que
+                                        definen a `red_11`.</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800">
+                                    <th scope="row" class="px-6 py-4 font-medium text-slate-200 whitespace-nowrap">
+                                        Puntos Fuertes</th>
+                                    <td class="px-6 py-4">Casi perfecto para las clases `orange_13`, `dred_15` y
+                                        `green_6`.</td>
+                                    <td class="px-6 py-4">Analizar qué hace a estas clases fáciles de identificar y
+                                        aplicar ese conocimiento a las más débiles.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </p>
+                </div>
+
+                <div style="page-break-before: always;"></div>
+
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Precisión y pérdida</h3>
+                    <img src="images/bloque_8_precision_y_perdida.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Arquitectura+Final'"
+                        alt="Dos manos uniendo dos piezas de un rompecabezas, simbolizando la unión de la IA y la lógica"
+                        class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-4xl">
+
+                    <!-- Grid for Performance Analysis -->
+                    <div class="space-y-6">
+                        <!-- Precision & Recall Card -->
+                        <div
+                            class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl shadow-lg transition-transform hover:scale-[1.02] hover:border-sky-500">
+                            <h3 class="font-bold text-lg text-white mb-2">Precisión y Recall</h3>
+                            <p class="text-slate-400">Ambas métricas se disparan y consolidan en valores excelentes
+                                (precisión ≈ 0.90, recall ≈ 0.88), demostrando que el modelo es altamente fiable:
+                                realiza <strong class="text-slate-200">predicciones certeras</strong> y es capaz de
+                                <strong class="text-slate-200">identificar la mayoría de los objetos</strong> de
+                                interés.
+                            </p>
+                        </div>
+
+                        <!-- mAP50 Card -->
+                        <div
+                            class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl shadow-lg transition-transform hover:scale-[1.02] hover:border-sky-500">
+                            <h3 class="font-bold text-lg text-white mb-2">mAP50 (Precisión Media a IoU 0.5)</h3>
+                            <p class="text-slate-400">Esta métrica se estabiliza en un notable valor de ≈0.88,
+                                confirmando la <strong class="text-slate-200">alta competencia del modelo</strong> para
+                                ubicar objetos correctamente bajo un criterio moderado.</p>
+                        </div>
+
+                        <!-- mAP50-95 Card -->
+                        <div
+                            class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl shadow-lg transition-transform hover:scale-[1.02] hover:border-sky-500">
+                            <h3 class="font-bold text-lg text-white mb-2">mAP50-95 (La Métrica Clave)</h3>
+                            <p class="text-slate-400">Siendo el indicador más riguroso, esta curva muestra una <strong
+                                    class="text-green-400">mejora sostenida y constante</strong> a lo largo de todo el
+                                proceso (llegando a ≈0.70). A pesar del incipiente sobreajuste, la capacidad real del
+                                modelo para localizar objetos con alta precisión <strong class="text-slate-200">sigue en
+                                    aumento</strong>.</p>
+                        </div>
+                        <!-- Training Loss Card -->
+                        <div
+                            class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl shadow-lg transition-transform hover:scale-[1.02] hover:border-sky-500">
+                            <h3 class="font-bold text-xl text-white mb-3">Pérdidas de Entrenamiento (Fila superior)</h3>
+                            <p class="text-slate-400">
+                                <strong class="text-slate-200">Observación:</strong> Las curvas `train/box_loss`,
+                                `train/cls_loss` y `train/dfl_loss` exhiben un comportamiento ejemplar, con un rápido
+                                descenso inicial que se suaviza hasta alcanzar una meseta estable.
+                                <br><br>
+                                <strong class="text-slate-200">Conclusión:</strong> Esto indica un proceso de
+                                aprendizaje <strong class="text-green-400">efectivo y sin inestabilidades</strong>. El
+                                modelo asimila la información del set de entrenamiento de forma constante y robusta.
+                            </p>
+                        </div>
+
+                        <!-- Validation Loss Card -->
+                        <div
+                            class="bg-slate-800/50 border border-slate-700 p-6 rounded-xl shadow-lg transition-transform hover:scale-[1.02] hover:border-sky-500">
+                            <h3 class="font-bold text-xl text-white mb-3">Pérdidas de Validación (Fila inferior)</h3>
+                            <p class="text-slate-400">
+                                <strong class="text-slate-200">Observación:</strong> Las métricas de validación siguen
+                                de cerca a las de entrenamiento. Sin embargo, la curva `val/cls_loss` toca fondo
+                                alrededor de la época 80-90 para luego estancarse o subir ligeramente.
+                                <br><br>
+                                <strong class="text-slate-200">Conclusión:</strong> Esta divergencia es el indicio
+                                clásico de un <strong class="text-amber-400">leve sobreajuste (overfitting)</strong>. El
+                                modelo comienza a memorizar los datos de entrenamiento en lugar de aprender patrones
+                                generalizables.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones Finales y Futuro del Proyecto</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La arquitectura híbrida ha demostrado ser la solución definitiva,
+                                    produciendo un sistema robusto, preciso y sin los sesgos de los enfoques
+                                    anteriores.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El "Supermodelo" final ha alcanzado un rendimiento de nivel profesional
+                                    (mAP50-95 de 0.716 en el set de prueba), validando todo el ciclo de
+                                    desarrollo.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Este proyecto encapsula un ciclo de vida de IA completo: desde la
+                                    recolección de datos, pasando por múltiples iteraciones de entrenamiento y
+                                    depuración, hasta el diseño de una arquitectura de software avanzada.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">¡Proyecto Completado! El Futuro</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Sistema de Visión Completo</h4>
+                                <p class="text-slate-300">Integrar el modelo `best.pt` con el módulo de lógica
+                                    contextual para crear un sistema unificado que ofrezca detecciones finales precisas
+                                    y contextualizadas.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Integración con Vídeo</h4>
+                                <p class="text-slate-300">Aplicar el sistema de visión a streams de vídeo para realizar
+                                    el seguimiento (tracking) de las bolas frame a frame y crear una representación
+                                    digital en tiempo real de la partida.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Desarrollo del "Cerebro de Billar"
+                                </h4>
+                                <p class="text-slate-300">Con la percepción resuelta, el enfoque puede pasar al
+                                    desarrollo de algoritmos de alto nivel: cálculo de trayectorias, sugerencia de tiros
+                                    o arbitraje virtual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS DEL ENTRENAMIENTO FINAL (Modelo Híbrido v1) ---
+            const class_names_final = ['black_8', 'blue_10', 'blue_2', 'dred_15', 'dred_7', 'green_14', 'green_6', 'orange_13', 'orange_5', 'purple_12', 'purple_4', 'red_11', 'red_3', 'white', 'yellow_1', 'yellow_9', 'be_blue_10', 'be_dred_15', 'be_green_14', 'be_purple_13', 'be_purple_5', 'be_pink_4', 'be_pink_12', 'be_red_11', 'be_yellow_9'];
+            const map50_95_final = [0.784, 0.508, 0.713, 0.404, 0.706, 0.513, 0.735, 0.454, 0.5, 0.483, 0.501, 0.499, 0.648, 0.747, 0.682, 0.45, 0.968, 0.933, 0.951, 0.953, 0.913, 0.953, 0.982, 0.97, 0.945];
+
+            // --- GRÁFICA: RENDIMIENTO FINAL POR CLASE ---
+            const classPerfCtx = document.getElementById('classPerformanceChart')?.getContext('2d');
+            if (classPerfCtx) {
+                new Chart(classPerfCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: class_names_final,
+                        datasets: [{
+                            label: 'mAP50-95 por Clase',
+                            data: map50_95_final,
+                            backgroundColor: class_names_final.map(name => name.startsWith('be_') ? '#4ade80' : '#60a5fa'),
+                            borderColor: '#1e293b',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                        scales: { x: { beginAtZero: true, min: 0.3, ticks: { color: '#e2e8f0' } }, y: { ticks: { color: '#e2e8f0' } } },
+                        plugins: { legend: { display: false } }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Fase 5 - ¿Modelo Ciego o Inseguro?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!--<span class="font-bold text-xl text-white">Proyecto Billar IA</span>-->
+                    <span class="nav-link">
+                        <!--<p>
+                            <strong>
+                                <br>
+                                <a href="bloque0.html">¿Modelo Ciego o Inseguro?</a>
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_5_Blind_or_Insecure_Model_Analysis_and_Improvement.mp3"
+                                type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque4.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Gráficas</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_5_Modelo_Ciego_o_Inseguro.pdf" target="_blank"
+                                    class="nav-link">Paper</a>
+                                <a href="bloque6.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">¿Modelo Ciego o
+                    Inseguro?</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Análisis avanzado de errores para
+                    diagnosticar la causa raíz de los fallos, distinguiendo entre objetos que el modelo no ve y aquellos
+                    sobre los que duda, para guiar la mejora final del dataset.</p>
+                <img src="images/bloque5.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Análisis+y+Diagnóstico'"
+                    alt="Visualización conceptual de un análisis profundo de datos y diagnóstico"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">El Diagnóstico Final: Más Allá de las Métricas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">El modelo `best.pt` aún falla en imágenes reales. El simple hecho
+                            de saber que falla (Falso Negativo) no es suficiente para saber cómo solucionarlo. ¿El
+                            modelo es "ciego" o simplemente "inseguro"?</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Realizar un análisis diferencial ejecutando las pruebas con un
+                            umbral de confianza muy bajo (`conf=0.25`) para revelar las detecciones de las que el modelo
+                            "duda" pero que sí está viendo.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Ejecución de inferencia con `conf=0.25`.</li>
+                            <li>Análisis visual comparativo de resultados.</li>
+                            <li>Clasificación de errores: "ciego" vs. "inseguro".</li>
+                            <li>Creación de una "lista de la compra" para mejorar datos.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Diagnóstico definitivo: el problema principal no es de "ceguera",
+                            sino de "inseguridad" debido al "Domain Gap". Esto permite un plan de acción quirúrgico para
+                            la mejora final del dataset.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Análisis Diferencial de Confianza</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">La Técnica de Diagnóstico</h3>
+                            <p class="text-slate-300 mb-4">Se ejecuta el modelo `best.pt` sobre las imágenes de prueba
+                                con un umbral de confianza muy bajo. Esto nos permite separar los errores en dos
+                                categorías:</p>
+                            <ul class="mt-2 text-slate-300 list-disc list-inside space-y-2">
+                                <li><b class="text-red-400">Modelo Ciego:</b> Bolas que siguen sin detectarse. Requieren
+                                    añadir más diversidad al dataset (nuevos ángulos, luces).</li>
+                                <li><b class="text-green-400">Modelo Inseguro:</b> Bolas que ahora sí aparecen, pero con
+                                    baja confianza. Se pueden solucionar añadiendo más ejemplos de esas situaciones
+                                    específicas.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Resultados Cuantitativos</h3>
+                            <p class="text-slate-300 mb-4">La tabla muestra la dramática diferencia en el número de
+                                detecciones al bajar el umbral de confianza, especialmente en la "Imagen 5", que pasa de
+                                0 a 11 detecciones. Esto confirma que el modelo "ve" las bolas, pero "duda".</p>
+                            <table class="w-full text-left border-collapse text-slate-300 mt-4">
+                                <thead class="bg-slate-800">
+                                    <tr>
+                                        <th class="p-3">Imagen Real</th>
+                                        <th class="p-3 text-center">Detecciones (conf > 0.5)</th>
+                                        <th class="p-3 text-center">Detecciones (conf > 0.25)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-slate-600">
+                                        <td class="p-3">Imagen 1</td>
+                                        <td class="p-3 text-center">3</td>
+                                        <td class="p-3 text-center text-green-400 font-bold">5</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-600">
+                                        <td class="p-3">Imagen 2</td>
+                                        <td class="p-3 text-center">2</td>
+                                        <td class="p-3 text-center text-green-400 font-bold">5</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-600">
+                                        <td class="p-3">Imagen 3</td>
+                                        <td class="p-3 text-center">2</td>
+                                        <td class="p-3 text-center text-green-400 font-bold">3</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-600">
+                                        <td class="p-3">Imagen 4</td>
+                                        <td class="p-3 text-center">7</td>
+                                        <td class="p-3 text-center text-green-400 font-bold">11</td>
+                                    </tr>
+                                    <tr class="border-b border-slate-600 bg-red-900/30">
+                                        <td class="p-3 font-bold">Imagen 5</td>
+                                        <td class="p-3 text-center font-bold">0</td>
+                                        <td class="p-3 text-center font-bold text-green-300">11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Análisis de Errores Cualitativo</h3>
+                        <p class="text-slate-300">Ir más allá de las métricas para entender el *porqué* de los fallos
+                            (oclusiones, reflejos, etc.), lo que permite una mejora de datos dirigida y eficiente.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Curación de Dataset 2.0</h3>
+                        <p class="text-slate-300">La recolección de nuevos datos no es aleatoria, sino que se basa en un
+                            "informe de errores" para atacar específicamente las debilidades del modelo.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Compromiso Precisión-Recall</h3>
+                        <p class="text-slate-300">El ajuste del umbral de confianza (`conf`) demuestra este equilibrio:
+                            un umbral bajo aumenta el recall (más detecciones) pero baja la precisión (más errores), y
+                            viceversa.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Falsos Negativos por Umbral</h3>
+                        <p class="text-slate-300">El descubrimiento más importante: objetos que el modelo sí ve, pero
+                            con confianza insuficiente. Son el objetivo principal para mejorar en el re-entrenamiento.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Robustez del Modelo</h3>
+                        <p class="text-slate-300">El objetivo final de esta fase: hacer que el modelo no solo sea
+                            preciso en su "zona de confort" (el dataset), sino también robusto en el impredecible mundo
+                            real.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Fine-Tuning Enfocado</h3>
+                        <p class="text-slate-300">La estrategia de re-entrenamiento final: usar el `best.pt` como base y
+                            re-ajustarlo con el nuevo dataset enriquecido para que aprenda a manejar los casos
+                            difíciles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Diagnóstico Visual de la "Inseguridad" del Modelo</h2>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Impacto de Bajar el Umbral de Confianza
+                    </h3>
+                    <p class="text-center text-slate-300 mb-6">Esta gráfica compara el número de bolas detectadas en las
+                        imágenes "reales" con un umbral de confianza normal (>0.5) y uno de análisis (>0.25). El aumento
+                        de detecciones revela que el modelo está "inseguro", no "ciego".</p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full"><canvas id="confidenceAnalysisChart"></canvas>
+                    </div>
+                </div>
+                <!-- Placeholders for other charts if needed in future phases -->
+                <div class="grid lg:grid-cols-2 gap-8 mt-8">
+                    <div id="mapChartContainer" class="card hidden">
+                        <div class="relative h-[40vh] w-full"><canvas id="mapChart"></canvas></div>
+                    </div>
+                    <div id="lossChartContainer" class="card hidden">
+                        <div class="relative h-[40vh] w-full"><canvas id="lossChart"></canvas></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Glosario -->
+        <section id="glosario" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Glosario de Términos</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div>
+                            <dt class="text-lg font-bold text-white">Modelo Ciego</dt>
+                            <dd class="mt-1 text-slate-300">Un falso negativo absoluto. El modelo es incapaz de proponer
+                                una caja delimitadora para un objeto, incluso con una confianza extremadamente baja.
+                                Indica un problema fundamental en los datos.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Modelo Inseguro</dt>
+                            <dd class="mt-1 text-slate-300">Un falso negativo por umbral. El modelo sí detecta el
+                                objeto, pero le asigna una puntuación de confianza tan baja que es filtrado. Es un
+                                problema más fácil de solucionar.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Análisis Diferencial</dt>
+                            <dd class="mt-1 text-slate-300">Técnica de comparar los resultados de un modelo bajo dos
+                                condiciones diferentes (en este caso, dos umbrales de confianza) para diagnosticar la
+                                causa raíz de un problema.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Oclusión</dt>
+                            <dd class="mt-1 text-slate-300">Situación en la que un objeto está parcialmente oculto por
+                                otro, dificultando su detección.</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Siguientes Pasos</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El análisis de baja confianza es una herramienta de depuración potentísima
+                                    que ha permitido diagnosticar con precisión que el problema es de "inseguridad" y no
+                                    de "ceguera".</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El "Domain Gap" entre el dataset y las imágenes reales es la causa principal
+                                    de la baja confianza del modelo.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Se ha creado una "lista de la compra" de datos muy específica, basada en
+                                    evidencia, para la mejora final y más importante del modelo.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">La Misión Final</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Campaña de Datos 3.0</h4>
+                                <p class="text-slate-300">Recolectar y etiquetar imágenes que cubran las debilidades
+                                    detectadas: replicar condiciones de la "Imagen 5", añadir oclusiones y resolver
+                                    confusiones de clase.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Re-entrenamiento Definitivo</h4>
+                                <p class="text-slate-300">Realizar un último `fine-tuning` partiendo del `best.pt`
+                                    actual y usando el nuevo dataset enriquecido para crear el modelo de producción
+                                    final.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Despliegue y Validación Final</h4>
+                                <p class="text-slate-300">Probar el modelo final en un amplio espectro de vídeos e
+                                    imágenes en tiempo real para validar que la brecha de dominio ha sido cerrada con
+                                    éxito.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS DEL ANÁLISIS DE CONFIANZA ---
+            const imageLabels = ['Imagen 1', 'Imagen 2', 'Imagen 3', 'Imagen 4', 'Imagen 5'];
+            const detections_conf05 = [3, 2, 2, 7, 0];
+            const detections_conf025 = [5, 5, 3, 11, 11];
+
+            // --- GRÁFICA: ANÁLISIS DE CONFIANZA ---
+            const confidenceCtx = document.getElementById('confidenceAnalysisChart').getContext('2d');
+            new Chart(confidenceCtx, {
+                type: 'bar',
+                data: {
+                    labels: imageLabels,
+                    datasets: [
+                        {
+                            label: 'Detecciones (conf > 0.5)',
+                            data: detections_conf05,
+                            backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                            borderColor: 'rgba(239, 68, 68, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Detecciones (conf > 0.25)',
+                            data: detections_conf025,
+                            backgroundColor: 'rgba(34, 197, 94, 0.7)',
+                            borderColor: 'rgba(34, 197, 94, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, ticks: { color: '#e2e8f0', stepSize: 1 } },
+                        x: { ticks: { color: '#e2e8f0' } }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#e2e8f0' } }
+                    }
+                }
+            });
+
+            // FIX: Check if chart elements exist before trying to modify their parents.
+            // This prevents errors if a presentation phase doesn't include these charts.
+            const mapChartContainer = document.getElementById('mapChartContainer');
+            if (mapChartContainer && !mapChartContainer.querySelector('canvas')) {
+                mapChartContainer.innerHTML = '<p class="text-center text-slate-400">Análisis de entrenamiento previo completado. Esta fase se centra en la evaluación cualitativa.</p>';
+            }
+
+            const lossChartContainer = document.getElementById('lossChartContainer');
+            if (lossChartContainer && !lossChartContainer.querySelector('canvas')) {
+                lossChartContainer.innerHTML = '<p class="text-center text-slate-400">Análisis de entrenamiento previo completado. Esta fase se centra en la evaluación cualitativa.</p>';
+            }
+        });
+    </script>
+</body>
+
+</html>

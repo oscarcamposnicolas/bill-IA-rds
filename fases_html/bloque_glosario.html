@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Glosario de Conceptos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+            font-weight: bold;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-16 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            @apply bg-slate-700 p-6 md:p-8 rounded-xl shadow-lg;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <span class="font-bold text-xl text-white">Glosario del Proyecto</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque_resumen.html" class="nav-link">
+                            << </a>
+                                <a href="#fase1-2" class="nav-link">Fases 1-2</a>
+                                <a href="#fase3-5" class="nav-link">Fases 3-5</a>
+                                <a href="#fase6-7" class="nav-link">Fases 6-7</a>
+                                <a href="#fase8-10" class="nav-link">Fases 8-10</a>
+                                <a href="bloque_artefactos.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-[60vh] flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Glosario de Conceptos de IA
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Un compendio de los términos, técnicas y
+                    estrategias clave que han definido el desarrollo de este proyecto, desde la preparación de datos
+                    hasta la arquitectura final.</p>
+                <img src="images/glosario.png"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Imagen+de+Bolas+de+Billar'"
+                    alt="Mesa de billar con bolas coloridas listas para jugar"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fases 1-2 -->
+        <section id="fase1-2" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Fases 1 y 2: El Dataset y Primeros Pasos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Dataset</h3>
+                        <p class="text-slate-300">Tu colección de imágenes de bolas de billar y sus etiquetas.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Etiquetado (Labeling) y Bounding Box</h3>
+                        <p class="text-slate-300">El proceso de dibujar cajas rectangulares (`xmin`, `ymin`, `xmax`,
+                            `ymax`) sobre los objetos y asignarles una Clase (ej. `white`).</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">YOLO (You Only Look Once)</h3>
+                        <p class="text-slate-300">La arquitectura de red neuronal que elegimos por su equilibrio entre
+                            velocidad y precisión.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Framework de Deep Learning</h3>
+                        <p class="text-slate-300">La biblioteca de software usada, que fue PyTorch a través de la
+                            librería Ultralytics.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Formato de Anotaciones YOLO (.txt)</h3>
+                        <p class="text-slate-300">El formato final de tus etiquetas, con coordenadas normalizadas
+                            (`center_x`, `center_y`, `width`, `height`) entre 0 y 1.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">División del Dataset (Train/Val/Test)</h3>
+                        <p class="text-slate-300">La práctica fundamental de separar los datos para entrenar, validar
+                            durante el proceso y probar al final.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Aprendizaje por Transferencia</h3>
+                        <p class="text-slate-300">La técnica de usar un modelo pre-entrenado (como `yolov8n.pt`) como
+                            punto de partida para acelerar y mejorar el aprendizaje.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Época (Epoch)</h3>
+                        <p class="text-slate-300">Un ciclo completo de entrenamiento sobre todo tu dataset.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">ROCm (Radeon Open Compute)</h3>
+                        <p class="text-slate-300">La plataforma de software de AMD que te permitió usar la potencia de
+                            tu GPU para acelerar el entrenamiento, un paso crucial que redujo los tiempos de días a
+                            horas.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Checkpoint (best.pt)</h3>
+                        <p class="text-slate-300">El archivo más importante generado durante el entrenamiento, que
+                            guarda los pesos del modelo en la época en que obtuvo el mejor rendimiento sobre el conjunto
+                            de validación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fases 3-5 -->
+        <section id="fase3-5" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Fases 3, 4 y 5: Optimización y Diagnóstico Avanzado</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Sobreajuste (Overfitting)</h3>
+                        <p class="text-slate-300">El primer gran problema que diagnosticamos, donde el modelo se
+                            "aprendía de memoria" el set de entrenamiento y perdía su capacidad de generalizar. Lo
+                            identificaste al ver que la pérdida en validación se estancaba mientras la de entrenamiento
+                            seguía bajando.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Parada Temprana (Early Stopping)</h3>
+                        <p class="text-slate-300">La primera contramedida que aplicamos, usando el parámetro `patience`
+                            para detener el entrenamiento cuando el modelo dejaba de mejorar, evitando así el
+                            sobreajuste excesivo.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">mAP (Mean Average Precision)</h3>
+                        <p class="text-slate-300">La métrica clave que usamos para medir objetivamente el rendimiento
+                            del modelo. `mAP50` es la estándar y `mAP50-95` la más estricta.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Análisis "Ciego vs. Inseguro"</h3>
+                        <p class="text-slate-300">Tu idea fundamental de realizar una inferencia con un umbral de
+                            confianza muy bajo (`conf=0.25`) para diferenciar entre bolas que el modelo no veía en
+                            absoluto (estaba "Ciego") y bolas que sí veía pero con poca seguridad (estaba "Inseguro").
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Brecha de Dominio (Domain Gap)</h3>
+                        <p class="text-slate-300">El concepto que explica por qué un modelo que funciona bien en el
+                            laboratorio (con los datos del dataset) puede fallar en el mundo real (con tus fotos de
+                            prueba), debido a diferencias en iluminación, cámara, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fases 6-7 -->
+        <section id="fase6-7" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Fases 6 y 7: El Desafío "Black Edition"</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Pre-etiquetado (Pre-labeling)</h3>
+                        <p class="text-slate-300">Tu iniciativa de usar el modelo ya entrenado como un "asistente" para
+                            generar las primeras etiquetas en el nuevo dataset "Black Edition", acelerando masivamente
+                            el proceso de etiquetado manual en Label Studio.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Aumentación de Datos</h3>
+                        <p class="text-slate-300">La técnica con la que creaste un dataset sintético y variado para las
+                            bolas "Black Edition", generando cientos de imágenes nuevas a partir de unas pocas, para
+                            combatir el sobreajuste.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Olvido Catastrófico</h3>
+                        <p class="text-slate-300">El problema más avanzado que enfrentaste. Al re-entrenar el modelo
+                            experto en bolas clásicas con los nuevos datos, el nuevo conocimiento "pisaba" y destruía lo
+                            que ya sabía.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Entrenamiento por Fases</h3>
+                        <p class="text-slate-300">La solución definitiva al olvido, que consistió en congelar el
+                            `backbone` para entrenar solo la "cabeza" de la red y luego hacer un `fine-tuning` completo
+                            con una tasa de aprendizaje mínima para un pulido final y de alta precisión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Fases 8-10 -->
+        <section id="fase8-10" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Fases 8, 9 y 10: La Arquitectura Final y Despliegue</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Arquitectura Híbrida</h3>
+                        <p class="text-slate-300">Tu propuesta clave: abandonar la idea de un único "supermodelo" y
+                            diseñar una arquitectura de dos etapas, una solución de ingeniería mucho más robusta y
+                            profesional.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Meta-aprendizaje</h3>
+                        <p class="text-slate-300">Técnica de usar un segundo modelo (Random Forest) para aprender de la
+                            salida del primero, reemplazando la lógica manual de votación por un clasificador de
+                            contexto entrenado.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Ingeniería de Características</h3>
+                        <p class="text-slate-300">El proceso en el que definiste qué información extraer de la salida de
+                            YOLO (recuentos, confianzas, etc.) para usarla como "features" y alimentar a tu nuevo
+                            modelo.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Random Forest</h3>
+                        <p class="text-slate-300">El algoritmo de Machine Learning que elegiste para actuar como
+                            "Cerebro", entrenándolo para clasificar el contexto de la mesa ("classic" o "black_edition")
+                            a partir de las características generadas por el "Ojo", logrando una precisión casi
+                            perfecta.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Flask</h3>
+                        <p class="text-slate-300">El framework de Python con el que construiste una aplicación web
+                            interactiva para demostrar y presentar tu trabajo.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Refactorización</h3>
+                        <p class="text-slate-300">La buena práctica de ingeniería de software que aplicaste al separar
+                            la lógica de la IA en su propio módulo (`motor_inferencia.py`), haciendo que el código de la
+                            web (`app.py`) fuera más limpio, seguro y fácil de mantener.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenamiento del Modelo YOLOv8</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!-- <span class="font-bold text-xl text-white">Proyecto Billar IA</span> -->
+                    <span class="nav-link">
+                        <!--<p>
+                            <strong>
+                                <br>
+                                <a href="bloque0.html">Entrenamiento del Modelo</a>
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_2_YOLOv8_Model_Training_and_AMD_GPU_Configuration.mp3"
+                                type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque1.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Gráficas</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_2_Yolo8n.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque3.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Entrenamiento del
+                    Modelo</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Un recorrido por el proceso de
+                    entrenamiento con YOLOv8, los desafíos de hardware encontrados (CPU vs. GPU) y el análisis de los
+                    resultados obtenidos.</p>
+                <img src="images/bloque2.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Imagen+Relevante'"
+                    alt="Visualización abstracta de una red neuronal en procesamiento"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">El Reto del Hardware y la Búsqueda de la Eficiencia</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">El entrenamiento en CPU resultó ser extremadamente lento (~35
+                            min/época), haciendo inviable completar suficientes épocas y dificultando la salida de
+                            posibles mínimos locales en la función de pérdida.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Migrar el entorno de entrenamiento a un servicio con GPU (Google
+                            Colab) para acelerar drásticamente el proceso. Paralelamente, investigar la compleja
+                            configuración de ROCm para habilitar la GPU AMD local.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Ejecución de entrenamientos en CPU y Colab.</li>
+                            <li>Reanudación desde checkpoints (`last.pt`).</li>
+                            <li>Análisis comparativo de métricas.</li>
+                            <li>Pruebas visuales del modelo en varias épocas.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Un modelo funcional entrenado durante 36 épocas en total. Se
+                            demuestra la viabilidad del proyecto y se confirma que la aceleración por GPU es
+                            indispensable para la eficiencia del entrenamiento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Proceso Técnico de Entrenamiento</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 1: Iniciar y Reanudar Entrenamiento</h3>
+                            <p class="text-slate-300 mb-4">Se utiliza un script de Python con la librería `ultralytics`.
+                                El entrenamiento inicial parte de un modelo pre-entrenado (`yolov8n.pt`). Para
+                                continuar, el script se modifica para cargar el último checkpoint (`last.pt`),
+                                permitiendo reanudar el proceso sin perder el progreso.</p>
+                            <h4 class="font-semibold text-lg text-white mb-2">Lógica de Entrenamiento (Python)</h4>
+                            <pre><code>from ultralytics import YOLO
+
+# Iniciar con un modelo pre-entrenado
+# model = YOLO('yolov8n.pt')
+
+# Reanudar desde el último checkpoint
+model = YOLO('runs/billar_balls_detection_v1/weights/last.pt')
+
+# Iniciar el proceso de entrenamiento
+results = model.train(
+    data='custom_data.yaml',
+    epochs=50,
+    imgsz=1080,
+    batch=16
+)</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 2: Inferencia y Prueba Visual</h3>
+                            <p class="text-slate-300 mb-4">Para evaluar el rendimiento del modelo en cualquier etapa, se
+                                utiliza un segundo script que carga los pesos del checkpoint (`best.pt` o `last.pt`),
+                                realiza una predicción sobre una imagen de prueba y visualiza los resultados dibujando
+                                las cajas delimitadoras (bounding boxes) y las etiquetas de clase.</p>
+                            <h4 class="font-semibold text-lg text-white mb-2">Resultados Visuales del Entrenamiento</h4>
+                            <img src="images/bloque_2_resultados_visuales.jpg"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/e2e8f0?text=Resultados+Visuales'"
+                                alt="Comparativa de imágenes con detecciones del modelo en diferentes épocas de entrenamiento"
+                                class="mt-4 rounded-xl shadow-lg w-full max-w-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Transfer Learning</h3>
+                        <p class="text-slate-300">Técnica que consiste en usar un modelo pre-entrenado (YOLOv8n) como
+                            punto de partida para acelerar y mejorar el entrenamiento en un dataset específico.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Checkpoints</h3>
+                        <p class="text-slate-300">Puntos de guardado del estado del modelo (`last.pt`, `best.pt`) que
+                            permiten detener y reanudar el entrenamiento, crucial para sesiones largas o con recursos
+                            limitados.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Métricas de Detección</h3>
+                        <p class="text-slate-300">Evaluación del rendimiento mediante indicadores clave como Precisión
+                            (P), Recall (R) y mAP (mean Average Precision), que miden la calidad de las detecciones.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Funciones de Pérdida</h3>
+                        <p class="text-slate-300">El modelo se optimiza minimizando pérdidas como `box_loss`
+                            (localización), `cls_loss` (clasificación) y `dfl_loss` (precisión de la caja).</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Aceleración por GPU</h3>
+                        <p class="text-slate-300">Uso de hardware especializado (NVIDIA CUDA o AMD ROCm) para reducir
+                            drásticamente los tiempos de entrenamiento en comparación con una CPU.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Hiperparámetros</h3>
+                        <p class="text-slate-300">Parámetros configurables del entrenamiento como `epochs` (ciclos de
+                            entrenamiento), `imgsz` (tamaño de imagen) y `batch` (lote de datos por iteración).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Evolución y Rendimiento del Modelo</h2>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Evolución de las Métricas mAP</h3>
+                        <p class="text-center text-slate-300 mb-6">Mejora de la precisión media (mAP) a lo largo de las
+                            36 épocas de entrenamiento. mAP50-95 es una métrica más estricta.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="mapChart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Evolución de las Funciones de Pérdida
+                        </h3>
+                        <p class="text-center text-slate-300 mb-6">Disminución de los errores de localización (box),
+                            clasificación (cls) y de la caja (dfl) durante el entrenamiento.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="lossChart"></canvas></div>
+                    </div>
+                </div>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Rendimiento Final por Clase (mAP50)</h3>
+                    <p class="text-center text-slate-300 mb-6">Precisión media del mejor modelo para cada tipo de bola,
+                        permitiendo ver qué clases son más fáciles o difíciles de detectar.</p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full"><canvas id="classPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Glosario -->
+        <section id="glosario" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Glosario de Términos</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div>
+                            <dt class="text-lg font-bold text-white">Ultralytics</dt>
+                            <dd class="mt-1 text-slate-300">La empresa y el ecosistema de software detrás de las
+                                implementaciones populares y fáciles de usar de YOLO, como YOLOv8.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Época (Epoch)</dt>
+                            <dd class="mt-1 text-slate-300">Un ciclo completo de entrenamiento a través de todo el
+                                conjunto de datos de entrenamiento.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">mAP (mean Average Precision)</dt>
+                            <dd class="mt-1 text-slate-300">Métrica estándar para medir la precisión de los modelos de
+                                detección de objetos. Un valor más alto indica un mejor rendimiento.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">ROCm (Radeon Open Compute)</dt>
+                            <dd class="mt-1 text-slate-300">Plataforma de software de AMD, análoga a CUDA de NVIDIA, que
+                                permite utilizar GPUs de AMD para computación de alto rendimiento y deep learning.</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Siguientes Pasos</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La aceleración por GPU no es una opción, sino un requisito fundamental para
+                                    el entrenamiento eficiente de modelos de deep learning.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El modelo muestra una clara curva de aprendizaje, donde más épocas de
+                                    entrenamiento se traducen en mejores métricas de rendimiento.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Reanudar el entrenamiento desde checkpoints es una estrategia efectiva y
+                                    necesaria para gestionar sesiones largas y progresar de forma iterativa.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Próximos Pasos</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Optimización del Entrenamiento</h4>
+                                <p class="text-slate-300">Completar un entrenamiento largo (100+ épocas) en GPU para
+                                    llevar el mAP a su máximo potencial.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Experimentar con Hiperparámetros</h4>
+                                <p class="text-slate-300">Probar diferentes tasas de aprendizaje, tamaños de lote u
+                                    optimizadores para afinar aún más el rendimiento del modelo.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Despliegue del Modelo</h4>
+                                <p class="text-slate-300">Utilizar el mejor modelo guardado (`best.pt`) para construir
+                                    una aplicación que realice detecciones en tiempo real usando una cámara.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS EXTRAÍDOS DEL PDF ---
+            const totalEpochs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36];
+
+            // Datos de los entrenamientos combinados (Colab + Local)
+            const map50_data = [0.464, 0.607, 0.691, 0.701, 0.732, 0.763, 0.726, 0.720, 0.711, 0.730, 0.743, 0.742, 0.758, 0.756, 0.757, 0.768, 0.757, 0.768, 0.756, 0.757, 0.745, 0.768, 0.720, 0.723, 0.759, 0.737, 0.750, 0.730, 0.757, 0.747, 0.745, 0.748, 0.742, 0.748, 0.750, 0.757];
+            const map50_95_data = [0.270, 0.358, 0.414, 0.405, 0.437, 0.464, 0.421, 0.428, 0.414, 0.431, 0.441, 0.446, 0.459, 0.459, 0.465, 0.477, 0.458, 0.476, 0.458, 0.456, 0.425, 0.437, 0.461, 0.443, 0.464, 0.426, 0.459, 0.447, 0.448, 0.462, 0.452, 0.461, 0.461, 0.462, 0.465, 0.473];
+            const box_loss_data = [1.334, 1.154, 1.132, 1.084, 1.026, 0.979, 0.954, 0.977, 0.975, 0.956, 0.919, 0.890, 0.858, 0.829, 0.791, 0.771, 0.848, 0.855, 0.863, 0.861, 0.847, 0.833, 0.814, 0.791, 0.773, 0.772, 0.727, 0.700, 0.694, 0.672, 0.661, 0.645, 0.628, 0.615, 0.603, 0.589];
+            const cls_loss_data = [2.902, 1.906, 1.685, 1.474, 1.289, 1.157, 1.174, 1.156, 1.098, 1.018, 0.900, 0.847, 0.785, 0.712, 0.664, 0.625, 0.764, 0.751, 0.761, 0.745, 0.712, 0.697, 0.663, 0.632, 0.613, 0.599, 0.526, 0.486, 0.476, 0.452, 0.436, 0.427, 0.410, 0.394, 0.388, 0.371];
+
+            // --- GRÁFICA 1: mAP ---
+            const mapCtx = document.getElementById('mapChart').getContext('2d');
+            new Chart(mapCtx, {
+                type: 'line',
+                data: {
+                    labels: totalEpochs,
+                    datasets: [
+                        { label: 'mAP50 (Val)', data: map50_data, borderColor: 'rgba(56, 189, 248, 1)', backgroundColor: 'rgba(56, 189, 248, 0.2)', fill: false, tension: 0.1 },
+                        { label: 'mAP50-95 (Val)', data: map50_95_data, borderColor: 'rgba(34, 197, 94, 1)', backgroundColor: 'rgba(34, 197, 94, 0.2)', fill: false, tension: 0.1 }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } }
+            });
+
+            // --- GRÁFICA 2: PÉRDIDAS ---
+            const lossCtx = document.getElementById('lossChart').getContext('2d');
+            new Chart(lossCtx, {
+                type: 'line',
+                data: {
+                    labels: totalEpochs,
+                    datasets: [
+                        { label: 'Pérdida de Caja (train/box_loss)', data: box_loss_data, borderColor: 'rgba(239, 68, 68, 1)', fill: false, tension: 0.1 },
+                        { label: 'Pérdida de Clase (train/cls_loss)', data: cls_loss_data, borderColor: 'rgba(249, 115, 22, 1)', fill: false, tension: 0.1 }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: false, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } }
+            });
+
+            // --- GRÁFICA 3: RENDIMIENTO POR CLASE ---
+            const classPerfCtx = document.getElementById('classPerformanceChart').getContext('2d');
+            const classNames = ['white', 'blue_10', 'red_15', 'black_8', 'purple_12', 'red_7', 'orange_13', 'blue_2', 'red_3', 'green_6', 'green_14', 'red_11', 'yellow_1', 'orange_5', 'yellow_9'];
+            const classMap50 = [0.758, 0.767, 0.689, 0.838, 0.676, 0.683, 0.693, 0.772, 0.743, 0.854, 0.817, 0.719, 0.814, 0.717, 0.809];
+            new Chart(classPerfCtx, {
+                type: 'bar',
+                data: {
+                    labels: classNames,
+                    datasets: [{
+                        label: 'mAP50 por Clase',
+                        data: classMap50,
+                        backgroundColor: [
+                            'rgba(255, 255, 255, 0.8)', 'rgba(59, 130, 246, 0.8)', 'rgba(239, 68, 68, 0.8)', 'rgba(107, 114, 128, 0.8)',
+                            'rgba(168, 85, 247, 0.8)', 'rgba(220, 38, 38, 0.8)', 'rgba(249, 115, 22, 0.8)', 'rgba(96, 165, 250, 0.8)',
+                            'rgba(248, 113, 113, 0.8)', 'rgba(34, 197, 94, 0.8)', 'rgba(74, 222, 128, 0.8)', 'rgba(185, 28, 28, 0.8)',
+                            'rgba(234, 179, 8, 0.8)', 'rgba(251, 146, 60, 0.8)', 'rgba(252, 211, 77, 0.8)'
+                        ],
+                        borderColor: '#1e293b',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { beginAtZero: true, ticks: { color: '#e2e8f0' } },
+                        y: { ticks: { color: '#e2e8f0' } }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

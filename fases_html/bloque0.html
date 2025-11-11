@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo del Proyecto de IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Estilos para la línea de tiempo y la conexión a las tarjetas */
+        .timeline-item:nth-child(odd) .timeline-card::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: -15px;
+            width: 15px;
+            height: 2px;
+            background-color: #475569;
+            /* slate-600 */
+        }
+
+        .timeline-item:nth-child(even) .timeline-card::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            right: -15px;
+            width: 15px;
+            height: 2px;
+            background-color: #475569;
+            /* slate-600 */
+        }
+
+        /* En móvil, todas las tarjetas a la derecha */
+        @media (max-width: 768px) {
+            .timeline-item .timeline-card {
+                left: 2.5rem !important;
+                /* Mover a la derecha del punto */
+                right: auto !important;
+                width: calc(100% - 3rem);
+            }
+
+            .timeline-item:nth-child(odd) .timeline-card::before,
+            .timeline-item:nth-child(even) .timeline-card::before {
+                left: -15px !important;
+                right: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-300 antialiased">
+
+    <div class="container mx-auto px-6 py-12 md:py-20">
+        <!-- Título principal -->
+        <div class="text-center mb-12 md:mb-20 max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">Fases del Proyecto de IA</h1>
+        </div>
+
+        <!-- Contenedor de la Línea de Tiempo -->
+        <div class="relative wrap overflow-hidden p-4 md:p-10 h-full">
+            <!-- Línea vertical central -->
+            <div class="absolute h-full border border-slate-700 border-2-2 left-1/2 hidden md:block"></div>
+
+            <!-- Línea vertical para móvil -->
+            <div class="absolute h-full border border-slate-700 border-2-2 left-6 block md:hidden"></div>
+
+            <!-- Fase 1 -->
+            <div class="timeline-item mb-12 flex md:justify-between md:items-center w-full md:flex-row-reverse">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">1: Del Dataset a la Detección</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Un viaje a través del preprocesamiento
+                        de datos para entrenar un modelo de IA capaz de identificar bolas de billar en tiempo real.</p>
+                    <a href="bloque1.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 2 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                        <rect x="9" y="9" width="6" height="6"></rect>
+                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">2: Entrenamiento del Modelo</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Un recorrido por el proceso de
+                        entrenamiento con YOLOv8, los desafíos de hardware (CPU vs. GPU) y el análisis de los
+                        resultados.</p>
+                    <a href="bloque2.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 3 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full md:flex-row-reverse">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <path d="M12 20h.01"></path>
+                        <path d="M12 4h.01"></path>
+                        <path d="M20 12h.01"></path>
+                        <path d="M4 12h.01"></path>
+                        <path d="M17.65 6.35h.01"></path>
+                        <path d="M6.35 17.65h.01"></path>
+                        <path d="M17.65 17.65h.01"></path>
+                        <path d="M6.35 6.35h.01"></path>
+                        <path d="M12 8a4 4 0 1 0 4 4"></path>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="m18.36 5.64.01.01"></path>
+                        <path d="m5.64 18.36.01.01"></path>
+                        <path d="m18.36 18.36.01.01"></path>
+                        <path d="m5.64 5.64.01.01"></path>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">3: Optimización con GPU y YOLOv11</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Activamos GPU, experimentamos con
+                        YOLOv11 y aplicamos técnicas avanzadas para combatir el sobreajuste.</p>
+                    <a href="bloque3.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 4 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="16"></line>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">4: Aumentando la Capacidad del Modelo</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Exploramos los límites con YOLOv11m y
+                        descubrimos la importancia de la brecha de generalización entre datos de entrenamiento y el
+                        mundo real.</p>
+                    <a href="bloque4.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 5 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full md:flex-row-reverse">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">5: ¿Modelo Ciego o Inseguro?</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Análisis avanzado de errores para
+                        diagnosticar la causa raíz de los fallos, distinguiendo entre objetos que el modelo no ve y
+                        aquellos sobre los que duda.</p>
+                    <a href="bloque5.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 6 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">6: Creación de Dataset Custom</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Afrontando la falta de datos para las
+                        bolas "Black Edition" mediante la creación de un dataset propio, usando un flujo de etiquetado
+                        asistido por IA.</p>
+                    <a href="bloque6.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 7 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full md:flex-row-reverse">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <line x1="4" y1="21" x2="4" y2="14"></line>
+                        <line x1="4" y1="10" x2="4" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12" y2="3"></line>
+                        <line x1="20" y1="21" x2="20" y2="16"></line>
+                        <line x1="20" y1="12" x2="20" y2="3"></line>
+                        <line x1="1" y1="14" x2="7" y2="14"></line>
+                        <line x1="9" y1="8" x2="15" y2="8"></line>
+                        <line x1="17" y1="16" x2="23" y2="16"></line>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">7: Fine-Tuning y el "Supermodelo"</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Aplicando técnicas de entrenamiento por
+                        fases para resolver el "Olvido Catastrófico" y crear un modelo final equilibrado y de alto
+                        rendimiento.</p>
+                    <a href="bloque7.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 8 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <rect x="16" y="16" width="6" height="6" rx="1"></rect>
+                        <rect x="2" y="16" width="6" height="6" rx="1"></rect>
+                        <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+                        <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
+                        <path d="M12 12V8"></path>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">8: Un Nuevo Enfoque de Arquitectura</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Adoptando un modelo híbrido que separa
+                        la percepción visual de la lógica contextual para un sistema más robusto, modular y fiable.</p>
+                    <a href="bloque8.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 9 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full md:flex-row-reverse">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <path d="M12 5a3 3 0 1 0-5.993.142" />
+                        <path d="M18 5a3 3 0 1 0-5.993.142" />
+                        <path d="M12 12a3 3 0 1 0-5.993.142" />
+                        <path d="M18 12a3 3 0 1 0-5.993.142" />
+                        <path d="M12 19a3 3 0 1 0-5.993.142" />
+                        <path d="M18 19a3 3 0 1 0-5.993.142" />
+                        <path d="M21 12h-3" />
+                        <path d="M6 12H3" />
+                        <path d="M12 2v3" />
+                        <path d="M12 9v3" />
+                        <path d="M12 16v3" />
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">9: El "Cerebro" de Contexto</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Implementando la etapa final: un
+                        clasificador de Machine Learning que aprende a determinar el contexto del juego a partir de las
+                        detecciones del modelo de visión.</p>
+                    <a href="bloque9.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver más
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 10 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                        <line x1="8" x2="16" y1="21" y2="21" />
+                        <line x1="12" x2="12" y1="17" y2="21" />
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">10: Presentación Web del Proyecto</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Culminando con una aplicación web
+                        interactiva usando Flask para demostrar el sistema, permitiendo la carga de imágenes y
+                        visualización de resultados.</p>
+                    <a href="bloque10.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver demo
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Fase 11 -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full md:flex-row-reverse">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 17 17 23 15.79 13.88"></polyline>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">11: El Viaje de la IA: Del Dato a la Detección
+                        Inteligente</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Un informe ejecutivo que consolida el
+                        ciclo de vida del proyecto: los desafíos, las estrategias y los resultados de un sistema de
+                        visión por computador robusto.</p>
+                    <a href="bloque_resumen.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Leer informe
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Glosario -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">Glosario de Conceptos de IA</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Un compendio de los términos, técnicas
+                        y estrategias clave que han definido el desarrollo de este proyecto, desde la preparación de
+                        datos hasta la arquitectura final.</p>
+                    <a href="bloque_glosario.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Consultar
+                        glosario &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Artefactos -->
+            <div class="timeline-item mb-12 flex md:justify-between items-center w-full md:flex-row-reverse">
+                <div class="order-1 md:w-5/12"></div>
+                <div
+                    class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-12 h-12 rounded-full absolute left-1/2 -translate-x-1/2 md:static">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="mx-auto text-cyan-400">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+                <div
+                    class="timeline-card order-1 bg-slate-800 rounded-lg shadow-xl md:w-5/12 px-6 py-5 transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-cyan-400/20 hover:border hover:border-cyan-400/50 relative">
+                    <h3 class="font-bold text-white text-xl mb-2">Artefactos del Proyecto</h3>
+                    <p class="text-sm leading-snug tracking-wide text-slate-400">Un listado técnico de los principales
+                        scripts, archivos de datos y modelos que se han desarrollado y utilizado a lo largo de cada fase
+                        del proyecto.</p>
+                    <a href="bloque_artefactos.html"
+                        class="inline-block mt-4 text-sm text-cyan-400 hover:text-cyan-300 font-semibold">Ver artefactos
+                        &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

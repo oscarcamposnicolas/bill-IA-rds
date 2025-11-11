@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Fase 9 - Detector de Contexto Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!--<div class="flex items-center"><span class="font-bold text-xl text-white">Proyecto Billar IA</span></div>-->
+                <span class="nav-link hidden md:block">
+                    <audio controls>
+                        <source src="audio/Fase_9_Advanced_Contextual_Ball_Detection_System.mp3" type="audio/mpeg">
+                    </audio>
+                </span>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque8.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#resultados" class="nav-link">Resultados</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_9_Detector_de_contexto.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque10.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Fase 9: El "Cerebro" de
+                    Contexto</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Implementando la etapa final de la
+                    arquitectura híbrida: un clasificador de Machine Learning que aprende a determinar el contexto del
+                    juego a partir de las detecciones del modelo de visión.</p>
+                <img src="images/bloque9.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Meta-Aprendizaje'"
+                    alt="Visualización de una red neuronal conectada a otra, simbolizando el meta-aprendizaje"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">De Reglas Manuales a Inteligencia Aprendida</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">La lógica de "votación" para determinar el contexto, aunque
+                            funcional, era un sistema de reglas manual. Era propenso a errores si el modelo de visión
+                            cometía fallos de clasificación puntuales.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Reemplazar las reglas manuales con un segundo modelo de Machine
+                            Learning (un clasificador Random Forest) que aprenda a predecir el contexto basándose en la
+                            salida agregada del modelo YOLO.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Ingeniería de Características: Creación de un "meta-dataset" en formato CSV.</li>
+                            <li>Entrenamiento del clasificador Random Forest.</li>
+                            <li>Manejo del desbalance de clases con `class_weight`.</li>
+                            <li>Integración del clasificador en la pipeline final.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Un clasificador de contexto con una **precisión del 99.91%**. El
+                            sistema final es robusto, preciso y capaz de autocorregir errores de clasificación basados
+                            en el contexto global de la imagen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">El "Meta-Modelo": Aprendiendo sobre el Aprendizaje</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 1: Ingeniería de Características</h3>
+                            <p class="text-slate-300 mb-4">Se crea un script que procesa todo el dataset con el modelo
+                                YOLO híbrido. Para cada imagen, extrae características numéricas (features) como la suma
+                                de confianzas de las "bolas delatoras", el número de detecciones por clase, etc. El
+                                resultado es un archivo CSV (`meta_dataset.csv`).</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Ejemplo de Fila del Meta-Dataset</h4>
+                            <pre><code>puntuacion_be,puntuacion_classic,total_detecciones,target
+0.0, 2.45, 5, 0
+3.7, 0.0, 8, 1
+...</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 2: Entrenamiento del Clasificador</h3>
+                            <p class="text-slate-300 mb-4">Se utiliza el `meta_dataset.csv` para entrenar un
+                                clasificador `RandomForestClassifier`. Se usa el parámetro `class_weight='balanced'`
+                                para que el modelo preste especial atención a la clase minoritaria ("Black Edition"),
+                                evitando así el sesgo.</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Lógica del Entrenamiento
+                                (Scikit-learn)</h4>
+                            <pre><code># Crear y entrenar el modelo Random Forest
+# class_weight='balanced' es la clave
+model = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42,
+    class_weight='balanced',
+    n_jobs=-1
+)
+model.fit(X_train, y_train)
+
+# Guardar el modelo entrenado
+joblib.dump(model, 'context_classifier.joblib')</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Meta-Aprendizaje (Stacking)</h3>
+                        <p class="text-slate-300">Técnica avanzada donde un segundo modelo de Machine Learning
+                            ("meta-modelo") se entrena para aprender de las predicciones o características extraídas de
+                            un primer modelo.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Clasificación Tabular</h3>
+                        <p class="text-slate-300">Tipo de problema de ML donde el objetivo es predecir una categoría a
+                            partir de datos estructurados en una tabla (filas y columnas), a diferencia de datos no
+                            estructurados como imágenes.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Random Forest</h3>
+                        <p class="text-slate-300">Potente algoritmo de ensamblaje que combina las predicciones de muchos
+                            árboles de decisión para lograr una alta precisión y robustez, ideal para datos tabulares.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Ingeniería de Características</h3>
+                        <p class="text-slate-300">El arte de crear nuevas variables (features) a partir de los datos
+                            brutos (en este caso, las predicciones de YOLO) para facilitar el aprendizaje del modelo de
+                            ML.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Manejo de Desbalance</h3>
+                        <p class="text-slate-300">Uso de técnicas como `class_weight='balanced'` para forzar a un
+                            algoritmo a prestar la misma atención a la clase minoritaria y a la mayoritaria, evitando
+                            sesgos.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Serialización de Modelos (Joblib)</h3>
+                        <p class="text-slate-300">Proceso de guardar un modelo de Scikit-learn ya entrenado en un único
+                            archivo, permitiendo cargarlo y usarlo para predicciones sin necesidad de re-entrenarlo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="resultados" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Resultados del Detector de Contexto</h2>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Resultados del Clasificador</h3>
+                    <p class="text-center text-slate-300 mb-6">El resultado del clasificador de contexto es casi
+                        perfecto. De 2114 imágenes de prueba, solo cometió 2 errores, logrando una precisión del 99.91%.
+                    </p>
+                    <div class="relative h-[40vh] max-h-[400px] w-full"><canvas id="confusionMatrixChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Futuro -->
+        <section id="conclusiones" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusión del Proyecto</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Lecciones Finales</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La solución más robusta a menudo no es un único modelo gigante, sino la
+                                    combinación inteligente de varios modelos más simples, cada uno especializado en una
+                                    tarea.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Reemplazar reglas manuales y frágiles con un modelo de ML data-driven (que
+                                    aprende de los datos) conduce a sistemas más fiables, precisos y fáciles de
+                                    mantener.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">¡Sistema Completado!</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">Objetivo Alcanzado</h4>
+                                <p class="text-slate-300">El proyecto ha culminado con la creación de una arquitectura
+                                    de IA de dos etapas, profesional y de alto rendimiento, que resuelve eficazmente el
+                                    problema de detección y clasificación de bolas de billar en múltiples contextos.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">Futuro del Proyecto</h4>
+                                <p class="text-slate-300">Con el "sistema de visión" finalizado y validado, el camino
+                                    está despejado para la integración en aplicaciones finales como el análisis de
+                                    partidas, la sugerencia de jugadas o el arbitraje virtual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS PARA LA MATRIZ DE CONFUSIÓN ---
+            const ctx = document.getElementById('confusionMatrixChart')?.getContext('2d');
+            if (ctx) {
+                const data = {
+                    labels: ['Predicho Clásico', 'Predicho Black Edition'],
+                    datasets: [{
+                        label: 'Real: Clásico',
+                        data: [1835, 0],
+                        backgroundColor: 'rgba(56, 189, 248, 0.6)',
+                        borderColor: 'rgba(56, 189, 248, 1)',
+                        borderWidth: 1,
+                        stack: 'Stack 0',
+                    }, {
+                        label: 'Real: Black Edition',
+                        data: [2, 277],
+                        backgroundColor: 'rgba(34, 197, 94, 0.6)',
+                        borderColor: 'rgba(34, 197, 94, 1)',
+                        borderWidth: 1,
+                        stack: 'Stack 1',
+                    }]
+                };
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { labels: { color: '#e2e8f0' } },
+                            title: { display: true, text: 'Rendimiento del Clasificador de Contexto', color: '#e2e8f0', font: { size: 16 } },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.y !== null) {
+                                            label += context.parsed.y;
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                ticks: { color: '#e2e8f0' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                                stacked: true,
+                            },
+                            y: {
+                                ticks: { color: '#e2e8f0' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                                stacked: true,
+                                title: { display: true, text: 'Predicciones Reales', color: '#e2e8f0' }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

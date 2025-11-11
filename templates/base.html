@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA - Billar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Proyecto Final: IA aplicada al Billar</h1>
+        <nav>
+            <a href="{{ url_for('portada_page') }}">Portada</a>
+            <a href="{{ url_for('inferencia_page') }}">Probar Modelo</a>
+            <a href="{{ url_for('fases_page') }}">Fases del Proyecto</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+
+</html>

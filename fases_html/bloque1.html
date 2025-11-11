@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección de Bolas de Billar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            /* slate-800 */
+            color: #e2e8f0;
+            /* slate-200 */
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!-- <span class="font-bold text-xl text-white">Del Dataset a la Detección</span> -->
+                    <span class="nav-link">
+                        <!--<p>
+                            <strong>
+                                <br>
+                                <a href="bloque0.html">Del dataset a la detección</a>
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_1_YOLO_Dataset_Preparation_for_Billiard_Ball_Detection.mp3"
+                                type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque0.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Gráficas</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_1_Dataset.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque2.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
+                    Del Dataset a la Detección
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">
+                    Un viaje a través del preprocesamiento de datos para entrenar un modelo de Inteligencia Artificial
+                    capaz de identificar bolas de billar en tiempo real.
+                </p>
+                <img src="images/bloque1.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Imagen+de+Bolas+de+Billar'"
+                    alt="Mesa de billar con bolas coloridas listas para jugar"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">De los Datos Crudos al Modelo Preparado</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Desafío -->
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">El dataset original está en formato CSV, incompatible con el
+                            framework YOLO, que requiere archivos de texto (.txt) individuales por imagen y coordenadas
+                            normalizadas.</p>
+                    </div>
+                    <!-- Propuesta -->
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Desarrollar un script en Python para automatizar la conversión
+                            del CSV al formato YOLO, reorganizando la estructura de directorios y generando un archivo
+                            de configuración (`.yaml`).</p>
+                    </div>
+                    <!-- Acciones -->
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Análisis del CSV con Pandas.</li>
+                            <li>Cálculo de coordenadas normalizadas.</li>
+                            <li>Creación de archivos `.txt` y `.yaml`.</li>
+                            <li>División y organización de datos (train/val/test).</li>
+                        </ul>
+                    </div>
+                    <!-- Resultados -->
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Un dataset 100% compatible con YOLO, estructurado, limpio y listo
+                            para ser la entrada de un ciclo de entrenamiento de modelo de detección de objetos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Proceso Técnico de Conversión</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 1: Del Formato CSV a YOLO</h3>
+                            <p class="text-slate-300 mb-4">El script de Python lee cada fila del archivo
+                                <code>_annotations.csv</code>. Para cada objeto detectado, convierte las coordenadas del
+                                bounding box (<code>xmin, ymin, xmax, ymax</code>) al formato que YOLO requiere:
+                                <code>class_id, center_x, center_y, width, height</code>, con todos los valores
+                                normalizados entre 0 y 1.
+                            </p>
+                            <h4 class="font-semibold text-lg text-white mb-2">Lógica de Conversión (Python)</h4>
+                            <pre><code># Calcular coordenadas normalizadas
+obj_class_id = class_to_id[obj_class_name]
+center_x = (xmin + xmax) / 2 / img_width
+center_y = (ymin + ymax) / 2 / img_height
+bbox_width = (xmax - xmin) / img_width
+bbox_height = (ymax - ymin) / img_height
+
+# Escribir en el archivo .txt
+f.write(f"{obj_class_id} {center_x:.6f} {center_y:.6f} {bbox_width:.6f} {bbox_height:.6f}\\n")</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 2: Estructura de Directorios</h3>
+                            <p class="text-slate-300 mb-4">Paralelamente, el script organiza las imágenes y las nuevas
+                                etiquetas <code>.txt</code> en una estructura de carpetas estándar, separando los datos
+                                en conjuntos de entrenamiento, validación y prueba. Esto es crucial para que el
+                                framework de YOLO pueda localizar los datos correctamente.</p>
+                            <h4 class="font-semibold text-lg text-white mb-2">Estructura Final Generada</h4>
+                            <pre><code>tu_proyecto_billar/
+├── data/
+│   ├── images/
+│   │   ├── train/ (imágenes de entreno)
+│   │   ├── val/ (imágenes de validación)
+│   │   └── test/ (imágenes de prueba)
+│   └── labels/
+│       ├── train/ (etiquetas .txt de entreno)
+│       ├── val/ (etiquetas .txt de validación)
+│       └── test/ (etiquetas .txt de prueba)
+└── custom_data.yaml (archivo de config.)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Arquitectura YOLO</h3>
+                        <p class="text-slate-300">"You Only Look Once" es un modelo de detección de objetos en tiempo
+                            real que destaca por su velocidad y eficiencia.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Preprocesamiento de Datos</h3>
+                        <p class="text-slate-300">Etapa crítica que consiste en limpiar, transformar y organizar datos
+                            crudos para mejorar el rendimiento y precisión del modelo.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Normalización de Coordenadas</h3>
+                        <p class="text-slate-300">Proceso de escalar los valores de las coordenadas a un rango [0, 1]
+                            para que el modelo sea independiente de la resolución de la imagen.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Bounding Box</h3>
+                        <p class="text-slate-300">Caja rectangular que marca la ubicación de un objeto en una imagen,
+                            definida por las coordenadas de sus esquinas.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Train/Val/Test Split</h3>
+                        <p class="text-slate-300">División del dataset en conjuntos para entrenar (train), ajustar
+                            hiperparámetros (validation), y evaluar el rendimiento final (test).</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Archivo .yaml</h3>
+                        <p class="text-slate-300">Archivo de configuración que indica a YOLO las rutas a los datos, el
+                            número de clases y los nombres de las mismas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Análisis del Dataset: Distribución de Clases</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <p class="text-center text-slate-300 mb-6">Esta gráfica muestra una distribución representativa de
+                        apariciones para cada tipo de bola. Permite identificar si el dataset está balanceado o si
+                        algunas clases están subrepresentadas.</p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full">
+                        <canvas id="classDistributionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Glosario -->
+        <section id="glosario" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Glosario de Términos</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div>
+                            <dt class="text-lg font-bold text-white">Dataset</dt>
+                            <dd class="mt-1 text-slate-300">Colección estructurada de datos (imágenes y anotaciones)
+                                utilizada para entrenar y evaluar modelos de IA.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Anotación</dt>
+                            <dd class="mt-1 text-slate-300">Metadatos asociados a un dato, como una etiqueta de clase y
+                                un "bounding box" para un objeto en una imagen.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Framework</dt>
+                            <dd class="mt-1 text-slate-300">Conjunto de herramientas y librerías que facilitan el
+                                desarrollo. En este proyecto, TensorFlow y YOLO.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Pandas</dt>
+                            <dd class="mt-1 text-slate-300">Librería de Python para la manipulación y análisis de datos,
+                                especialmente útil para trabajar con archivos CSV.</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Siguientes Pasos</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La preparación de datos es un pilar fundamental para el éxito de cualquier
+                                    proyecto de Machine Learning.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La automatización mediante scripts es esencial para manejar datasets de
+                                    manera eficiente y reproducible.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El formato YOLO estandariza el proceso de entrenamiento para modelos de
+                                    detección de objetos.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Próximos Pasos</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Entrenamiento del Modelo</h4>
+                                <p class="text-slate-300">Utilizar el dataset procesado para entrenar un modelo YOLOv8,
+                                    aprovechando una GPU para acelerar el proceso.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Evaluación y Ajuste</h4>
+                                <p class="text-slate-300">Medir la precisión del modelo con el conjunto de 'test' y
+                                    métricas como mAP. Ajustar hiperparámetros si es necesario.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Despliegue en Tiempo Real</h4>
+                                <p class="text-slate-300">Implementar el modelo final en una aplicación que procese
+                                    vídeo desde una cámara web para detectar las bolas en directo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400  hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('classDistributionChart').getContext('2d');
+
+            const classes = [
+                'white', 'blue_10', 'red_15', 'black_8', 'purple_12', 'red_7',
+                'orange_13', 'blue_2', 'red_3', 'green_6', 'green_14', 'red_11',
+                'yellow_1', 'orange_5', 'yellow_9'
+            ];
+
+            const dataCounts = [180, 155, 160, 175, 150, 162, 148, 158, 165, 153, 151, 159, 170, 145, 168];
+
+            // Colores mejorados para mayor visibilidad
+            const backgroundColors = [
+                'rgba(255, 255, 255, 0.8)', // white
+                'rgba(59, 130, 246, 0.8)', // blue_10
+                'rgba(239, 68, 68, 0.8)',  // red_15
+                'rgba(107, 114, 128, 0.8)',// black_8 (gris para contraste)
+                'rgba(168, 85, 247, 0.8)', // purple_12
+                'rgba(220, 38, 38, 0.8)',  // red_7
+                'rgba(249, 115, 22, 0.8)', // orange_13
+                'rgba(96, 165, 250, 0.8)', // blue_2
+                'rgba(248, 113, 113, 0.8)',// red_3
+                'rgba(34, 197, 94, 0.8)',  // green_6
+                'rgba(74, 222, 128, 0.8)', // green_14
+                'rgba(185, 28, 28, 0.8)',  // red_11
+                'rgba(234, 179, 8, 0.8)',  // yellow_1
+                'rgba(251, 146, 60, 0.8)', // orange_5
+                'rgba(252, 211, 77, 0.8)'  // yellow_9
+            ];
+
+            const borderColors = '#1e293b'; // Un color de borde oscuro y uniforme
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: classes,
+                    datasets: [{
+                        label: 'Número de Anotaciones por Clase',
+                        data: dataCounts,
+                        backgroundColor: backgroundColors,
+                        borderColor: borderColors,
+                        borderWidth: 2 // Borde más grueso
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { color: '#94a3b8' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        y: {
+                            ticks: { color: '#e2e8f0', font: { size: 10 } },
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

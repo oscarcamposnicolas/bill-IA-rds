@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IA: Fase 6 - Creación de Dataset Custom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!--<span class="font-bold text-xl text-white">Proyecto Billar IA</span>-->
+                    <span class="nav-link">
+                        <!--<p>
+                            <strong>
+                                <br>
+                                <a href="bloque0.html">Creación de Dataset Custom</a>
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_6_Building_the_Black_Edition_Billiard_Ball_Dataset.mp3"
+                                type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque5.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Gráficas</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_6_Custom_Datase_Black-Edition.pdf" target="_blank"
+                                    class="nav-link">Paper</a>
+                                <a href="bloque7.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Creación de Dataset Custom
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Afrontando el desafío de la falta de
+                    datos para las bolas "Black Edition" mediante la creación de un dataset propio, utilizando un flujo
+                    de trabajo de etiquetado asistido por IA.</p>
+                <img src="images/bloque6.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=Análisis+de+Datos'"
+                    alt="Visualización de análisis de datos y creación de datasets"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">El Desafío de los Datos de Nicho</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">No existen datasets públicos y etiquetados para las bolas de
+                            billar "Black Edition", lo que impide entrenar un modelo capaz de reconocer esta estética
+                            moderna y de nicho.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Crear un dataset propio desde cero, implementando un flujo de
+                            trabajo de etiquetado asistido por IA para acelerar el proceso y asegurar la alta calidad de
+                            los datos.</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Recolección de imágenes de sets "Black Edition".</li>
+                            <li>Uso del modelo existente para pre-etiquetar.</li>
+                            <li>Corrección manual y validación en Label Studio.</li>
+                            <li>Unificación del nuevo dataset con el original.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Un nuevo dataset de alta calidad, verificado y listo para ser
+                            combinado con el original, habilitando el entrenamiento de un "Supermodelo" final, mucho más
+                            robusto y versátil.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Flujo de Trabajo: Etiquetado Asistido por IA</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 1: Pre-etiquetado Automático</h3>
+                            <p class="text-slate-300 mb-4">Se utiliza el mejor modelo entrenado hasta la fecha
+                                (`best.pt`) como un "asistente". Este modelo analiza las nuevas imágenes "Black Edition"
+                                y genera propuestas de etiquetas en formato YOLO (`.txt`). Aunque puede equivocarse en
+                                la clase, su capacidad para detectar formas esféricas acelera enormemente el proceso.
+                            </p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Lógica del Pre-etiquetado (Python)
+                            </h4>
+                            <pre><code># Cargar el modelo existente
+model = YOLO('ruta/a/best.pt')
+
+# Procesar una nueva imagen
+results = model.predict(nueva_imagen, conf=0.25)
+
+# Guardar las propuestas de etiquetas
+# ... (código para escribir los .txt)</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 2: Corrección en Label Studio</h3>
+                            <p class="text-slate-300 mb-4">Las imágenes y las etiquetas propuestas se importan a Label
+                                Studio. La tarea manual ya no es dibujar cada caja desde cero, sino un control de
+                                calidad mucho más rápido: corregir clases, ajustar cajas, eliminar errores y añadir las
+                                pocas detecciones omitidas. Finalmente, el dataset verificado se exporta.</p>
+                            <h4 class="font-semibold text-lg text-white mt-8 mb-2">Flujo de Trabajo de Verificación</h4>
+                            <img src="images/bloque_6_label_studio.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/e2e8f0?text=Flujo+de+Label+Studio'"
+                                alt="Diagrama de flujo mostrando el proceso de importación, corrección y exportación en Label Studio"
+                                class="mt-4 rounded-xl shadow-lg w-full max-w-4xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Dataset Personalizado</h3>
+                        <p class="text-slate-300">Creación de un conjunto de datos propio y específico para un problema
+                            de nicho, una de las tareas más importantes en un proyecto de IA real.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Etiquetado Asistido (Pre-labeling)</h3>
+                        <p class="text-slate-300">Técnica avanzada que usa un modelo de IA existente para generar
+                            anotaciones iniciales, reduciendo drásticamente el tiempo de etiquetado manual.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Herramientas de Etiquetado</h3>
+                        <p class="text-slate-300">Uso de software profesional como Label Studio para gestionar,
+                            visualizar y corregir anotaciones de manera eficiente y colaborativa.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Verdad Absoluta (Ground Truth)</h3>
+                        <p class="text-slate-300">El dataset final, verificado y corregido manualmente, que se considera
+                            la fuente de verdad 100% correcta para entrenar y evaluar el modelo.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Unificación de Datasets</h3>
+                        <p class="text-slate-300">Proceso de combinar múltiples datasets (el original y el nuevo "Black
+                            Edition") en un único conjunto de datos más grande y diverso para entrenar un modelo más
+                            robusto.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Ciclo de Vida de IA</h3>
+                        <p class="text-slate-300">Demostración del ciclo completo de un proyecto de IA: del
+                            entrenamiento al análisis de errores, y de vuelta a la mejora de datos para un
+                            re-entrenamiento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Eficiencia del Proceso de Etiquetado</h2>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Etiquetado Manual vs. Asistido por IA
+                    </h3>
+                    <p class="text-center text-slate-300 mb-6">Esta gráfica ilustra el ahorro de tiempo estimado al
+                        utilizar el modelo pre-entrenado para generar propuestas de etiquetas. La tarea humana pasa de
+                        ser la creación desde cero a una supervisión y corrección mucho más rápida.</p>
+                    <div class="relative h-[50vh] max-h-[400px] w-full"><canvas id="labelingEffortChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Glosario -->
+        <section id="glosario" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Glosario de Términos</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div>
+                            <dt class="text-lg font-bold text-white">Label Studio</dt>
+                            <dd class="mt-1 text-slate-300">Una herramienta de etiquetado de datos de código abierto que
+                                permite anotar diferentes tipos de datos. Es fundamental para crear datasets de alta
+                                calidad para Computer Vision.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Flujo de Trabajo (Workflow)</dt>
+                            <dd class="mt-1 text-slate-300">La secuencia de pasos definidos para completar una tarea
+                                compleja, en este caso, desde la recolección de datos crudos hasta la generación de un
+                                dataset verificado.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Formato de Exportación JSON</dt>
+                            <dd class="mt-1 text-slate-300">Formato de archivo que utiliza Label Studio para guardar
+                                todas las tareas, imágenes y anotaciones de un proyecto. Es un formato rico en
+                                información que debe ser convertido a formatos más simples como YOLO .txt.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Fine-Tuning con Nuevo Dominio</dt>
+                            <dd class="mt-1 text-slate-300">Usar un modelo ya experto (ej. en bolas de colores) y
+                                re-entrenarlo con un nuevo conjunto de datos (ej. bolas "black edition") para que adapte
+                                su conocimiento a esta nueva estética o "dominio".</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Siguientes Pasos</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>La creación de datasets personalizados es una habilidad crítica y a menudo
+                                    inevitable para resolver problemas de nicho en el mundo real.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El pre-etiquetado asistido por IA es una estrategia altamente efectiva que
+                                    puede reducir el tiempo y esfuerzo de anotación manual en más de un 70%.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Un flujo de trabajo robusto, que incluye scripts para conversión y
+                                    verificación, es esencial para garantizar la integridad y calidad de los datos
+                                    finales.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">El "Supermodelo"</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Unificar los Datasets</h4>
+                                <p class="text-slate-300">Combinar el dataset original de bolas de colores con el nuevo
+                                    y verificado dataset "Black Edition" en una única estructura de carpetas
+                                    (train/valid/test).</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Crear el `supermodelo.yaml`</h4>
+                                <p class="text-slate-300">Generar un archivo de configuración final que apunte al
+                                    dataset unificado y contenga la lista maestra completa con todas las clases de ambos
+                                    sets.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Entrenar el Modelo Definitivo</h4>
+                                <p class="text-slate-300">Lanzar el entrenamiento final usando los pesos del mejor
+                                    modelo actual (`best.pt`) como punto de partida para un `fine-tuning` sobre el
+                                    dataset unificado y completo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS DEL ANÁLISIS DE ESFUERZO DE ETIQUETADO ---
+            const effortLabels = ['Creación Manual de Cajas', 'Corrección de Propuestas IA'];
+            const effortData = [100, 30]; // Representa 100% de esfuerzo vs. ~30%
+
+            const effortCtx = document.getElementById('labelingEffortChart').getContext('2d');
+            new Chart(effortCtx, {
+                type: 'bar',
+                data: {
+                    labels: effortLabels,
+                    datasets: [{
+                        label: 'Esfuerzo Relativo (%)',
+                        data: effortData,
+                        backgroundColor: [
+                            'rgba(239, 68, 68, 0.7)',
+                            'rgba(34, 197, 94, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(239, 68, 68, 1)',
+                            'rgba(34, 197, 94, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        x: { beginAtZero: true, max: 100, ticks: { color: '#e2e8f0', callback: function (value) { return value + "%" } } },
+                        y: { ticks: { color: '#e2e8f0' } }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

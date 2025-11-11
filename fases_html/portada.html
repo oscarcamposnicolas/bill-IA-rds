@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada del Proyecto: La mente sobre el Tapete</title>
+    <!-- Inclusión de Tailwind CSS para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importación de la fuente "Inter" de Google Fonts para un look moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Contenedor para la imagen de fondo */
+        .bg-image-container {
+            position: relative;
+            /* --- IMAGEN CON RUTA LOCAL --- */
+            /* Reemplaza 'portada.png' con la ruta a tu imagen. */
+            /* Si la imagen está en la misma carpeta, solo necesitas el nombre del archivo. */
+            /* Ejemplo: background-image: url('portada.png'); */
+            /* Ejemplo con ruta completa: background-image: url('file:///C:/Users/TuUsuario/Desktop/portada.png'); */
+            background-image: url('images/portada.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Capa semitransparente sobre la imagen para mejorar la legibilidad del texto */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* El fondo ahora es un gradiente sutil para dar más profundidad */
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.75) 0%, rgba(10, 14, 20, 0.95) 100%);
+            z-index: 1;
+        }
+
+        /* Contenido de texto que se sitúa por encima del overlay */
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Efecto sutil de scanlines para dar una sensación tecnológica */
+        .scanline-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+            background-size: 100% 4px;
+            z-index: 3;
+            pointer-events: none;
+            animation: scan 8s linear infinite;
+        }
+
+        /* Animación para el efecto de scanlines */
+        @keyframes scan {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 0% 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Contenedor principal que ocupa toda la pantalla -->
+    <div class="bg-image-container min-h-screen flex flex-col">
+        <!-- Capas de efectos visuales -->
+        <div class="overlay"></div>
+        <div class="scanline-overlay"></div>
+
+        <!-- Contenedor del contenido principal, centrado vertical y horizontalmente -->
+        <main
+            class="content container mx-auto flex flex-col justify-center items-center text-center p-6 sm:p-8 flex-grow">
+
+            <!-- Título Principal -->
+            <h1
+                class="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-wide leading-tight text-shadow-lg">
+                La Mente sobre el Tapete
+                <span class="block text-3xl sm:text-4xl md:text-5xl mt-2 font-bold normal-case text-cyan-300">
+                    Diseño de una Inteligencia Artificial para Dominar el Billar
+                </span>
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl">
+                Donde la geometría, la estrategia y el aprendizaje profundo se encuentran.
+            </p>
+        </main>
+
+        <!-- Pie de página con la información del autor y curso -->
+        <footer class="content w-full text-center p-6">
+            <div class="text-sm md:text-base text-gray-300">
+                <!-- --- EDITA TU INFORMACIÓN AQUÍ --- -->
+                <p class="mb-2">Un proyecto de: <span class="font-bold">Especialista en IA</span></p>
+                <p class="mb-2">Presentado por: <span class="font-bold">Oscar Campos</span></p>
+                <p class="mb-2">Fecha: <span class="font-bold">Julio, 2025</span></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

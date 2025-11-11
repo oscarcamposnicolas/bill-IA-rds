@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización con YOLOv11</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+            font-weight: bold;
+        }
+
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12 text-white;
+            font-size: xx-large;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            @apply bg-slate-700 p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-cyan-500/20 hover:-translate-y-2;
+        }
+
+        .nav-link {
+            @apply px-4 py-2 rounded-md text-sm font-medium text-slate-300 hover:bg-slate-600 hover:text-white transition-colors;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        pre {
+            background-color: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body class="w-full">
+    <!-- Header / Navegación -->
+    <header class="bg-slate-800/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center hidden md:block">
+                    <!--<span class="font-bold text-xl text-white">Proyecto Billar IA</span>-->
+                    <span class="nav-link">
+                        <!--<p>hidden md:block
+                            </strong>
+                        </p>
+                        <audio controls style="width: 100%;">-->
+                        <audio controls>
+                            <source src="audio/Fase_3_YOLO_Model_Training_and_Optimization.mp3" type="audio/mpeg">
+                        </audio>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="bloque2.html" class="nav-link">
+                            << </a>
+                                <a href="#desafios" class="nav-link">Desafíos</a>
+                                <a href="#proceso" class="nav-link">Proceso Técnico</a>
+                                <a href="#conocimientos" class="nav-link">Conocimientos</a>
+                                <a href="#graficas" class="nav-link">Gráficas</a>
+                                <a href="#glosario" class="nav-link">Glosario</a>
+                                <a href="#conclusiones" class="nav-link">Conclusiones</a>
+                                <a href="pdf/Fase_3_Yolo11n.pdf" target="_blank" class="nav-link">Paper</a>
+                                <a href="bloque4.html" class="nav-link"> >> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden hero-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-800/50 via-slate-800 to-slate-800"></div>
+            <div class="relative z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">Optimización con GPU y
+                    YOLOv11</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300">Un salto cualitativo: activamos la GPU
+                    local, experimentamos con la arquitectura YOLOv11 y aplicamos técnicas avanzadas para combatir el
+                    sobreajuste.</p>
+                <img src="images/bloque3.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/1e293b/e2e8f0?text=GPU+acelerando+IA'"
+                    alt="Imagen conceptual de una GPU procesando datos para inteligencia artificial"
+                    class="mt-12 mx-auto rounded-xl shadow-2xl shadow-cyan-500/20 w-full max-w-2xl max-h-2xl">
+            </div>
+        </section>
+
+        <!-- Desafíos, Propuestas, Acciones y Resultados -->
+        <section id="desafios" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">De la Fuerza Bruta a la Estrategia Inteligente</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Desafío</h3>
+                        <p class="mt-2 text-slate-300">A pesar de entrenar más épocas, el modelo anterior se estancaba
+                            en un máximo de rendimiento y mostraba claro sobreajuste (overfitting), memorizando los
+                            datos en lugar de generalizar.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Propuesta</h3>
+                        <p class="mt-2 text-slate-300">Combatir el sobreajuste con técnicas de regularización: activar
+                            la aumentación de datos agresiva (MixUp), implementar Early Stopping y probar una
+                            arquitectura más moderna (YOLOv11n).</p>
+                    </div>
+                    <div class="card">
+                        <div
+                            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Acciones</h3>
+                        <ul class="mt-2 text-slate-300 list-disc list-inside">
+                            <li>Configuración de GPU local con AMD ROCm.</li>
+                            <li>Entrenamiento con YOLOv11n y `imgsz=640`.</li>
+                            <li>Activación de `augment=True` y `mixup=0.1`.</li>
+                            <li>Uso de `patience=20` para Early Stopping.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Resultados</h3>
+                        <p class="mt-2 text-slate-300">Un modelo notablemente superior, con mejor rendimiento (`mAP50 de
+                            0.77`) y un sobreajuste mucho más controlado. El entrenamiento se detuvo eficientemente en
+                            la época 88 de 200.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Proceso Técnico de Conversión -->
+        <section id="proceso" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Proceso de Entrenamiento Optimizado</h2>
+                <div class="card">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 1: GPU y Aumentación Agresiva</h3>
+                            <p class="text-slate-300 mb-4">El hito principal fue la activación de la GPU AMD Radeon RX
+                                6800 XT a través de ROCm, reduciendo los tiempos por época de ~40 minutos a ~1.5
+                                minutos. Se aplicaron técnicas avanzadas de aumentación para mejorar la generalización
+                                del modelo.</p>
+                            <h4 class="font-semibold text-lg text-white mb-2">Configuración de Entrenamiento Mejorada
+                            </h4>
+                            <pre><code># Entrenamiento con Early Stopping y Aumentación
+results = model.train(
+    data=data_yaml_path,
+    epochs=200, # Un número alto
+    imgsz=640,
+    batch=32,
+    patience=20, # Parada temprana
+    augment=True, # Aumentación activada
+    mixup=0.1,    # Técnica de regularización
+    hsv_s=0.9     # Mayor variación de saturación
+)</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Paso 2: Análisis Cualitativo de Errores</h3>
+                            <p class="text-slate-300 mb-4">Tras obtener un modelo más robusto, el enfoque cambió de la
+                                simple mejora de métricas al análisis cualitativo. Se realizaron pruebas en imágenes
+                                nuevas para identificar patrones de error específicos (bolas no detectadas,
+                                clasificaciones erróneas) y guiar la siguiente fase de recolección de datos.</p>
+                            <h4 class="font-semibold text-lg text-white mb-2">Ejemplo de Inferencia con el Modelo
+                                Mejorado</h4>
+                            <img src="images/bloque_3_resultados_visuales.jpg"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/e2e8f0?text=Detecciones+del+Modelo'"
+                                alt="Imagen de una mesa de billar con varias bolas detectadas correctamente por el modelo mejorado"
+                                class="mt-4 rounded-xl shadow-lg w-full  max-w-4xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Conocimientos y Conceptos Aplicados -->
+        <section id="conocimientos" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conocimientos y Conceptos Aplicados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Regularización</h3>
+                        <p class="text-slate-300">Conjunto de técnicas (como MixUp, aumentación de datos) utilizadas
+                            para prevenir el sobreajuste y ayudar al modelo a generalizar mejor a datos nuevos.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Early Stopping</h3>
+                        <p class="text-slate-300">Método que detiene el entrenamiento automáticamente cuando el
+                            rendimiento del modelo en un set de validación deja de mejorar, ahorrando tiempo y evitando
+                            el sobreajuste.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Análisis de Errores</h3>
+                        <p class="text-slate-300">Proceso manual y cualitativo de inspeccionar las predicciones
+                            incorrectas del modelo para entender sus debilidades y guiar futuras mejoras en el dataset.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">YOLOv11</h3>
+                        <p class="text-slate-300">Una evolución de la arquitectura YOLO, utilizada en esta fase para
+                            experimentar con modelos más recientes en busca de un mejor equilibrio entre velocidad y
+                            precisión.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Compromiso Precisión-Recall</h3>
+                        <p class="text-slate-300">El dilema de ajustar un umbral de confianza: un umbral alto aumenta la
+                            precisión (menos errores) pero baja el recall (menos detecciones), y viceversa.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-white mb-2">Curación de Dataset</h3>
+                        <p class="text-slate-300">Proceso iterativo de mejorar un conjunto de datos añadiendo ejemplos
+                            específicos que aborden las debilidades detectadas en el modelo (e.g., oclusiones,
+                            reflejos).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Gráficas -->
+        <section id="graficas" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Evolución del Entrenamiento Mejorado</h2>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Evolución de las Métricas mAP</h3>
+                        <p class="text-center text-slate-300 mb-6">El modelo muestra una mejora continua hasta que el
+                            rendimiento se estabiliza. El entrenamiento se detuvo en la época 87 gracias a Early
+                            Stopping.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="mapChart"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-center text-white mb-4">Control del Sobreajuste (Pérdidas)
+                        </h3>
+                        <p class="text-center text-slate-300 mb-6">Las pérdidas de validación (líneas discontinuas)
+                            siguen de cerca a las de entrenamiento, mostrando que el sobreajuste está mucho más
+                            controlado.</p>
+                        <div class="relative h-[40vh] w-full"><canvas id="lossChart"></canvas></div>
+                    </div>
+                </div>
+                <div class="card mt-8">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">Rendimiento del Mejor Modelo por Clase
+                        (mAP50)</h3>
+                    <p class="text-center text-slate-300 mb-6">Precisión del modelo de la época 67. Se observa un gran
+                        rendimiento en bolas como `green_6` y `yellow_1`, y áreas de mejora en `orange_5` y `purple_12`.
+                    </p>
+                    <div class="relative h-[60vh] max-h-[500px] w-full"><canvas id="classPerformanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Glosario -->
+        <section id="glosario" class="py-24 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Glosario de Términos</h2>
+                <div class="card max-w-4xl mx-auto">
+                    <div class="space-y-6">
+                        <div>
+                            <dt class="text-lg font-bold text-white">YOLOv11</dt>
+                            <dd class="mt-1 text-slate-300">Una arquitectura de detección de objetos más reciente en la
+                                familia YOLO, que busca mejorar el rendimiento y la eficiencia sobre versiones
+                                anteriores.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Early Stopping</dt>
+                            <dd class="mt-1 text-slate-300">Técnica de regularización que detiene el entrenamiento si el
+                                rendimiento en el set de validación no mejora durante un número definido de épocas
+                                (`patience`).</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">MixUp</dt>
+                            <dd class="mt-1 text-slate-300">Una potente técnica de aumentación de datos que crea nuevas
+                                muestras de entrenamiento combinando dos imágenes y sus etiquetas, forzando al modelo a
+                                generalizar mejor.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-lg font-bold text-white">Falso Positivo / Falso Negativo</dt>
+                            <dd class="mt-1 text-slate-300">Un Falso Positivo es una detección incorrecta. Un Falso
+                                Negativo es un objeto real que el modelo no detectó.</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones y Siguientes Pasos -->
+        <section id="conclusiones" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title">Conclusiones y Siguientes Pasos</h2>
+                <div class="grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Conclusiones Clave</h3>
+                        <ul class="space-y-4 text-slate-200">
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>El ciclo de Probar → Analizar Errores → Mejorar Datos → Re-entrenar es la
+                                    estrategia más efectiva para construir un sistema de IA robusto.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Las técnicas de regularización como la aumentación de datos y el early
+                                    stopping son cruciales para controlar el sobreajuste y alcanzar un mayor
+                                    rendimiento.</span></li>
+                            <li class="flex items-start"><svg class="h-6 w-6 text-cyan-400 mr-3 flex-shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg><span>Incluso con un buen modelo, la selección de un umbral de confianza (`conf`)
+                                    adecuado es clave para balancear la precisión y la cantidad de detecciones en la
+                                    aplicación final.</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-bold text-white mb-4">Próximos Pasos</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">1. Curación del Dataset</h4>
+                                <p class="text-slate-300">Basado en el análisis de errores, añadir nuevas imágenes al
+                                    dataset que incluyan específicamente los casos difíciles: oclusiones, reflejos y
+                                    colores ambiguos.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">2. Re-entrenamiento Iterativo</h4>
+                                <p class="text-slate-300">Lanzar un nuevo ciclo de entrenamiento con el dataset
+                                    mejorado, partiendo del `best.pt` actual para un ajuste fino (fine-tuning).</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-cyan-400">3. Desarrollar la Aplicación Final</h4>
+                                <p class="text-slate-300">Empezar a construir la aplicación final que utilizará el
+                                    modelo para procesar un stream de vídeo y extraer las coordenadas de las bolas en
+                                    tiempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-slate-400 hidden md:block">
+            <p>&copy; 2025 Proyecto de Detección con IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- DATOS EXTRAÍDOS DEL PDF (Entrenamiento mejorado con Early Stopping) ---
+            const epochs = Array.from({ length: 87 }, (_, i) => i + 1);
+            const map50 = [0.173, 0.481, 0.495, 0.585, 0.617, 0.668, 0.719, 0.701, 0.659, 0.697, 0.729, 0.727, 0.731, 0.733, 0.741, 0.74, 0.73, 0.718, 0.721, 0.731, 0.738, 0.743, 0.739, 0.714, 0.729, 0.728, 0.731, 0.728, 0.721, 0.734, 0.732, 0.731, 0.73, 0.734, 0.734, 0.725, 0.735, 0.73, 0.733, 0.732, 0.725, 0.72, 0.725, 0.72, 0.719, 0.714, 0.71, 0.715, 0.719, 0.72, 0.723, 0.727, 0.739, 0.725, 0.726, 0.718, 0.712, 0.721, 0.719, 0.721, 0.72, 0.732, 0.731, 0.741, 0.726, 0.755, 0.746, 0.741, 0.728, 0.716, 0.714, 0.715, 0.722, 0.717, 0.726, 0.71, 0.717, 0.718, 0.723, 0.721, 0.72, 0.723, 0.731, 0.727, 0.731, 0.725, 0.726, 0.723, 0.715];
+            const map50_95 = [0.096, 0.276, 0.269, 0.32, 0.354, 0.382, 0.421, 0.415, 0.388, 0.414, 0.43, 0.441, 0.432, 0.438, 0.446, 0.44, 0.436, 0.432, 0.434, 0.423, 0.44, 0.448, 0.445, 0.434, 0.443, 0.435, 0.441, 0.441, 0.433, 0.438, 0.439, 0.438, 0.439, 0.441, 0.44, 0.441, 0.445, 0.441, 0.446, 0.443, 0.44, 0.438, 0.444, 0.441, 0.437, 0.436, 0.434, 0.438, 0.44, 0.441, 0.444, 0.446, 0.452, 0.445, 0.446, 0.445, 0.444, 0.44, 0.439, 0.44, 0.44, 0.44, 0.441, 0.44, 0.454, 0.458, 0.44, 0.435, 0.43, 0.427, 0.427, 0.431, 0.435, 0.434, 0.434, 0.435, 0.434, 0.436, 0.434, 0.435, 0.433, 0.434, 0.433, 0.434, 0.434];
+            const box_loss = [1.464, 1.387, 1.35, 1.33, 1.274, 1.243, 1.213, 1.181, 1.155, 1.138, 1.133, 1.102, 1.088, 1.078, 1.064, 1.049, 1.031, 1.027, 1.015, 1.007, 0.99, 0.99, 0.976, 0.974, 0.959, 0.954, 0.945, 0.938, 0.928, 0.927, 0.919, 0.912, 0.905, 0.9, 0.902, 0.894, 0.88, 0.873, 0.873, 0.863, 0.827, 0.797, 0.779, 0.758, 0.739, 0.715, 0.697, 0.678, 0.66, 0.645, 0.61, 0.597, 0.591, 0.584, 0.578, 0.573, 0.569, 0.559, 0.553, 0.558, 0.553, 0.547, 0.541, 0.54, 0.537, 0.536, 0.531, 0.53, 0.528, 0.522, 0.522, 0.525, 0.518, 0.517, 0.514, 0.511, 0.509, 0.505, 0.506, 0.502, 0.503, 0.501, 0.499, 0.499, 0.497, 0.498];
+            const cls_loss = [3.573, 2.127, 1.788, 1.642, 1.49, 1.398, 1.297, 1.23, 1.174, 1.119, 1.082, 1.044, 1.006, 0.967, 0.934, 0.912, 0.878, 0.873, 0.85, 0.826, 0.811, 0.796, 0.784, 0.778, 0.75, 0.751, 0.732, 0.727, 0.707, 0.709, 0.693, 0.686, 0.679, 0.678, 0.682, 0.668, 0.654, 0.64, 0.644, 0.634, 0.402, 0.384, 0.376, 0.37, 0.364, 0.362, 0.358, 0.354, 0.349, 0.348, 0.346, 0.347, 0.347, 0.346, 0.345, 0.344, 0.345, 0.344, 0.344, 0.344, 0.345, 0.342, 0.341, 0.34, 0.34, 0.339, 0.339, 0.339, 0.337, 0.337, 0.338, 0.338, 0.337, 0.337, 0.335, 0.335, 0.334, 0.334, 0.334, 0.333, 0.333, 0.332, 0.332, 0.332, 0.331];
+
+            // --- GRÁFICA 1: mAP ---
+            new Chart(document.getElementById('mapChart').getContext('2d'), { type: 'line', data: { labels: epochs, datasets: [{ label: 'mAP50 (Val)', data: map50, borderColor: 'rgba(56, 189, 248, 1)', fill: false, tension: 0.1 }, { label: 'mAP50-95 (Val)', data: map50_95, borderColor: 'rgba(34, 197, 94, 1)', fill: false, tension: 0.1 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } } });
+
+            // --- GRÁFICA 2: PÉRDIDAS ---
+            new Chart(document.getElementById('lossChart').getContext('2d'), { type: 'line', data: { labels: epochs, datasets: [{ label: 'Pérdida de Caja (train/box_loss)', data: box_loss, borderColor: 'rgba(239, 68, 68, 1)', fill: false, tension: 0.1 }, { label: 'Pérdida de Clase (train/cls_loss)', data: cls_loss, borderColor: 'rgba(249, 115, 22, 1)', fill: false, tension: 0.1 }] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: false, ticks: { color: '#e2e8f0' } }, x: { ticks: { color: '#e2e8f0' } } }, plugins: { legend: { labels: { color: '#e2e8f0' } } } } });
+
+            // --- GRÁFICA 3: RENDIMIENTO POR CLASE (del best.pt en la época 67) ---
+            const classPerfCtx = document.getElementById('classPerformanceChart').getContext('2d');
+            const classNames = ['white', 'yellow_1', 'blue_2', 'red_3', 'purple_4', 'orange_5', 'green_6', 'dred_7', 'black_8', 'yellow_9', 'blue_10', 'red_11', 'purple_12', 'orange_13', 'green_14', 'dred_15'];
+            const classMap50 = [0.732, 0.79, 0.792, 0.714, 0.671, 0.617, 0.878, 0.687, 0.796, 0.744, 0.785, 0.737, 0.68, 0.721, 0.788, 0.722];
+            new Chart(classPerfCtx, {
+                type: 'bar',
+                data: {
+                    labels: classNames,
+                    datasets: [{
+                        label: 'mAP50 por Clase',
+                        data: classMap50,
+                        backgroundColor: [
+                            'rgba(255, 255, 255, 0.8)', 'rgba(252, 211, 77, 0.8)', 'rgba(96, 165, 250, 0.8)', 'rgba(248, 113, 113, 0.8)',
+                            'rgba(192, 132, 252, 0.8)', 'rgba(251, 146, 60, 0.8)', 'rgba(74, 222, 128, 0.8)', 'rgba(185, 28, 28, 0.8)',
+                            'rgba(107, 114, 128, 0.8)', 'rgba(234, 179, 8, 0.8)', 'rgba(59, 130, 246, 0.8)', 'rgba(220, 38, 38, 0.8)',
+                            'rgba(168, 85, 247, 0.8)', 'rgba(249, 115, 22, 0.8)', 'rgba(34, 197, 94, 0.8)', 'rgba(239, 68, 68, 0.8)'
+                        ],
+                        borderColor: '#1e293b',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                    scales: { x: { beginAtZero: true, min: 0.3, ticks: { color: '#e2e8f0' } }, y: { ticks: { color: '#e2e8f0' } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
