@@ -34,30 +34,69 @@ El proyecto utiliza un *pipeline* de inferencia modular que orquesta múltiples 
 5.  **Detección de Bolas y Contexto (P1):** Un modelo YOLO híbrido (`pool_hybrid.pt`) detecta las bolas, y un clasificador Random Forest (`context_classifier.joblib`) etiqueta la escena (ej. "Classic").
 6.  **Salida Final:** Las coordenadas de las bolas (P1) se multiplican por la Matriz $H$ para obtener las coordenadas finales en el plano de la mesa.
 
-## 3\. 🚀 Inicio Rápido
+## 3\. 📦 Contenido del Repositorio (Nota Importante)
 
-Este proyecto está diseñado para ser 100% on-premise. Se requiere **Python 3.10+** y un entorno virtual.
+Para mantener el repositorio ágil y enfocado en el código fuente, **este repositorio NO incluye los siguientes artefactos pesados**:
 
-### 1\. Clonar el Repositorio
+  * **Datasets de Imágenes:** Los conjuntos de datos de entrenamiento, validación y prueba (que ocupan varios GB) no están incluidos.
+  * **Modelos Entrenados:** Los archivos de pesos (`.pt`, `.joblib`) no están incluidos.
 
-```bash
-git clone https://github.com/oscarcamposnicolas/bill-IA-rds.git
-cd bill-IA-rds
-```
+Todo el **código fuente para generar estos artefactos** (scripts de aumentación, conversión de Label Studio y entrenamiento de modelos) está incluido en las carpetas `detect_balls/`, `detect_pockets/`, etc., permitiendo la **reproducibilidad completa** del proyecto.
 
-### 2\. Crear y Activar el Entorno Virtual
+## 4\. 🚀 Inicio Rápido y Demo del Proyecto (Flask)
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+Este repositorio incluye la **aplicación web Flask funcional** que se presentó al final del curso. Esta demo sirve como prueba de concepto interactiva y como documentación navegable.
 
-### 3\. Instalar Dependencias
+**Componentes Clave de la Demo:**
 
-```bash
-# Instalar todas las librerías de Python necesarias
-pip install -r requirements.txt
-```
+  * `app.py`: El servidor Flask que gestiona las rutas y la lógica de la API.
+  * `motor_inferencia.py`: El *pipeline* híbrido (YOLO + RF) para la detección de bolas y contexto.
+  * `templates/inferencia.html`: La página principal de la aplicación, que permite **probar la inferencia** subiendo una imagen.
+  * `fases_html/` (y `fases_html/bloque0.html`): Archivos HTML estáticos que sirven como **documentación interactiva** de la evolución del proyecto.
 
-*(Nota: La configuración de aceleración por GPU (CUDA/ROCm) para PyTorch debe realizarse según la documentación oficial de PyTorch para tu hardware específico.)*
+### Ejecución de la Demo y la presentacion de **deteccion de bolas**:
+
+1.  **Clonar:**
+
+    ```bash
+    git clone https://github.com/tu-usuario/bill-IA-rds.git
+    cd bill-IA-rds
+    ```
+
+2.  **Entorno Virtual:**
+
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
+
+3.  **Instalar Dependencias:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+    
+    *(Nota: La configuración de aceleración por GPU (CUDA/ROCm) para PyTorch debe realizarse según la documentación oficial de PyTorch para tu hardware específico.)*
+
+4.  **Ejecutar el Servidor Flask:**
+
+    ```bash
+    flask run
+    ```
+
+5.  **Probar la Inferencia:**
+
+      * Para poder probar la inferencia, hay que generar los modelos entrenados, tanto de Deep Learning (YOLO) como de Machine Learning (Random Forest).
+      * Abre `http://127.0.0.1:5000` en tu navegador para acceder a la herramienta de subida y prueba de inferencia.
+
+6.  **Explorar la Documentación de Fases:**
+
+      * Para navegar por la presentación de la evolución del proyecto, abre el archivo `fases_html/bloque0.html` directamente en tu navegador (ej. `file:///ruta/a/tu/proyecto/bill-IA-rds/fases_html/bloque0.html`).
+
+## 5\. 🗺️ Fases Futuras (Fase 8: Unificación)
+
+El estado actual del proyecto es una colección de *scripts* de I+D funcionales y una demo en Flask (Fases 1-4). Los próximos pasos se centran en la **refactorización y unificación** para la generación de una aplicación web.
+
+1.  **Refactorización Modular:** Migrar la lógica de los *scripts* sueltos a una estructura de "expertos" en la carpeta `ia_modules/`.
+2.  **Aplicación Streamlit:** Construir una nueva aplicación web (`presentation_app.py`) usando **Streamlit** que importe estos módulos y permita probar el *pipeline* unificado completo (P4 $\rightarrow$ P1.5 $\rightarrow$ P1 $\rightarrow$ Homografía).
 
