@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Bill-IA-rds (Completa)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- ESTILOS GLOBALES Y RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            width: 100vw;
+            height: 100vh; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* --- CONTENEDOR DE DIAPOSITIVA (AHORA UN MUESTRA/OCULTA) --- */
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
+            display: none; /* Oculto por defecto */
+            flex-direction: column;
+            z-index: 1;
+        }
+        
+        /* Clase 'active' que el JS usará para mostrar la slide actual */
+        .slide.active {
+            display: flex;
+            z-index: 2;
+        }
+
+        /* --- ESTILOS COMUNES DE DIAPOSITIVAS --- */
+        .tech-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(90deg, rgba(0,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(0,255,255,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 1;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: clamp(30px, 5vh, 60px) clamp(40px, 5vw, 70px); /* Padding adaptable */
+            position: relative;
+            z-index: 2;
+            flex-grow: 1;
+            overflow-y: auto; /* Scroll si el contenido es más alto que la pantalla */
+        }
+        .title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 3.5vw, 40px);
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+            letter-spacing: 1px;
+            position: relative;
+            flex-shrink: 0; 
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #ff00ff;
+        }
+        .highlight {
+            color: #ff00ff;
+            font-weight: 700;
+        }
+        .corner-accent {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(0, 255, 255, 0.5);
+        }
+        .top-left {
+            top: 15px;
+            left: 15px;
+            border-right: none;
+            border-bottom: none;
+        }
+        .bottom-right {
+            bottom: 15px;
+            right: 15px;
+            border-left: none;
+            border-top: none;
+        }
+        .main-container {
+            display: flex;
+            gap: 30px;
+            flex-grow: 1;
+        }
+        .left-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .card-icon i {
+            color: #00ffff;
+            font-size: 32px;
+        }
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.2rem, 2vw, 24px);
+            font-weight: 700;
+            color: #00ffff;
+        }
+        .feature-list {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: clamp(0.9rem, 1.5vw, 20px);
+            color: #b0b0b0;
+        }
+        .feature-item i {
+            color: #00ffff;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .metric-value {
+            font-size: clamp(1.8rem, 3vw, 36px);
+            font-weight: 700;
+            color: #00ffff;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .metric-label {
+            text-align: center;
+            color: #b0b0b0;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .tech-badge {
+            display: inline-block;
+            background-color: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            font-weight: 700;
+            color: #00ffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+        }
+        .image-container {
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            /*height: 250px;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a1a;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.7);
+            padding: 10px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 14px;
+            color: #00ffff;
+            text-align: center;
+        }
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        .flow-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+        .flow-icon i {
+            color: #00ffff;
+            font-size: 30px;
+        }
+        .flow-label {
+            font-size: 16px;
+            color: #b0b0b0;
+            font-weight: 500;
+        }
+        .flow-arrow {
+            color: #00ffff;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* --- ESTILOS ESPECÍFICOS DE CADA DIAPOSITIVA --- */
+
+        /* Slide 1: Portada */
+        #slide-1 .content {
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.85)), 
+                        url('https://placehold.co/1280x720/0a0a0a/00ffff?text=PLACEHOLDER:+Portada');
+            background-size: cover;
+            background-position: center;
+        }
+        #slide-1 .title {
+            font-size: clamp(3rem, 8vw, 64px);
+            font-weight: 900;
+            margin-bottom: 24px;
+            color: #00ffff;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            letter-spacing: 2px;
+            border: none;
+            text-align: center;
+        }
+        #slide-1 .title::after { display: none; }
+        #slide-1 .subtitle {
+            font-size: clamp(1.1rem, 2.2vw, 22px);
+            font-weight: 300;
+            max-width: 80%;
+            color: #e0e0e0;
+            line-height: 1.4;
+        }
+        #slide-1 .tech-icon {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+        }
+        #slide-1 .tech-icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.7;
+        }
+        #slide-1 .tech-icon-item i {
+            color: #00ffff;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        #slide-1 .tech-icon-label {
+            font-size: 14px;
+            color: #e0e0e0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Slide 2: Visión */
+        #slide-2 .vision-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            flex-grow: 1;
+        }
+        #slide-2 .vision-card {
+            flex: 1;
+            background-color: rgba(18, 18, 18, 0.7);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        #slide-2 .vision-icon {
+            width: 80px; height: 80px; background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        #slide-2 .vision-icon i { color: #00ffff; font-size: 40px; }
+        #slide-2 .vision-title {
+            font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 700;
+            color: #00ffff; margin-bottom: 15px;
+        }
+        #slide-2 .vision-points { list-style-type: none; text-align: left; width: 100%; }
+        #slide-2 .vision-point {
+            display: flex; align-items: center; margin-bottom: 12px;
+            font-size: 20px; color: #b0b0b0;
+        }
+        #slide-2 .vision-point i { color: #00ffff; margin-right: 10px; font-size: 20px; }
+
+        /* Slide 3: Futuro */
+        #slide-3 .context { text-align: center; margin-bottom: 40px; }
+        #slide-3 .context-text {
+            font-family: 'Orbitron', sans-serif; font-size: 28px; font-weight: 700;
+            color: #e0e0e0; display: inline-block; padding: 10px 25px;
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+        }
+        #slide-3 .roadmap-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px; flex-grow: 1;
+        }
+        #slide-3 .roadmap-item {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 30px; display: flex;
+            flex-direction: column; align-items: center; text-align: center;
+        }
+        #slide-3 .item-number {
+            position: absolute; top: 15px; left: 15px; width: 30px; height: 30px;
+            background-color: rgba(0, 255, 255, 0.2); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: 700;
+            color: #00ffff;
+        }
+        #slide-3 .item-icon {
+            width: 80px; height: 80px; background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        #slide-3 .item-icon i { color: #00ffff; font-size: 40px; }
+        #slide-3 .item-title {
+            font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 700;
+            color: #00ffff; margin-bottom: 15px;
+        }
+        #slide-3 .item-description { font-size: 20px; color: #b0b0b0; line-height: 1.4; }
+        
+        /* Slide 4: Transfer Learning */
+        #slide-4 .tech-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+
+        /* Slide 5: Aumentación Datos */
+        #slide-5 .data-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+        #slide-5 .data-flow {
+            display: flex; justify-content: space-between; margin-top: 20px;
+            padding: 15px; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+        }
+
+        /* Slide 6: Random Forest */
+        #slide-6 .brain-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+        #slide-6 .hybrid-flow {
+            display: flex; justify-content: space-between; margin-top: 20px;
+            padding: 15px; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+        }
+
+        /* Slide 7: Área de Juego */
+        #slide-7 .challenge-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+        #slide-7 .logic-steps {
+            display: flex; justify-content: space-between; margin-top: 20px;
+            padding: 15px; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+        }
+        #slide-7 .logic-step {
+            display: flex; flex-direction: column; align-items: center; text-align: center; width: 120px;
+        }
+        #slide-7 .step-number {
+            width: 40px; height: 40px; background-color: rgba(0, 255, 255, 0.2);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 10px; font-family: 'Orbitron', sans-serif; font-size: 20px;
+            font-weight: 700; color: #00ffff; border: 1px solid rgba(0, 255, 255, 0.5);
+        }
+        #slide-7 .step-text { font-size: 16px; color: #b0b0b0; font-weight: 500; }
+        #slide-7 .logic-arrow { color: #00ffff; font-size: 24px; display: flex; align-items: center; }
+        #slide-7 .comparison-container { display: flex; gap: 15px; margin-top: 20px; flex-grow: 1; }
+        #slide-7 .comparison-side {
+            flex: 1; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+            padding: 15px; display: flex; flex-direction: column; align-items: center;
+        }
+        #slide-7 .comparison-title {
+            font-family: 'Orbitron', sans-serif; font-size: 20px; font-weight: 700;
+            color: #00ffff; margin-bottom: 10px; text-align: center;
+        }
+        #slide-7 .comparison-image {
+            width: 100%; height: 180px; background-color: rgba(30, 30, 30, 0.7);
+            border: 1px dashed rgba(0, 255, 255, 0.3); border-radius: 8px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: #606060; font-family: 'Roboto Mono', monospace; padding: 10px;
+        }
+        
+        /* Slide 8: Perspectiva */
+        #slide-8 .perspective-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+        #slide-8 .error-badge {
+            display: inline-block; background-color: rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.5); border-radius: 20px;
+            padding: 5px 15px; margin-top: 10px; font-weight: 700; color: #ff3333;
+        }
+        #slide-8 .perspective-flow {
+            display: flex; justify-content: space-between; margin-top: 20px;
+            padding: 15px; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+        }
+
+        /* Slide 9: Solución Semántica */
+        #slide-9 .solution-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+        #slide-9 .success-badge {
+            display: inline-block; background-color: rgba(0, 255, 0, 0.2);
+            border: 1px solid rgba(0, 255, 0, 0.5); border-radius: 20px;
+            padding: 5px 15px; margin-top: 10px; font-weight: 700; color: #00ff00;
+        }
+        #slide-9 .rule-box {
+            background-color: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 15px; margin-top: 15px; text-align: center;
+        }
+        #slide-9 .rule-text {
+            font-family: 'Orbitron', sans-serif; font-size: 20px; font-weight: 700;
+            color: #00ffff; line-height: 1.4;
+        }
+        #slide-9 .semantic-flow {
+            display: flex; justify-content: space-between; margin-top: 20px;
+            padding: 15px; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+        }
+
+        /* Slide 10: Resultado Final */
+        #slide-10 .result-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+        #slide-10 .integration-flow {
+            display: flex; justify-content: space-between; margin-top: 20px;
+            padding: 15px; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+        }
+        
+        /* Slide 11: RAG */
+        #slide-11 .rag-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; flex-grow: 1; display: flex; flex-direction: column;
+        }
+        #slide-11 .rag-flow {
+            display: flex; justify-content: space-between; margin-top: 20px;
+            padding: 15px; background-color: rgba(18, 18, 18, 0.5); border-radius: 8px;
+        }
+
+        /* Slide 12: Aplicaciones */
+        /* V4.1: CORRECCIÓN DE LAYOUT */
+        #slide-12 .main-container {
+            flex-direction: column; /* Apila el título y la parrilla */
+        }
+        #slide-12 .potential-box {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; display: flex; align-items: center; gap: 30px;
+            flex-grow: 0; /* No deja que crezca */
+        }
+        #slide-12 .potential-icon {
+            width: 80px; height: 80px; background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        #slide-12 .potential-icon i { color: #00ffff; font-size: 40px; }
+        #slide-12 .potential-text {
+            font-family: 'Orbitron', sans-serif; font-size: 28px; font-weight: 700; color: #e0e0e0;
+        }
+        #slide-12 .applications-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 30px; flex-grow: 1;
+        }
+        #slide-12 .application-card {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 30px; display: flex;
+            flex-direction: column; align-items: center; text-align: center;
+        }
+        #slide-12 .app-icon {
+            width: 80px; height: 80px; background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        #slide-12 .app-icon i { color: #00ffff; font-size: 40px; }
+        #slide-12 .app-title {
+            font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 700;
+            color: #00ffff; margin-bottom: 15px;
+        }
+        #slide-12 .app-description { font-size: 20px; color: #b0b0b0; line-height: 1.4; }
+
+        /* Slide 13: Stack */
+        #slide-13 .stack-container { display: flex; flex-direction: column; gap: 30px; flex-grow: 1; }
+        #slide-13 .stack-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 25px; flex-grow: 1;
+        }
+        #slide-13 .stack-category {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; display: flex; flex-direction: column;
+        }
+        #slide-13 .category-header { display: flex; align-items: center; margin-bottom: 20px; }
+        #slide-13 .category-icon {
+            width: 50px; height: 50px; background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-right: 15px;
+        }
+        #slide-13 .category-icon i { color: #00ffff; font-size: 28px; }
+        #slide-13 .category-title {
+            font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 700; color: #00ffff;
+        }
+        #slide-13 .tech-list { list-style-type: none; flex-grow: 1; }
+        #slide-13 .tech-item {
+            display: flex; align-items: center; margin-bottom: 15px;
+            font-size: 20px; color: #b0b0b0;
+        }
+        #slide-13 .tech-item i { color: #00ffff; margin-right: 10px; font-size: 20px; }
+        #slide-13 .privacy-badge {
+            display: flex; align-items: center; justify-content: center;
+            background-color: rgba(0, 255, 255, 0.1); border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px; padding: 15px 30px; margin-top: 10px;
+        }
+        #slide-13 .privacy-icon { color: #00ffff; font-size: 32px; margin-right: 15px; }
+        #slide-13 .privacy-text {
+            font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 700; color: #00ffff;
+        }
+
+        /* Slide 14: Conclusión */
+        #slide-14 .main-container { display: flex; flex-direction: column; gap: 30px; flex-grow: 1; }
+        #slide-14 .system-container { display: flex; gap: 30px; flex-grow: 1; }
+        #slide-14 .system-card {
+            flex: 1; background-color: rgba(18, 18, 18, 0.7);
+            border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px;
+            padding: 30px; display: flex; flex-direction: column;
+            align-items: center; text-align: center;
+        }
+        #slide-14 .system-icon {
+            width: 80px; height: 80px; background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        #slide-14 .system-icon i { color: #00ffff; font-size: 40px; }
+        #slide-14 .system-title {
+            font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 700;
+            color: #00ffff; margin-bottom: 15px;
+        }
+        #slide-14 .system-description { font-size: 20px; color: #b0b0b0; line-height: 1.4; }
+        #slide-14 .status-container {
+            background-color: rgba(18, 18, 18, 0.7); border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px; padding: 25px; display: flex; align-items: center; gap: 30px;
+        }
+        #slide-14 .status-icon {
+            width: 80px; height: 80px; background-color: rgba(0, 255, 255, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        #slide-14 .status-icon i { color: #00ffff; font-size: 40px; }
+        #slide-14 .status-content { flex-grow: 1; }
+        #slide-14 .status-title {
+            font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 700;
+            color: #00ffff; margin-bottom: 15px;
+        }
+        #slide-14 .status-badges { display: flex; gap: 15px; flex-wrap: wrap; }
+        #slide-14 .status-badge {
+            display: inline-block; background-color: rgba(0, 255, 0, 0.2);
+            border: 1px solid rgba(0, 255, 0, 0.5); border-radius: 20px;
+            padding: 8px 15px; font-weight: 700; color: #00ff00;
+            font-family: 'Orbitron', sans-serif; font-size: 18px;
+        }
+        #slide-14 .thank-you { text-align: center; margin-top: 40px; }
+        #slide-14 .thank-you-text {
+            font-family: 'Orbitron', sans-serif; font-size: 36px; font-weight: 700;
+            color: #00ffff; text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+        
+        /* --- NAVEGACIÓN --- */
+        .nav-indicator {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 15px;
+            color: #00ffff;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            opacity: 0.2;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            z-index: 100;
+            pointer-events: none; /* Desactivado por defecto */
+        }
+        .nav-indicator.active {
+            opacity: 0.7;
+            pointer-events: auto;
+        }
+        .nav-indicator.active:hover {
+            opacity: 1.0;
+        }
+        .nav-right { right: 10px; }
+        .nav-left { left: 10px; }
+
+        /* --- MEDIA QUERIES (Responsividad) --- */
+        @media (max-width: 900px) {
+            .slide { 
+                min-height: 100vh; /* Ocupa toda la altura en móvil */
+                height: auto; 
+                aspect-ratio: auto; 
+                border: none;
+            }
+            .content { padding: 40px 30px; }
+            .main-container { flex-direction: column; }
+            .left-column, .right-column { gap: 15px; }
+            .vision-container { grid-template-columns: 1fr; }
+            .roadmap-grid { grid-template-columns: 1fr; }
+            .comparison-container { flex-direction: column; }
+            .comparison-image { height: 150px; }
+            .data-flow, .hybrid-flow, .perspective-flow, .semantic-flow, .rag-flow, .integration-flow { 
+                flex-direction: column; gap: 15px; 
+            }
+            .flow-arrow { display: none; }
+            .flow-step { width: 100%; }
+            #slide-12 .applications-grid { grid-template-columns: 1fr; }
+            #slide-13 .stack-grid { grid-template-columns: 1fr; }
+            #slide-14 .system-container { flex-direction: column; }
+            #slide-14 .status-container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DIAPOSITIVA 1: Portada -->
+    <div class="slide active" id="slide-1">
+        <div class="tech-overlay"></div>
+        <div class="corner-accent top-left"></div>
+        <div class="corner-accent bottom-right"></div>
+        <div class="content" style="justify-content: center; align-items: center; background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.85)); background-size: cover; background-position: center;">
+            <h1 class="title" style="font-size: 128px; text-align: center; border: none; margin-bottom: 24px;">bill<span style="color:yellow; font-size: 1.25em;">-IA-</span>rds</h1>
+            <p class="subtitle">Inteligencia Artificial Híbrida para el Análisis de Billar <span class="highlight">(100% On-Premise)</span></p>
+        </div>
+        <div class="tech-icon">
+            <div class="tech-icon-item">
+                <i class="material-icons">visibility</i>
+                <span class="tech-icon-label">Visión</span>
+            </div>
+            <div class="tech-icon-item">
+                <i class="material-icons">psychology</i>
+                <span class="tech-icon-label">Razonamiento</span>
+            </div>
+            <div class="tech-icon-item">
+                <i class="material-icons">school</i>
+                <span class="tech-icon-label">Conocimiento</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 2: La Visión y el Propósito -->
+    <div class="slide" id="slide-2">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">La Visión y el Propósito</h1>
+            <div class="vision-container">
+                <div class="vision-card">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="vision-icon">
+                        <i class="material-icons">visibility</i>
+                    </div>
+                    <div class="vision-title">Objetivo</div>
+                    <ul class="vision-points">
+                        <li class="vision-point"><i class="material-icons">arrow_right</i>Digitalizar billar usando &nbsp;<span class="highlight">imágenes</span></li>
+                        <li class="vision-point"><i class="material-icons">arrow_right</i>Análisis en <span class="highlight">&nbsp;tiempo real</span></li>
+                        <li class="vision-point"><i class="material-icons">arrow_right</i>Sin dispositivos adicionales</li>
+                    </ul>
+                </div>
+                <div class="vision-card">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="vision-icon">
+                        <i class="material-icons">warning</i>
+                    </div>
+                    <div class="vision-title">El Problema</div>
+                    <ul class="vision-points">
+                        <li class="vision-point"><i class="material-icons">arrow_right</i><span class="highlight">Visión compleja</span>&nbsp; y perspectiva variable</li>
+                        <li class="vision-point"><i class="material-icons">arrow_right</i><span class="highlight">Geometría engañosa</span>&nbsp; del juego</li>
+                        <li class="vision-point"><i class="material-icons">arrow_right</i><span class="highlight">Reglas estrictas</span>&nbsp; del billar</li>
+                    </ul>
+                </div>
+                <div class="vision-card">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="vision-icon">
+                        <i class="material-icons">diamond</i>
+                    </div>
+                    <div class="vision-title">Valor Diferencial</div>
+                    <ul class="vision-points">
+                        <li class="vision-point"><i class="material-icons">arrow_right</i><span class="highlight">Privacidad total</span>&nbsp;(100% Local)</li>
+                        <li class="vision-point"><i class="material-icons">arrow_right</i><span class="highlight">Bajo coste</span>&nbsp; de implementación</li>
+                        <li class="vision-point"><i class="material-icons">arrow_right</i><span class="highlight">Alta precisión</span>&nbsp; en detección</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 3: Hoja de Ruta -->
+    <div class="slide" id="slide-3">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Hoja de Ruta (Objetivos Futuros)</h1>
+            <div class="context">
+                <div class="context-text">"No es solo un detector, es una <span class="highlight">plataforma en evolución</span>"</div>
+            </div>
+            <div class="roadmap-grid">
+                <div class="roadmap-item">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="item-number">1</div>
+                    <div class="item-icon"><i class="material-icons">videocam</i></div>
+                    <div class="item-title">Video Tracking</div>
+                    <div class="item-description">
+                        Seguimiento de identidad de bolas frame-a-frame
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="item-number">2</div>
+                    <div class="item-icon"><i class="material-icons">school</i></div>
+                    <div class="item-title">Entrenador IA</div>
+                    <div class="item-description">
+                        Análisis de jugadas y planes de entrenamiento personalizados
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="item-number">3</div>
+                    <div class="item-icon"><i class="material-icons">gavel</i></div>
+                    <div class="item-title">Árbitro Automático</div>
+                    <div class="item-description">
+                        Detección de faltas y puntuación en tiempo real
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="item-number">4</div>
+                    <div class="item-icon"><i class="material-icons">insights</i></div>
+                    <div class="item-title">IA Predictiva</div>
+                    <div class="item-description">
+                        Predicción de resultados basada en Big Data histórico
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 4: El Ojo de la IA -->
+    <div class="slide" id="slide-4">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Fase 2 - El Ojo de la IA (Detección)</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="tech-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">visibility</i></div>
+                            <div class="card-title">Tecnología</div>
+                        </div>
+                        <div class="tech-badge">RED NEURONAL (CNN) YOLOv11</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">auto_awesome</i><span>Deep Learning <span class="highlight">state-of-the-art</span></span></li>
+                            <li class="feature-item"><i class="material-icons">speed</i><span>Detección en <span class="highlight">tiempo real</span></span></li>
+                            <li class="feature-item"><i class="material-icons">tune</i><span>Optimizado para condiciones variables</span></li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">verified</i></div>
+                            <div class="card-title">Logro</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">autorenew</i><span><span class="highlight">Transfer Learning</span> personalizado</span></li>
+                            <li class="feature-item"><i class="material-icons">filter_1</i><span>Detección de <span class="highlight">16 clases</span> de bolas (set clásico)</span></li>
+                            <li class="feature-item"><i class="material-icons">precision_manufacturing</i><span>Coordinadas con alta precisión</span></li>
+                        </ul>
+                        <div class="metric-value">98.7%</div>
+                        <div class="metric-label">Precisión de detección</div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="tech-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">bolt</i></div>
+                            <div class="card-title">Resultado</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">visibility</i><span>El sistema <span class="highlight">"ve"</span> cada bola (etiqueta y coordenadas)</span></li>
+                            <li class="feature-item"><i class="material-icons">timer</i><span>Procesamiento en <span class="highlight">milisegundos</span></span></li>
+                            <li class="feature-item"><i class="material-icons">all_inclusive</i><span>Detección simultánea de todas las bolas</span></li>
+                        </ul>
+                        <div class="metric-value">12ms</div>
+                        <div class="metric-label">Tiempo de inferencia</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="./presentacion/detect_balls_pool_table_3.png?text=PLACEHOLDER:+Bounding+Boxes" alt="Detección de objetos con bounding boxes">
+                        <!--<div class="image-overlay">[PLACEHOLDER: Imagen de la mesa con las bolas detectadas]</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 5: Fábrica de Datos -->
+    <div class="slide" id="slide-5">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Fase 3 - La Fábrica de Datos</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="data-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">warning</i></div>
+                            <div class="card-title">Desafío</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">dataset</i><span>Crear dataset para <span class="highlight">diferentes sets</span> de bolas</span></li>
+                            <li class="feature-item"><i class="material-icons">attach_money</i><span>Coste elevado del etiquetado manual</span></li>
+                            <li class="feature-item"><i class="material-icons">balance</i><span>Desequilibrio entre clases de bolas</span></li>
+                        </ul>
+                    </div>
+                    <div class="data-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">build</i></div>
+                            <div class="card-title">Solución</div>
+                        </div>
+                        <div class="tech-badge">Pipeline de Ingeniería de Datos</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">label</i><span><span class="highlight">Label Studio</span> (Human-in-the-Loop)</span></li>
+                            <li class="feature-item"><i class="material-icons">autorenew</i><span><span class="highlight">Albumentations</span> (Augmentation)</span></li>
+                            <li class="feature-item"><i class="material-icons">auto_fix_high</i><span>Generación automática de variaciones</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="data-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">trending_up</i></div>
+                            <div class="card-title">Resultado</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">dataset</i><span>Pre-etiquetado automático con <span class="highlight">Red Neuronal</span></span></li>
+                            <li class="feature-item"><i class="material-icons">dataset_linked</i><span>Dataset extra multiplicado por <span class="highlight">15x</span></span></li>
+                            <li class="feature-item"><i class="material-icons">balance</i><span>Datos balanceados automáticamente</span></li>
+                            <li class="feature-item"><i class="material-icons">timer</i><span>Reducción del tiempo de etiquetado en <span class="highlight">75%</span></span></li>
+                        </ul>
+                        <div class="metric-value">1,500</div>
+                        <div class="metric-label">Imágenes extra generadas</div>
+                    </div>
+                    <div class="image-container">
+                        <img style="width: 20%;" src="presentacion/augmentation/0.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/1.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/2.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/3.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/4.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                    </div>
+                    <div class="image-container">
+                        <img style="width: 20%;" src="presentacion/augmentation/5.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/6.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/7.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/8.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/9.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <!--<div class="image-overlay">[PLACEHOLDER: Collage: Original vs. Variaciones aumentadas]</div>-->
+                    </div>
+                    <div class="image-container">
+                        <img style="width: 20%;" src="presentacion/augmentation/10.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/11.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/12.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/13.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <img style="width: 20%;" src="presentacion/augmentation/14.jpg?text=PLACEHOLDER:+Data+Augmentation" alt="Data augmentation example">
+                        <!--<div class="image-overlay">[PLACEHOLDER: Collage: Original vs. Variaciones aumentadas]</div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="data-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">collections</i></div><div class="flow-label">Datos Crudos</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Red Neuronal</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">label</i></div><div class="flow-label">Label Studio</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">autorenew</i></div><div class="flow-label">Albumentations</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">dataset</i></div><div class="flow-label">Dataset Final</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 6: Cerebro Híbrido -->
+    <div class="slide" id="slide-6">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Fase 4 - El Cerebro Híbrido</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="brain-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">psychology</i></div>
+                            <div class="card-title">Innovación</div>
+                        </div>
+                        <div class="tech-badge">Deep Learning + ML Clásico</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">architecture</i><span>Sistema <span class="highlight">híbrido</span> de dos capas</span></li>
+                            <li class="feature-item"><i class="material-icons">integration_instructions</i><span>Combinación de <span class="highlight">visión</span> y <span class="highlight">razonamiento</span></span></li>
+                            <li class="feature-item"><i class="material-icons">settings_suggest</i><span>Contextualización del entorno de juego</span></li>
+                        </ul>
+                    </div>
+                    <div class="brain-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">schema</i></div>
+                            <div class="card-title">Flujo</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">visibility</i><span><span class="highlight">Red Neuronal</span>: Ve las bolas (25 clases)</span></li>
+                            <li class="feature-item"><i class="material-icons">account_tree</i><span><span class="highlight">Random Forest</span>: Detecta set de bolas</span></li>
+                            <li class="feature-item"><i class="material-icons">category</i><span>Clasificación: <span class="highlight">Classic</span> vs <span class="highlight">Black Edition</span></span></li>
+                        </ul>
+                        <div class="metric-value">97.8%</div>
+                        <div class="metric-label">Precisión de clasificación</div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="brain-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">lightbulb</i></div>
+                            <div class="card-title">Ventaja</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">speed</i><span>Procesamiento en <span class="highlight">milisegundos</span></span></li>
+                            <li class="feature-item"><i class="material-icons">precision_manufacturing</i><span>Adaptación a diferentes sets</span></li>
+                            <li class="feature-item"><i class="material-icons">auto_fix_high</i><span>Integración transparente</span></li>
+                        </ul>
+                        <div class="metric-value">2ms</div>
+                        <div class="metric-label">Tiempo de clasificación</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="presentacion/random-forest.png?text=PLACEHOLDER:+Clasificación+de+Contexto" alt="Ejemplo de clasificación de contexto">
+                        <!--<div class="image-overlay">Ejemplo: Clasificación de imágenes con contexto</div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="hybrid-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Red Neuronal</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">data_array</i></div><div class="flow-label">Vector</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">schema</i></div><div class="flow-label">Random Forest</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">check_circle</i></div><div class="flow-label">Contexto</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 7: Desafío de la Mesa -->
+    <div class="slide" id="slide-7">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Fase 5 - El Desafío de la Mesa (De Ruido a Señal)</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="challenge-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">warning</i></div>
+                            <div class="card-title">El Problema</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">blur_on</i><span>Visión clásica (Hough) detecta <span class="highlight">demasiado ruido</span></span></li>
+                            <li class="feature-item"><i class="material-icons">tonality</i><span>Confusión con <span class="highlight">sombras</span> y <span class="highlight">madera</span></span></li>
+                            <li class="feature-item"><i class="material-icons">texture</i><span>Identificación incorrecta del área de juego</span></li>
+                        </ul>
+                        <div class="metric-value">12%</div>
+                        <div class="metric-label">Tasa de éxito inicial</div>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">lightbulb</i></div>
+                            <div class="card-title">La Solución</div>
+                        </div>
+                        <div class="tech-badge">Heurística de "Área Mínima Válida"</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">filter_alt</i><span>Algoritmo de <span class="highlight">filtrado geométrico</span></span></li>
+                            <li class="feature-item"><i class="material-icons">architecture</i><span>Enfoque basado en <span class="highlight">área relativa</span></span></li>
+                            <li class="feature-item"><i class="material-icons">tune</i><span>Adaptado específicamente para billar</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="challenge-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">psychology</i></div>
+                            <div class="card-title">Lógica</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">rule</i><span>"Si es un <span class="highlight">cuadrilátero válido</span> y es el <span class="highlight">más pequeño</span>, es el fieltro"</span></li>
+                        </ul>
+                        <div class="logic-steps">
+                            <div class="logic-step"><div class="step-number">1</div><div class="step-text">Descartar ruido</div></div>
+                            <div class="logic-arrow">→</div>
+                            <div class="logic-step"><div class="step-number">2</div><div class="step-text">Identificar candidatos</div></div>
+                            <div class="logic-arrow">→</div>
+                            <div class="logic-step"><div class="step-number">3</div><div class="step-text">Elegir el más pequeño</div></div>
+                        </div>
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Precisión de detección</div>
+                    </div>
+                    <div class="image-container">
+                        <img style="width: 50%" src="presentacion/hough/ruido.png?text=PLACEHOLDER:+Comparativa+Hough+vs+Limpia" alt="Comparativa de detección Hough vs limpia">
+                        <img style="width: 50%" src="presentacion/hough/limpia.png?text=PLACEHOLDER:+Comparativa+Hough+vs+Limpia" alt="Comparativa de detección Hough vs limpia">
+                        <div class="image-overlay">Comparativa: Izquierda (Ruido Hough) vs Derecha (Detección limpia)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 8: Trampa de la Perspectiva -->
+    <div class="slide" id="slide-8">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Fase 5/6 - La Trampa de la Perspectiva</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="perspective-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">check_circle</i></div>
+                            <div class="card-title">El Logro</div>
+                        </div>
+                        <div class="tech-badge">Homografía</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">flip</i><span>Logramos <span class="highlight">"aplanar"</span> la mesa</span></li>
+                            <li class="feature-item"><i class="material-icons">aspect_ratio</i><span>Transformación de perspectiva exitosa</span></li>
+                            <li class="feature-item"><i class="material-icons">straighten</i><span>Preservación de proporciones</span></li>
+                        </ul>
+                    </div>
+                    <div class="perspective-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">error</i></div>
+                            <div class="card-title">El Fallo</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">panorama_fish_eye</i><span>En ángulos <span class="highlight">bajos</span>, lado corto parece más largo</span></li>
+                            <li class="feature-item"><i class="material-icons">rotate_90_degrees_ccw</i><span>IA rotaba la mesa <span class="highlight">incorrectamente</span></span></li>
+                            <li class="feature-item"><i class="material-icons">sync_problem</i><span>Trayectorias calculadas erróneamente</span></li>
+                        </ul>
+                        <div class="error-badge">ORIENTACIÓN: INCORRECTA</div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="perspective-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">lightbulb</i></div>
+                            <div class="card-title">Lección</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">calculate</i><span>La <span class="highlight">geometría 2D</span> no es suficiente</span></li>
+                            <li class="feature-item"><i class="material-icons">psychology</i><span>Necesitamos <span class="highlight">semántica</span> del dominio</span></li>
+                            <li class="feature-item"><i class="material-icons">smart_toy</i><span>Contexto es crucial para interpretación</span></li>
+                        </ul>
+                        <div class="metric-value">78%</div>
+                        <div class="metric-label">Tasa de error con ángulos extremos</div>
+                    </div>
+                    <div class="image-container">
+                        <img style="width: 60%" src="presentacion/rotacion/mala.png?text=PLACEHOLDER:+Mesa+en+vertical" alt="Comparativa de orientación vertical vs horizontal">
+                    </div>
+                    <div class="image-container">
+                        <img style="width: 60%" src="presentacion/rotacion/buena.png?text=PLACEHOLDER:+Mesa+en+vertical" alt="Comparativa de orientación vertical vs horizontal">
+                        <div class="image-overlay">Problema de perspectiva: Vertical vs Horizontal</div>
+                    </div>
+                </div>
+            </div>
+            <div class="perspective-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">photo_camera</i></div><div class="flow-label">Vista Extrema</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">crop_free</i></div><div class="flow-label">Detección Mesa</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">flip</i></div><div class="flow-label">Transformación</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">rotate_90_degrees_ccw</i></div><div class="flow-label">Rotación Errónea</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 9: Solución Semántica -->
+    <div class="slide" id="slide-9">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Fase 6 - Solución Semántica (Pockets)</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="solution-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">auto_awesome</i></div>
+                            <div class="card-title">Solución</div>
+                        </div>
+                        <div class="tech-badge">Segundo Modelo de Red Neuronal YOLO</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">filter_center_focus</i><span>Entrenado <span class="highlight">especializado</span> en Troneras</span></li>
+                            <li class="feature-item"><i class="material-icons">settings_suggest</i><span>Independiente del modelo principal</span></li>
+                            <li class="feature-item"><i class="material-icons">psychology</i><span>Enfoque basado en <span class="highlight">semántica</span></span></li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">rule</i></div>
+                            <div class="card-title">Regla Invariante</div>
+                        </div>
+                        <div class="rule-box">
+                            <div class="rule-text">"El lado con <span class="highlight">3 troneras</span> SIEMPRE es el lado largo"</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">all_inclusive</i><span>Válida <span class="highlight">sin importar</span> la perspectiva</span></li>
+                            <li class="feature-item"><i class="material-icons">fact_check</i><span>Basada en hechos, no en píxeles</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="solution-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">verified</i></div>
+                            <div class="card-title">Resultado</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">check_circle</i><span><span class="highlight">Detección perfecta</span> en todos los casos</span></li>
+                            <li class="feature-item"><i class="material-icons">speed</i><span>Robusto ante ángulos extremos</span></li>
+                            <li class="feature-item"><i class="material-icons">integration_instructions</i><span>Integración transparente con pipeline</span></li>
+                        </ul>
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Precisión de detección</div>
+                        <div class="success-badge">ORIENTACIÓN: CORRECTA</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="presentacion/detect_pockets_pool_table_3.png?text=PLACEHOLDER:+Detección+de+Troneras" alt="Detección de troneras en mesa de billar">
+                        <div class="image-overlay">Detección de las 6 troneras para orientación correcta</div>
+                    </div>
+                </div>
+            </div>
+            <div class="semantic-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen Original</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">filter_center_focus</i></div><div class="flow-label">Red Neuronal</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">format_list_numbered</i></div><div class="flow-label">Datos Troneras</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">rotate_90_degrees_ccw</i></div><div class="flow-label">Corrección Orientación</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 10: Resultado Final Integrado -->
+    <div class="slide" id="slide-10">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Resultado Final Integrado</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="result-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">integration_instructions</i></div>
+                            <div class="card-title">Hito</div>
+                        </div>
+                        <div class="tech-badge">Fusión Completa</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">visibility</i><span><span class="highlight">Detección</span> (Red Neuronal)</span></li>
+                            <li class="feature-item"><i class="material-icons">architecture</i><span><span class="highlight">Geometría</span> (Homografía)</span></li>
+                            <li class="feature-item"><i class="material-icons">psychology</i><span><span class="highlight">Semántica</span> (Red Neuronal)</span></li>
+                        </ul>
+                    </div>
+                    <div class="result-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">aspect_ratio</i></div>
+                            <div class="card-title">Producto</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">crop_free</i><span>Vista <span class="highlight">cenital</span> (Top-Down)</span></li>
+                            <li class="feature-item"><i class="material-icons">straighten</i><span>Resolución <span class="highlight">1000×500 píxeles</span></span></li>
+                            <li class="feature-item"><i class="material-icons">grid_on</i><span>Estandarización completa</span></li>
+                        </ul>
+                        <div class="metric-value">1000×500</div>
+                        <div class="metric-label">Resolución final</div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="result-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">functions</i></div>
+                            <div class="card-title">Utilidad</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">pin_drop</i><span>Coordenadas <span class="highlight">(X,Y) reales</span></span></li>
+                            <li class="feature-item"><i class="material-icons">route</i><span>Listas para <span class="highlight">física del juego</span></span></li>
+                            <li class="feature-item"><i class="material-icons">auto_fix_high</i><span>Base para simulación precisa</span></li>
+                        </ul>
+                        <div class="metric-value">mm</div>
+                        <div class="metric-label">Precisión de coordenadas</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="presentacion/cenital.png?text=PLACEHOLDER:+Vista+Cenital+Perfecta" alt="Mesa de billar en vista cenital perfecta">
+                        <div class="image-overlay">Vista cenital estandarizada de 1000×500 píxeles</div>
+                    </div>
+                </div>
+            </div>
+            <div class="integration-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen Original</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Detección</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">architecture</i></div><div class="flow-label">Geometría</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">psychology</i></div><div class="flow-label">Semántica</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">sports_esports</i></div><div class="flow-label">Mesa Perfecta</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 11: El Experto (RAG) -->
+    <div class="slide" id="slide-11">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Fase 7 - El Experto (RAG)</h1>
+            <div class="main-container">
+                <div class="left-column">
+                    <div class="rag-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">smart_toy</i></div>
+                            <div class="card-title">Funcionalidad</div>
+                        </div>
+                        <div class="tech-badge">Asistente de Reglas y físicas Interactivo</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">question_answer</i><span>Responde dudas sobre <span class="highlight">reglamento y físicas</span></span></li>
+                            <li class="feature-item"><i class="material-icons">description</i><span>Cita <span class="highlight">documentos oficiales</span></span></li>
+                            <li class="feature-item"><i class="material-icons">psychology</i><span>Explicaciones contextualizadas</span></li>
+                        </ul>
+                    </div>
+                    <div class="rag-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">settings</i></div>
+                            <div class="card-title">Tecnología</div>
+                        </div>
+                        <div class="tech-badge">RAG Local</div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">storage</i><span><span class="highlight">Vector Store</span> (FAISS)</span></li>
+                            <li class="feature-item"><i class="material-icons">memory</i><span><span class="highlight">LLM Local</span> (Ollama)</span></li>
+                            <li class="feature-item"><i class="material-icons">integration_instructions</i><span><span class="highlight">LangChain</span> para orquestación</span></li>
+                        </ul>
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Ejecución Local</div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="rag-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="material-icons">cases</i></div>
+                            <div class="card-title">Caso de Uso</div>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><i class="material-icons">help</i><span>Jugador pregunta <span class="highlight">duda de reglamento</span></span></li>
+                            <li class="feature-item"><i class="material-icons">search</i><span>IA busca en <span class="highlight">documentación oficial</span></span></li>
+                            <li class="feature-item"><i class="material-icons">format_quote</i><span>Responde <span class="highlight">citando</span> fuente específica</span></li>
+                        </ul>
+                        <div class="metric-value">Sin alucinaciones</div>
+                        <div class="metric-label">Respuestas verificables</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="presentacion/llm.png?text=PLACEHOLDER:+Chatbot+respondiendo+duda" alt="Chatbot respondiendo una duda compleja">
+                        <!--<div class="image-overlay">Asistente experto respondiendo una duda compleja</div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="rag-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">help</i></div><div class="flow-label">Pregunta</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">search</i></div><div class="flow-label">FAISS</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">psychology</i></div><div class="flow-label">LLM Local</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">question_answer</i></div><div class="flow-label">Respuesta</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 12: Aplicaciones Transversales -->
+    <div class="slide" id="slide-12">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Aplicaciones Transversales (Transferencia)</h1>
+            <div class="main-container" style="flex-direction: column;"> <!-- V4.1 FIX: flex-direction: column -->
+                <div class="potential-box">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="potential-icon"><i class="material-icons">hub</i></div>
+                    <div class="potential-text">
+                        Potencial: Esta tecnología <span class="highlight">no es solo para billar</span>
+                    </div>
+                </div>
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="app-icon"><i class="material-icons">precision_manufacturing</i></div>
+                        <div class="app-title">Industria 4.0</div>
+                        <div class="app-description">
+                            Control de calidad y detección de defectos en superficies planas
+                        </div>
+                    </div>
+                    <div class="application-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="app-icon"><i class="material-icons">inventory_2</i></div>
+                        <div class="app-title">Logística</div>
+                        <div class="app-description">
+                            Localización, conteo y clasificación de objetos en cintas transportadoras
+                        </div>
+                    </div>
+                    <div class="application-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="app-icon"><i class="material-icons">smart_toy</i></div>
+                        <div class="app-title">Robótica</div>
+                        <div class="app-description">
+                            Visión espacial para brazos robóticos (Pick & Place) en entornos no estructurados
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 13: Stack Tecnológico -->
+    <div class="slide" id="slide-13">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Stack Tecnológico</h1>
+            <div class="stack-container">
+                <div class="stack-grid">
+                    <div class="stack-category">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="category-header">
+                            <div class="category-icon"><i class="material-icons">code</i></div>
+                            <div class="category-title">Lenguaje</div>
+                        </div>
+                        <ul class="tech-list">
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>Python <span class="highlight">3.10</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>NumPy</span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>Pandas</span></li>
+                        </ul>
+                    </div>
+                    <div class="stack-category">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="category-header">
+                            <div class="category-icon"><i class="material-icons">visibility</i></div>
+                            <div class="category-title">Visión</div>
+                        </div>
+                        <ul class="tech-list">
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">OpenCV</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">Albumentations</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>Pygame</span></li>
+                        </ul>
+                    </div>
+                    <div class="stack-category">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="category-header">
+                            <div class="category-icon"><i class="material-icons">psychology</i></div>
+                            <div class="category-title">IA</div>
+                        </div>
+                        <ul class="tech-list">
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">PyTorch</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">Ultralytics YOLOv11</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">Scikit-learn</span></span></li>
+                        </ul>
+                    </div>
+                    <div class="stack-category">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="category-header">
+                            <div class="category-icon"><i class="material-icons">smart_toy</i></div>
+                            <div class="category-title">GenAI</div>
+                        </div>
+                        <ul class="tech-list">
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">LangChain</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">FAISS</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">Ollama</span></span></li>
+                        </ul>
+                    </div>
+                    <div class="stack-category">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="category-header">
+                            <div class="category-icon"><i class="material-icons">storage</i></div>
+                            <div class="category-title">Datos</div>
+                        </div>
+                        <ul class="tech-list">
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>Label Studio</span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>SQLite</span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>JSON/YAML</span></li>
+                        </ul>
+                    </div>
+                    <div class="stack-category">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="category-header">
+                            <div class="category-icon"><i class="material-icons">cloud_upload</i></div>
+                            <div class="category-title">Despliegue</div>
+                        </div>
+                        <ul class="tech-list">
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">Flask</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span><span class="highlight">Modelos de ML y DL</span></span></li>
+                            <li class="tech-item"><i class="material-icons">check_circle</i><span>Ejecución 100% Local</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="privacy-badge">
+                    <i class="material-icons privacy-icon">security</i>
+                    <div class="privacy-text">100% Local (Privacidad asegurada)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 14: Conclusión -->
+    <div class="slide" id="slide-14">
+        <div class="tech-overlay"></div>
+        <div class="content">
+            <h1 class="title">Conclusión</h1>
+            <div class="main-container">
+                <div class="system-container">
+                    <div class="system-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="system-icon"><i class="material-icons">visibility</i></div>
+                        <div class="system-title">Percepción</div>
+                        <div class="system-description"><span class="highlight">Ver</span> las bolas y la mesa con precisión</div>
+                    </div>
+                    <div class="system-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="system-icon"><i class="material-icons">psychology</i></div>
+                        <div class="system-title">Razonamiento</div>
+                        <div class="system-description"><span class="highlight">Entender</span> el contexto, las reglas y las físicas</div>
+                    </div>
+                    <div class="system-card">
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="system-icon"><i class="material-icons">school</i></div>
+                        <div class="system-title">Conocimiento</div>
+                        <div class="system-description"><span class="highlight">Saber</span> responder dudas sobre reglamento y físicas</div>
+                    </div>
+                </div>
+                <div class="status-container">
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="status-icon"><i class="material-icons">verified</i></div>
+                    <div class="status-content">
+                        <div class="status-title">Estado del Sistema</div>
+                        <div class="status-badges">
+                            <div class="status-badge">Funcional</div>
+                            <div class="status-badge">Validado</div>
+                            <div class="status-badge">Seguro</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="thank-you">
+                    <div class="thank-you-text">Gracias por su atención</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para los botones de navegación -->
+    <div id="nav-left" class="nav-indicator nav-left">
+        <i class="fa-solid fa-chevron-left"></i>
+    </div>
+    <div id="nav-right" class="nav-indicator nav-right">
+        <i class="fa-solid fa-chevron-right"></i>
+    </div>
+
+    <script>
+        // --- LÓGICA DE NAVEGACIÓN ---
+        let currentSlide = 1;
+        const totalSlides = 14; // ¡Total de 14 diapositivas!
+
+        function showSlide(slideNumber) {
+            // Ocultar todas las diapositivas
+            document.querySelectorAll('.slide').forEach((slide) => {
+                slide.classList.remove('active');
+            });
+            
+            // Mostrar la diapositiva solicitada
+            const newSlide = document.getElementById('slide-' + slideNumber);
+            if (newSlide) {
+                newSlide.classList.add('active');
+                currentSlide = slideNumber;
+            }
+            
+            // Actualizar botones de navegación
+            updateNavButtons();
+        }
+
+        function navigate(direction) {
+            let newSlideNumber = currentSlide + direction;
+            if (newSlideNumber > 0 && newSlideNumber <= totalSlides) {
+                showSlide(newSlideNumber);
+            }
+        }
+
+        function updateNavButtons() {
+            const navLeft = document.getElementById('nav-left');
+            const navRight = document.getElementById('nav-right');
+
+            if (currentSlide === 1) {
+                navLeft.classList.remove('active');
+            } else {
+                navLeft.classList.add('active');
+            }
+
+            if (currentSlide === totalSlides) {
+                navRight.classList.remove('active');
+            } else {
+                navRight.classList.add('active');
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                navigate(1);
+            } else if (event.key === 'ArrowLeft') {
+                navigate(-1);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Asignar clics a los botones
+            document.getElementById('nav-left').onclick = () => navigate(-1);
+            document.getElementById('nav-right').onclick = () => navigate(1);
+            
+            // Mostrar la primera diapositiva
+            showSlide(1);
+        });
+    </script>
+</body>
+</html>
