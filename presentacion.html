@@ -282,25 +282,25 @@
         }
         #slide-1 .tech-icon {
             position: absolute;
-            bottom: 40px;
+            bottom: 140px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 30px;
+            gap: 100px;
         }
         #slide-1 .tech-icon-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            opacity: 0.7;
+            opacity: 1.0;
         }
         #slide-1 .tech-icon-item i {
             color: #00ffff;
-            font-size: 28px;
+            font-size: 72px;
             margin-bottom: 8px;
         }
         #slide-1 .tech-icon-label {
-            font-size: 14px;
+            font-size: 24px;
             color: #e0e0e0;
             font-family: 'Orbitron', sans-serif;
         }
@@ -803,7 +803,7 @@
     <div class="slide" id="slide-4">
         <div class="tech-overlay"></div>
         <div class="content">
-            <h1 class="title">Fase 2 - El Ojo de la IA (Detección)</h1>
+            <h1 class="title">Fase 1 - El Ojo de la IA (Detección)</h1>
             <div class="main-container">
                 <div class="left-column">
                     <div class="tech-card">
@@ -865,7 +865,20 @@
     <div class="slide" id="slide-5">
         <div class="tech-overlay"></div>
         <div class="content">
-            <h1 class="title">Fase 3 - La Fábrica de Datos</h1>
+            <h1 class="title">Fase 2 - La Fábrica de Datos</h1>
+
+            <div class="data-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">collections</i></div><div class="flow-label">Datos Crudos</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Red Neuronal</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">label</i></div><div class="flow-label">Label Studio</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">autorenew</i></div><div class="flow-label">Albumentations</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">dataset</i></div><div class="flow-label">Dataset Final</div></div>
+            </div>
+
             <div class="main-container">
                 <div class="left-column">
                     <div class="data-card">
@@ -876,7 +889,7 @@
                             <div class="card-title">Desafío</div>
                         </div>
                         <ul class="feature-list">
-                            <li class="feature-item"><i class="material-icons">dataset</i><span>Crear dataset para <span class="highlight">diferentes sets</span> de bolas</span></li>
+                            <li class="feature-item"><i class="material-icons">dataset</i><span>Crear dataset para <span class="highlight">diferentes sets</span> de bolas, aumentando a 25 clases</span></li>
                             <li class="feature-item"><i class="material-icons">attach_money</i><span>Coste elevado del etiquetado manual</span></li>
                             <li class="feature-item"><i class="material-icons">balance</i><span>Desequilibrio entre clases de bolas</span></li>
                         </ul>
@@ -938,17 +951,6 @@
                     </div>
                 </div>
             </div>
-            <div class="data-flow">
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">collections</i></div><div class="flow-label">Datos Crudos</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Red Neuronal</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">label</i></div><div class="flow-label">Label Studio</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">autorenew</i></div><div class="flow-label">Albumentations</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">dataset</i></div><div class="flow-label">Dataset Final</div></div>
-            </div>
         </div>
     </div>
 
@@ -956,7 +958,18 @@
     <div class="slide" id="slide-6">
         <div class="tech-overlay"></div>
         <div class="content">
-            <h1 class="title">Fase 4 - El Cerebro Híbrido</h1>
+            <h1 class="title">Fase 3 - El Cerebro Híbrido</h1>
+            <div class="hybrid-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Red Neuronal</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">data_array</i></div><div class="flow-label">Vector</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">schema</i></div><div class="flow-label">Random Forest</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">check_circle</i></div><div class="flow-label">Contexto</div></div>
+            </div>
             <div class="main-container">
                 <div class="left-column">
                     <div class="brain-card">
@@ -1006,21 +1019,10 @@
                         <div class="metric-label">Tiempo de clasificación</div>
                     </div>
                     <div class="image-container">
-                        <img src="presentacion/random-forest.png?text=PLACEHOLDER:+Clasificación+de+Contexto" alt="Ejemplo de clasificación de contexto">
+                        <img style="width: 80%" src="presentacion/random-forest.png?text=PLACEHOLDER:+Clasificación+de+Contexto" alt="Ejemplo de clasificación de contexto">
                         <!--<div class="image-overlay">Ejemplo: Clasificación de imágenes con contexto</div>-->
                     </div>
                 </div>
-            </div>
-            <div class="hybrid-flow">
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Red Neuronal</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">data_array</i></div><div class="flow-label">Vector</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">schema</i></div><div class="flow-label">Random Forest</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">check_circle</i></div><div class="flow-label">Contexto</div></div>
             </div>
         </div>
     </div>
@@ -1029,7 +1031,7 @@
     <div class="slide" id="slide-7">
         <div class="tech-overlay"></div>
         <div class="content">
-            <h1 class="title">Fase 5 - El Desafío de la Mesa (De Ruido a Señal)</h1>
+            <h1 class="title">Fase 4 - El Desafío de la Mesa (De Ruido a Señal)</h1>
             <div class="main-container">
                 <div class="left-column">
                     <div class="challenge-card">
@@ -1084,9 +1086,11 @@
                         <div class="metric-label">Precisión de detección</div>
                     </div>
                     <div class="image-container">
-                        <img style="width: 50%" src="presentacion/hough/ruido.png?text=PLACEHOLDER:+Comparativa+Hough+vs+Limpia" alt="Comparativa de detección Hough vs limpia">
-                        <img style="width: 50%" src="presentacion/hough/limpia.png?text=PLACEHOLDER:+Comparativa+Hough+vs+Limpia" alt="Comparativa de detección Hough vs limpia">
-                        <div class="image-overlay">Comparativa: Izquierda (Ruido Hough) vs Derecha (Detección limpia)</div>
+                        <img style="width: 65%" src="presentacion/hough/ruido.png?text=PLACEHOLDER:+Comparativa+Hough+vs+Limpia" alt="Comparativa de detección Hough vs limpia">
+                    </div>
+                    <div class="image-container">
+                        <img style="width: 65%" src="presentacion/hough/limpia.png?text=PLACEHOLDER:+Comparativa+Hough+vs+Limpia" alt="Comparativa de detección Hough vs limpia">
+                        <!--<div class="image-overlay">Comparativa: Izquierda (Ruido Hough) vs Derecha (Detección limpia)</div>-->
                     </div>
                 </div>
             </div>
@@ -1097,7 +1101,16 @@
     <div class="slide" id="slide-8">
         <div class="tech-overlay"></div>
         <div class="content">
-            <h1 class="title">Fase 5/6 - La Trampa de la Perspectiva</h1>
+            <h1 class="title">Fase 5 - La Trampa de la Perspectiva</h1>
+            <div class="perspective-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">photo_camera</i></div><div class="flow-label">Vista Extrema</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">crop_free</i></div><div class="flow-label">Detección Mesa</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">flip</i></div><div class="flow-label">Transformación</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">rotate_90_degrees_ccw</i></div><div class="flow-label">Rotación Errónea</div></div>
+            </div>
             <div class="main-container">
                 <div class="left-column">
                     <div class="perspective-card">
@@ -1123,7 +1136,7 @@
                         </div>
                         <ul class="feature-list">
                             <li class="feature-item"><i class="material-icons">panorama_fish_eye</i><span>En ángulos <span class="highlight">bajos</span>, lado corto parece más largo</span></li>
-                            <li class="feature-item"><i class="material-icons">rotate_90_degrees_ccw</i><span>IA rotaba la mesa <span class="highlight">incorrectamente</span></span></li>
+                            <li class="feature-item"><i class="material-icons">rotate_90_degrees_ccw</i><span>IA rota la mesa <span class="highlight">incorrectamente</span></span></li>
                             <li class="feature-item"><i class="material-icons">sync_problem</i><span>Trayectorias calculadas erróneamente</span></li>
                         </ul>
                         <div class="error-badge">ORIENTACIÓN: INCORRECTA</div>
@@ -1154,15 +1167,6 @@
                     </div>
                 </div>
             </div>
-            <div class="perspective-flow">
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">photo_camera</i></div><div class="flow-label">Vista Extrema</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">crop_free</i></div><div class="flow-label">Detección Mesa</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">flip</i></div><div class="flow-label">Transformación</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">rotate_90_degrees_ccw</i></div><div class="flow-label">Rotación Errónea</div></div>
-            </div>
         </div>
     </div>
 
@@ -1171,6 +1175,15 @@
         <div class="tech-overlay"></div>
         <div class="content">
             <h1 class="title">Fase 6 - Solución Semántica (Pockets)</h1>
+            <div class="semantic-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen Original</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">filter_center_focus</i></div><div class="flow-label">Red Neuronal</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">format_list_numbered</i></div><div class="flow-label">Datos Troneras</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">rotate_90_degrees_ccw</i></div><div class="flow-label">Corrección Orientación</div></div>
+            </div>
             <div class="main-container">
                 <div class="left-column">
                     <div class="solution-card">
@@ -1226,15 +1239,6 @@
                     </div>
                 </div>
             </div>
-            <div class="semantic-flow">
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen Original</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">filter_center_focus</i></div><div class="flow-label">Red Neuronal</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">format_list_numbered</i></div><div class="flow-label">Datos Troneras</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">rotate_90_degrees_ccw</i></div><div class="flow-label">Corrección Orientación</div></div>
-            </div>
         </div>
     </div>
 
@@ -1243,6 +1247,17 @@
         <div class="tech-overlay"></div>
         <div class="content">
             <h1 class="title">Resultado Final Integrado</h1>
+            <div class="integration-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen Original</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Detección</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">architecture</i></div><div class="flow-label">Geometría</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">psychology</i></div><div class="flow-label">Semántica</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">sports_esports</i></div><div class="flow-label">Mesa Perfecta</div></div>
+            </div>
             <div class="main-container">
                 <div class="left-column">
                     <div class="result-card">
@@ -1297,17 +1312,6 @@
                     </div>
                 </div>
             </div>
-            <div class="integration-flow">
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">image</i></div><div class="flow-label">Imagen Original</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">visibility</i></div><div class="flow-label">Detección</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">architecture</i></div><div class="flow-label">Geometría</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">psychology</i></div><div class="flow-label">Semántica</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">sports_esports</i></div><div class="flow-label">Mesa Perfecta</div></div>
-            </div>
         </div>
     </div>
 
@@ -1316,6 +1320,15 @@
         <div class="tech-overlay"></div>
         <div class="content">
             <h1 class="title">Fase 7 - El Experto (RAG)</h1>
+            <div class="rag-flow">
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">help</i></div><div class="flow-label">Pregunta</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">search</i></div><div class="flow-label">FAISS</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">psychology</i></div><div class="flow-label">LLM Local</div></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><div class="flow-icon"><i class="material-icons">question_answer</i></div><div class="flow-label">Respuesta</div></div>
+            </div>
             <div class="main-container">
                 <div class="left-column">
                     <div class="rag-card">
@@ -1370,15 +1383,6 @@
                         <!--<div class="image-overlay">Asistente experto respondiendo una duda compleja</div>-->
                     </div>
                 </div>
-            </div>
-            <div class="rag-flow">
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">help</i></div><div class="flow-label">Pregunta</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">search</i></div><div class="flow-label">FAISS</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">psychology</i></div><div class="flow-label">LLM Local</div></div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-icon"><i class="material-icons">question_answer</i></div><div class="flow-label">Respuesta</div></div>
             </div>
         </div>
     </div>
